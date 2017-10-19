@@ -1,0 +1,227 @@
+﻿@charset "UTF-8";
+/* CSS Document */
+
+
+body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, form, fieldset, input, textarea, p, blockquote, th, td { margin: 0; padding: 0; }
+body { font-size: 12px; font-family: \5b8b\4f53, Arial, Helvetica, sans-serif; background: #fff; line-height: 150%; color: #333; }
+table { border-collapse: collapse; border-spacing: 0; }
+fieldset, img { border: 0; }
+ins { text-decoration: none; display:block;}
+legend { display: none; }
+address, caption, cite, code, dfn, em, strong, th, var { font-style: normal; font-weight: normal; }
+ol, ul { list-style: none; }
+caption, th { text-align: left; }
+h1, h2, h3, h4, h5, h6 { font-size: 100%; font-weight: normal; }
+q:before, q:after { content: ''; }
+abbr, acronym { border: 0; }
+ a:link, a:visited { color: #333; text-decoration: none; } 
+/* a:hover { color: #c00; text-decoration: underline; } */
+a strong { color: #c00; }
+object, embed { display: block }
+input, select { border-radius: 0 }
+.clear { clear: both; height: 0; overflow: hidden; }
+.clearfix { *zoom:1}
+.clearfix:after { display: block; overflow: hidden; clear: both; height: 0; visibility: hidden; content: "."; }
+a.best:link, a.best:visited { color: #c00; }
+.bt_page { width: 990px; margin: 0 auto; clear:both; min-height:503px;}
+/*line box*/
+.line-box { margin:40px auto 0; clear:both; }
+
+/*二级页左右分栏*/
+.col-all{ background:url(http://image.bitautoimg.com/uimg/index2014/images2/bg_line.png) repeat-y 735px 0; margin:40px 0 0 0; zoom:1;}
+.col-alltop0{ margin-top:0;}
+.col-all_noborder{ background:none;}
+.col-con{ width:720px; float:left; padding:0 15px 0 0; position:relative;}
+.col-side{ width:240px; float:right; overflow:hidden;}
+.col-side .line-box{ margin:30px 0 0;}
+.col-side h4{border-bottom:1px solid #e9e9e9; font-size:16px; font-weight:800; height:30px; line-height:18px; font-family:"microsoft yahei";}
+.line-box_t0{ margin:0 !important;}
+.col-side2{ width:240px; float:right;border-bottom:1px solid #e9e9e9;border-left:1px solid #e9e9e9; padding-left:14px;}
+.col-con2{ width:735px; float:left; padding:0;}
+.col_line{ border-bottom:1px solid #E9E9E9;}
+
+/*.col-all-search{ margin-top:20px;}
+.col-all-search .tool-selectcar-v2{ margin-top:0;}*/
+
+/*二级页右侧标题*/
+.side_title{ position:relative;}
+.side_title .more{ position:absolute; top:0; right:0; color:#ccc;}
+.side_title .more em{ font-weight:800;font-size:16px; font-family:"微软雅黑"; color:#333;text-decoration:none;}
+.side_title .more a:hover em{ color:#c00;}
+.side_title .more a.downarrow{font-size:16px; font-family:"微软雅黑";}
+.side_title .more a.downarrow:link,.side_title .more a.downarrow:visited{color:#333;}
+.side_title .more a.downarrow:hover{color:#c00;}
+
+/*标题后带向右箭头*/
+h3 em {font-family: simson;font-size: 18px;padding-left: 10px;}
+
+/*广告*/
+.bt_ad, .ad-990{width:990px;margin:0 auto;clear:both;overflow:hidden;}
+
+/*无结果提示*/
+.no-txt-box{ height: 95px; float: left;background: url(http://image.bitautoimg.com/uimg/index2014/images2/error_ico.jpg) no-repeat left center;padding:10px 0 0 115px; font-family: "微软雅黑"; margin:20px 0 0 0;}
+.suc-txt-box{background: url(http://image.bitautoimg.com/uimg/index2014/images2/success_ico.jpg) no-repeat left center;}
+.no-txt-box p{ line-height: 22px; color: #999999; font-size: 12px; padding: 0; font-family: "宋体,Arial,Helvetica,sans-serif"}
+.no-txt-box .tit{ line-height: 40px; font-size: 20px; color: #333333;font-family: "微软雅黑";}
+.no-txt-box .t-line{ line-height: 30px; padding: 0 0 5px}
+.no-txt-box a{ color: #333333; margin: 0 10px 0 0 }
+.no-txt-box a:hover{ color:#c00;}
+.no-car-box{ height: 100px; line-height: 100px; font-family: "微软雅黑"; padding: 0 0 0 115px; font-size: 20px; background: url(http://image.bitautoimg.com/uimg/index2014/images2/error_ico.jpg) no-repeat left center;}
+.no-txt-m{ margin: 0}
+
+/*--提交申请成功--*/
+.tjsq_succ{padding:30px 0 15px 0; position:relative}
+.tjsq_succ .box{padding:20px 0 0 150px;background:url(http://image.bitautoimg.com/uimg/index2014/images2/bq_succ.jpg) 0 0 no-repeat;height:130px}
+.tjsq_succ .box h6{font-size:22px;font-family:"Microsoft Yahei";padding-bottom:15px;color:#333;}
+.tjsq_succ .box p{color:#666;height:30px;line-height:30px;font-size:14px;}
+.tjsq_succ .box p strong{font-weight:bold}
+.tjsq_succ .box p.sm{color:#999}
+.tjsq_succ .box p span.red{color:#c00;padding:0 5px;font-family:"Microsoft Yahei";}
+.tjsq_succ .box p span.hui{color:#999;padding:0 5px;}
+.tjsq_succ .worry{background:url(http://image.bitautoimg.com/uimg/index2014/images2/bq_worry.jpg) 0 0 no-repeat}
+.ad270x80{ width:270px; height:80px; overflow:hidden; border:1px solid #e9e9e9; position:absolute; top:20px;right:0}
+/*66购车节*/
+.part66_box{ width:100px; height:28px; background:url(images/66party.png) no-repeat -60px 0; float:left;}
+
+/*提交成功下边二维码*/
+.tjsq_succ .box{height:auto;}
+.tjsq_succ .box .erweima{min-height:100px;width:230px;margin-top:15px;padding-bottom:25px;}
+.tjsq_succ .box .erweima img{width:98px;height:98px;margin-right:10px;float:left;border:1px solid #e9e9e9}
+.tjsq_succ .box .erweima p{width:90px;float:left;height:auto;line-height:22px;color:#999;padding-top:6px;font-size:14px;}
+
+/*================================login===============================*/
+.bit_top990{ width:100%; height:40px; background:#333;z-index: 1114; position:relative;}
+.bit_top990 a:link, .bit_top990 a:visited{ color:#999;}
+.bit_top990 a:hover{ color:#fff; text-decoration:none;}
+.bit990{ width:990px; margin:0 auto; height:40px; background:#333;}
+.bit_top990 .bitweb{ font-family:microsoft yahei; font-size:14px;}
+.bit_top990 .bitweb li{ float:left; line-height:40px;}
+.bit_top990 .bitweb li a{ padding:0 10px; display:block;}
+
+.bit_top990  ul li{ border-right:1px #1d1d1d solid; border-left:1px #454545 solid;}
+.bit_top990  ul li a{ }
+.bit_top990  ul li a:hover{ background:#292929 }
+
+.bit_top990  ul li.bityiche a{ background:#c00; color:#fff;}
+.bit_top990  ul li.bittaoche a{ background:#f93;color:#fff;}
+.bit_top990  ul li.bitleche a{ background:#4fb747;color:#fff;}
+
+.bit_top990  ul li.bityiche a:hover{ background:#b80000; }
+.bit_top990  ul li.bittaoche a:hover{ background:#ef8924;}
+.bit_top990  ul li.bitleche a:hover{ background:#42aa3a;}
+
+.bit_top990 .bityiche, .bit_top990 .bittaoche, .bit_top990 .bitleche{ border:none;}
+
+
+
+
+.bt_login_box990 {float: right;position: relative;z-index: 10;border-right:1px #454545 solid;/*width:549px;*/width:auto; font-size: 12px;}
+.bt_login_box990 ul { float:right;}
+.bt_login_box990 ul li{ height:40px; line-height:40px; padding:0 10px 0 0; float:left;}
+.bt_login_box990 ul li.noborderl{ border-left:none;}
+
+.bit990 ul li.bit_link{ padding:0 10px; position:relative;}
+.bit990 ul li.bit_link a {padding: 0 13px 0 0;display: block;position: relative;color:#999;}
+.bit990 ul li.bit_link a:hover {	background-color:transparent;}
+.bit990 ul li.bit_link a em {height: 5px;display: block;overflow: hidden;width: 8px;position: absolute;right: 0;_right: 10px;top: 17px;*top: 4px;background:url(http://img1.bitautoimg.com/uimg/index2014/images/login_bg2.png) -128px -90px no-repeat;}
+.bit990 ul li.bit_hover a  {	color:#fff;}
+.bit990 ul li.bit_hover a em {	background:url(http://img1.bitautoimg.com/uimg/index2014/images/login_bg2.png) 0 -90px no-repeat;}
+
+.bit990 ul li.bit_hover {background: #292929;}
+.bit_top990 .bitweb li.bit_link a{ padding:0 13px 0 0;}
+
+/*popbox*/
+ul li.bit_hover dl { display:block; margin:0 -1px 0 0; display:block; position:absolute; border:1px solid #333333; background:#fff; border-width:0 1px 5px 1px;z-index:11; overflow:hidden; font-family:microsoft yahei;font-size:14px;-moz-box-shadow:2px 2px 1px #ccc; -webkit-box-shadow:2px 2px 1px #ccc; box-shadow:2px 2px 1px #ccc; }
+
+/**/
+ul li.bit_hover dl.login_mapsite{ width:309px;top:40px; right:1px; }
+ul li.bit_hover dl.login_fav{width:115px;top:40px; left:0; overflow:hidden;}
+ul li.bit_hover dl.login_account{width:217px;top:40px; right:-1px; overflow:hidden;}
+
+ul li.bit_hover dl dt { color:#999; float:left; width:96%; padding:14px 0 13px 15px; font-weight:bold; line-height:13px;  
+overflow:hidden; border-top:1px #e9e9e9 solid; font-weight:normal; }
+ul li.bit_hover dl dt.noborder { border:none; }
+ul li.bit_hover dl dt.dtmore { text-align:right; font-weight:normal; padding:14px 0 13px 15px; }
+
+ul li.bit_hover dl dd { float:left; padding:0 15px; line-height:15px; white-space:nowrap; border-right:1px #e5e5e5 solid;  margin:0 0 13px 0;}
+ul li.bit_hover dl dd a { padding:0; }
+ul li.bit_hover dl a:link,ul li.bit_hover dl a:visited { color:#333; }
+ul li.bit_hover dl a:hover { color:#c00; }
+ul li.bit_hover dl dd.noborder{ border:none;}
+
+/*fav box*/
+ul li.bit_hover dl dt.block {padding:0;width:100px;}
+ul li.bit_hover dl dt.block a{padding:0 0 0 15px !important;display:block;width:115px;height:42px;line-height:42px;}
+ul li.bit_hover dl dt.block a:hover{background:#f2f2f2;}
+ul li.bit_hover dl.login_fav dd.noborder a{width:85px; display:block;overflow:hidden; white-space:nowrap;}
+ul li.bit_hover dl.login_fav dt{width:115px;}
+
+/*account box*/
+.bt_login_box990 ul li.bit_hover dl.login_account dd{ width:108px; height:42px; margin:0; float:left;text-align:center; line-height:42px; border-bottom:1px #ebebeb solid; padding:0;}
+.bt_login_box990 ul li.bit_hover dl.login_account dd a{ padding:0 0 0 40px; background:url(http://img1.bitautoimg.com/uimg/index2014/images/login_bg2.png) no-repeat; height:42px; display:block;} 
+ 
+.bt_login_box990 ul li.bit_hover dl.login_account dd a.sina{ background-position:13px -317px;}
+.bt_login_box990 ul li.bit_hover dl.login_account dd a.qq{background-position:-102px -317px;}
+.bt_login_box990 ul li.bit_hover dl.login_account dd a.weixin{background-position:-102px -360px;}
+.bt_login_box990 ul li.bit_hover dl.login_account dd a.renren{background-position:13px -360px;}
+.bt_login_box990 ul li.bit_hover dl.login_account dd a.baidu{background-position:13px -401px;}
+.bt_login_box990 ul li.bit_hover dl.login_account dd a.taobao{background-position:-102px -401px;}
+ 
+.bt_login_box990 ul li.bit_hover dl.login_account dd a.sina:hover{ background-color:#f2f2f2; background-position:13px -167px;}
+.bt_login_box990 ul li.bit_hover dl.login_account dd a.qq:hover{background-color:#f2f2f2;background-position:-102px -167px;}
+.bt_login_box990 ul li.bit_hover dl.login_account dd a.weixin:hover{background-color:#f2f2f2;background-position:-102px -210px;}
+.bt_login_box990 ul li.bit_hover dl.login_account dd a.renren:hover{background-color:#f2f2f2;background-position:13px -210px;}
+.bt_login_box990 ul li.bit_hover dl.login_account dd a.baidu:hover{background-color:#f2f2f2;background-position:13px -251px;}
+.bt_login_box990 ul li.bit_hover dl.login_account dd a.taobao:hover{background-color:#f2f2f2;background-position:-102px -251px;}
+
+/*baa login*/
+.bt_login_box990 ul li .bit_loginInput{ width:97px; border:1px #666 solid; background:#333; height:18px; color:#999; padding:0 0 0 3px;}
+.bt_login_box990 ul li .bit_loginInputaccount{ border-right:none;}
+.bt_login_box990 ul li .bit_logintop{ width:33px; height:20px; background:#666; color:#ccc; border:none; margin-right:5px; cursor:pointer;-webkit-appearance:none;}
+.bt_login_box990 ul li.noborderl input{ float:left; margin-top:10px; line-height:20px;}
+.bt_login_box990 ul li.noborderl .accountlogin{ width:254px; height:40px; white-space:nowrap; overflow:hidden;}
+.bt_login_box990 ul li.noborderl .accountlogin a{ float:left;}
+.bt_login_box990 ul li.noborderl .accountlogin a{ background-color:transparent;}
+.bt_login_box990 ul li.noborderl .accountlogin  a.newmessage{ width:18px; height:14px; background:url(http://img1.bitautoimg.com/uimg/index2014/images/login_bg2.png) 0 0 no-repeat; line-height:1000px; overflow:hidden; margin:12px 10px 0;}
+.bt_login_box990 ul li.noborderl .accountlogin a.newmessage:hover{ background:url(http://img1.bitautoimg.com/uimg/index2014/images/login_bg2.png) 0 -44px no-repeat;}
+.bt_login_box990 ul li.noborderl .accountlogin  .accountname{ width:192px; height:40px; white-space:nowrap; overflow:hidden; text-align:right; white-space:nowrap; float:left;}
+.bt_login_box990 ul li.noborderl .accountlogin  .accountname a{ float:none; display:inline; }
+.bt_login_box990 ul li.noborderl .accountlogin  a.message{width:18px; height:14px; background:url(http://img1.bitautoimg.com/uimg/index2014/images/login_bg2.png) -45px 0 no-repeat; line-height:1000px; overflow:hidden; margin:12px 10px 0;}
+.bt_login_box990 ul li.noborderl .accountlogin a.message:hover{ background:url(http://img1.bitautoimg.com/uimg/index2014/images/login_bg2.png) -45px -44px no-repeat;}
+
+/*琛ヤ竵*/
+.bt_login_box990 .map-warp-box{width:315px;height:371px; position:absolute; right: -5px;top: 40px;}
+.bt_login_box990 ul li.bit_hover .map-warp-box dl{ position: relative; z-index: 1001; top: 0}
+.bt_login_box990 .map-warp-box .mask{ display: block; background: #ffffff;position:absolute; right: 1px;top: 0; z-index: 1000; opacity: 0;filter:alpha(opacity=0); width: 315px; height: 376px;}
+
+/*弹层*/
+div.city-popbox{ display:block;}
+div.city-popbox{ display:block; margin:0; display:block; position:absolute; border:1px solid #333; background:#fff; border-width:1px 1px 5px;z-index:10; zoom:1; 
+ font-family:simsun;
+ top:28px;
+ left:0;
+ font-size:12px;
+/*-moz-box-shadow:2px 2px 1px #ccc; -webkit-box-shadow:2px 2px 1px #ccc; box-shadow:2px 2px 1px #ccc;*/ }
+
+
+
+/*城市弹层*/
+
+div.city-popbox dl{ /*width:310px; height:28px; */ width:448px;line-height:24px; border-bottom:1px #ececec solid; background:#fff; clear:both; overflow:hidden; padding:0 0 6px;}
+div.city-popbox dl.current{ background:#f2f2f2;}
+div.city-popbox dl dt{ color:#999; padding:6px 10px 0;}
+div.city-popbox dl dd{ float:left; padding:0 10px; white-space:nowrap; width:54px; color:#999; overflow:hidden;}
+div.city-popbox dl dd.current{font-weight:bold;}
+div.city-popbox dl a{margin:0; zoom:1;}
+div.city-popbox dl a:hover{ text-decoration:none;}
+div.city-popbox dd a{ display:block; width: 60px; overflow: hidden;}
+
+div dl.popbox378{ width:378px; padding:4px 0 6px;}
+
+div dl.popbox_list5 dd{ width:69px;}
+div dl.popbox_list5 dd em{ color:#999;}
+div dl.popbox_list5 dt{ background:#f7f7f7; border-bottom:1px solid #ececec; height:29px; padding:0 10px; margin:0 0 4px; line-height:29px; color:#999;}
+div dl.popbox_list5 dt em{ margin:0 5px;}
+div dl.popbox_list5 .city-popbox dd a{ width: 70px}
+
+

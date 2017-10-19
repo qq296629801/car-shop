@@ -1,0 +1,929 @@
+#@head("订单")
+   <link rel="stylesheet" type="text/css" href="/css/new-order.css" media="screen">
+    <!--中间内容 -->
+    <div class="bt_page">
+        <div class="shadow-box">
+            <!-- 主体区域 -->
+            <div class="order-contain clearfix">
+                <div class="clearfix">
+                    <div class="order-car">
+                        <a href="#" target="_blank">
+                            <img id="Img1" title="#(car.clname??)" alt="#(car.clname??)" src="/img/u/#(car.url)">
+                        </a>
+                        <h1>
+                            #(car.yname)款
+                           #(car.bname)
+                        </h1>
+                        <p>
+                           #(car.cname) #(car.gname)版<a data-code="122060" style="" id="carSelector" href="javascript:">更换车款</a></p>
+                    </div>
+                    
+                    <div class="order-total">
+                        <ul>
+                            
+                            <li class="nobd"><strong>
+                                #(car.count)</strong>人<br>
+                                正在购买</li>
+                            
+                            <li><strong>
+                                #(car.sel_price??)</strong>万元<br>
+                                平均节省</li>
+                            
+                            <li>约
+                                <strong>7</strong>分钟<br>
+                                获得底价</li>
+                            
+                        </ul>
+                    </div>
+                    
+                </div>
+                <!-- 表单部分 -->
+                <div class="new-order-wrap">
+                    
+                    <div class="new-order-text clearfix" id="ddcolorDiv" style="">
+                        <div class="new-order-tleft">
+                            外观颜色：
+                        </div>
+                        <div class="new-order-tright posr lenscolor new-order-th40 " id="ddcolor" data-code="22440" data-text="琥珀橙">
+                            #for(c:colors)
+                            #if(car.color_id==c.id)
+                            <a href="javascript:key1(#(c.id))" data-code="#(c.id)" data-imgurl="#" data-text="#(c.name)" class="new-order-tr-color clearfix current"><em style="background: #(c.value);">
+                                </em><span>
+                                    #(c.name)</span></a>
+                            #else
+                             <a href="javascript:key1(#(c.id))" data-code="#(c.id)" data-imgurl="#" data-text="#(c.name)" class="new-order-tr-color clearfix"><em style="background: #(c.value);">
+                                </em><span>
+                                    #(c.name)</span></a>
+                            #end
+              				#end
+                        </div>
+                        
+                        <div class="new-order-tslide">
+                            <span>展开</span> <i></i>
+                        </div>
+                        
+                    </div>
+                    <div class="new-order-text clearfix">
+                        <div class="new-order-tleft">
+                            买车方式：</div>
+                        <div class="new-order-tright" data-code="0" id="ddtype">
+                            <div class="new-order-buycar-way current" onclick="javascript:key2('新车全款')" data-code="0">
+                                新车全款</div>
+                            <div class="new-order-buycar-way" onclick="javascript:key2('新车贷款')" data-code="1" data-lend="1">
+                                新车贷款</div>
+                            <div class="new-order-buycar-way" onclick="javascript:key2('置换全款')" data-code="2" data-site="255">
+                                置换全款</div>
+                            <div class="new-order-buycar-way" onclick="javascript:key2('置换贷款')" data-code="3" data-site="366">
+                                置换贷款</div>
+                            <div class="replacement">
+                                <div class="replacearrow">
+                                </div>
+                                <label class="replacecheckbox">
+                                    <input id="changeGift" type="checkbox">
+                                    参与置换旧车换新车活动，享2000元现金补贴。<a href="http://hd.huimaiche.com/hd/auction" target="_blank">活动详情&gt;</a>
+                                </label>
+                                <div class="mycar-info clearfix">
+                                    <div class="replacetitle">
+                                        爱车信息：</div>
+                                    <div class="replacecot">
+                                        <div class="selectbox selectbox1">
+                                            <i class="selectbox-i"></i><span id="changeBrand" data-code="">品牌</span>
+                                            <div style="display: none" class="seler_layer">
+                                                <div class="select-box">
+                                                    <div class="select-title clearfix">
+                                                        <ul id="quick-select-brand">
+                                                            <li><a href="javascript:void(0)">A</a></li><li><a href="javascript:void(0)">B</a></li><li><a href="javascript:void(0)">C</a></li><li><a href="javascript:void(0)">D</a></li><li><a href="javascript:void(0)">F</a></li><li><a href="javascript:void(0)">G</a></li><li><a href="javascript:void(0)">H</a></li><li><a href="javascript:void(0)">J</a></li><li><a href="javascript:void(0)">K</a></li><li><a href="javascript:void(0)">L</a></li><li><a href="javascript:void(0)">M</a></li><li><a href="javascript:void(0)">N</a></li><li><a href="javascript:void(0)">O</a></li><li><a href="javascript:void(0)">P</a></li><li><a href="javascript:void(0)">Q</a></li><li><a href="javascript:void(0)">R</a></li><li><a href="javascript:void(0)">S</a></li><li><a href="javascript:void(0)">T</a></li><li><a href="javascript:void(0)">W</a></li><li><a href="javascript:void(0)">X</a></li><li><a href="javascript:void(0)">Y</a></li><li><a href="javascript:void(0)">Z</a></li>
+                                                        </ul>
+                                                        <a href="javascript:void(0)" class="active-more" id="brand-more-bottom" style="bottom: 184px;"></a><a href="javascript:void(0)" class="active-more-top" id="brand-more-top"></a>
+                                                    </div>
+                                                    <div class="select-con clearfix" id="brand-detail">
+                                                        <p><i>A</i><a data-code="180" href="javascript:void(0)">AC Schnitzer</a><a data-code="268" href="javascript:void(0)">ALPINA</a><a data-code="272" href="javascript:void(0)">ARCFOX</a><a data-code="228" href="javascript:void(0)">Artega</a><a data-code="92" href="javascript:void(0)">阿尔法·罗密欧</a><a data-code="151" href="javascript:void(0)">阿尔特</a><a data-code="97" href="javascript:void(0)">阿斯顿·马丁</a><a data-code="116" href="javascript:void(0)">安驰</a><a data-code="9" href="javascript:void(0)">奥迪</a><a data-code="12" href="javascript:void(0)">奥克斯</a></p><p><i>B</i><a data-code="172" href="javascript:void(0)">巴博斯</a><a data-code="157" href="javascript:void(0)">宝骏</a><a data-code="68" href="javascript:void(0)">宝龙</a><a data-code="3" href="javascript:void(0)">宝马</a><a data-code="236" href="javascript:void(0)">宝沃</a><a data-code="184" href="javascript:void(0)">保斐利</a><a data-code="82" href="javascript:void(0)">保时捷</a><a data-code="163" href="javascript:void(0)">北京</a><a data-code="211" href="javascript:void(0)">北汽幻速</a><a data-code="261" href="javascript:void(0)">北汽瑞丽</a><a data-code="195" href="javascript:void(0)">北汽绅宝</a><a data-code="168" href="javascript:void(0)">北汽威旺</a><a data-code="216" href="javascript:void(0)">北汽新能源</a><a data-code="14" href="javascript:void(0)">北汽制造</a><a data-code="2" href="javascript:void(0)">奔驰</a><a data-code="59" href="javascript:void(0)">奔腾</a><a data-code="26" href="javascript:void(0)">本田</a><a data-code="263" href="javascript:void(0)">比速</a><a data-code="15" href="javascript:void(0)">比亚迪</a><a data-code="5" href="javascript:void(0)">标致</a><a data-code="127" href="javascript:void(0)">别克</a><a data-code="85" href="javascript:void(0)">宾利</a><a data-code="135" href="javascript:void(0)">布加迪</a></p><p><i>C</i><a data-code="188" href="javascript:void(0)">Carlsson</a><a data-code="129" href="javascript:void(0)">昌河</a><a data-code="221" href="javascript:void(0)">成功</a><a data-code="136" href="javascript:void(0)">长安</a><a data-code="230" href="javascript:void(0)">长安跨越</a><a data-code="159" href="javascript:void(0)">长安欧尚</a><a data-code="20" href="javascript:void(0)">长安微车</a><a data-code="21" href="javascript:void(0)">长城</a><a data-code="231" href="javascript:void(0)">长城华冠</a><a data-code="254" href="javascript:void(0)">长江汽车</a><a data-code="250" href="javascript:void(0)">长久汽车</a></p><p><i>D</i><a data-code="217" href="javascript:void(0)">Dacia</a><a data-code="179" href="javascript:void(0)">DS</a><a data-code="66" href="javascript:void(0)">大迪</a><a data-code="69" href="javascript:void(0)">大发</a><a data-code="106" href="javascript:void(0)">大宇</a><a data-code="8" href="javascript:void(0)">大众</a><a data-code="113" href="javascript:void(0)">道奇</a><a data-code="192" href="javascript:void(0)">底特律电动车</a><a data-code="27" href="javascript:void(0)">东风</a><a data-code="235" href="javascript:void(0)">东风·郑州日产</a><a data-code="197" href="javascript:void(0)">东风风度</a><a data-code="253" href="javascript:void(0)">东风风光</a><a data-code="115" href="javascript:void(0)">东风风行</a><a data-code="256" href="javascript:void(0)">东风风诺</a><a data-code="141" href="javascript:void(0)">东风风神</a><a data-code="205" href="javascript:void(0)">东风小康</a><a data-code="198" href="javascript:void(0)">东风校车系列</a><a data-code="215" href="javascript:void(0)">东风御风</a><a data-code="29" href="javascript:void(0)">东南</a></p><p><i>F</i><a data-code="257" href="javascript:void(0)">Faraday Future</a><a data-code="187" href="javascript:void(0)">Faralli Mazzanti</a><a data-code="91" href="javascript:void(0)">法拉利</a><a data-code="199" href="javascript:void(0)">飞驰商务车</a><a data-code="164" href="javascript:void(0)">菲斯克</a><a data-code="40" href="javascript:void(0)">菲亚特</a><a data-code="7" href="javascript:void(0)">丰田</a><a data-code="190" href="javascript:void(0)">弗那萨利</a><a data-code="154" href="javascript:void(0)">福达</a><a data-code="67" href="javascript:void(0)">福迪</a><a data-code="208" href="javascript:void(0)">福汽启腾</a><a data-code="17" href="javascript:void(0)">福特</a><a data-code="128" href="javascript:void(0)">福田</a><a data-code="61" href="javascript:void(0)">富奇</a></p><p><i>G</i><a data-code="265" href="javascript:void(0)">GLM</a><a data-code="109" href="javascript:void(0)">GMC</a><a data-code="237" href="javascript:void(0)">GTA</a><a data-code="182" href="javascript:void(0)">观致</a><a data-code="110" href="javascript:void(0)">光冈</a><a data-code="269" href="javascript:void(0)">广汽乘用车</a><a data-code="147" href="javascript:void(0)">广汽传祺</a><a data-code="63" href="javascript:void(0)">广汽吉奥</a><a data-code="133" href="javascript:void(0)">广汽日野</a><a data-code="252" href="javascript:void(0)">广汽中兴</a></p><p><i>H</i><a data-code="31" href="javascript:void(0)">哈飞</a><a data-code="196" href="javascript:void(0)">哈弗</a><a data-code="170" href="javascript:void(0)">海格</a><a data-code="32" href="javascript:void(0)">海马</a><a data-code="149" href="javascript:void(0)">海马商用车</a><a data-code="119" href="javascript:void(0)">汉江</a><a data-code="259" href="javascript:void(0)">汉腾</a><a data-code="108" href="javascript:void(0)">悍马</a><a data-code="70" href="javascript:void(0)">航天圆通</a><a data-code="124" href="javascript:void(0)">黑豹</a><a data-code="181" href="javascript:void(0)">恒天</a><a data-code="58" href="javascript:void(0)">红旗</a><a data-code="262" href="javascript:void(0)">华凯</a><a data-code="44" href="javascript:void(0)">华普</a><a data-code="271" href="javascript:void(0)">华骐</a><a data-code="225" href="javascript:void(0)">华颂</a><a data-code="112" href="javascript:void(0)">华泰</a><a data-code="251" href="javascript:void(0)">华泰新能源</a><a data-code="130" href="javascript:void(0)">华阳</a><a data-code="52" href="javascript:void(0)">黄海</a><a data-code="45" href="javascript:void(0)">汇众</a></p><p><i>J</i><a data-code="4" href="javascript:void(0)">Jeep</a><a data-code="34" href="javascript:void(0)">吉利</a><a data-code="143" href="javascript:void(0)">吉利帝豪</a><a data-code="144" href="javascript:void(0)">吉利全球鹰</a><a data-code="148" href="javascript:void(0)">吉利英伦</a><a data-code="121" href="javascript:void(0)">吉林江北</a><a data-code="277" href="javascript:void(0)">吉威新能源</a><a data-code="122" href="javascript:void(0)">济南汽车</a><a data-code="35" href="javascript:void(0)">江淮</a><a data-code="37" href="javascript:void(0)">江铃</a><a data-code="224" href="javascript:void(0)">江铃集团轻汽</a><a data-code="276" href="javascript:void(0)">江铃集团新能源</a><a data-code="38" href="javascript:void(0)">江南</a><a data-code="219" href="javascript:void(0)">江西五十铃</a><a data-code="98" href="javascript:void(0)">捷豹</a><a data-code="39" href="javascript:void(0)">金杯</a><a data-code="74" href="javascript:void(0)">金程</a><a data-code="57" href="javascript:void(0)">金龙</a><a data-code="161" href="javascript:void(0)">金旅客车</a><a data-code="152" href="javascript:void(0)">九龙</a><a data-code="279" href="javascript:void(0)">君马</a><a data-code="177" href="javascript:void(0)">俊风</a></p><p><i>K</i><a data-code="212" href="javascript:void(0)">KTM</a><a data-code="214" href="javascript:void(0)">卡升</a><a data-code="213" href="javascript:void(0)">卡威</a><a data-code="150" href="javascript:void(0)">开瑞</a><a data-code="107" href="javascript:void(0)">凯迪拉克</a><a data-code="220" href="javascript:void(0)">凯翼</a><a data-code="241" href="javascript:void(0)">康迪全球鹰</a><a data-code="145" href="javascript:void(0)">科尼赛克</a><a data-code="218" href="javascript:void(0)">科瑞斯的</a><a data-code="51" href="javascript:void(0)">克莱斯勒</a></p><p><i>L</i><a data-code="255" href="javascript:void(0)">LeSEE</a><a data-code="86" href="javascript:void(0)">兰博基尼</a><a data-code="200" href="javascript:void(0)">蓝海房车</a><a data-code="90" href="javascript:void(0)">蓝旗亚</a><a data-code="227" href="javascript:void(0)">朗世</a><a data-code="80" href="javascript:void(0)">劳斯莱斯</a><a data-code="229" href="javascript:void(0)">雷丁电动</a><a data-code="94" href="javascript:void(0)">雷克萨斯</a><a data-code="99" href="javascript:void(0)">雷诺</a><a data-code="166" href="javascript:void(0)">理念</a><a data-code="76" href="javascript:void(0)">力帆</a><a data-code="146" href="javascript:void(0)">莲花</a><a data-code="153" href="javascript:void(0)">猎豹</a><a data-code="95" href="javascript:void(0)">林肯</a><a data-code="16" href="javascript:void(0)">铃木</a><a data-code="267" href="javascript:void(0)">领克</a><a data-code="223" href="javascript:void(0)">领志</a><a data-code="249" href="javascript:void(0)">陆地方舟</a><a data-code="36" href="javascript:void(0)">陆风</a><a data-code="96" href="javascript:void(0)">路虎</a><a data-code="83" href="javascript:void(0)">路特斯</a><a data-code="101" href="javascript:void(0)">罗孚</a><a data-code="278" href="javascript:void(0)">罗伦士</a></p><p><i>M</i><a data-code="81" href="javascript:void(0)">MINI</a><a data-code="18" href="javascript:void(0)">马自达</a><a data-code="93" href="javascript:void(0)">玛莎拉蒂</a><a data-code="88" href="javascript:void(0)">迈巴赫</a><a data-code="183" href="javascript:void(0)">迈凯伦</a><a data-code="55" href="javascript:void(0)">美亚</a><a data-code="79" href="javascript:void(0)">名爵</a><a data-code="201" href="javascript:void(0)">摩根</a><a data-code="123" href="javascript:void(0)">牡丹汽车</a></p><p><i>N</i><a data-code="234" href="javascript:void(0)">Noble</a><a data-code="155" href="javascript:void(0)">纳智捷</a></p><p><i>O</i><a data-code="84" href="javascript:void(0)">讴歌</a><a data-code="104" href="javascript:void(0)">欧宝</a><a data-code="171" href="javascript:void(0)">欧朗</a><a data-code="243" href="javascript:void(0)">欧联</a></p><p><i>P</i><a data-code="191" href="javascript:void(0)">PGO</a><a data-code="185" href="javascript:void(0)">帕加尼</a><a data-code="105" href="javascript:void(0)">旁蒂克</a><a data-code="210" href="javascript:void(0)">皮特比尔特卡车</a></p><p><i>Q</i><a data-code="42" href="javascript:void(0)">奇瑞</a><a data-code="156" href="javascript:void(0)">启辰</a><a data-code="28" href="javascript:void(0)">起亚</a><a data-code="226" href="javascript:void(0)">乔治·巴顿</a><a data-code="43" href="javascript:void(0)">庆铃</a></p><p><i>R</i><a data-code="30" href="javascript:void(0)">日产</a><a data-code="78" href="javascript:void(0)">荣威</a><a data-code="142" href="javascript:void(0)">瑞麒</a></p><p><i>S</i><a data-code="89" href="javascript:void(0)">smart</a><a data-code="162" href="javascript:void(0)">SPIRRA</a><a data-code="242" href="javascript:void(0)">STARTECH</a><a data-code="260" href="javascript:void(0)">SWM斯威</a><a data-code="103" href="javascript:void(0)">萨博</a><a data-code="239" href="javascript:void(0)">赛麟SALEEN</a><a data-code="25" href="javascript:void(0)">三菱</a><a data-code="117" href="javascript:void(0)">三星</a><a data-code="209" href="javascript:void(0)">山姆</a><a data-code="169" href="javascript:void(0)">陕汽通家</a><a data-code="165" href="javascript:void(0)">上汽大通</a><a data-code="244" href="javascript:void(0)">上喆汽车</a><a data-code="137" href="javascript:void(0)">世爵</a><a data-code="173" href="javascript:void(0)">首望</a><a data-code="50" href="javascript:void(0)">双环</a><a data-code="102" href="javascript:void(0)">双龙</a><a data-code="73" href="javascript:void(0)">顺旅</a><a data-code="111" href="javascript:void(0)">斯巴鲁</a><a data-code="10" href="javascript:void(0)">斯柯达</a></p><p><i>T</i><a data-code="139" href="javascript:void(0)">塔菲克</a><a data-code="202" href="javascript:void(0)">泰卡特</a><a data-code="160" href="javascript:void(0)">特拉蒙塔纳</a><a data-code="189" href="javascript:void(0)">特斯拉</a><a data-code="175" href="javascript:void(0)">腾势</a><a data-code="54" href="javascript:void(0)">天马</a><a data-code="120" href="javascript:void(0)">田野</a><a data-code="56" href="javascript:void(0)">通田</a></p><p><i>W</i><a data-code="270" href="javascript:void(0)">WEY</a><a data-code="46" href="javascript:void(0)">万丰</a><a data-code="125" href="javascript:void(0)">万通</a><a data-code="140" href="javascript:void(0)">威麟</a><a data-code="186" href="javascript:void(0)">威兹曼</a><a data-code="247" href="javascript:void(0)">潍柴欧睿</a><a data-code="207" href="javascript:void(0)">潍柴英致</a><a data-code="266" href="javascript:void(0)">蔚来</a><a data-code="19" href="javascript:void(0)">沃尔沃</a><a data-code="48" href="javascript:void(0)">五菱</a><a data-code="132" href="javascript:void(0)">五十铃</a></p><p><i>X</i><a data-code="87" href="javascript:void(0)">西雅特</a><a data-code="13" href="javascript:void(0)">现代</a><a data-code="264" href="javascript:void(0)">小鹏汽车</a><a data-code="65" href="javascript:void(0)">新大地</a><a data-code="71" href="javascript:void(0)">新凯</a><a data-code="62" href="javascript:void(0)">新雅途</a><a data-code="174" href="javascript:void(0)">星客特</a><a data-code="49" href="javascript:void(0)">雪佛兰</a><a data-code="6" href="javascript:void(0)">雪铁龙</a></p><p><i>Y</i><a data-code="194" href="javascript:void(0)">扬州亚星客车</a><a data-code="138" href="javascript:void(0)">野马</a><a data-code="53" href="javascript:void(0)">一汽</a><a data-code="41" href="javascript:void(0)">依维柯</a><a data-code="47" href="javascript:void(0)">仪征</a><a data-code="100" href="javascript:void(0)">英菲尼迪</a><a data-code="193" href="javascript:void(0)">英特诺帝</a><a data-code="75" href="javascript:void(0)">永源</a><a data-code="245" href="javascript:void(0)">游侠汽车</a><a data-code="176" href="javascript:void(0)">友谊客车</a><a data-code="178" href="javascript:void(0)">宇通</a><a data-code="258" href="javascript:void(0)">驭胜</a><a data-code="238" href="javascript:void(0)">御捷</a><a data-code="118" href="javascript:void(0)">云豹</a><a data-code="274" href="javascript:void(0)">云度</a><a data-code="126" href="javascript:void(0)">云雀</a></p><p><i>Z</i><a data-code="240" href="javascript:void(0)">Zenvo</a><a data-code="273" href="javascript:void(0)">正道</a><a data-code="203" href="javascript:void(0)">之诺</a><a data-code="233" href="javascript:void(0)">知豆</a><a data-code="60" href="javascript:void(0)">中华</a><a data-code="64" href="javascript:void(0)">中客华北</a><a data-code="167" href="javascript:void(0)">中欧房车</a><a data-code="72" href="javascript:void(0)">中顺</a><a data-code="204" href="javascript:void(0)">中通客车</a><a data-code="33" href="javascript:void(0)">中兴</a><a data-code="77" href="javascript:void(0)">众泰</a><a data-code="246" href="javascript:void(0)">重汽王牌</a></p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="selectbox selectbox2">
+                                            <i class="selectbox-i"></i><span id="changeOldYear" data-code="">首次上牌时间</span>
+                                            <div style="display: none" class="seler_layer">
+                                                <ul>
+                                                    <li data-code="1">2008年之前</li>
+                                                    <li data-code="2">2008年之后（含08年）</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <div id="replacecot-error">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--新车贷款开始 -->
+                            <div id="detail-lend-mask" class="detail-lend-mask" style="display: none;">
+                                <div class="detail-lend-marrow">
+                                </div>
+                                <div class="detail-lend-mcontent">
+                                    <div class="detail-lend-mctop clearfix">
+                                        <span>尚未有贷款服务</span>
+                                        <div class="detail-lend-mctips">
+                                            <div class="detail-lend-mctips-wrap">
+                                                <i></i>手续简便
+                                            </div>
+                                            <div class="detail-lend-mctips-wrap">
+                                                <i></i>申请门槛低
+                                            </div>
+                                            <div class="detail-lend-mctips-wrap">
+                                                <i></i>放贷款
+                                            </div>
+                                            <div class="detail-lend-mctips-wrap">
+                                                <i></i>顾问1对1服务
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="detail-lend-mcplan clearfix">
+                                        <div class="detail-lend-mcpwrap">
+                                            <div class="detail-lend-mcpwtitle">
+                                                低首付方案</div>
+                                            <div class="detail-lend-mcpwc">
+                                                首付低至20%起,最长3年还款期
+                                            </div>
+                                        </div>
+                                        <div class="detail-lend-mcpline">
+                                        </div>
+                                        <div class="detail-lend-mcpwrap1">
+                                            <div class="detail-lend-mcpwtitle">
+                                                低月供方案</div>
+                                            <div class="detail-lend-mcpwc">
+                                                超低月供,还款无压力
+                                            </div>
+                                        </div>
+                                        <div class="detail-lend-mcpline">
+                                        </div>
+                                        <div class="detail-lend-mcpwrap2">
+                                            <div class="detail-lend-mcpwtitle">
+                                                低成本方案</div>
+                                            <div class="detail-lend-mcpwc">
+                                                0利率，超低手续费率</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="new-order-text clearfix">
+                        <div class="new-order-tleft">
+                            买车时间：</div>
+                        <div class="new-order-tright" data-code="180" id="buytc">
+                            <div class="new-order-buycar-time" onclick="javascript:key3('7天内')" data-code="7">
+                                7天内</div>
+                            <div class="new-order-buycar-time" onclick="javascript:key3('1个月内')" data-code="30">
+                                1个月内</div>
+                            <div class="new-order-buycar-time" onclick="javascript:key3('1~3个月')" data-code="90">
+                                1~3个月</div>
+                            <div class="new-order-buycar-time current" onclick="javascript:key3('3个月以上')" data-code="180">
+                                3个月以上</div>
+                        </div>
+                    </div>
+                    <div class="new-order-text clearfix">
+                        <div class="new-order-tleft">
+                            <div id="ddbrandlocFlag" data-code="1" style="display: none;">
+                            </div>
+                            上牌城市：
+                        </div>
+                        <div class="new-order-tright" id="ddbrandloc">
+                            <div class="new-order-buycar-city selectbox_new_province">
+                                <span data-code="5">广东</span><i></i>
+                                <div class="new-order-buycar-city-list seler_layer_new" style="display: none;">
+                                    <ul>
+                                    #for(c:citys)
+	                                    #if(c.pid==null)
+	                                    <li data-code="#(c.id)" onclick="javascript:bingCity(#(c.id));">#(c.name)</li>
+	                                    #end
+                                    #end
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="new-order-buycar-city selectbox_new_city">
+                                <span data-code="0" id="cuCity">请选择市</span><i></i>
+                                <div class="new-order-buycar-city-list seler_layer_new" style="display: none;">
+                                    <ul id="citys">
+                                    </ul>
+                                </div>
+                            </div>
+                            <div id="ddbrandloctip" class="new-order-buycar-city-tips" style="display: none;"></div>
+                        </div>
+                    </div>
+                    <div class="new-order-text clearfix" data-code="1" id="buyTargetdiv" style="">
+                        <div class="new-order-tleft" id="buyTargetName">买车指标：</div>
+                        <div class="new-order-tright" id="buyTarget" data-code="">
+                            <div class="new-order-buycar-amount" data-code="1" onclick="javascript:test(1);">
+                                有</div>
+                            <div class="new-order-buycar-amount" data-code="0" onclick="javascript:test(0);">
+                                没有</div>
+                        </div>
+                    </div>
+                    <div class="new-order-text clearfix">
+                        <div class="new-order-tleft">
+                            买车城市：</div>
+                        <div class="new-order-tright">
+                            <div class="new-order-buycar-getcar">
+                                广州</div>
+                        </div>
+                    </div>
+                    <div class="new-order-more" id="dluserinfo">
+                        <div class="new-order-more-wrap">
+                            <div class="new-order-mwleft">
+                                姓名：</div>
+                            <div class="new-order-mwright">
+                                <div class="new-order-mw-name">
+                                    <input type="text" maxlength="6" id="oName" placeholder="请输入姓名" value="#(session.user.nick_name??)">
+                                </div>
+                                <div class="new-order-mw-nametips">
+                                    <i></i><span>方便买车顾问联系您,协助您买车</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="new-order-more-wrap">
+                            <div class="new-order-mwleft">
+                                手机：</div>
+                            <div class="new-order-mwright">
+                                17704005789
+                                <input type="hidden" maxlength="11" id="oPhone" placeholder="请输入用于接收报价的手机号" value="17704005789">
+                            </div>
+                        </div>
+                        
+                    </div>
+                    
+                    <div id="giftdiv" data-count="1" class="new-order-gift new-order-nobottom clearfix" style="display: none;">
+                        <script type="text/javascript">
+                            var giftArr = new Array;
+                        </script>
+                        <div class="new-order-gift-left">
+                            买车礼品：</div>
+                        <div class="new-order-gift-right">
+                            
+                            <a href="javascript:void(0)" class="new-order-gift-ra current" data-id="1102" data-type="1" id="gift11102" data-title="66购车节，底价嗨翻天，新车送4200元专属大礼包" data-date="" data-url="//hd.huimaiche.com/hd/201706" data-img="https://image.huimaiche.cn/gift/17631dd3-5c96-4da0-88c4-dcf751df10fe.jpg">
+                                4200元新车专属大礼包
+                            </a>
+                            <script type="text/javascript">
+                                giftArr.push('gift11102');
+                            </script>
+                            
+                            <div id="wrapdiv_gifterror" style="display: none;">
+                                <span id="div_gifterror"></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="new-order-gift clearfix">
+                        <div class="new-order-gift-left">
+                        </div>
+                        <div class="new-order-gift-right">
+                            <div class="new-order-gift-right-choose">
+                                <i class="selected" id="chb_contract"></i>
+                                <div class="new-order-gift-right-call">
+                                    我已阅读并同意<a href="http://help.huimaiche.com/issue/servicecontract/" target="_blank">《服务协议》</a></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="new-order-detail">
+                        <div class="new-order-detail-top">
+                            <span>完善需求，获得更多针对性的服务</span><i></i>
+                        </div>
+                        <div class="new-order-detail-bottom">
+                            
+                            <div class="new-order-detail-bwrap clearfix" style="">
+                                <div class="new-order-detail-bwleft">
+                                    内饰颜色：</div>
+                                <div class="new-order-detail-bwright" data-code="" id="ddpholstery">
+                                    
+                                    <a href="javascript:void(0)" class="new-order-detail-bwr-color clearfix"><span data-code="黑色/米色">
+                                        黑色/米色</span> </a>
+                                    
+                                </div>
+                            </div>
+                            <div class="new-order-detail-bwrap clearfix">
+                                <div class="new-order-detail-bwleft">
+                                    是否试驾过：</div>
+                                <div class="new-order-detail-bwright" id="isTestDrive" data-code="">
+                                    <div class="new-order-detail-bwrtry" data-code="1">
+                                        是</div>
+                                    <div class="new-order-detail-bwrtry" data-code="0">
+                                        否</div>
+                                </div>
+                            </div>
+                            <div class="new-order-detail-bwrap clearfix">
+                                <div class="new-order-detail-bwleft">
+                                    期望裸车价：</div>
+                                <div class="new-order-detail-bwright">
+                                    <input id="hopeBareCarPrice" type="text" maxlength="7" class="new-order-detail-wishprice">
+                                    <span class="new-order-detail-bwr-text">万元</span>
+                                </div>
+                            </div>
+                            <div class="new-order-detail-bwrap clearfix">
+                                <div class="new-order-detail-bwleft">
+                                    大致预算：</div>
+                                <div class="new-order-detail-bwright">
+                                    <input id="maybeBudget" type="text" maxlength="10" class="new-order-detail-wishprice">
+                                    <span class="new-order-detail-bwr-text">万元</span>
+                                </div>
+                            </div>
+                            <div class="new-order-detail-bwrap clearfix">
+                                <div class="new-order-detail-bwleft">
+                                    其他需求：</div>
+                                <div class="new-order-detail-bwright">
+                                    <textarea id="otherNeed" placeholder="例如您还关心哪些车型、购车用途，对动力和空间的要求等等…"></textarea>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="new-order-button clearfix">
+                        <div class="new-order-bleft">
+                            <i></i>
+                            广州将有<a data-hmclog="{pageid: 4, eventid: 24}" id="dealers" href="javascript:" data-code="50002122,100027210,100003418,100014713,100009786">5家</a>4S店可为您出底价
+                        </div>
+                        <div class="new-order-bright">
+                            <a id="next_submit" data-hmclog="{pageid: 4, eventid: 22}" href="javascript:void(0)" class="new-order-bright-submit" style="">提交买车需求</a> <a id="before-next" href="javascript:void(0)" class="new-order-bright-submiting" style="display: none;"><i></i>提交中 </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="common-reasons2">
+        <ul>
+            <li>
+                <em></em>
+                <h3>
+                    底价承诺
+                </h3>
+                <p>
+                    底价凭证为您到店买车保驾护<br>航，买贵了承诺赔付5000元。
+                </p>
+            </li>
+            <li class="second">
+                <em></em>
+                <h3>
+                    省时省心
+                </h3>
+                <p>
+                    不再东奔西走挨家砍价，足<br>不出户即可获得多家4S店底价。
+                </p>
+            </li>
+            <li class="third">
+                <em></em>
+                <h3>
+                    订金随时退
+                </h3>
+                <p>
+                    底价不满意、看车试驾不满<br>意、服务不满意随时退还订金。
+                </p>
+            </li>
+            <li class="last">
+                <em></em>
+                <h3>
+                    保护隐私
+                </h3>
+                <p>
+                    让您免受电话骚扰，只有您<br>的销售顾问能与您取得联系。
+                </p>
+            </li>
+        </ul>
+    </div>
+    </div>
+    <div id="log_ordersuccess" style="display: none;" data-hmclog="{pageid: 4, eventid: 23}">
+    </div>
+    <div id="log_order_regsuccess" style="display: none;" data-hmclog="{pageid: 4, eventid: 26}">
+    </div>
+    <div id="log_order_wsxqzk" style="display: none;" data-hmclog="{pageid: 4, eventid: 729 }">
+    </div>
+    <div id="log_order_zcsp" style="display: none;" data-hmclog="{pageid: 4, eventid: 725}">
+    </div>
+    <div id="log_order_kscs" style="display: none;" data-hmclog="{pageid: 4, eventid: 726,car:122060,buycity:501,spcity:  }">
+    </div>
+    <div id="log_order_bkscs" style="display: none;" data-hmclog="{pageid: 4, eventid: 727,car:122060,buycity:501,spcity:  }">
+    </div>
+    <div id="log_order_ksqhcs" style="display: none;" data-hmclog="{pageid: 4, eventid: 728,car:122060,buycity:501,spcity:  }">
+    </div>
+    <script type="text/javascript">
+        var HMCWebLogCollector = { area: '501', serial: '1661', page: '', cp: '', tracker_u: '' };
+        var XCWebLogCollector = { area: '501', serial: '1661', page: '', cp: '' };
+    </script>
+  #include("/common/_footer.html")
+    <script type="text/javascript" src="/js/order_0819.js"></script>
+    <script type="text/javascript" src="/js/ui.base.js"></script>
+    <script type="text/javascript" src="/js/carchange.js"></script>
+    <script type="text/javascript" src="/js/carloanscheme.js"></script>
+    <script type="text/javascript" src="/js/dealerchange2.js"></script>
+    <script type="text/javascript" src="/js/json2_min.js"></script>
+    <script type="text/javascript">
+    var k4=0;
+    var k3="7天内";
+    var k2="新车全款";
+    var k1="#(car.color_id??)";
+    var k=37;
+ 	function test(value){
+ 		k4=value;
+ 	}
+    function key3(value){
+    	k3=value;
+    }
+    
+    function key2(value){
+    	k2=value;
+    }
+    function key1(id){
+    	k1=id;
+    }
+   
+    function getShi(id){
+    	k=id;
+    }
+    
+    function bingCity(aid){
+    	$("#cuCity").html("请选择市");
+    	$("#citys").html("");
+    	$.post("/user/GetAreaService",{aid:aid,type:2},function(data){
+    		for(var c in  data){
+    			var val="<li data-code='"+data[c].id+"' onclick='javascript:getShi("+data[c].id+");'>"+data[c].name+"</li>";
+    			$("#citys").append(val);
+    			if(c==1){
+    				$("#cuCity").html(data[c].name);
+    				$("#cuCity").attr("data-code",data[c].id);
+    				k=data[c].id;
+    			}
+    		}
+    	});
+    }
+    
+        $(function() {
+        	bingCity(1);
+    		$("#next_submit").click(function(){
+    			 var name=$("#oName").val();
+    			$.post("/saveOrder",{k1:k1,k2:k2,k3:k3,k4:k4,k5:name,k6:k,k7:"#(car.id??)",k8:"#(session.user.id??)"},function(data){
+    				if(data.status=="SUCCES"){
+    					 window.location = '/buy';
+    				}else {
+    					alert(data.msg);
+    				}
+    	    	});
+    		});
+        	
+            $.ordernew.init({
+                o: "",
+                al: "",
+                csSpell: "siyucivic",
+                carid: 122060,
+                lp: 5,
+                lc: 501,
+                localCityName: '广州',
+                isGift: true,
+                isLogin: 1,
+                callback: function(data) {
+                    if (data) {
+                        if (!data.IsSuccess && data.ErrorMsg && data.ErrorCode == 1000824) { //有推荐异地订单的错误信息
+                            $("#next").show();
+                            $("#before-next").hide();
+                            $.jqmFrame.showErrorNew(data);
+                        } else if (!data.IsSuccess && data.ErrorMsg && data.ErrorCode == 1000823) { //无推荐异地订单的错误信息
+                            $("#next").show();
+                            $("#before-next").hide();
+                            $.jqmFrame.showErrorNew2(data);
+                        } else if (!data.IsSuccess && data.ErrorMsg) { //非异地订单的错误信息
+                            $.jqmFrame.showError(data);
+                        } else { //成功
+                            $("#log_ordersuccess").trigger("click");
+                            if (typeof baiduStat !== "undefined") {
+                                baiduStat.order_subSuc();
+                            }
+                            if (data.RedirUrl != null) {
+                                window.location.href = data.RedirUrl;
+                            }
+                        }
+                    }
+                }
+            });
+
+
+            $.carSelector.init({
+                csid: 1661,
+                ccode: 501,
+                csname: "#(car.bname)",
+                datasource: JSON.parse('[{"CarYear":"2017","Cars":[{"Exhaust":"1.0","EngineMaxPower":"92","EngineAddPressType":"涡轮增压","Cars":[{"CarID":"122058","CarName":"180TURBO 自动 舒适版","CsID":1661,"CSName":"思域","PV":61,"CarTransmissionType":"CVT无级变速","SalePrice":"12.79","HavePromise":false,"HaveFinance":true,"SavePrice":"0.58万","EType":null},{"CarID":"122060","CarName":"180TURBO 手动 舒适版","CsID":1661,"CSName":"思域","PV":21,"CarTransmissionType":"手动","SalePrice":"11.59","HavePromise":true,"HaveFinance":true,"SavePrice":"0.58万","EType":null}]}]},{"CarYear":"2016","Cars":[{"Exhaust":"1.5","EngineMaxPower":"130","EngineAddPressType":"涡轮增压","Cars":[{"CarID":"119059","CarName":"220TURBO 自动豪华版","CsID":1661,"CSName":"思域","PV":100,"CarTransmissionType":"CVT无级变速","SalePrice":"13.99","HavePromise":false,"HaveFinance":true,"SavePrice":"0.75万","EType":null},{"CarID":"116578","CarName":"220TURBO 手动豪华版","CsID":1661,"CSName":"思域","PV":21,"CarTransmissionType":"手动","SalePrice":"12.99","HavePromise":false,"HaveFinance":true,"SavePrice":"0.75万","EType":null},{"CarID":"119060","CarName":"220TURBO 自动尊贵版","CsID":1661,"CSName":"思域","PV":19,"CarTransmissionType":"CVT无级变速","SalePrice":"15.59","HavePromise":false,"HaveFinance":true,"SavePrice":"0.75万","EType":null},{"CarID":"119061","CarName":"220TURBO 自动尊耀版","CsID":1661,"CSName":"思域","PV":12,"CarTransmissionType":"CVT无级变速","SalePrice":"16.99","HavePromise":false,"HaveFinance":true,"SavePrice":"0.75万","EType":null}]},{"Exhaust":"1.8","EngineMaxPower":"104","EngineAddPressType":"","Cars":[{"CarID":"117091","CarName":"1.8L 自动 LXi经典版","CsID":1661,"CSName":"思域","PV":9,"CarTransmissionType":"自动","SalePrice":"12.98","HavePromise":false,"HaveFinance":true,"SavePrice":"0.75万","EType":null},{"CarID":"117090","CarName":"1.8L 手动 LXi经典版","CsID":1661,"CSName":"思域","PV":7,"CarTransmissionType":"手动","SalePrice":"12.18","HavePromise":false,"HaveFinance":true,"SavePrice":"0.75万","EType":null},{"CarID":"117094","CarName":"1.8L 自动 VTi豪华版","CsID":1661,"CSName":"思域","PV":3,"CarTransmissionType":"自动","SalePrice":"15.78","HavePromise":false,"HaveFinance":true,"SavePrice":"0.75万","EType":null},{"CarID":"117092","CarName":"1.8L 手动 EXi舒适版","CsID":1661,"CSName":"思域","PV":2,"CarTransmissionType":"手动","SalePrice":"13.18","HavePromise":false,"HaveFinance":true,"SavePrice":"0.75万","EType":null},{"CarID":"117093","CarName":"1.8L 自动 EXi舒适版","CsID":1661,"CSName":"思域","PV":2,"CarTransmissionType":"自动","SalePrice":"13.98","HavePromise":false,"HaveFinance":true,"SavePrice":"0.75万","EType":null}]}]}]'),
+                callback: function(data) {
+                    if (data) {
+                        $.ordernew.utils.saveInput();
+                        var url = "/order/501/" + data.carid + "/?al=1";
+                        window.location.href = url;
+                    }
+                }
+            });
+        });
+    </script>
+    <script type="text/javascript">
+        $(function () {
+            var $detailtop = $('.new-order-detail-top');
+            var $detailtopi = $('.new-order-detail-top i');
+            var $detailbottom = $('.new-order-detail-bottom');
+
+             //点击收起和展开颜色选择
+            var $tslide = $('.new-order-tslide');
+            var $tsright = $tslide.siblings('.new-order-tright');
+            $tslide.on('click', function () {
+                if($tsright.hasClass('new-order-th40')) {
+                    $tsright.removeClass('new-order-th40');
+                    $(this).hide();
+                }
+            });
+
+            $detailtop.click(function() { //展开完善需求
+                if ($detailbottom.is(":visible")) {
+                    $detailbottom.hide();
+                    $detailtopi.removeClass('clicked');
+                } else {
+                    $detailbottom.show();
+                    $detailtopi.addClass('clicked');
+                    $("#log_order_wsxqzk").click();
+                }
+            });
+
+
+            var checkNum = function($obj) {
+                var num = $.trim($obj.val());
+                if (!isNaN(num)) {
+                    var dot = num.indexOf(".");
+                    if (dot != -1) { //小数
+                        var dotCnt = num.substring(dot + 1, num.length); //小数部分
+                        var ZS = num.substring(0, dot); //整数部分
+                        var ZZ = ""; //最终显示
+                        var dot1 = ZS.indexOf("0"); //是否首位是0
+                        if (dot1 == 0) {
+                            if (ZS.length > 1) {
+                                ZS = num.substring(1, dot); //整数部分
+                            }
+                        }
+                        if (ZS.length > 4) {
+                            ZZ = ZS.substring(0, 4); //整数部分
+                        } else {
+                            if (dotCnt.length > 2) { //大于2位
+                                dotCnt = dotCnt.substr(0, 2);
+                            }
+                            ZZ = ZS + "." + dotCnt
+                        }
+                        $obj.val(ZZ);
+                    } else {
+                        var dot = num.indexOf("0"); //是否首位是0
+                        var ZS = num;
+                        if (dot == 0) {
+                            if (num.length > 1) {
+                                ZS = num.substring(1); //整数部分
+                            }
+                        }
+                        if (ZS.length > 4) {
+                            ZS = ZS.substring(0, 4); //整数部分
+                        }
+                        $obj.val(ZS);
+                    }
+                } else {
+                    $obj.val("");
+                }
+            };
+
+            $("#hopeBareCarPrice").bind("input", function() {
+                checkNum($(this));
+            }).bind("blur", function() {
+                checkNum($(this));
+            });
+
+            //大致预算
+            $("#maybeBudget").keyup(function() {
+                var otherNeed = $(this).val();
+                if (otherNeed.length > 10) {
+                    $(this).val(otherNeed.substring(0, 10));
+                }
+            });
+            //其他需求
+            $("#otherNeed").keyup(function() {
+                var otherNeed = $(this).val();
+                if (otherNeed.length > 200) {
+                    $(this).val(otherNeed.substring(0, 200));
+                }
+            });
+
+            //姓名和手机号提示
+            $("#oName").focus(function() {
+                $(".new-order-mw-nametips").show();
+            });
+            $("#oName").blur(function() {
+                $(".new-order-mw-nametips").hide();
+            });
+            $("#oPhone").focus(function() {
+                $(".new-order-mw-phonetips").show();
+            });
+            $("#oPhone").blur(function() {
+                $(".new-order-mw-phonetips").hide();
+            });
+            CheckBuyTarget(501);
+
+            SetDefaultValueForCity(501);
+            
+            CheckIsRemote();
+            
+        });
+
+
+    </script>
+    <script type="text/javascript">
+        if (!Array.prototype.indexOf) {
+            Array.prototype.indexOf = function(elt /*, from*/) {
+                var len = this.length >>> 0;
+                var from = Number(arguments[1]) || 0;
+                from = (from < 0)
+                    ? Math.ceil(from)
+                    : Math.floor(from);
+                if (from < 0)
+                    from += len;
+                for (; from < len; from++) {
+                    if (from in this &&
+                        this[from] === elt)
+                        return from;
+                }
+                return -1;
+            };
+        }
+        
+        //买车指标
+        var  CheckBuyTarget= function(cityId) {
+            $("#buyTarget").attr("data-code", "");
+            $("#buyTarget .new-order-buycar-amount").removeClass("current");
+            //初始化-当前城市在购车指标限制城市数组中
+            var buyTargetArray = new Array(201, 501, 2601, 3001, 502, 2401);
+            if (buyTargetArray.indexOf(cityId) >= 0) {
+                var buyTargetName = "买车指标：";
+                if (cityId == 2401) {
+                    buyTargetName = "额度单：";
+                }
+                $("#buyTargetName").html(buyTargetName);
+                $("#buyTargetdiv").attr("data-code", "1");
+                $("#buyTargetdiv").show();
+            } else {
+                $("#buyTargetName").html("");
+                $("#buyTargetdiv").attr("data-code", "");
+                $("#buyTargetdiv").hide();
+            }
+        }
+
+        //指定城市，下单时，需要给予默认值
+        var SetDefaultValueForCity= function(cityId) {
+            var citysArray = new Array(2105, 1708, 3003, 601, 307, 1401, 401, 3002, 2201, 1101, 301);
+            if (citysArray.indexOf(cityId) >= 0) { //当前城市为指定城市，下单时，需要给予默认值
+                SetDefaultValue();
+            }
+        }
+        var SetDefaultValue= function() {
+            //外观颜色
+            if ($("#ddcolorDiv").is(":visible")) {
+                $("#ddcolor a.new-order-tr-color").eq(0).click();
+            }
+            //买车方式
+            $("#ddtype div.new-order-buycar-way").eq(1).click();
+            //买车时间
+            $("#buytc div.new-order-buycar-time").eq(1).click();
+        }
+
+
+        var CheckIsRemote= function() { //登录状态下判断是否是异地订单
+            $.ajax({
+                type: "GET",
+                url: "/order/GetSaleCarLimitPermission",
+                data: { carId: 122060, cityId: 501, localCityName: '广州' },
+                success: function(data) {
+                    if (data.IsSuccess && data.ErrorMsg && data.ErrorCode == 1000825) { //检查到有推荐的异地订单的错误信息
+                        $("#next").show();
+                        $("#before-next").hide();
+                        $.jqmFrame.showErrorNew(data);
+                    } else if (data.IsSuccess && data.ErrorMsg) { //检查到无推荐的异地订单的错误信息
+                        $("#next").show();
+                        $("#before-next").hide();
+                        $.jqmFrame.showErrorNew2(data);
+                    } else {
+                        $("#log_ordersuccess").trigger("click");
+                        if (typeof baiduStat !== "undefined") {
+                            baiduStat.order_subSuc();
+                        }
+                    }
+                }
+            });
+        }
+
+        //检查是否是最多两位小数点，整数位最多4位的数字
+        var CheckInteger= function(num) {
+            var patt = new RegExp("^[0-9]{1,4}$");
+            return patt.test(num);
+        }
+        //检查是否是最多两位小数点，整数位最多4位的数字
+        var CheckDecimal= function(num) {
+            var patt = new RegExp("^[0-9]{1,4}[\.][0-9]{0,2}$");
+            return patt.test(num);
+        }
+
+        var LongerTwoLetter= function(num) {
+            var patt = new RegExp("[^0-9]{2,}");
+            return patt.test(num);
+        }
+
+        //验证上牌城市
+        var CheckBoardCity= function() {
+            $("#ddbrandloctip").html("");
+            $("#ddbrandloctip").hide();
+            var cuCityCode = $("#cuCity").attr("data-code") * 1;
+            var curcityName = $("#cuCity").html();
+            if ($.ordernew.legalCity != null) {
+                if ($.ordernew.legalCity.indexOf(cuCityCode) < 0) {
+                    $("#ddbrandlocFlag").attr("data-code","1");
+                    $("#log_order_zcsp").click();
+                } else {
+                    $("#ddbrandlocFlag").attr("data-code","0");//不能上牌
+                    Showddbrandloctip(cuCityCode, curcityName);
+                }
+
+            } else {
+                $("#ddbrandlocFlag").attr("data-code","1");
+                $("#log_order_zcsp").click();
+
+            }
+            CheckBuyTarget(cuCityCode);
+        }
+
+        //提示消息
+        var Showddbrandloctip= function(cuCityCode, curcityName) {
+            if (curcityName != "") {
+                var localCity = "广州";
+                var url = "/order/" + cuCityCode + "/" + 122060 + "";
+                var carName = '思域';
+                var tips = "在" + localCity + "买" + carName + "，不能上" + curcityName + "牌照";
+                if ($.ordernew.carSaleCity != null && $.ordernew.carSaleCity.indexOf(cuCityCode) >= 0) {
+                    tips += "，建议您切换到" + curcityName + "城市 <a href='javascript:void(0);' data-url='" + url + "' onclick=ChangeCityForOrder(this)>切换到" + curcityName + "站></a>";
+                    var pos = $("#log_order_kscs").attr("data-hmclog").lastIndexOf(":");
+                    if (pos > 0) {
+                        var logsubstr = $("#log_order_kscs").attr("data-hmclog").substring(0, pos + 1);
+                        logsubstr = logsubstr + $("#cuCity").attr("data-code") + "}";
+                        $("#log_order_kscs").attr("data-hmclog", logsubstr);
+                        $("#log_order_kscs").click();
+                    }
+
+                } else {
+                    var pos = $("#log_order_bkscs").attr("data-hmclog").lastIndexOf(":");
+                    if (pos > 0) {
+                        var logsubstr = $("#log_order_bkscs").attr("data-hmclog").substring(0, pos + 1);
+                        logsubstr = logsubstr + $("#cuCity").attr("data-code") + "}";
+                        $("#log_order_bkscs").attr("data-hmclog", logsubstr);
+                        $("#log_order_bkscs").click();
+                    }
+                }
+                $("#ddbrandloctip").html(tips);
+                $("#ddbrandloctip").show();
+            }
+        }
+        //更好城市前，写cookie记录
+        var ChangeCityForOrder= function(obj) {
+            var url = $(obj).attr("data-url");
+            if (url != "") {
+                $.ordernew.utils.saveInput(); //写记录
+                var pos = $("#log_order_ksqhcs").attr("data-hmclog").lastIndexOf(":");
+                if (pos > 0) {
+                    var logsubstr = $("#log_order_ksqhcs").attr("data-hmclog").substring(0, pos + 1);
+                    logsubstr = logsubstr + $("#cuCity").attr("data-code") + "}";
+                    $("#log_order_ksqhcs").attr("data-hmclog", logsubstr);
+                    $("#log_order_ksqhcs").click();
+                }
+                window.location.href = url;
+            }
+        }
+
+        //验证用户是否选择了必填项
+        var CheckForSubmitButton= function() {
+            $("div.new-order-error.error-position").remove();
+            var boolResult = true;
+            //外观颜色 
+            if ($("#ddcolorDiv").is(":visible")) {
+                var oColorval = $.ordernew.oColor.attr("data-code");
+                if (oColorval == "") {
+                     $("#ddcolor").parent().append("<div  class=\"new-order-error new-order-error1\"><i></i><span>请选择您中意的外观颜色</span></div>");
+                     //$("#ddcolor").append("<div  class=\"new-order-error\"><i></i><span>请选择您中意的外观颜色</span></div>");
+                    boolResult = false;
+                }
+            }
+
+            //购车方式
+            var oBuyTypeval = $.ordernew.oBuyType.attr("data-code");
+            if (oBuyTypeval == "") {
+                $("#ddtype").append("<div  class=\"new-order-error\"><i></i><span>请选择您的买车方式</span></div>");
+                boolResult = false;
+            }
+
+            //购车时间
+            var oBuyTimeval = $.ordernew.oBuyTime.attr("data-code");
+            if (oBuyTimeval == "") {
+                $("#buytc").append("<div  class=\"new-order-error\"><i></i><span>请选择您的预估买车时间</span></div>");
+                boolResult = false;
+            }
+
+            //上牌城市
+            var ddbrandlocFlag = $("#ddbrandlocFlag").attr("data-code");
+            if (ddbrandlocFlag != "1") {
+                $("#ddbrandloc").append("<div  class=\"new-order-error\"></div>");
+                boolResult = false;
+            }
+
+            //购车指标
+            var buyTargetdiv = $("#buyTargetdiv").attr("data-code");
+            if (buyTargetdiv == "1") {
+                var buyTargetval = $.ordernew.buyTarget.attr("data-code");
+                if (buyTargetval == "") {
+                    $("#buyTarget").append("<div  class=\"new-order-error\"><i></i><span>请选择" + $("#buyTargetName").html().replace("：", "") + "</span></div>");
+                    boolResult = false;
+                }
+            }
+
+            //购车礼包(已经隐藏掉了，取默认值)
+
+            //期望裸车价
+            var hopeBareCarPriceval = $("#hopeBareCarPrice").val();
+            if (hopeBareCarPriceval != "") {
+                if (!CheckInteger(hopeBareCarPriceval) && !CheckDecimal(hopeBareCarPriceval)) {
+                    $(".new-order-detail-bwright").eq(2).append("<div  class=\"new-order-error\"><i></i><span>请输入姓名</span>期望裸车价格式不正确</span></div>");
+                    boolResult = false;
+                }
+            }
+            //大致预算
+            var maybeBudgetval = $("#maybeBudget").val();
+            if (maybeBudgetval != "" && maybeBudgetval.length > 10) {
+                $(".new-order-detail-bwright").eq(3).append("<div  class=\"new-order-error\"><i></i><span>大致预算长度不能大于10个字符</span></div>");
+                boolResult = false;
+            }
+            if (!boolResult) {
+                if ($("div.new-order-error").eq(0).parent()) {
+                    var firstPosition = $("div.new-order-error").eq(0).parent();
+                    if (firstPosition.size()) {
+                        var scrollToppostion = firstPosition.offset().top;
+                        $("html,body").animate({ scrollTop: (scrollToppostion - 10) + "px" }, 500);
+                    }
+                }
+            }
+            return boolResult;
+        }
+    </script>
+    <script type="text/javascript" src="/js/common.js"></script>
+<div class="tool-bar-new" style="right: 0px;">
+  <div class="sidebaradv"><a href="https://dsapi.huimaiche.com/huimaicheadapi/ad/skip.aspx?adId=947&amp;typeid=0&amp;cityid=501&amp;url=http%3a%2f%2fhd.huimaiche.com%2fhd%2f201706" target="_blank"> <img src="./order-submit_files/c2616184-f2fa-42a9-9784-95790fe39f2e.jpg" alt=""></a></div>
+  <div class="tool-bar tool-bar-js">
+     
+    <ul class="tool-ul">
+      <li class="tool-li tool-mycar" style="margin-left: 0px;">
+         <a href="javascript:void(0)" data-hmclog="{pageid: 19, eventid: 34}" class="tool-a myorder"><i class="sideBarIcon2 myCar">订单</i></a>
+         
+        <div class="tool-car" id="orderListCtrl">
+           
+            <p class="nocar"><i></i>暂无订单,赶快去选购心仪的车辆<br><a href="http://www.huimaiche.com/">去首页看看</a></p>
+          
+        </div>
+      </li>
+      <li class="tool-li">
+        <a href="javascript:void(0)" id="couponctrl" class="tool-a"><i class="sideBarIcon2 lq">领券</i></a>
+      </li>
+    </ul>
+    <ul class="tool-ul tool-myul">
+      <li class="tool-li"><a data-hmclog="{pageid: 19, eventid: 36}" id="onlineServiceLink" href="javascript:void(0)" class="tool-a"><i class="sideBarIcon kf">在线客服</i></a></li>
+      <li class="tool-li"><a id="showfeedbackBtn" data-hmclog="{pageid: 19, eventid: 37}" href="javascript:void(0)" class="tool-a"><i class="sideBarIcon advice">意见建议</i></a></li>
+      <li class="tool-li">
+          <a href="http://www.huimaiche.com/app" class="tool-a" id="appclient"><i class="sideBarIcon app">APP下载</i></a>
+          <div class="wx-drop" style="display: none;">
+            <i class="icon-arrow"></i>
+            <img src="./order-submit_files/top-huimaiche-qr.png" alt="">
+            <span>下载APP极速获取报价</span>
+        </div>
+      </li>
+      <li class="tool-li">
+        <a style="cursor:default" class="tool-a" id="weixinapp">
+            <i class="sideBarIcon wxxcx"><span>微信</span><span>小程序</span></i>
+        </a>
+        <div class="wx-drop" style="display: none;">
+            <i class="icon-arrow"></i>
+            <img src="./order-submit_files/weixinxcx(1).jpg" alt="">
+            <span>微信扫一扫，极速体验</span>
+        </div>
+      </li>
+      <li class="tool-li"><a href="javascript:void(0)" class="tool-a gotop" style="display: none; margin-left: 0px;"><i class="sideBarIcon toTop">返回顶部</i></a></li>
+    </ul>
+  </div>
+</div>
+<script>
+    /* 右侧导航控制二维码 */
+    var $toola = $('#weixinapp,#appclient');
+    $toola.each(function () {
+        $(this).hover(function () {
+            $(this).siblings().show();
+        }, function () {
+            $(this).siblings().hide();
+        });
+    });
+    /* 右侧导航控制二维码end */
+</script></body></html>

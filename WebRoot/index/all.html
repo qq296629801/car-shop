@@ -1,0 +1,70 @@
+#@head("地区")
+    <!-- 主题内容区域 start -->
+    <!-- topBanner start -->
+    <div class="top-banner">
+        <div class="banner-content">
+            <h2>底价买车从这里开始</h2>
+            <p class="status"><span>5,137</span>人正在这里买车</p>
+            <a href="/list?location_id=#for(l:locationList)#if(for.index==0)#(l.id)#end#end" class="go-to-btn" title="广州车集市">进入广州站</a>
+        </div>
+    </div>
+    <!-- topBanner end-->
+    <!-- 搜索框 start-->
+    <div class="search-box-wrapper">
+        <div class="search-box-content clearfix">
+            <div class="search-wrapper">
+                <div class="search">
+                    <input id="keyword" type="text" value="输入购车城市，例如北京" data-tip="输入购车城市，例如北京" onfocus=" if (value == &#39;输入购车城市，例如北京&#39;) {value = &#39;&#39;;}this.style.color = &#39;#333&#39;; " onblur=" if (value == &#39;&#39;) {value = &#39;输入购车城市，例如北京&#39;;this.style.color = &#39;#999&#39;;} ">
+                    <ul class="select-layer" style="display: none;">
+                    </ul>
+                </div>
+            </div>
+            <div class="search-title">搜索购车城市：</div>
+            <div class="hot-cities">
+                <span>已开通城市：</span>
+               #for(l:locationList)
+                <a href="/list?location_id=#(l.id)">#(l.name)</a>
+                #end
+            </div>
+        </div>
+    </div>
+    <!-- 搜索框 end-->
+    <div style="width: 980px;margin-left: auto;margin-right: auto;font-size: 16px;margin-top: 30px;">
+    	<p>更多城市正紧锣密鼓筹备中···</p>
+    </div>
+    
+    <div class="cities-list-wrapper">
+        <ul class="cities-list">
+            
+                <li>
+                    <span>华北</span>
+                </li>
+            
+                <li>
+                    <span>华南</span>
+                </li>
+            
+                <li>
+                    <span>华东</span>
+                </li>
+            
+                <li>
+                    <span>华中</span>
+                </li>
+            
+                <li>
+                    <span>东北</span>
+                </li>
+            
+                <li>
+                    <span>西南</span>
+                </li>
+            
+                <li>
+                    <span>西北</span>
+                </li>
+        </ul>
+        <p class="notice">车集市开通了<span>3</span>个城市，如果以上没有您要找的城市，请您立即<a href="javascript:void(0);" id="btnFeed">告诉我们</a>， 车集市会尽快开通!</p>
+    </div>
+    <!--尾部 -->
+  #include("/common/_footer.html")

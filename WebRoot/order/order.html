@@ -1,0 +1,249 @@
+#@head("订单")
+ <script type="text/javascript">
+function caner(id){
+	$.post("/cancer",{id:id},function(data){
+		alert(data.msg);
+	});
+}
+</script>
+<link rel="stylesheet" type="text/css" href="/css/buycar.css" media="screen"> 
+<link rel="stylesheet" type="text/css" href="/css/shangou-buycar.css" media="screen">  
+    <div class="bt_page ptop_40 clearfix">
+        <div class="col-left">
+            <div class="tip_top">    <i></i>    您有<em>#(newNum??) </em>个新的订单等待支付</div>
+            <ul class="order_list">
+                 #for (o:listOrder)
+                        <li>
+                            <div class="order_tit">
+                                <div class="fleft">
+                                    <span>订单编号：#(o.id)</span>
+                                    <span>提交时间：#(o.submit_time)</span>
+                                    
+                                </div>
+                                <div class="fright">
+                                    <a href="/order/buy">查看详情</a>
+                                    <a href="javascript:void(0);" onclick="javascript:caner(#(o.id));">取消订单</a>
+                                    
+                                </div>
+                            </div>
+                            <div class="order_cot">
+                                <table cellspacing="0" cellpadding="0" border="0">
+                                    <tbody>
+                                        <tr>
+                                            <td>    <div class="carimg">        <img src="./img/u/#(o.carurl)"></div> </td>
+                                            <td valign="middle">    <div class="carname">       <strong>#(o.carname)</strong>       <p>  #( o.carmodelname)</p>        <p class="col_9">              <span class="col_name">#(o.colorname)</span>|<span>#(o.buy_style)</span></p>    </div></td>
+                                            <td valign="middle">
+                                            <div class="car_status">
+                                               <strong>  
+                                            	 等待支付订金
+	                                            </strong><p>请在7天内支付订金，超时订单将自动取消</p>
+	                                           <p class="btn">    
+	                                            <span class="button_orange button_x_30"><a href="/order/buy">支付订金</a></span>
+	                                            </p>
+                                            </div>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </li>
+                   #end 
+            </ul>
+        </div>
+       <!-- contact start -->
+         <div class="col-right">
+					<div class="mckf m1">
+					    <h3>
+					        车集市客服</h3>
+					    <p>
+					        <strong>
+					            xxxx-xxx-xxx</strong></p>
+					    <p>
+					        周一至周日 （ 9 : 00 - 21 : 00 ）</p>
+					    
+					</div>
+        </div>
+       <!-- contact end -->
+    </div>
+    <div id="DivCancelPayebleWin" class="fuc_box" style="display: none; background-color: White;">
+        <div id="DivCancelPayebleWinTitle">
+            <div class="fuc_close">
+                <a href="javascript:void(0);" onclick="$(&#39;#DivCancelPayebleWin&#39;).css(&#39;display&#39;,&#39;none&#39;);_M.Close();">
+                </a>
+            </div>
+            <h2 class="fuc_tit">
+                取消订单
+            </h2>
+        </div>
+        <div class="dinjfc qrtuih">
+            <span class="sb_bg"></span>
+            <p class="tjcg_tit">
+                您确定要取消订单吗？</p>
+            <p>
+                取消订单后订单将作废！</p>
+            <div class="dinjbut">
+                <span class="button_orange button_m_40 "><a href="javascript:void(0);" onclick="$.Order.cancelOrder(false) ">
+                    确定取消订单</a></span>
+            </div>
+        </div>
+    </div>
+    <div id="divCancelWin" class="fuc_box" style="display: none; background-color: White;">
+        <div id="divCancelTitle">
+            <div class="fuc_close">
+                <a id="btnCancelWinClose" href="javascript:void(0);"></a>
+            </div>
+            <h2 class="fuc_tit">
+                取消订单</h2>
+        </div>
+        <div class="tanh_box">
+            <dl>
+                <dt></dt>
+                <dd class="cancel-order">
+                    <h3>
+                        取消后订单将作废！</h3>
+                    <p id="pCancelTip">
+                    </p>
+                    <p id="pCancelTip2">
+                    </p>
+                    <div class="selectbox">
+                        <span id="reason" data-value="0">您取消订单的原因是什么？</span>
+                        <div style="display: none" class="seler_layer">
+                            <ul>
+                                <li data-value="1">价格偏高</li>
+                                <li data-value="2">可选的4S店少</li>
+                                <li data-value="3">4S店离我太远</li>
+                                <li data-value="4">店里没有现车</li>
+                                <li data-value="5">有额外的附加条件</li>
+                                <li data-value="6">不能按约定底价成交</li>
+                                <li data-value="7">没有我要的颜色</li>
+                                <li data-value="8">我想买其他的车</li>
+                                <li data-value="9">不想买了</li>
+                                <li data-value="-1">其他原因</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div id="divCancelReason" class="qrm" style="display: none">
+                        <textarea id="txtCancelReason" autocomplete="off"></textarea>
+                    </div>
+                    <div id="cancelErrMsg" class="error" style="display: none">
+                    </div>
+                    <div class="btn">
+                        <span id="btnSubmitCancel" class="button_orange button_m_40 "><a href="javascript:void(0);">
+                            确定取消订单</a> </span>
+                    </div>
+                </dd>
+            </dl>
+        </div>
+    </div>
+    <div id="DivDelOrderWin" class="fuc_box" style="display: none; background-color: White;">
+        <div id="DivDelOrderWinTitle">
+            <div class="fuc_close">
+                <a href="javascript:void(0);" onclick="$(&#39;#DivDelOrderWin&#39;).css(&#39;display&#39;,&#39;none&#39;);_M.Close();">
+                </a>
+            </div>
+            <h2 class="fuc_tit">
+                删除订单
+            </h2>
+        </div>
+        <div class="dinjfc qrtuih">
+            <span class="sb_bg"></span>
+            <p class="tjcg_tit">
+                您确定要删除订单吗？</p>
+            <div class="dinjbut">
+                <span class="button_orange button_m_40 "><a href="javascript:void(0);" onclick="$.Order.delOrder() ">
+                    确定删除订单</a></span>
+            </div>
+        </div>
+    </div>
+
+
+    
+    <div id="MallDivCancelPayebleWin" class="fuc_box" style="display: none; background-color: White;">
+        <div id="MallDivCancelPayebleWinTitle">
+            <div class="fuc_close">
+                <a href="javascript:void(0);" onclick="$(&#39;#MallDivCancelPayebleWin&#39;).css(&#39;display&#39;,&#39;none&#39;);_M.Close();">
+                </a>
+            </div>
+            <h2 class="fuc_tit">
+                取消订单
+            </h2>
+        </div>
+        <div class="dinjfc qrtuih">
+            <span class="sb_bg"></span>
+            <p class="tjcg_tit">
+                您确定要取消订单吗？</p>
+            <p>
+                取消订单后订单将作废！</p>
+            <div class="dinjbut">
+                <span class="button_orange button_m_40 "><a href="javascript:void(0);" onclick="$.Order.mallCancelOrder(false) ">
+                    确定取消订单</a></span>
+            </div>
+        </div>
+    </div>
+    <div id="MallDivDelOrderWin" class="fuc_box" style="display: none; background-color: White;">
+        <div id="MallDivDelOrderWinTitle">
+            <div class="fuc_close">
+                <a href="javascript:void(0);" onclick="$(&#39;#MallDivDelOrderWin&#39;).css(&#39;display&#39;,&#39;none&#39;);_M.Close();">
+                </a>
+            </div>
+            <h2 class="fuc_tit">
+                删除订单
+            </h2>
+        </div>
+        <div class="dinjfc qrtuih">
+            <span class="sb_bg"></span>
+            <p class="tjcg_tit">
+                您确定要删除订单吗？</p>
+            <div class="dinjbut">
+                <span class="button_orange button_m_40 "><a href="javascript:void(0);" onclick="$.Order.delOrder() ">
+                    确定删除订单</a></span>
+            </div>
+        </div>
+    </div>
+    <div id="MallDivCompleteOrder" class="fuc_box" style="display: none; background-color: White;">
+        <div id="MallDivCompleteOrderTitle">
+            <div class="fuc_close">
+                <a href="javascript:void(0);" onclick="$(&#39;#MallDivCompleteOrder&#39;).css(&#39;display&#39;,&#39;none&#39;);_M.Close();">
+                </a>
+            </div>
+            <h2 class="fuc_tit">
+                确认提车
+            </h2>
+        </div>
+        <div class="dinjfc qrtuih">
+            <span class="sb_bg"></span>
+            <p class="tjcg_tit">
+                您确定已经提车？</p>
+            <div class="dinjbut">
+                <span class="button_orange button_m_40 ">
+                    <a href="javascript:void(0);" onclick="$.Order.mallComplateOrder() ">是</a>   
+                    <a href="javascript:void(0);" onclick="$(&#39;#MallDivCompleteOrder&#39;).css(&#39;display&#39;,&#39;none&#39;);_M.Close();">否</a>
+                </span>
+            </div>
+        </div>
+    </div>
+
+    <div id="DivErrow" class="fuc_box" style="display: none; background-color: White;">
+        <div id="DivErrowTitle">
+            <div class="fuc_close">
+                <a href="javascript:void(0);" onclick="$(&#39;#DivErrow&#39;).css(&#39;display&#39;,&#39;none&#39;);_M.Close();">
+                </a>
+            </div>
+            <h2 class="fuc_tit">
+                错误
+            </h2>
+        </div>
+        <div class="dinjfc qrtuih">
+            <span class="sb_bg"></span>
+            <p class="tjcg_tit" id="errowContent">
+                操作遇到错误请联系客服。</p>
+            <div class="dinjbut">
+                <span class="button_orange button_m_40 "><a href="javascript:void(0);" onclick="$(&#39;#DivErrow&#39;).css(&#39;display&#39;,&#39;none&#39;);_M.Close();">
+                    确定</a></span>
+            </div>
+        </div>
+    </div>
+    
+
+    <!--中间内容 结束 -->
+ #include("/common/_footer.html")

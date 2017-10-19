@@ -1,0 +1,42 @@
+/**
+
+page css
+
+*/
+.pagination{
+	    float: right;
+}
+
+.pagination .carlist-mp-prev, .pagination .carlist-mp-next {
+    width: 68px;
+    height: 28px;
+    background: #ffffff;
+    border: 1px solid #ededed;
+    float: left;
+    margin-right: 10px;
+    color: #333333;
+    text-align: center;
+    cursor: pointer;
+        line-height: 30px;
+}
+.pagination .carlist-mp-page {
+    width: 28px;
+    height: 28px;
+    background: #ffffff;
+    border: 1px solid #ededed;
+    float: left;
+    margin-right: 10px;
+    color: #333333;
+    text-align: center;
+    cursor: pointer;
+        line-height: 30px;
+}
+
+.pagination .disabled {
+  background: #f9f9f9;
+  cursor: default;
+}
+.pagination .current {
+  background: #f9f9f9;
+  cursor: default;
+}

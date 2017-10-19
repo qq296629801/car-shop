@@ -1,0 +1,615 @@
+#@head("用户中心")
+    <script type="text/javascript">
+        /* 页面全局设置 */
+        	var provinceID = "#(c3.id??)";
+            var cityID ="#(c2.id??) ";
+            var countyID = "#(c.id??)";
+            var templet = "<li aid='{AreaID}'>{AreaName}</li>";
+        $(function() {
+        	bindProvince();
+            bindCity(provinceID);
+            bindCounty(cityID);
+            //菜单
+            $("#ulTop li").attr("class", "");
+            $("#liPerson").attr("class", "current");
+            //输入框
+            $('.txt')
+                .focus(function() {
+                    $(this).parent('.txtbox').addClass('on');
+                })
+                .blur(function() {
+                    $(this).parent('.txtbox').removeClass('on');
+                });
+            //【修改个人信息】和【修改密码】切换
+            $("#modifyLable,#resetPwd").click(function() {
+                $(".infodiv").hide();
+                $(".wrapli").removeClass("current");
+                $("#" + $(this).attr("linkdiv")).show();
+                $(this).parent().addClass("current");
+            });
+            
+        $("#mobile").focus(function(){
+        	$("#mobileErrMsg").html("");
+        });
+        $("#mobile").blur(function(){
+        	$("#mobileErrMsg").html("");
+        });
+            
+            $('#btnOpenWin').click(show);
+            $('#btnCloseWin').click(hide);
+            $('#btnSendCode').one("click", sendCode);
+            $("#btnChangeMobile").one("click", changeMobile);
+            
+            var flag=0;
+            $("#provincespan").click(function(){
+            	if(flag==0){
+            		$(".edit-province .seler_layer").show();
+            		flag=1;
+            	}else{
+            		$(".edit-province .seler_layer").hide();
+            		flag=0;
+            	}
+            });
+            var flag2=0;
+            $("#cityspan").click(function(){
+            	if(flag2==0){
+            		$(".city1 .seler_layer").show();
+            		flag2=1;
+            	}else{
+            		$(".city1 .seler_layer").hide();
+            		flag2=0;
+            	}
+            });
+            var flag3=0;
+            $("#areaspan").click(function(){
+            	if(flag3==0){
+            		$(".city2 .seler_layer").show();
+            		flag3=1;
+            	}else{
+            		$(".city2 .seler_layer").hide();
+            		flag3=0;
+            	}
+            });
+        });
+        /*修改手机号*/
+            //显示修改手机号弹层
+            function show() {
+                $("#newMobile,#checkCode").val("").blur();
+                _M.Show("divChangeMoblieWin", "divChangeMoblieTitle");
+            }
+            //隐藏修改手机号弹层
+            function hide() {
+                $("#divChangeMoblieWin").hide();
+                _M.Close();
+            }
+            //手机号合法性验证
+            function IsMobile() {
+                return ValidateObj.IsMobile(this.value);
+            }
+            function IsNewMobile(){
+                return this.value!=$('#mobile').val();
+            }
+            //手机号合法性验证
+            function CheckMobile(mobile) {
+                var o = {
+                    value: mobile,
+                    defaultValue: "新手机号将作为登录账号",
+                    emptyTip: "请输入新手机号",
+                    allowEmpty: false,
+                    formatCheck: IsMobile,
+                    formatTip: "请输入正确手机号",
+                    logicCheck: IsNewMobile,
+                    logicTip: "新手机号和原手机号相同，请更换"
+                };
+
+                var result = ValidateObj.Validate(o);
+                if (!result.IsPass()) {
+                    ValidateTip.showErr('newMobileErrMsg', result.errMsg);
+                    return false;
+                }
+
+                return true;
+            }
+            //发送确认码
+            function sendCode() {
+                var mobile = $('#newMobile').val();
+
+                //--------验证手机号--------               
+                if (!CheckMobile(mobile)) {
+                    $('#btnSendCode').one("click", sendCode);
+                    return;
+                }
+                //---------发送确认码--------
+                $.ajax({
+                    type: "POST",
+                    url: "/user/Ajax/SendMessage.ashx",
+                    data: {
+                        t: 1,
+                        mobile: mobile
+                    },
+                    success: function(data) {
+                        $('#btnSendCode').unbind('click').one("click", sendCode);
+                        if (data.Status == -1) {
+                            window.location = '/';
+                        } else if (data.Status > 0) {
+                            //---------60秒倒计时--------
+                            var sc = 60;
+                            $('#btnSendCode').addClass("resent").text(sc + "秒后重发");
+                            var wt = setInterval(function() {
+                                if (parseInt(sc, 10) > 1) {
+                                    sc -= 1;
+                                    $('#btnSendCode').text(sc + "秒后重发");
+                                } else {
+                                    clearInterval(wt);
+                                    $('#btnSendCode').removeClass("resent")
+                                        .addClass('surebtn')
+                                        .text("发送确认码");
+                                }
+                            }, 1000);
+                        } else {
+                            ValidateTip.showErr('newMobileErrMsg', data.Msg);
+                        }
+                    }
+                });
+            }
+            //ajax修改手机号
+            function changeMobile() {
+                var mobile = $('#newMobile').val();
+                var checkCode = $("#checkCode").val();
+
+                //--------验证手机号--------              
+                if (!CheckMobile(mobile)) {
+                    $("#btnChangeMobile").one("click", changeMobile);
+                    return;
+                }
+                //--------验证确认码--------
+                var o = {
+                    value: checkCode,
+                    defaultValue: "请输入手机收到的确认码",
+                    emptyTip: "请输入手机收到的确认码",
+                    allowEmpty: false
+                };
+                result = ValidateObj.Validate(o);
+                if (!result.IsPass()) {
+                    ValidateTip.showErr('codeErrMsg', result.errMsg);
+                    $("#btnChangeMobile").unbind('click').one("click", changeMobile);
+                    return;
+                }
+
+                //--------修改手机号--------
+                $.ajax({
+                    type: 'POST',
+                    url: "/user/Ajax/ModifyMobile.ashx",
+                    data: {
+                        mobile: mobile,
+                        code: checkCode
+                    },
+                    dataType: "json",
+                    success: function(data, textStatus) {
+
+                        if (data.Status == -1) {
+                            window.location = '/';
+                        } else if (data.Status > 0) {
+                            hide();
+                            $("#mobile").val(mobile);
+                            ValidateTip.showSuccess("divSuccessTip", "手机号修改成功");
+                        } else {
+                            data.Msg.indexOf('确认码') > -1 || data.Msg.indexOf('频繁') > -1?
+                                ValidateTip.showErr('codeErrMsg', data.Msg) :
+                                ValidateTip.showErr('newMobileErrMsg', data.Msg);
+                        }
+                    }
+                });
+                $("#btnChangeMobile").one("click", changeMobile);
+            }
+            //Init
+
+        /*修改密码*/
+  
+            function checkPwd() {
+                var oldPwd = $("#oldPwd").val();
+                var newPwd = $("#newPwd").val();
+                var confirmPwd = $("#confirmPwd").val();
+                var mobile = $("#mobile").val();
+             
+                if (oldPwd == "") {
+                    alert("请输入原密码");
+                    return false;
+                }
+                if (newPwd == "") {
+                	  alert( "请输入新密码");
+                    return false;
+                }
+                if (newPwd == $.trim(mobile)) {
+                	  alert("密码和手机号不能相同");
+                    return false;
+                }
+                if (newPwd.length < 6||newPwd.length >16) {
+                	  alert("密码应为6-16个英文字母或数字");
+                    return false;
+                }
+                if (confirmPwd == "") {
+                	  alert("请输入确认密码");
+                    return false;
+                }
+                if (newPwd != confirmPwd) {
+                	  alert( "密码和确认密码不一致");
+                    return false;
+                }
+                 if (oldPwd == newPwd) {
+                	  alert("新密码和原密码相同");
+                    return false;
+                }
+                return true;
+            }
+
+            function changePwd() {
+                if (checkPwd()) {
+                    $.ajax({
+                        type: 'POST',
+                        url: "/user/ModifyPwd",
+                        data: {
+                            np: $.trim($("#newPwd").val()),
+                            op: $.trim($("#oldPwd").val())
+                        },
+                        dataType: "json",
+                        success: function(data) {
+                            if (data.Status == -1) {
+                                window.location = '/user';
+                            } else if (data.Status == -33) {
+                                alert("原密码输入错误");
+                            } else if (data.Status > 0) {
+                                $("#oldPwd").val("");
+                                $("#newPwd").val("");
+                                $("#confirmPwd").val("");
+                                alert("修改成功！");
+                            } else if (data.Status == -44) {
+                            	 alert("密码应为6-16个英文字母或数字");
+                            }else {
+                            	 alert("密码修改失败");
+                            }
+                        },
+                        error:function(data){
+                        	console.log(data.responseText);
+                        }
+                    });
+                }
+            }
+          
+        /*地区下拉菜单*/
+            
+            //下拉菜单选中和鼠标悬浮设置
+            function attachEvent(targetID) {
+                $('#' + targetID).find('li')
+                    .click(function() {
+                        var areaID = $(this).attr("aid");
+                        var areaName = $(this).html();
+                        var areaType = $(this).parent().attr("id");
+                        $(this).parents('.seler_layer').hide();
+                        $(this).parents('.selectbox').find('span')
+                            .attr("aid", areaID)
+                            .html(areaName);
+                        if (areaType === 'province' && areaID != provinceID) {
+                            $("#cityspan").html("请选择城市").attr("aid", 0);
+                            $("#areaspan").html("请选择区县").attr("aid", 0);
+                            $("#city").html("");
+                            $("#area").html("");
+                            provinceID = areaID;
+                            bindCity(areaID);
+                           
+                        } else if (areaType === 'city' && areaID != cityID) {
+                            $("#areaspan").html("请选择区县").attr("aid", 0);
+                            $("#area").html("");
+                            cityID = areaID;
+                            bindCounty(areaID);
+                        }
+                    });
+            }
+            //初始化省份下拉菜单
+            function bindProvince() {
+                $.ajax({
+                    type: 'POST',
+                    url: "/user/GetAreaService",
+                    data: {
+                        aid: 0,
+                        type: 1
+                    },
+                    dataType: "json",
+                    success: function(data, textStatus) {
+	                      for(c in data){
+	                    	  var li = templet.replace('{AreaID}', data[c].id).replace('{AreaName}', data[c].name);
+	                    	  $("#province").append(li);
+	                      }
+                    },
+                    complete: function() {
+                        attachEvent('province');
+                    }
+                });
+            }
+            //初始化市下拉菜单
+            function bindCity(province) {
+                $.ajax({
+                    type: 'POST',
+                    url: "/user/GetAreaService",
+                    data: {
+                        aid: province,
+                        type: 2
+                    },
+                    dataType: "json",
+                    success: function(data, textStatus) {
+                        $("#city").html("");
+		                      for(c in data){
+		                    	  var li = templet.replace('{AreaID}', data[c].id).replace('{AreaName}', data[c].name);
+		                    	  $("#city").append(li);
+		                    	  if (cityID == data[c].id) {
+		                                $("#cityspan").html( data[c].name).attr("aid", data[c].id);
+		                            }
+		                      }
+                           
+                    },
+                    complete: function() {
+                        attachEvent('city');
+                    }
+                });              
+            }
+            //初始化县下拉菜单
+            function bindCounty(city) {
+                $.ajax({
+                    type: 'POST',
+                    url: "/user/GetAreaService",
+                    data: {
+                        aid: city,
+                        type: 2
+                    },
+                    dataType: "json",
+                    success: function(data, textStatus) {
+                        $("#area").html("");
+                        for(c in data){
+                            var li = templet.replace('{AreaID}', data[c].id).replace('{AreaName}',data[c].name)
+                            $("#area").append(li);
+                             if (countyID == data[c].id) {
+                                $("#areaspan").html(data[c].name).attr("aid", data[c].id);
+                            }
+                        }
+                    },
+                    complete: function() {
+                        attachEvent('area');
+                    }
+                });
+            }
+            //地区下拉菜单显示/隐藏
+            function showSelect(event) {
+                var selectors = $('.selectbox span');
+                var layers = $('.selectbox .seler_layer');
+                var obj = $(this);
+                var index = selectors.index(obj);
+
+                for (var i = 0; i < selectors.length; i++) {
+                    if (i != index) {
+                        layers.eq(i).hide();
+                    }
+                }
+
+                if (layers.eq(index).css('display') == "none") {
+                    layers.eq(index).show();
+
+                    //IE:cancelBubble,Other：stopPropagation
+                    if (event.stopPropagation) { //Mozilla and Opera                   
+                        event.stopPropagation(); 
+                    } else if (window.event) {  //IE                   
+                        window.event.cancelBubble = true; 
+                    }
+
+                    //IE：document，Other：window
+                    $(($.browser.msie) ? document : window).one('click', function() {
+                        $(".seler_layer").hide();
+                    });
+                }
+            }
+
+
+
+        /*修改用户资料*/
+
+            //邮箱合法性验证
+            function IsEmail() {
+                var result = new ValidateResult();
+
+                if (!ValidateObj.IsEmail(this.value)) {
+                    result.success = false;
+                    result.errMsg = this.formatTip;
+                }
+                return result;
+            };
+            //数据验证
+            function checkData(name, mobile, cityid) {
+            	console.log(isMobile(mobile));
+                //--------姓名---------
+               if(!isMobile(mobile)){
+            	   $("#mobileErrMsg").show();
+            	   $("#mobileErrMsg").html("<b style='color:red'>手机号码输入有误！</b>");
+            	   return false;
+               }
+                return true;
+            }
+            //修改资料
+            function modifyUser() {
+                var mobile = $("#mobile").val();
+                var userName = $("#name").val();
+                var cityid = $('#cityspan').attr("aid");
+                var areaid = $('#areaspan').attr("aid");
+                if (checkData(userName, mobile, cityid)) {
+                    $.ajax({
+                        type: 'POST',
+                        url: "/user/ModifyUser",
+                        data: {
+                        	id:"#(session.user.id??)",
+                        	mobile: mobile,
+                            name: userName,
+                            aid: areaid > 0 ? areaid : cityid
+                        },
+                        dataType: "json",
+                        success: function(data) {
+                            if (data.Status == -1) {
+                                window.location = '/user';
+                            } else if (data.Status > 0) {
+                            	alert(data.Msg);
+                                setTimeout(function () {
+                                    window.location.reload();
+                                }, 500);
+                            } else if (data.Status == 0) {
+                            	alert(data.Msg);
+                            } else {
+                            	alert(data.Msg);
+                            }
+                        },
+                        error:function(data){
+                        	console.log(data.responseText);
+                        }
+                    });
+                }
+            }
+				
+
+
+         //惠车网统计
+        var HMCWebLogCollector = {
+            userid: '7271483'
+        };
+        //检查用户名是否合法(用于初始化带出)
+     function getUserName (userName) {
+        var rule = /^[\u4e00-\u9fa5\\]+$/;
+        var reg = RegExp(rule);
+        if (reg.test(userName) && userName.length <= 6) {
+            return userName;
+        }
+        return "";
+    }
+    </script>
+
+    <!--中间内容 开始 -->
+    <div class="bt_page">
+        <ul id="data_tab0" class="xinxzl   clearfix">
+            <li class="current wrapli"><a id="modifyLable" linkdiv="data_box0_0" href="javascript:void(0)">修改个人信息</a>
+                <b class="ar_up"></b><b class="ar_up_in"></b></li>
+            <li class="wrapli"><a id="resetPwd" linkdiv="data_box0_1" href="javascript:void(0)" title="点击修改密码">修改密码</a>
+                <b class="ar_up"></b><b class="ar_up_in"></b></li>
+        </ul>
+        <div class="clearfix  xgmmbox clearfix infodiv" id="data_box0_0" style="display: block;">
+            <div class="xg_mm">
+            </div>
+              <div class="txtbox">
+                <label>
+                    账&nbsp;&nbsp;号：</label>
+                <input id="userName" value="#(user.user_name??)" maxlength="12" type="text" class="txt" readonly="readonly">
+            </div>
+            
+            <div class="txtbox">
+                <label>
+                    手&nbsp;&nbsp;机：</label>
+                <input id="mobile" value="#(user.phone??)" maxlength="12" type="text" class="txt">
+            </div>
+                 
+            <div id="mobileErrMsg" class="diverror" style="display: none">
+            </div>
+            <div class="txtbox">
+                <label>
+                    姓&nbsp;&nbsp;名：</label>
+                <input id="name" value="#(user.nick_name??)" maxlength="6" type="text" class="txt">
+            </div>
+            <div id="nameErrMsg" class="diverror" style="display: none">
+            </div>
+       
+            <div class="selectbox edit-province">
+                <span id="provincespan" aid="#(c3.id??)">#(c3.name??)</span>
+                <div style="display: none;" class="seler_layer">
+                    <ul id="province">
+                    </ul>
+                </div>
+            </div>
+            <div class="selectbox edit-city city1">
+                <span id="cityspan" aid="#(c2.id??)">#(c2.name??)</span>
+                <div style="display: none;" class="seler_layer">
+                    <ul id="city">
+                    </ul>
+                </div>
+            </div>
+            <div class="selectbox edit-city city2">
+                <span id="areaspan" aid="#(c.id??)">#(c.name??)</span>
+                <div style="display: none;" class="seler_layer">
+                    <ul id="area">
+                    </ul>
+                </div>
+            </div>
+            <div id="areaErrMsg" class="diverror" style="display: none">
+            </div>
+            <div class="clear">
+            </div>
+            <span class="button_orange button_l_50 mr10"><a id="btnModifyUser" href="javascript:modifyUser();">保存修改</a>
+            </span>
+        </div>
+        <div class="clearfix xgmmbox xgmm_mbot clearfix infodiv" id="data_box0_1" style="display: none;">
+            <div class="txtbox xgmm_w75">
+                <label>
+                    &nbsp;原&nbsp;密&nbsp;码：</label>
+                <input id="oldPwd" type="password" class="txt" maxlength="21"></div>
+            <div id="oldPwdErrMsg" class="diverror" style="display: none">
+            </div>
+            <div class="txtbox xgmm_w75">
+                <label>
+                    &nbsp;新&nbsp;密&nbsp;码：</label>
+                <input id="newPwd" type="password" class="txt" maxlength="16"></div>
+            <div id="newPwdErrMsg" class="diverror" style="display: none">
+            </div>
+            <div class="txtbox xgmm_w75">
+                <label>
+                    确认密码：</label>
+                <input id="confirmPwd" type="password" class="txt" maxlength="16">
+            </div>
+            <div id="confirmErrMsg" class="diverror" style="display: none">
+            </div>
+            <div class="clear">
+            </div>
+            <span class="button_orange button_l_50 mr10"><a id="modifyButton" href="javascript:changePwd();">
+                保存修改</a></span>
+        </div>
+    </div>
+    <!--中间内容 结束 -->
+    <div id="divChangeMoblieWin" class="fuc_box" style="display: none; background-color: White;">
+        <div id="divChangeMoblieTitle">
+            <div id="btnCloseWin" class="fuc_close">
+                <a href="javascript:void(0);"></a>
+            </div>
+            <h2 class="fuc_tit">
+                修改手机号</h2>
+        </div>
+        <div class="carinfor editphone">
+            <ul>
+                <li class="formli">
+                    <label>
+                        新手机：</label>
+                    <div class="txtbox w340">
+                        <input maxlength="11" id="newMobile" type="text" class="txt">
+                    </div>
+                    <div id="newMobileErrMsg" class="error" style="display: none">
+                    </div>
+                </li>
+                <li class="formli">
+                    <label>
+                        确认码：</label>
+                    <div class="txtbox w190">
+                        <input maxlength="6" id="checkCode" type="text" class="txt">
+                    </div>
+                    <div id="codeErrMsg" class="error" style="display: none">
+                    </div>
+                    <a id="btnSendCode" href="javascript:void(0)" class="surebtn">发送确认码</a>
+                    <div class="clear">
+                    </div>
+                </li>
+                <li class="formli"><span id="btnChangeMobile" class="button_orange button_m_40"><a href="javascript:void(0)">确认修改</a> </span><a class="nosms" target="_blank" href="http://help.huimaiche.com/issue/dingdan">
+                        无法收到确认短信？</a> </li>
+            </ul>
+        </div>
+    </div>
+    <!--尾部开始 -->
+ #include("/common/_footer.html")

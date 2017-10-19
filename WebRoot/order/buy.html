@@ -1,0 +1,784 @@
+#@head("支付页面")
+<link href="./css/new-pay.css" type="text/css" rel="stylesheet">
+ <!--中间内容 开始 -->
+<div class="pay-subtitle">
+	<div><strong>2017款 宝马3系 320i M运动型</strong><span>厂商指导价：32.00万</span></div>
+</div>
+    <div class="container">
+        <!-- 流程及提示 -->
+        <div class="flow-cot">
+            
+<div class="flow">
+	<div class="flow-line-1"></div>
+	<div style="width: 25%" class="flow-line-2"></div>
+	<ul>
+		<li>	<strong>提交订单</strong><br>	<i class="first gou">1</i><br>	<span>2017-05-18 00:05:46</span></li><li>	<strong>预付订金</strong><br>	<i class="green">2</i><br><span>&nbsp;</span><div class="flow-arrow"><span>◆</span><em>◆</em></div></li><li>	<strong>获得底价</strong><br>	<i class="">3</i><br><span>&nbsp;</span></li><li>	<strong>付款提车</strong><br>	<i class="">4</i><br><span>&nbsp;</span></li><li class="pj">	<strong>评价商家</strong><br>	<i class="quan"></i><br><span>&nbsp;</span></li>
+	</ul>
+</div>
+            <div class="flow-address">
+                <h3>
+                    
+                    到店看车前，
+                    
+                    您需要预付<em>99元</em>订金到惠买车，请在7天内支付，超过订单将作废。</h3>
+                <div class="flow-tips">
+                    <h4>
+                        <i class="icon-tips"></i>惠买车提示</h4>
+                    
+                            <p>
+                                1、预付订金后，商家才认为您有明确的买车意向，才会去与其他商家竞争，报出心理底价。</p>
+                            <p>
+                                2、订金先预付到您的惠买车账号，买车时再付给商家抵用车款，不买车订金100%退还。</p>
+                            <p>
+                                3、不想买了，可以<a href="javascript:void(0)" id="btnShowCancelWin">取消订单</a>
+                                
+                                <span id="cancelErrMsg" class="error"></span>
+                            </p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="order-pay">
+            
+<table width="100%" cellpadding="0" cellspacing="0">
+    <tbody><tr>
+        <td width="82" align="right" valign="top">
+            订金金额：
+        </td>
+        <td>
+            <strong class="order-money">￥<span>99</span></strong>
+            <div class="order-money-tips">预付订金后，多家4S店会实时提供报价详单，承诺无隐性消费！</div>
+        </td>
+    </tr>
+    <tr id="payCouponTR" style="display: none;">
+        <td align="right" valign="top">
+            优&nbsp;惠&nbsp;券：
+        </td>
+        <td>
+            <span id="currentCoupon" class="quan" vid="" val="0"><i></i>未使用优惠券</span> <a id="btnShowCoupon" href="javascript:void(0);" class="link new-link"><i></i>展开全部</a>
+            <div id="payCouponListDiv" class="quan-list-box" style="display: none;"><div class="quan-list-tab">
+        <a id="btnUse" class="active">可用优惠券（0）</a>
+        <a id="btnNoUse">不可用优惠券（0）</a>
+    </div>
+    <div id="divUseCouponList">
+    
+        <div class="no-quan">
+            <p><i></i><span>无可用优惠券，请先支付订金，买车时还有使用优惠券的机会！</span></p>
+        </div>
+    
+    </div>
+
+    <div id="divNoUseCouponList" style="display: none;">
+    
+        <div class="no-quan">
+            <p><i></i><span>无不可用优惠券</span></p>
+        </div>
+    
+    </div>
+    <div class="quan-tips">
+        ＊优惠券在买车时可抵车款</div></div>
+        </td>
+    </tr>
+    <tr id="actualToPay" style="display: none;">
+        <td align="right" valign="top">
+            可抵车款：
+        </td>
+        <td>
+            <strong id="paidMoney" class="djnum">￥99</strong>
+        </td>
+    </tr>
+    <tr id="payTypeSelect" class="payselect">
+        <td align="right" valign="top">
+            支付方式：
+        </td>
+        <td>
+            <a class="zf zfb seletzf" href="javascript:void(0);" pt="3">
+                <i></i></a>
+            <a class="zf new-zfb" href="javascript:;" pt="10"><i></i>
+                <em></em></a>
+            <a class="zf wx" href="javascript:void(0);" pt="2"> <i>
+            </i></a>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            &nbsp;
+        </td>
+        <td>
+            <div class="qf_btn">
+                <span id="spanSubmitPay" class="button_orange button_l_50 fleft"><a id="btnPay" href="javascript:void(0);" data-hmclog="{ pageid: &#39;11&#39;, eventid: &#39;677&#39;}">立即支付</a> </span>
+                <span class="qf-tip fleft"><span class="qf-tip-con"><span class="qf-tip-text"></span>
+                </span></span>
+            </div>
+        </td>
+    </tr>
+</tbody></table>
+<div class="mask" id="weixinQrcode" style="display: none;">
+    <div class="mask-out">
+    </div>
+    <div class="new-pay-weixin">
+        <div class="new-pay-wtop">
+            <div class="new-pay-wt-close">
+                <i></i>
+            </div>
+            <div class="new-pay-wt-title">
+                微信支付</div>
+        </div>
+        <div class="new-pay-wmiddle">
+            <img id="payQrcodeImg" src="http://i.huimaiche.com/car/pay?oid=15631888&amp;cp=W7PcLc9Lz7FnTO4a5nBLMQ!!">
+            <div class="new-pay-wm-text">
+                请使用 微信 扫一扫<br>
+                二维码完成支付</div>
+        </div>
+        <div class="new-pay-wleft">
+        </div>
+    </div>
+</div>
+<div class="mask" id="zfbQrCode" style="display: none;">
+    <div class="mask-out">
+    </div>
+    <div id="fancybox-wrap">
+        <div class="new-pay-fancy-close">
+            <i></i>
+        </div>
+        <div class="fancybox-skin">
+            <div class="fancybox-inner" style="overflow: hidden; width: 628px; height: 280px;">
+                <iframe src="./buy_files/saved_resource.html" frameborder="0" id="alipayQrIframe" style="width: 628px; height: 280px;
+                    overflow: hidden; display: block;"></iframe>
+            </div>
+            <a title="Close" class="fancybox-close" id="fancybox-close" href="javascript:"></a>
+            <input type="hidden" value="" id="qrcodeForm">
+        </div>
+    </div>
+</div>
+<script type="text/javascript">
+    //============================================================
+    // 支付模块，需要调用重置优惠券列表功能
+    //============================================================
+    var statStr = $("#btnPay").attr("data-hmclog");
+    //选择支付类型
+    function setPayType() {
+        $(".zf").removeClass("seletzf");
+        $(this).addClass("seletzf");
+
+        //网银支付
+        if ($(this).attr("pt") == 8) {
+            $(".wy-pay").show();
+        }
+        else {
+            $(".wy-pay").hide();
+        }
+        $("#btnPay").attr("data-hmclog",statStr.substring(0,statStr.length-1) + ",paytype : '" + $(this).attr("pt") + "'}");
+    }
+
+    //付订金-提交
+    function paySubmit() {
+        var oid = "15631888";
+        var paytype = $(".zf.seletzf").attr("pt");
+        var cid = $("#currentCoupon").attr("vid");
+        var camount = $("#currentCoupon").attr("val");
+        var subscription = "99";
+
+        var curl = "";
+        var bid = "";
+        if (paytype == 8) {
+            var curl = "//i.huimaiche.com/order/list.aspx";
+            var bid = $("input[name=rdiPayBankType]:checked").val();
+            if (typeof (bid) == "undefined") {
+                bid = "";
+            }
+        }
+
+        //隐藏闪购提示
+        $("#divPayWarnWin").hide();
+        _M.Close();
+         var newPay = 1;
+        var paymode = 1;
+        if (newPay == 1 && (paytype == "2" || paytype == "10") && paymode == 1) {
+            payQRCode(oid, paytype, cid, bid, curl, (paytype == "10" ? 1 : 0));
+        } else {
+            //提交支付
+            $("#pay_paytype").val(paytype);
+            $("#pay_cid").val(cid);
+            $("#pay_bid").val(bid);
+            $("#pay_curl").val(curl);
+            $("#pay_form").submit();
+
+
+            //支付提示
+            showNotice();
+
+            //百度统计事件【去支付】
+            baiduStat.hm_pay();
+
+            //惠买车统计事件【去支付】
+            huimaicheStat.hm_pay(document.getElementById("btnPay"));
+             }
+            //启用支付按钮
+            $("#btnPay").unbind("click").one("click", pay);
+       
+    }
+
+    //监听支付结果
+    function listenPayResult(payOrderId,payType,payCenterId) {
+        setTimeout(function() {
+             _interval = setInterval(function checkStatus() {
+                 $.ajax({
+                     url: '/order/Ajax/GetPayStatus.ashx',
+                     type: 'POST',
+                     dataType: 'json',
+                     data: {
+                         pid: payOrderId
+                     },
+                     success: function(data) {
+                         if (data.Status == -1) {
+                             window.location = 'https://passport.huimaiche.com/login/?re=http%253a%252f%252fi.huimaiche.com%252fcar%252fpay%253foid%253d15631888%2526cp%253dW7PcLc9Lz7FnTO4a5nBLMQ!!';
+                         } else if (data.Status > 0) {
+                            clearInterval(_interval);
+                             window.onbeforeunload = null;
+                             switch (payType) {
+                             case "2":
+                             window.location = "/car/payweixin?oid=15631888&cp=W7PcLc9Lz7FnTO4a5nBLMQ!!&action=1";
+                                 break;
+                                 case "10":
+                                  window.location = "/Order/PaySuccessed.aspx?mpid="+payCenterId+"&orderid=15631888&PayAmount=99";
+                                     break;
+                             default:
+                             }
+                             
+                         } else {
+                            //alert(data.Msg)
+                         }
+                     }
+                 });
+             }, 2500);
+         }, 5000);
+    }
+     function payQRCode(oid,paytype,cid,bid,curl,qrPay) {
+         //请求支付
+            $.ajax({
+                type: "get",
+                url: "/order/Ajax/GetPayOrder.ashx",
+                data: { oid: oid, pt: paytype, cid: cid, bid: bid, curl: curl,qrPay:qrPay },
+                dataType: "json",
+                async: false,
+                cache: false,
+                success: function (data, textStatus) {
+                    if (data.Status == 1) {
+                        //提交支付
+                        switch (paytype) {
+                            case "2":
+                                //微信支付
+                                setPayImage(data.PayUrl,paytype);
+                                $("#weixinQrcode").show();
+                                listenPayResult(data.PayOrderId,paytype,0);
+                                break;
+                                 case "3":
+                                //支付宝支付
+                                     $("#qrcodeForm").val(data.PayUrl);
+                                     $("#zfbQrCode").find("iframe")[0].src = "/Order/PayZfbQrCode.aspx?r="+Math.random();
+                                     $("#zfbQrCode").show();
+                                     listenPayResult(data.PayOrderId,paytype,data.PayOrderId);
+                                break;
+                                case "10":
+                                //支付宝支付
+                                     $("#qrcodeForm").val(data.PayUrl);
+                                     $("#zfbQrCode").find("iframe")[0].src = "/Order/PayZfbQrCode.aspx?r="+Math.random();
+                                     $("#zfbQrCode").show();
+                                     listenPayResult(data.PayOrderId,paytype,data.PayOrderId);
+                                break;
+                        }
+                    }else {
+                        //其它错误信息
+                        
+                        $("#payWarnMessage").html(data.Msg);
+                        showPayWarnWin();
+                    }
+                }
+            });
+           
+        }
+          //提示窗口
+    function showPayWarnWin() {
+    _M.Show("divPayWarn2Win", "divPayWarn2Title");
+    }
+         //设置图片地址
+    function setPayImage(url,payType) {
+        
+        switch (parseInt(payType)) {
+        case 2:
+         $("#payQrcodeImg").attr("src","/order/Ajax/PayQRCode.ashx?pc=" + url);
+            break;
+        case 3:
+//         $("#frameZFB").html(url);
+//            $("#alipaysubmit").submit();
+            break;
+        }
+       
+    }
+
+    //提交支付-确认
+    function pay() {
+        var carCount = "-1";
+        if (carCount == -1) {
+            //普通订单
+            paySubmit();
+        }
+        else {
+            _M.Show("divPayWarnWin", "divPayWarnTitle");
+            //启用支付按钮
+            $("#btnPay").unbind("click").one("click", pay);
+        }
+    }
+
+    //显示支付结果通知
+    function showNotice() {
+        _M.Show("divPayNoticeWin", "divPayNoticeTitle");
+    }
+
+    //隐藏支付结果通知
+    function hideNotice() {
+        //启用支付按钮
+        //$("#btnPay").unbind("click").one("click", pay);
+        $("#divPayNoticeWin").hide();
+        _M.Close();
+    }
+
+    //支付成功按钮事件
+    function paidSuccessfull() {
+        //百度统计事件【支付成功看详情】
+        baiduStat.hm_pay_view_successed();
+
+        //惠买车统计事件【支付成功看详情】
+        huimaicheStat.hm_pay_view_successed(document.getElementById("btnPaySuccess"));
+
+        hideNotice();
+        window.location = "/car/price?oid=15631888&cp=W7PcLc9Lz7FnTO4a5nBLMQ!!";
+    }
+
+    //支付失败按钮事件
+    function failToPay() {
+        //百度统计事件【支付失败选择其他】
+        baiduStat.hm_pay_view_error();
+
+        //惠买车统计事件【支付失败选择其他】
+        huimaicheStat.hm_pay_view_error(document.getElementById("btnRepay"));
+
+        hideNotice();
+
+        window.location.reload();
+    }
+
+    //Init
+    $(function () {
+        $(".zf").click(setPayType);
+        $("#btnPay").one("click", pay);
+        $("#submitButton").click("click", paySubmit);
+        $("#divPayNoticeTitle .fuc_close").click(hideNotice);
+        $("#btnPaySuccess").click(paidSuccessfull);
+        $("#btnRepay").click(failToPay);
+
+        var carCount = "-1";
+        var carLockCount = "0";
+        var carColor = "";
+
+         qrcodeUiInit();
+
+        $(".new-pay-fancy-close").find("i").click(function() {
+            zfbHideEvent();
+        });
+    });
+    //初始化二维码
+    function qrcodeUiInit() {
+        var $continue = $('.new-pay-mb1');
+        var $notuse = $('.new-pay-mb2');
+        var $newclose = $('.new-pay-wt-close');
+        var $newmask = $('.new-pay-weixin');
+        var $newleft = $('.new-pay-wleft');
+        var $close = $('.new-pay-wt-close');
+        $close.click(function () {
+            $('#weixinQrcode').hide();
+        });
+        $newmask.hover(function () {
+            $newleft.show();
+        }, function () {
+            $newleft.hide();
+        });
+    }
+    function zfbHideEvent() {
+         $("#zfbQrCode").hide();
+              $("#qrcodeForm").val('');
+              $("#zfbQrCode").find("iframe")[0].src = "";
+    }
+    //============================================================
+    // 优惠券模块：载入优惠券列表，设置默认优惠券
+    //============================================================
+
+    //显示优惠券列表
+    function showCouponList() {
+        var btnCoupon = $("#btnShowCoupon");
+        if (btnCoupon.text() == "展开全部") {
+            //bindCouponList();
+            //_M.Show("divCouponListWin", "divCouponListTitle");
+            $("#payCouponListDiv").show();
+            $("#btnShowCoupon").addClass("active").html("<i></i>收起");
+        }
+        else {
+            hideCouponList();
+        }
+    }
+
+    //隐藏优惠券列表
+    function hideCouponList() {
+        $("#payCouponListDiv").hide();
+        $("#btnShowCoupon").removeClass("active").html("<i></i>展开全部");
+    }
+
+    //选择优惠券列表中的类型Tab
+    function selectCouponListTypeTab() {
+        var thisId = $(this).attr("id");
+
+        $(".quan-list-tab a").removeClass("active");
+        $("#" + thisId).addClass("active");
+
+        if (thisId == "btnUse") {
+            $("#divUseCouponList").show();
+            $("#divNoUseCouponList").hide();
+            $(".quan-tips").show();
+        }
+        else {
+            $("#divUseCouponList").hide();
+            $("#divNoUseCouponList").show();
+            $(".quan-tips").hide();
+        }
+    }
+
+    //载入优惠券列表
+    function bindCouponList() {
+        var oid = "15631888";
+        var cid = $("#currentCoupon").attr("vid"); //当前选中优惠券ID
+        var tmpId = "tmp_payCouponListDiv";
+        var bindId = "payCouponListDiv"
+
+        $.ajax({
+            url: "/order/Ajax/GetCoupon.ashx",
+            dataType: "json",
+            data: { oid: oid,dealcar : 121144 },
+            async: false,
+            cache: false,
+            timeout: 30000,
+            success: function (data) {
+                if (data.Status == -1) {
+                    window.location = "https://passport.huimaiche.com/login/?re=http%253a%252f%252fi.huimaiche.com%252fcar%252fpay%253foid%253d15631888%2526cp%253dW7PcLc9Lz7FnTO4a5nBLMQ!!";
+                } else if (data.Status > 0) {
+                    //绑定数据
+                    var json = { "data": data.Content, "selectvid": cid };
+                    var html = template.render(tmpId, json);
+                    $("#" + bindId).html(html);
+
+                    //优惠券列表注册选择优惠券事件：click & mouseover
+                    $("#divUseCouponList li").click(function () {
+                        var couponID = "";
+                        var couponsAmount = 0;
+                        if ($(this).hasClass("active")) {
+                            $("#divUseCouponList li").removeClass("active");
+                        } else {
+                            $("#divUseCouponList li").removeClass("active");
+                            $(this).addClass("active");
+
+                            var elem = $(this);
+                            if (elem.length > 0) {
+                                couponID = elem.attr("vid");
+                                couponsAmount = elem.attr("val");
+                            }
+                        }
+
+                        couponSelected(couponID, couponsAmount);
+                    });
+
+                    //优惠券列表注册使用说明事件：click & mouseover
+                    $(".quan-list-detail").mouseover(function () {
+                        $(this).children(".quan-list-detail-range").show();
+
+                    }).mouseout(function () {
+                        $(this).children(".quan-list-detail-range").hide();
+                    });
+                } else {
+                    //$("#" + bindId).html(data.Msg);
+                    var json = { "data": data.Content };
+                    var html = template.render(tmpId, json);
+                    $("#" + bindId).html(html);
+                }
+                if(data.Content.UseList.length <= 0) {
+                    $("#payCouponTR").hide();
+                    $("#actualToPay").hide();
+                }
+            },
+            error: function () {
+                $("#" + bindId).html("请求异常");
+            }
+        });
+    }
+
+    //优惠券选中后，调整页面下显示
+    function couponSelected(id, amount) {
+        var subscription = "99";
+        var totalMoney = parseInt(subscription) + parseInt(amount);
+        var amountInfo = "未使用优惠券";
+        if (amount > 0) {
+            amountInfo = amount + "元优惠券"
+        }
+
+        $("#paidMoney").html("￥" + ValidateObj.FormatNumber(totalMoney));
+        $("#currentCoupon")
+            .html("<i></i>" + amountInfo)
+            .attr({ vid: id, val: amount });
+    }
+
+    //选择优惠券
+    function couponSelect() {
+        var couponID = "";
+        var couponsAmount = 0;
+        var list = $("#divUseCouponList li");
+        
+        //alert(list.length);
+        if (list.length > 0) {
+            //有优惠券
+            $("#payCouponTR").show();
+            //$("#actualToPay").show();
+
+            var elem = $("#divUseCouponList li.active");
+            if (elem.length > 0) {
+                //alert(elem.attr("vid"));
+                couponID = elem.attr("vid");
+                couponsAmount = elem.attr("val");
+            }
+        }
+        else {
+            //无可用优惠券
+            var nolist = $("#divUseCouponList li");
+            if (nolist.length > 0) {
+                $("#payCouponTR").show();
+                //$("#actualToPay").show();
+            } else {
+                $("#payCouponTR").hide();
+                //$("#actualToPay").hide();
+            }
+        }
+
+        couponSelected(couponID, couponsAmount);
+        elem = null;
+    }
+
+    //初始化
+    $(function () {
+        bindCouponList(); //初始化优惠券
+        couponSelect(); //设置选择优惠券
+
+        $("#btnShowCoupon").click(showCouponList);
+        $(".quan-list-tab a").live("click", selectCouponListTypeTab);
+
+        //设置默认网银支付——银行
+        var bankList = $("input[name=rdiPayBankType]");
+        if (bankList && bankList[0]) {
+            $("input[name=rdiPayBankType]")[0].checked = true;
+        }
+
+    });
+</script>
+
+        </div>
+        
+<script type="text/javascript" src="./buy_files/GiftCommon.js.下载"></script>
+<script>
+    $(function () {
+        try {
+            Gift.init("18f5ea52d9b3f5e1a939bed903cd60ac", 3, "giftDivID", "/order/");
+        }
+        catch (e) { }
+    });
+</script>
+<div id="giftDivID" class="get-card-list" style="">
+		<ul>
+		<link rel="stylesheet" href="./css/new-pay-1026.css">
+		</ul>
+</div>
+
+        
+<script type="text/javascript">
+    //    $(function() {
+    //        try {
+    //            checkShowCurve("121144" , function(candraw) {
+    //                if (!candraw) {
+    //                	$('.order-car-info .nobd').hide();
+    //                	$('#param').addClass('nobd');
+    //                }
+    //            });
+    //       
+    //        } catch (e) {}
+    //    });
+</script>
+<div class="order-info">
+    <div class="order-title">
+        订单信息</div>
+    <div class="cot clearfix">
+        <div class="order-car-info">
+            <img src="./buy_files/saved_resource(1)" height="100px" width="150px">
+            <ul>
+                <li class="nobd"><a href="http://www.huimaiche.com/baoma3xi/?carid=121144#t1" target="_blank">底价走势</a></li>
+                <li id="param"><a href="http://www.huimaiche.com/baoma3xi/?carid=121144#t2" target="_blank">车型参数</a></li>
+                
+                <li><a href="http://www.huimaiche.com/baoma3xi/?carid=121144#t3" target="_blank">车型图片</a></li>
+                
+            </ul>
+        </div>
+        <div class="table">
+            <table width="100%" cellpadding="0" cellspacing="0">
+                <tbody>
+                    <tr><td class="tb-title" width="60">订单编号：</td><td width="300">15631888</td><td class="tb-title" width="60">意向车型：</td><td>2017款 宝马3系 320i M运动型</td></tr><tr><td class="tb-title">购车方式：</td><td>新车全款</td><td class="tb-title">外观颜色：</td><td>冰河银金属漆</td></tr><tr><td class="tb-title">手机号码：</td><td>159****2376</td><td class="tb-title">上牌城市：</td><td>广州</td></tr><tr><td class="tb-title">认证商家：</td><td>4家</td><td class="tb-title"></td><td></td></tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <div class="order-bottom">
+        订金金额：<strong>￥99</strong></div>
+</div>
+
+    </div>
+    
+<div class="index-ad">
+</div>
+
+    <!--尾部 -->
+    <!--尾部开始 -->
+ #include("/common/_footer.html")
+
+<!--尾部结束 -->
+<!--支付弹层 开始 -->
+<div id="divPayNoticeWin" class="fuc_box fuc_w515" style="display: none; background-color: White;">
+    <div id="divPayNoticeTitle">
+        <div class="fuc_close">
+            <a></a>
+        </div>
+        <h2 class="fuc_tit">
+            提示</h2>
+    </div>
+    <div class="zsdj">
+        <h4 id="tipHeader">
+            请在新打开的页面完成付款！</h4>
+        <div class="zfcgbox">
+            <p id="tipSuccess">
+                <span class="button_orange button_m_40"><a id="btnPaySuccess" href="javascript:void(0);" data-hmclog="{ pageid: &#39;5&#39;, eventid: &#39;32&#39;}">支付成功,查看详情</a> </span>
+            </p>
+            <p id="tipFail">
+                <span id="failSpan" class="button_gray button_m_40"><a id="btnRepay" href="javascript:void(0);" data-hmclog="{ pageid: &#39;5&#39;, eventid: &#39;33&#39;}">遇到问题,重新支付</a> </span>
+            </p>
+        </div>
+    </div>
+</div>
+<div id="divPayWarnWin" class="fuc_box fuc_w515" style="display: none; background-color: White;">
+    <div id="divPayWarnTitle">
+        <div class="fuc_close">
+            <a href="javascript:void(0);" onclick="$(&#39;#divPayWarnWin&#39;).hide();_M.Close();"></a>
+        </div>
+        <h2 class="fuc_tit">
+            支付提醒</h2>
+    </div>
+    <div class="tanh_box">
+        <dl>
+            <dt></dt>
+            <dd class="zf-warning">
+                <h3>
+                    在支付订金之前，请您确认以下信息</h3>
+                <ul>
+                    <li><span>1. </span>由惠买车的买车顾问陪同您到店买车</li>
+                    <li><span>2. </span>不买车订金随时退</li>
+                </ul>
+                <div class="btn">
+                    <span class="button_orange button_m_40"><a id="submitButton" href="javascript:">知道了，去支付</a></span></div>
+            </dd>
+        </dl>
+    </div>
+</div>
+<div id="divCouponListWin" class="fuc_box fuc_w400" style="display: none; background-color: White;">
+    <div id="divCouponListTitle">
+        <div class="fuc_close">
+            <a href="javascript:void(0);"></a>
+        </div>
+        <h2 class="fuc_tit">
+            请选择易车优惠券</h2>
+    </div>
+    <div class="djq_list">
+        <ul id="couponList">
+            数据加载中....
+        </ul>
+        <div class="choose-djq-tips">
+            <p>
+                提示：1 优惠券可直抵车款，退款时优惠券会自动退回。</p>
+            <p class="ti">
+                2 不勾选优惠券并点击“确认”按钮可不使用优惠券。</p>
+        </div>
+        <div class="btn">
+            <span class="button_orange button_m_40"><a id="btnCouponConfirm" href="javascript:void(0);">
+                确定</a> </span>
+        </div>
+    </div>
+</div>
+
+
+<div id="divSuccessTip" class="fc" style="display: none; position: fixed; _position: absolute;">
+    <div id="txtSuccessTip" class="fc_blc">
+    </div>
+</div>
+<!--支付弹层 结束 -->
+<!--支付提交form 开始 -->
+<form id="pay_form" action="http://i.huimaiche.com/order/payjump.aspx?oid=15631888&amp;cp=W7PcLc9Lz7FnTO4a5nBLMQ!!" method="post" target="_blank">
+<input id="pay_paytype" type="hidden" name="pay_paytype" value="">
+<input id="pay_cid" type="hidden" name="pay_cid" value="">
+<input id="pay_bid" type="hidden" name="pay_bid" value="">
+<input id="pay_curl" type="hidden" name="pay_curl" value="">
+</form>
+<!--支付提交form 结束 -->
+
+    <div id="divCancelWin" class="fuc_box" style="display: none; background-color: White;">
+        <div id="divCancelTitle">
+            <div id="btnCancelWinClose" class="fuc_close">
+                <a href="javascript:void(0);"></a>
+            </div>
+            <h2 class="fuc_tit">
+                取消订单</h2>
+        </div>
+        <div class="dinjfc qrtuih">
+            <span class="sb_bg"></span>
+            <p class="tjcg_tit">
+                您确定要取消订单吗？</p>
+            <p>
+                取消订单后订单将作废！</p>
+            <div class="dinjbut">
+                <span class="button_orange button_m_40 "><a id="btnSubmitCancel" href="javascript:void(0);">
+                    确定取消订单</a> </span>
+            </div>
+        </div>
+    </div>
+  
+    <div id="divPayWarn2Win" class="fuc_box" style="display: none; background-color: White;">
+        <div id="divPayWarn2Title">
+            <div class="fuc_close">
+                <a href="javascript:void(0);" onclick="winClose(0);"></a>
+            </div>
+            <h2 class="fuc_tit">
+                支付提醒</h2>
+        </div>
+        <div class="tanh_box">
+            <div class="confirm-pay zf-over">
+                <span class="bg"></span>
+                <p id="payWarnMessage">
+                </p>
+                <div class="btn">
+                    <span class="button_orange button_m_40"><a id="divPayWarn2Link" href="javascript:void(0);" onclick="winClose(0);">我知道了</a></span></div>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript" src="./js/online-consult.js"></script>
+
+</body></html>

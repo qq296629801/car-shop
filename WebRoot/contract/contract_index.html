@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html><head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>晒合同</title>
+<link rel="stylesheet" href="/css/common.css">
+<link rel="stylesheet" href="/css/share-20150811.css">
+     #include("/common/_head_team.html")
+</head>
+<body>
+    <div class="share-experience bt_page">
+        <div class="col-main col-main-left">
+            <div class="bread-crumbs-link-share">
+                <a href="http://www.#.com/">首页</a> &gt; <a href="http://hd.#.com/share/list" id="qbrul"><span>全部合同</span></a><span id="bdCity"></span>
+            </div>
+            <div class="mod-header">
+                <strong>晒合同</strong> <span id="choose-site">全国<i class="icon"></i></span>
+            </div>
+            <div class="listing">
+                <ul id="shareUl">
+                    #for(c:contractPage.getList())
+                            <li class="list-item"><a href="/contract/detail?id=#(c.id)" target="_blank">
+                                <div class="list-item-thumb">
+                                    <span></span>
+                                    <img src="/img/u/#(c.picture_url??)" alt="">
+                                </div>
+                                <div class="list-item-content">
+                                    <h4>#(c.title??)</h4>
+                                    <h5>
+                                        <span>车主：#(c.nick_name??)</span><span>汽车品牌：#(c.brand_name??)</span><span>分享日期：#date(c.share_date,'YYYY年MM月dd日')</span></h5>
+                                        <h5><span>解锁金币：#(c.unlock_coin??)个</span></h5>
+                                    <p class="intro" id="content_id">
+                                        #(c.content.replaceAll('<[^>]+>', '').substring(0,150))...
+                                    </p>
+                                </div>
+                                <!-- <p class="list-save-money">省<em>0.8</em>万</p> -->
+                                <!-- <div class="clear">
+                                </div> -->
+                            </a></li>
+                     #end 
+                        
+                            <!-- <li class="list-item"><a href="http://hd.#.com/share/detail/12616" target="_blank">
+                                <div class="list-item-thumb">
+                                    <span></span>
+                                    <img src="./blog_files/20170613190247239_cdee61.jpg" alt="">
+                                </div>
+                                <div class="list-item-content">
+                                    <h4>
+                                        易车网砍价很不错</h4>
+                                    <h5>
+                                        <span>车主：李玉 学</span><span>分享日期：2017年06月13日</span></h5>
+                                    <p class="intro">
+                                        易车网购车感觉比自己去店里便宜很多，很好，非常支持！我是参加惠买车团购去的，易车服务员也很不错，商家服务到位，购买该车关注很久了，自己也到多家4s店去看过车，但......
+                                    </p>
+                                </div>
+                                <p class="list-save-money">省<em>0.5</em>万</p>
+                                <div class="clear">
+                                </div>
+                            </a></li>
+                        
+                            <li class="list-item"><a href="http://hd.#.com/share/detail/12614" target="_blank">
+                                <div class="list-item-thumb">
+                                    <span></span>
+                                    <img src="./blog_files/20170613111608383_6e84f5.jpg" alt="">
+                                </div>
+                                <div class="list-item-content">
+                                    <h4>
+                                        惠买车网购车</h4>
+                                    <h5>
+                                        <span>车主：肖振国</span><span>分享日期：2017年06月13日</span></h5>
+                                    <p class="intro">
+                                        想买七座suv的想法由来已久，在汉兰达、道奇酷威、锐界、传祺徘徊了很长时间！出于种种原因考虑，曾经一度定位在传祺GS8！但是随着各种信息的不断深入，综合性价比，折旧......
+                                    </p>
+                                </div>
+                                
+                                <div class="clear">
+                                </div>
+                            </a></li>
+                        
+                            <li class="list-item"><a href="http://hd.#.com/share/detail/12613" target="_blank">
+                                <div class="list-item-thumb">
+                                    <span></span>
+                                    <img src="./blog_files/20170608012206969_42e0a3.jpg" alt="">
+                                </div>
+                                <div class="list-item-content">
+                                    <h4>
+                                        一键低价</h4>
+                                    <h5>
+                                        <span>车主：郭生</span><span>分享日期：2017年06月10日</span></h5>
+                                    <p class="intro">
+                                        由原来看福特福睿斯预算十万左右代步，冲去4s店试驾，第一次买车，试驾员s型直行，当时觉得好利害，自己试驾路程有点短，觉得车动力够用音响够好，但再细和老婆看车也看......
+                                    </p>
+                                </div>
+                                <p class="list-save-money">省<em>0.4</em>万</p>
+                                <div class="clear">
+                                </div>
+                            </a></li>
+                        
+                            <li class="list-item"><a href="http://hd.#.com/share/detail/12612" target="_blank">
+                                <div class="list-item-thumb">
+                                    <span></span>
+                                    <img src="./blog_files/170609181817658_f6f7.jpg" alt="">
+                                </div>
+                                <div class="list-item-content">
+                                    <h4>
+                                        艾力绅风尚版交款提车。</h4>
+                                    <h5>
+                                        <span>车主：郭静</span><span>分享日期：2017年06月09日</span></h5>
+                                    <p class="intro">
+                                        等了一个半月才迎来我的白色小艾，我选择风尚版因为是家用二胎神器，家里有两个调皮小孩。风尚版第二排没有小桌板，这样方便平时照顾小孩，不会挡路，电器的东西也怕容......
+                                    </p>
+                                </div>
+                                <p class="list-save-money">省<em>1.58</em>万</p>
+                                <div class="clear">
+                                </div>
+                            </a></li>
+                        
+                            <li class="list-item"><a href="http://hd.#.com/share/detail/12610" target="_blank">
+                                <div class="list-item-thumb">
+                                    <span></span>
+                                    <img src="./blog_files/20170606123320431_70efa9.jpg" alt="">
+                                </div>
+                                <div class="list-item-content">
+                                    <h4>
+                                        为博瑞而自豪</h4>
+                                    <h5>
+                                        <span>车主：王居武</span><span>分享日期：2017年06月06日</span></h5>
+                                    <p class="intro">
+                                        我在东莞打工多年，有一次偶尔在街道上看到了一款大气，外观时尚的轿车，但还没来得及看清楚是什么品牌的车子，就已经飞驰而去了。后来就在网上查找，凭当时的大概影响......
+                                    </p>
+                                </div>
+                                <p class="list-save-money">省<em>1</em>万</p>
+                                <div class="clear">
+                                </div>
+                            </a></li> -->
+                        
+                </ul>
+            </div>
+            <div id="paginator" class="paginator">
+                <ul id="pagingUrl">
+                #if(contractPage.totalPage==1)
+                
+                <li><a class="is-active" href="http://hd.#.com/share/list?p=#(contractPage.totalPage)">#(contractPage.totalPage)</a></li>
+                #else
+                #for(i=1;i<=contractPage.totalPage;i++)
+                
+                <li><a class="is-active" href="http://hd.#.com/share/list?p=#(i)">#(i)</a></li>
+                
+                #end
+                <li class="next"><a href="http://hd.#.com/share/list?p=2">下一页</a></li>
+                #end
+                </ul>
+                <span id="spanCounter" class="page-counter">共#(contractPage.totalPage??)页</span>
+                <div class="page-form">
+                    去往
+                    <input onkeyup="this.value=this.value.replace(/\D/g,&#39;&#39;)" onafterpaste="this.value=this.value.replace(/\D/g,&#39;&#39;)" class="input-control" type="text" id="txtGo2Page">
+                    页
+                </div>
+                <a href="javascript:void(0)" class="btn-jump" id="btnJump" onclick="open_window()">确定</a>
+                <a href="javascript:void(0)" class="btn-jump" id="" onclick="contract_release()">发布合同</a>
+            </div>
+            <div class="share-experience-tips">
+                免责声明：购车体验中的图片为平台购车用户真实分享，如果对其中的展示内容有任何问题，请立即联系4000591591。
+            </div>
+            
+        </div>
+        <div class="col-sub">
+            <div class="sub-header">
+                <strong>热销车型</strong>
+            </div>
+            <div class="car_list">
+    <ul>
+        
+    <li>
+        <a href="http://www.#.com/siyucivic?page=buy_share" class="pic">
+            <img width="135" height="88" src="./blog_files/0715018566_6.jpg">
+        </a>
+        <div class="car-detail">
+            <a href="http://www.#.com/siyucivic?page=buy_share">
+                <p class="car-type">思域</p>
+                <p class="buying">有<em>877</em>人正在购买</p>
+            </a>
+</div>
+        
+    </li>
+    
+    <li>
+        <a href="http://www.#.com/chuanqigs4?page=buy_share" class="pic">
+            <img width="135" height="88" src="./blog_files/0517594450_6.jpg">
+        </a>
+        <div class="car-detail">
+            <a href="http://www.#.com/chuanqigs4?page=buy_share">
+                <p class="car-type">传祺GS4</p>
+                <p class="buying">有<em>512</em>人正在购买</p>
+            </a>
+</div>
+        
+    </li>
+    
+    <li>
+        <a href="http://www.#.com/hafuh6?page=buy_share" class="pic">
+            <img width="135" height="88" src="./blog_files/0622000295_6.jpg">
+        </a>
+        <div class="car-detail">
+            <a href="http://www.#.com/hafuh6?page=buy_share">
+                <p class="car-type">哈弗H6</p>
+                <p class="buying">有<em>509</em>人正在购买</p>
+            </a>
+</div>
+        
+           <div class="s-car-ico"></div>
+         
+    </li>
+    
+    <li>
+        <a href="http://www.#.com/changancs75?page=buy_share" class="pic">
+            <img width="135" height="88" src="./blog_files/0431144782_6.jpg">
+        </a>
+        <div class="car-detail">
+            <a href="http://www.#.com/changancs75?page=buy_share">
+                <p class="car-type">长安CS75</p>
+                <p class="buying">有<em>457</em>人正在购买</p>
+            </a>
+</div>
+        
+    </li>
+    
+    <li>
+        <a href="http://www.#.com/hanlanda?page=buy_share" class="pic">
+            <img width="135" height="88" src="./blog_files/1112269679_6.jpg">
+        </a>
+        <div class="car-detail">
+            <a href="http://www.#.com/hanlanda?page=buy_share">
+                <p class="car-type">汉兰达</p>
+                <p class="buying">有<em>391</em>人正在购买</p>
+            </a>
+</div>
+        
+    </li>
+    
+    <li>
+        <a href="http://www.#.com/jieda?page=buy_share" class="pic">
+            <img width="135" height="88" src="./blog_files/1048125125_6.jpg">
+        </a>
+        <div class="car-detail">
+            <a href="http://www.#.com/jieda?page=buy_share">
+                <p class="car-type">捷达</p>
+                <p class="buying">有<em>389</em>人正在购买</p>
+            </a>
+</div>
+        
+    </li>
+    
+</ul>
+</div>
+        </div>
+    </div>
+     <!--尾部-->
+     #include("/common/_footer_team.html")
+    <!--/尾部-->
+
+<!--登陆-->
+<!--头-->
+    <!-- 选择全国和本地按钮 -->
+    <script>
+        $(function () {
+            /* var cityCode = '501';
+            var cityName = '广州';
+            var bd = $.getUrlParam('bd');
+            if (parseInt(bd) == cityCode) {
+                $("#choose-site").html('本地<i class="icon">&#xe600;</i>');
+                $("#bdCity").html(' &gt;' + cityName);
+            }
+            else {
+                $("#choose-site").html('全国<i class="icon">&#xe600;</i>');
+                $("#bdCity").html('');
+            }
+
+            var count = '<div class="site-layout"><b></b><ul><li><a href="/share/list">全国</a></li><li><a href="/share/list?bd=' + cityCode + '">本地</a></li></ul></div>';
+            $("#choose-site").showDiv({
+                content: count,
+                leftNum: -140,
+                topNum: 10,
+                eventType: "click"
+            }); */
+           
+        })
+        function contract_release() {
+        	window.location.href = "/contract/release";
+		}
+        function open_window(){
+        	 var name=prompt("请输入您的名字","");//将输入的内容赋给变量 name ，
+        	 
+        	    //这里需要注意的是，prompt有两个参数，前面是提示的话，后面是当对话框出来后，在对话框里的默认值
+        	 
+        	    if(name)//如果返回的有内容
+        	 
+        	    {
+        	 
+        	         alert("欢迎您："+ name)
+        	 
+        	     }
+        }
+    </script>
+</body></html>

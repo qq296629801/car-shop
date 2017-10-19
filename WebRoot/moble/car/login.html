@@ -1,0 +1,98 @@
+#@layout("用户中心")
+<body>
+    <div>
+        <div id="top" class="header" data-position="fixed" style="">
+    <a id="top-back" href="javascript:" class="turnback"><i class="i-back"></i>返回</a>
+    <h1 id="top-title">快捷登录</h1>
+    <div id="top-menu" class="h-menu-wrap">
+        <i class="h-menu" id="h-menu"></i>
+        <div class="hm-wrap">
+            <ul class="ms-list">
+                <li id="top-menu-index"><a href="http://m.#/">首页</a></li>
+                <li id="top-menu-search"><a href="http://m.#/search/">选车</a></li>
+                <li id="top-menu-px" style="display:none;"><a href="http://m.#/jinkou">平行进口</a></li>
+                <li id="top-menu-dg"><a href="http://news.m.#/">导购频道</a></li>
+                <li id="top-menu-order"><a href="http://i.m.#/order/list.aspx">我的订单</a></li>
+                <li id="top-menu-app"><a href="http://m.#/app/?apkname=wapdb&amp;tracker_u=669_wapdb">手机APP</a></li>
+            </ul>
+            <i class="triangle-up"></i>
+        </div>
+    </div>
+</div>
+        <div data-role="content">
+            <div class="account">
+                <div class="login-padding"></div>
+                <div class="account-form no-bdb">
+                    <ul>
+                        <li>
+                         <!--    <i class="i-form-2 on"></i>--> 
+                            <input type="text" class="inputtxt" id="mobile" maxlength="11" autocomplete="off" placeholder="请输入手机号作为登录账号">
+                        </li>
+                        <li class="pic-yzm">
+                            <i class="i-form-8"></i>
+                            <input id="vcode" type="text" maxlength="4" autocomplete="off" class="inputtxt" placeholder="图形验证码">
+                            <div class="change-pic-yzm">
+                                <img id="vcode-img" class="changecode" src="./css/sms" with="80" height="28" alt="">
+                                <span class="changecode">换一张</span>
+                            </div>
+                        </li>
+                        <li class="input-yzm bd0">
+                            <i class="i-form-3 on"></i>
+                            <input id="mcode" class="inputtxt" type="text" maxlength="6" autocomplete="off" placeholder="请输入确认码">
+                        </li>
+                        <li class="get-yzm bd0">
+                            <span class="c-blue" id="sendcode">获取确认码</span>
+                        </li>
+                    </ul>
+                    <div class="not-get-code" style="display: none;"><a href="http://passport.m.#/mlogin/?re=http%3A%2F%2Fguangzhou.m.#%2F#">无法收到确认码短信？</a></div>
+                </div>
+                <div class="foot-btn" style="border-top: 0;">
+                    <a href="javascript:" class="main-btn" id="mlogin-submit">登录</a>
+                </div>
+            </div>
+        </div>
+        <div id="foot" data-role="footer" style="">
+    <div class="footer">
+        <div class="fl">
+           
+        </div>
+        <div class="fr"><a href="http://help.m.#/">帮助中心</a></div>
+    </div>
+</div>
+
+    </div>
+    <div id="div_loading" class="zm-loading-layer" style="z-index: 2147483647; display: none;">
+        <div class="z-block">
+            <img src="./images/laoding.jpg" alt="">
+            <p>正在登录...</p>
+        </div>
+    </div>
+    <div class="etzone"></div>
+    <script type="text/javascript" src="./js/checkcode.js"></script>
+    <script type="text/javascript" src="./js/mlogin.js"></script>
+    <script type="text/javascript">
+        //禁止滑动
+        function stopwipe(e) {
+            $(".mask").css({ "height": $(document).height() });
+            $(".maskcontent").css("position", "fixed")
+        }
+
+        $(function () {
+            $.mlogin.init();
+            $("#btnCloseMask").click(function () {
+                $(".mask").hide();
+            });
+            window.addEventListener("resize", function () {
+                $(".mask").css({ "height": $(document).height() });
+            }, false);
+        });
+    </script>
+	<div class="tab-bar tab-bottom" style="position:fixed; bottom:0; left:0;">
+    <a class="tab-button " href="index.html"><i class="tab-button-icon icon icon-home"></i><span class="tab-button-txt">首页</span></a>
+    <a class="tab-button " href="forum.html"><i class="tab-button-icon icon icon-exhibition" style="background-size:30px"></i><span class="tab-button-txt">论坛</span></a>
+    <a class="tab-button " href="my-favorite.html"><i class="tab-button-icon icon icon-car"></i><span class="tab-button-txt">找车</span></a>
+    <a class="tab-button " href="service-list.html"><i class="tab-button-icon icon icon-service"></i><span class="tab-button-txt">服务</span></a>
+    <a class="tab-button active" href="my.html"><i class="tab-button-icon icon icon-my"></i><span class="tab-button-txt">我的</span></a>
+</div>
+	
+</body></html>

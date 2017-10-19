@@ -1,0 +1,2094 @@
+/* 支付页最新内容css */
+.header-nav-wrapper .header-nav-content .newpay-top {
+  position: absolute;
+  top: 23px;
+  left: 220px;
+  width: 200px;
+  height: 50px;
+  line-height: 50px;
+  font-size: 24px;
+  color: #333333;
+  font-weight: normal;
+}
+.header-nav-wrapper .header-nav-content .newpay-top span {
+  color: #dde1e8;
+  vertical-align: middle;
+  margin-right: 5px;
+}
+.header-nav-wrapper .header-nav-content .newpay-top b {
+  vertical-align: middle;
+  font-weight: normal;
+}
+.header-nav-wrapper.nobr {
+  height: 92px;
+}
+.header-nav-wrapper.nobr .header-nav-content {
+  height: 92px;
+}
+.header-nav-wrapper.nobr .header-nav-content .logo {
+  top: 32px;
+}
+.new-pay-content {
+  width: 992px;
+  margin: 0 auto;
+  min-height: 650px;
+}
+.new-pay-content .new-pay-top1 {
+  width: 990px;
+  border: 1px solid #dde1e8;
+  position: relative;
+  overflow: hidden;
+  min-height: 395px;
+}
+.new-pay-content .new-pay-top1 .new-pay-left1 {
+  float: left;
+  padding-top: 61px;
+  padding-left: 63px;
+  width: 615px;
+}
+.new-pay-content .new-pay-top1 .new-pay-left1 .new-pay-ltop {
+  position: relative;
+  padding-left: 64px;
+  height: 130px;
+}
+.new-pay-content .new-pay-top1 .new-pay-left1 .new-pay-ltop em {
+  display: block;
+  position: absolute;
+  top: 6px;
+  left: 0px;
+  width: 42px;
+  height: 42px;
+  background: url("../images/pay/new-pay-icon.png") no-repeat -192px -78px;
+  background-size: 500px 200px;
+  -o-background-size: 500px 200px;
+  -moz-background-size: 500px 200px;
+  -webkit-background-size: 500px 200px;
+}
+.new-pay-content .new-pay-top1 .new-pay-left1 .new-pay-ltop .new-pay-lttop {
+  height: 50px;
+  line-height: 50px;
+  font-size: 20px;
+  color: #000000;
+}
+.new-pay-content .new-pay-top1 .new-pay-left1 .new-pay-ltop .new-pay-lttop span {
+  color: #ff5800;
+}
+.new-pay-content .new-pay-top1 .new-pay-left1 .new-pay-ltop .new-pay-ltbottom {
+  width: 484px;
+  height: 34px;
+  line-height: 34px;
+  border: 1px solid #fedeb2;
+  background: #fff1e3;
+  font-size: 14px;
+  color: #ff5800;
+  position: relative;
+  text-align: center;
+  margin-top: 6px;
+}
+.new-pay-content .new-pay-top1 .new-pay-left1 .new-pay-ltop .new-pay-ltbottom i {
+  display: block;
+  position: absolute;
+  top: -13px;
+  left: 47px;
+  width: 24px;
+  height: 13px;
+  background: url("../images/pay/new-pay-icon1.png") no-repeat 0 0;
+  background-size: 500px 500px;
+  -o-background-size: 500px 500px;
+  -moz-background-size: 500px 500px;
+  -webkit-background-size: 500px 500px;
+}
+.new-pay-content .new-pay-top1 .new-pay-left1 .new-pay-lmiddle {
+  padding-left: 64px;
+}
+.new-pay-content .new-pay-top1 .new-pay-left1 .new-pay-lmiddle .new-pay-lm1 {
+  width: 142px;
+  height: 38px;
+  float: left;
+  margin-right: 16px;
+  border: 1px solid #dde1e8;
+  cursor: pointer;
+}
+.new-pay-content .new-pay-top1 .new-pay-left1 .new-pay-lmiddle .new-pay-lm1 em {
+  display: block;
+  width: 142px;
+  height: 38px;
+  background: url("../images/pay/new-pay-icon1.png") no-repeat -194px 0;
+  background-size: 500px 500px;
+  -o-background-size: 500px 500px;
+  -moz-background-size: 500px 500px;
+  -webkit-background-size: 500px 500px;
+}
+.new-pay-content .new-pay-top1 .new-pay-left1 .new-pay-lmiddle .new-pay-lm2 {
+  width: 142px;
+  height: 38px;
+  float: left;
+  margin-right: 16px;
+  border: 1px solid #dde1e8;
+  cursor: pointer;
+}
+.new-pay-content .new-pay-top1 .new-pay-left1 .new-pay-lmiddle .new-pay-lm2 em {
+  display: block;
+  width: 142px;
+  height: 38px;
+  background: url("../images/pay/new-pay-icon1.png") no-repeat 0 -83px;
+  background-size: 500px 500px;
+  -o-background-size: 500px 500px;
+  -moz-background-size: 500px 500px;
+  -webkit-background-size: 500px 500px;
+}
+.new-pay-content .new-pay-top1 .new-pay-left1 .new-pay-lmiddle .new-pay-lm3 {
+  width: 142px;
+  height: 38px;
+  float: left;
+  margin-right: 16px;
+  border: 1px solid #dde1e8;
+  cursor: pointer;
+}
+.new-pay-content .new-pay-top1 .new-pay-left1 .new-pay-lmiddle .new-pay-lm3 em {
+  display: block;
+  width: 142px;
+  height: 38px;
+  background: url("../images/pay/new-pay-icon1.png") no-repeat -142px -83px;
+  background-size: 500px 500px;
+  -o-background-size: 500px 500px;
+  -moz-background-size: 500px 500px;
+  -webkit-background-size: 500px 500px;
+}
+.new-pay-content .new-pay-top1 .new-pay-left1 .new-pay-lmiddle .current {
+  border: 1px solid #ff6900;
+}
+.new-pay-content .new-pay-top1 .new-pay-left1 .new-pay-lmiddle .new-pay-lm-banks {
+  float: left;
+  width: 100%;
+  display: none;
+}
+.new-pay-content .new-pay-top1 .new-pay-left1 .new-pay-lmiddle .new-pay-lm-banks .wy-pay {
+  position: relative;
+  width: 480px;
+  border-top: 1px solid #cccccc;
+  padding-top: 10px;
+  margin-top: 30px;
+  display: block;
+}
+.new-pay-content .new-pay-top1 .new-pay-left1 .new-pay-lmiddle .new-pay-lm-banks .wy-pay i {
+  width: 26px;
+  height: 14px;
+  position: absolute;
+  display: block;
+  top: -14px;
+  left: 380px;
+  background: url("../images/banks.jpg") no-repeat left bottom;
+}
+.new-pay-content .new-pay-top1 .new-pay-left1 .new-pay-lmiddle .new-pay-lm-banks .wy-pay li {
+  width: 153px;
+  float: left;
+  padding: 10px 0;
+}
+.new-pay-content .new-pay-top1 .new-pay-left1 .new-pay-lmiddle .new-pay-lm-banks .wy-pay li input {
+  float: left;
+  margin: 7px 7px 0 0;
+}
+.new-pay-content .new-pay-top1 .new-pay-left1 .new-pay-lmiddle .new-pay-lm-banks .wy-pay li span {
+  width: 120px;
+  height: 32px;
+  float: left;
+  background: url("../images/banks.jpg?20161026") no-repeat;
+}
+.new-pay-content .new-pay-top1 .new-pay-left1 .new-pay-lmiddle .new-pay-lm-banks .wy-pay li span.BOCB2C {
+  background-position: 0 0;
+}
+.new-pay-content .new-pay-top1 .new-pay-left1 .new-pay-lmiddle .new-pay-lm-banks .wy-pay li span.ICBCB2C {
+  background-position: 0 -32px;
+}
+.new-pay-content .new-pay-top1 .new-pay-left1 .new-pay-lmiddle .new-pay-lm-banks .wy-pay li span.CMB {
+  background-position: 0 -64px;
+}
+.new-pay-content .new-pay-top1 .new-pay-left1 .new-pay-lmiddle .new-pay-lm-banks .wy-pay li span.CCB {
+  background-position: 0 -96px;
+}
+.new-pay-content .new-pay-top1 .new-pay-left1 .new-pay-lmiddle .new-pay-lm-banks .wy-pay li span.ABC {
+  background-position: 0 -128px;
+}
+.new-pay-content .new-pay-top1 .new-pay-left1 .new-pay-lmiddle .new-pay-lm-banks .wy-pay li span.POSTGC {
+  background-position: 0 -160px;
+}
+.new-pay-content .new-pay-top1 .new-pay-left1 .new-pay-lmiddle .new-pay-lm-banks .wy-pay li span.SPDB {
+  background-position: 0 -192px;
+}
+.new-pay-content .new-pay-top1 .new-pay-left1 .new-pay-lmiddle .new-pay-lm-banks .wy-pay li span.CIB {
+  background-position: 0 -224px;
+}
+.new-pay-content .new-pay-top1 .new-pay-left1 .new-pay-lmiddle .new-pay-lm-banks .wy-pay li span.GDB {
+  background-position: 0 -256px;
+}
+.new-pay-content .new-pay-top1 .new-pay-left1 .new-pay-lmiddle .new-pay-lm-banks .wy-pay li span.HZCBB2C {
+  background-position: 0 -288px;
+}
+.new-pay-content .new-pay-top1 .new-pay-left1 .new-pay-lmiddle .new-pay-lm-banks .wy-pay li span.SHBANK {
+  background-position: 0 -320px;
+}
+.new-pay-content .new-pay-top1 .new-pay-left1 .new-pay-lmiddle .new-pay-lm-banks .wy-pay li span.SPABANK {
+  background-position: 0 -352px;
+}
+.new-pay-content .new-pay-top1 .new-pay-left1 .new-pay-lmiddle .new-pay-lm-banks .wy-pay li span.NBBANK {
+  background-position: 0 -384px;
+}
+.new-pay-content .new-pay-top1 .new-pay-left1 .new-pay-lmiddle .new-pay-lm-banks .wy-pay li span.FDB {
+  background-position: 0 -416px;
+}
+.new-pay-content .new-pay-top1 .new-pay-left1 .new-pay-lbottom {
+  padding: 42px 0 46px 64px;
+}
+.new-pay-content .new-pay-top1 .new-pay-left1 .new-pay-lbottom .new-pay-lbbtn {
+  display: block;
+  float: left;
+  width: 227px;
+  height: 48px;
+  line-height: 48px;
+  background: #ff6900;
+  border-radius: 2px;
+  -moz-border-radius: 2px;
+  -webkit-border-radius: 2px;
+  position: relative;
+  cursor: pointer;
+}
+.new-pay-content .new-pay-top1 .new-pay-left1 .new-pay-lbottom .new-pay-lbbtn .new-pay-lbbl {
+  width: 162px;
+  height: 48px;
+  display: block;
+  color: #ffffff;
+  font-size: 20px;
+  text-align: center;
+  font-weight: bold;
+}
+.new-pay-content .new-pay-top1 .new-pay-left1 .new-pay-lbottom .new-pay-lbbtn .new-pay-lbbr {
+  position: absolute;
+  top: 11px;
+  left: 146px;
+  width: 52px;
+  height: 29px;
+  background: url("../images/pay/new-pay-icon1.png") no-repeat -291px -83px;
+  background-size: 500px 500px;
+  -o-background-size: 500px 500px;
+  -moz-background-size: 500px 500px;
+  -webkit-background-size: 500px 500px;
+}
+.new-pay-content .new-pay-top1 .new-pay-left1 .new-pay-lbottom .new-pay-lbbtn:hover,
+.new-pay-content .new-pay-top1 .new-pay-left1 .new-pay-lbottom .new-pay-lbbtn1:hover,
+.new-pay-content .new-pay-top1 .new-pay-left1 .new-pay-lbottom .new-pay-lblook:hover,
+.new-pay-content .new-pay-top1 .new-pay-left1 .new-pay-lbottom .new-pay-lbcancel:hover {
+  text-decoration: none;
+}
+.new-pay-content .new-pay-top1 .new-pay-left1 .new-pay-lbottom .new-pay-lbbtn:hover,
+.new-pay-content .new-pay-top1 .new-pay-left1 .new-pay-lbottom .new-pay-lbbtn1:hover {
+  background: #e55817;
+}
+.new-pay-content .new-pay-top1 .new-pay-left1 .new-pay-lbottom .new-pay-lbbtn1 {
+  display: block;
+  float: left;
+  width: 288px;
+  height: 58px;
+  line-height: 58px;
+  background: #ff6900;
+  border-radius: 2px;
+  -moz-border-radius: 2px;
+  -webkit-border-radius: 2px;
+  position: relative;
+  cursor: pointer;
+}
+.new-pay-content .new-pay-top1 .new-pay-left1 .new-pay-lbottom .new-pay-lbbtn1 .new-pay-lbbl {
+  width: 162px;
+  height: 58px;
+  display: block;
+  color: #ffffff;
+  font-size: 20px;
+  text-align: center;
+  font-weight: bold;
+}
+.new-pay-content .new-pay-top1 .new-pay-left1 .new-pay-lbottom .new-pay-lbbtn1 .new-pay-lbbline {
+  display: block;
+  position: absolute;
+  top: 15px;
+  left: 153px;
+  width: 1px;
+  height: 28px;
+  background: #ff964d;
+}
+.new-pay-content .new-pay-top1 .new-pay-left1 .new-pay-lbottom .new-pay-lbbtn1 .new-pay-lbbright {
+  width: 117px;
+  position: absolute;
+  top: 12px;
+  right: 0;
+  line-height: 18px;
+  font-size: 12px;
+  color: #ffffff;
+}
+.new-pay-content .new-pay-top1 .new-pay-left1 .new-pay-lbottom .new-pay-lbbtn1 .new-pay-lbbright .new-pay-lbbrtop,
+.new-pay-content .new-pay-top1 .new-pay-left1 .new-pay-lbottom .new-pay-lbbtn1 .new-pay-lbbright .new-pay-lbbrbottom {
+  display: block;
+  width: 100%;
+  height: 18px;
+}
+.new-pay-content .new-pay-top1 .new-pay-left1 .new-pay-lbottom .new-pay-lblook {
+  margin-left: 26px;
+  width: 88px;
+  float: left;
+  height: 48px;
+  line-height: 48px;
+  font-size: 14px;
+  color: #1848a8;
+  text-align: center;
+}
+.new-pay-content .new-pay-top1 .new-pay-left1 .new-pay-lbottom .new-pay-lbcancel {
+  width: 88px;
+  float: left;
+  height: 48px;
+  line-height: 48px;
+  font-size: 14px;
+  color: #1848a8;
+  text-align: center;
+}
+.new-pay-content .new-pay-top1 .new-pay-right1 {
+  position: absolute;
+  top: 0;
+  right: 0;
+  min-height: 282px;
+  width: 282px;
+  padding: 27px 0 4px 30px;
+  background: #f7f8fa;
+  height: 100%;
+}
+.new-pay-content .new-pay-top1 .new-pay-right1 .new-pay-rall {
+  width: 264px;
+  padding-bottom: 22px;
+}
+.new-pay-content .new-pay-top1 .new-pay-right1 .new-pay-rall .new-pay-ratop {
+  width: 100%;
+}
+.new-pay-content .new-pay-top1 .new-pay-right1 .new-pay-rall .new-pay-ratop .new-pay-rat-left {
+  width: 21px;
+  float: left;
+  height: 22px;
+  line-height: 22px;
+  font-size: 12px;
+  color: #1848a8;
+  font-weight: bold;
+}
+.new-pay-content .new-pay-top1 .new-pay-right1 .new-pay-rall .new-pay-ratop .new-pay-rat-right {
+  width: 243px;
+  float: left;
+  line-height: 22px;
+  font-size: 12px;
+  color: #333333;
+}
+.new-pay-content .new-pay-top1 .new-pay-right1 .new-pay-rall .new-pay-rabottom {
+  width: 100%;
+}
+.new-pay-content .new-pay-top1 .new-pay-right1 .new-pay-rall .new-pay-rabottom .new-pay-rab-left {
+  width: 21px;
+  float: left;
+  height: 22px;
+  line-height: 22px;
+  font-size: 12px;
+  color: #333333;
+  font-weight: bold;
+}
+.new-pay-content .new-pay-top1 .new-pay-right1 .new-pay-rall .new-pay-rabottom .new-pay-rab-right {
+  width: 243px;
+  float: left;
+  line-height: 22px;
+  font-size: 12px;
+  color: #333333;
+}
+.new-pay-content .new-pay-top2 {
+  width: 990px;
+  border: 1px solid #dde1e8;
+  position: relative;
+  overflow: hidden;
+  min-height: 400px;
+}
+.new-pay-content .new-pay-top2 .new-pay-left1 {
+  float: left;
+  padding-top: 61px;
+  padding-left: 63px;
+  width: 615px;
+}
+.new-pay-content .new-pay-top2 .new-pay-left1 .new-pay-ltop {
+  position: relative;
+  padding-left: 64px;
+  height: 130px;
+}
+.new-pay-content .new-pay-top2 .new-pay-left1 .new-pay-ltop em {
+  display: block;
+  position: absolute;
+  top: 6px;
+  left: 0px;
+  width: 42px;
+  height: 42px;
+  background: url("../images/pay/new-pay-icon.png") no-repeat -192px -78px;
+  background-size: 500px 200px;
+  -o-background-size: 500px 200px;
+  -moz-background-size: 500px 200px;
+  -webkit-background-size: 500px 200px;
+}
+.new-pay-content .new-pay-top2 .new-pay-left1 .new-pay-ltop .new-pay-lttop {
+  height: 50px;
+  line-height: 50px;
+  font-size: 20px;
+  color: #000000;
+}
+.new-pay-content .new-pay-top2 .new-pay-left1 .new-pay-ltop .new-pay-lttop span {
+  color: #ff5800;
+}
+.new-pay-content .new-pay-top2 .new-pay-left1 .new-pay-ltop .new-pay-ltbottom {
+  width: 484px;
+  height: 34px;
+  line-height: 34px;
+  border: 1px solid #fedeb2;
+  background: #fff1e3;
+  font-size: 14px;
+  color: #ff5800;
+  position: relative;
+  text-align: center;
+  margin-top: 6px;
+}
+.new-pay-content .new-pay-top2 .new-pay-left1 .new-pay-ltop .new-pay-ltbottom i {
+  display: block;
+  position: absolute;
+  top: -13px;
+  left: 47px;
+  width: 24px;
+  height: 13px;
+  background: url("../images/pay/new-pay-icon1.png") no-repeat 0 0;
+  background-size: 500px 500px;
+  -o-background-size: 500px 500px;
+  -moz-background-size: 500px 500px;
+  -webkit-background-size: 500px 500px;
+}
+.new-pay-content .new-pay-top2 .new-pay-left1 .new-pay-lmiddle {
+  padding-left: 64px;
+}
+.new-pay-content .new-pay-top2 .new-pay-left1 .new-pay-lmiddle .new-pay-lm1 {
+  width: 142px;
+  height: 38px;
+  float: left;
+  margin-right: 16px;
+  border: 1px solid #dde1e8;
+  cursor: pointer;
+}
+.new-pay-content .new-pay-top2 .new-pay-left1 .new-pay-lmiddle .new-pay-lm1 em {
+  display: block;
+  width: 142px;
+  height: 38px;
+  background: url("../images/pay/new-pay-icon1.png") no-repeat -194px 0;
+  background-size: 500px 500px;
+  -o-background-size: 500px 500px;
+  -moz-background-size: 500px 500px;
+  -webkit-background-size: 500px 500px;
+}
+.new-pay-content .new-pay-top2 .new-pay-left1 .new-pay-lmiddle .new-pay-lm2 {
+  width: 142px;
+  height: 38px;
+  float: left;
+  margin-right: 16px;
+  border: 1px solid #dde1e8;
+  cursor: pointer;
+}
+.new-pay-content .new-pay-top2 .new-pay-left1 .new-pay-lmiddle .new-pay-lm2 em {
+  display: block;
+  width: 142px;
+  height: 38px;
+  background: url("../images/pay/new-pay-icon1.png") no-repeat 0 -83px;
+  background-size: 500px 500px;
+  -o-background-size: 500px 500px;
+  -moz-background-size: 500px 500px;
+  -webkit-background-size: 500px 500px;
+}
+.new-pay-content .new-pay-top2 .new-pay-left1 .new-pay-lmiddle .new-pay-lm3 {
+  width: 142px;
+  height: 38px;
+  float: left;
+  margin-right: 16px;
+  border: 1px solid #dde1e8;
+  cursor: pointer;
+}
+.new-pay-content .new-pay-top2 .new-pay-left1 .new-pay-lmiddle .new-pay-lm3 em {
+  display: block;
+  width: 142px;
+  height: 38px;
+  background: url("../images/pay/new-pay-icon1.png") no-repeat -142px -83px;
+  background-size: 500px 500px;
+  -o-background-size: 500px 500px;
+  -moz-background-size: 500px 500px;
+  -webkit-background-size: 500px 500px;
+}
+.new-pay-content .new-pay-top2 .new-pay-left1 .new-pay-lmiddle .current {
+  border: 1px solid #ff6900;
+}
+.new-pay-content .new-pay-top2 .new-pay-left1 .new-pay-lmiddle .new-pay-lm-banks {
+  float: left;
+  width: 100%;
+  display: none;
+}
+.new-pay-content .new-pay-top2 .new-pay-left1 .new-pay-lmiddle .new-pay-lm-banks .wy-pay {
+  position: relative;
+  width: 480px;
+  border-top: 1px solid #cccccc;
+  padding-top: 10px;
+  margin-top: 30px;
+  display: block;
+}
+.new-pay-content .new-pay-top2 .new-pay-left1 .new-pay-lmiddle .new-pay-lm-banks .wy-pay i {
+  width: 26px;
+  height: 14px;
+  position: absolute;
+  display: block;
+  top: -14px;
+  left: 380px;
+  background: url("../images/banks.jpg") no-repeat left bottom;
+}
+.new-pay-content .new-pay-top2 .new-pay-left1 .new-pay-lmiddle .new-pay-lm-banks .wy-pay li {
+  width: 153px;
+  float: left;
+  padding: 10px 0;
+}
+.new-pay-content .new-pay-top2 .new-pay-left1 .new-pay-lmiddle .new-pay-lm-banks .wy-pay li input {
+  float: left;
+  margin: 7px 7px 0 0;
+}
+.new-pay-content .new-pay-top2 .new-pay-left1 .new-pay-lmiddle .new-pay-lm-banks .wy-pay li span {
+  width: 120px;
+  height: 32px;
+  float: left;
+  background: url("../images/banks.jpg?20161026") no-repeat;
+}
+.new-pay-content .new-pay-top2 .new-pay-left1 .new-pay-lmiddle .new-pay-lm-banks .wy-pay li span.BOCB2C {
+  background-position: 0 0;
+}
+.new-pay-content .new-pay-top2 .new-pay-left1 .new-pay-lmiddle .new-pay-lm-banks .wy-pay li span.ICBCB2C {
+  background-position: 0 -32px;
+}
+.new-pay-content .new-pay-top2 .new-pay-left1 .new-pay-lmiddle .new-pay-lm-banks .wy-pay li span.CMB {
+  background-position: 0 -64px;
+}
+.new-pay-content .new-pay-top2 .new-pay-left1 .new-pay-lmiddle .new-pay-lm-banks .wy-pay li span.CCB {
+  background-position: 0 -96px;
+}
+.new-pay-content .new-pay-top2 .new-pay-left1 .new-pay-lmiddle .new-pay-lm-banks .wy-pay li span.ABC {
+  background-position: 0 -128px;
+}
+.new-pay-content .new-pay-top2 .new-pay-left1 .new-pay-lmiddle .new-pay-lm-banks .wy-pay li span.POSTGC {
+  background-position: 0 -160px;
+}
+.new-pay-content .new-pay-top2 .new-pay-left1 .new-pay-lmiddle .new-pay-lm-banks .wy-pay li span.SPDB {
+  background-position: 0 -192px;
+}
+.new-pay-content .new-pay-top2 .new-pay-left1 .new-pay-lmiddle .new-pay-lm-banks .wy-pay li span.CIB {
+  background-position: 0 -224px;
+}
+.new-pay-content .new-pay-top2 .new-pay-left1 .new-pay-lmiddle .new-pay-lm-banks .wy-pay li span.GDB {
+  background-position: 0 -256px;
+}
+.new-pay-content .new-pay-top2 .new-pay-left1 .new-pay-lmiddle .new-pay-lm-banks .wy-pay li span.HZCBB2C {
+  background-position: 0 -288px;
+}
+.new-pay-content .new-pay-top2 .new-pay-left1 .new-pay-lmiddle .new-pay-lm-banks .wy-pay li span.SHBANK {
+  background-position: 0 -320px;
+}
+.new-pay-content .new-pay-top2 .new-pay-left1 .new-pay-lmiddle .new-pay-lm-banks .wy-pay li span.SPABANK {
+  background-position: 0 -352px;
+}
+.new-pay-content .new-pay-top2 .new-pay-left1 .new-pay-lmiddle .new-pay-lm-banks .wy-pay li span.NBBANK {
+  background-position: 0 -384px;
+}
+.new-pay-content .new-pay-top2 .new-pay-left1 .new-pay-lmiddle .new-pay-lm-banks .wy-pay li span.FDB {
+  background-position: 0 -416px;
+}
+.new-pay-content .new-pay-top2 .new-pay-left1 .new-pay-lbottom {
+  padding: 42px 0 46px 64px;
+}
+.new-pay-content .new-pay-top2 .new-pay-left1 .new-pay-lbottom .new-pay-lbbtn {
+  display: block;
+  float: left;
+  width: 227px;
+  height: 48px;
+  line-height: 48px;
+  background: #ff6900;
+  border-radius: 2px;
+  -moz-border-radius: 2px;
+  -webkit-border-radius: 2px;
+  position: relative;
+  cursor: pointer;
+}
+.new-pay-content .new-pay-top2 .new-pay-left1 .new-pay-lbottom .new-pay-lbbtn .new-pay-lbbl {
+  width: 162px;
+  height: 48px;
+  display: block;
+  color: #ffffff;
+  font-size: 20px;
+  text-align: center;
+  font-weight: bold;
+}
+.new-pay-content .new-pay-top2 .new-pay-left1 .new-pay-lbottom .new-pay-lbbtn .new-pay-lbbr {
+  position: absolute;
+  top: 11px;
+  left: 146px;
+  width: 52px;
+  height: 29px;
+  background: url("../images/pay/new-pay-icon1.png") no-repeat -291px -83px;
+  background-size: 500px 500px;
+  -o-background-size: 500px 500px;
+  -moz-background-size: 500px 500px;
+  -webkit-background-size: 500px 500px;
+}
+.new-pay-content .new-pay-top2 .new-pay-left1 .new-pay-lbottom .new-pay-lbbtn:hover,
+.new-pay-content .new-pay-top2 .new-pay-left1 .new-pay-lbottom .new-pay-lbbtn1:hover,
+.new-pay-content .new-pay-top2 .new-pay-left1 .new-pay-lbottom .new-pay-lblook:hover,
+.new-pay-content .new-pay-top2 .new-pay-left1 .new-pay-lbottom .new-pay-lbcancel:hover {
+  text-decoration: none;
+}
+.new-pay-content .new-pay-top2 .new-pay-left1 .new-pay-lbottom .new-pay-lbbtn:hover,
+.new-pay-content .new-pay-top2 .new-pay-left1 .new-pay-lbottom .new-pay-lbbtn1:hover {
+  background: #e55817;
+}
+.new-pay-content .new-pay-top2 .new-pay-left1 .new-pay-lbottom .new-pay-lbbtn1 {
+  display: block;
+  float: left;
+  width: 288px;
+  height: 58px;
+  line-height: 58px;
+  background: #ff6900;
+  border-radius: 2px;
+  -moz-border-radius: 2px;
+  -webkit-border-radius: 2px;
+  position: relative;
+  cursor: pointer;
+}
+.new-pay-content .new-pay-top2 .new-pay-left1 .new-pay-lbottom .new-pay-lbbtn1 .new-pay-lbbl {
+  width: 162px;
+  height: 58px;
+  display: block;
+  color: #ffffff;
+  font-size: 20px;
+  text-align: center;
+  font-weight: bold;
+}
+.new-pay-content .new-pay-top2 .new-pay-left1 .new-pay-lbottom .new-pay-lbbtn1 .new-pay-lbbline {
+  display: block;
+  position: absolute;
+  top: 15px;
+  left: 153px;
+  width: 1px;
+  height: 28px;
+  background: #ff964d;
+}
+.new-pay-content .new-pay-top2 .new-pay-left1 .new-pay-lbottom .new-pay-lbbtn1 .new-pay-lbbright {
+  width: 117px;
+  position: absolute;
+  top: 12px;
+  right: 0;
+  line-height: 18px;
+  font-size: 12px;
+  color: #ffffff;
+}
+.new-pay-content .new-pay-top2 .new-pay-left1 .new-pay-lbottom .new-pay-lbbtn1 .new-pay-lbbright .new-pay-lbbrtop,
+.new-pay-content .new-pay-top2 .new-pay-left1 .new-pay-lbottom .new-pay-lbbtn1 .new-pay-lbbright .new-pay-lbbrbottom {
+  display: block;
+  width: 100%;
+  height: 18px;
+}
+.new-pay-content .new-pay-top2 .new-pay-left1 .new-pay-lbottom .new-pay-lblook {
+  margin-left: 26px;
+  width: 88px;
+  float: left;
+  height: 48px;
+  line-height: 48px;
+  font-size: 14px;
+  color: #1848a8;
+  text-align: center;
+}
+.new-pay-content .new-pay-top2 .new-pay-left1 .new-pay-lbottom .new-pay-lbcancel {
+  width: 88px;
+  float: left;
+  height: 48px;
+  line-height: 48px;
+  font-size: 14px;
+  color: #1848a8;
+  text-align: center;
+}
+.new-pay-content .new-pay-top2 .new-pay-right1 {
+  position: absolute;
+  top: 0;
+  right: 0;
+  min-height: 282px;
+  width: 282px;
+  padding: 27px 0 4px 30px;
+  background: #f7f8fa;
+  height: 100%;
+}
+.new-pay-content .new-pay-top2 .new-pay-right1 .new-pay-rall {
+  width: 264px;
+  padding-bottom: 22px;
+}
+.new-pay-content .new-pay-top2 .new-pay-right1 .new-pay-rall .new-pay-ratop {
+  width: 100%;
+}
+.new-pay-content .new-pay-top2 .new-pay-right1 .new-pay-rall .new-pay-ratop .new-pay-rat-left {
+  width: 21px;
+  float: left;
+  height: 22px;
+  line-height: 22px;
+  font-size: 12px;
+  color: #1848a8;
+  font-weight: bold;
+}
+.new-pay-content .new-pay-top2 .new-pay-right1 .new-pay-rall .new-pay-ratop .new-pay-rat-right {
+  width: 243px;
+  float: left;
+  line-height: 22px;
+  font-size: 12px;
+  color: #333333;
+}
+.new-pay-content .new-pay-top2 .new-pay-right1 .new-pay-rall .new-pay-rabottom {
+  width: 100%;
+}
+.new-pay-content .new-pay-top2 .new-pay-right1 .new-pay-rall .new-pay-rabottom .new-pay-rab-left {
+  width: 21px;
+  float: left;
+  height: 22px;
+  line-height: 22px;
+  font-size: 12px;
+  color: #333333;
+  font-weight: bold;
+}
+.new-pay-content .new-pay-top2 .new-pay-right1 .new-pay-rall .new-pay-rabottom .new-pay-rab-right {
+  width: 243px;
+  float: left;
+  line-height: 22px;
+  font-size: 12px;
+  color: #333333;
+}
+.new-pay-content .new-pay-top {
+  width: 990px;
+  border: 1px solid #dde1e8;
+  position: relative;
+  overflow: hidden;
+}
+.new-pay-content .new-pay-top .new-pay-left {
+  float: left;
+  padding-top: 30px;
+  padding-left: 63px;
+  width: 615px;
+}
+.new-pay-content .new-pay-top .new-pay-left .new-pay-ltop {
+  position: relative;
+  padding-left: 64px;
+  height: 120px;
+}
+.new-pay-content .new-pay-top .new-pay-left .new-pay-ltop em {
+  display: block;
+  position: absolute;
+  top: 6px;
+  left: 0px;
+  width: 42px;
+  height: 42px;
+  background: url("../images/pay/new-pay-icon.png") no-repeat -192px -78px;
+  background-size: 500px 200px;
+  -o-background-size: 500px 200px;
+  -moz-background-size: 500px 200px;
+  -webkit-background-size: 500px 200px;
+}
+.new-pay-content .new-pay-top .new-pay-left .new-pay-ltop .new-pay-lttop {
+  height: 50px;
+  line-height: 50px;
+  font-size: 20px;
+  color: #000000;
+}
+.new-pay-content .new-pay-top .new-pay-left .new-pay-ltop .new-pay-lttop span {
+  color: #ff5800;
+}
+.new-pay-content .new-pay-top .new-pay-left .new-pay-ltop .new-pay-ltbottom {
+  width: 484px;
+  height: 34px;
+  line-height: 34px;
+  border: 1px solid #fedeb2;
+  background: #fff1e3;
+  font-size: 14px;
+  color: #ff5800;
+  position: relative;
+  text-align: center;
+}
+.new-pay-content .new-pay-top .new-pay-left .new-pay-ltop .new-pay-ltbottom i {
+  display: block;
+  position: absolute;
+  top: -13px;
+  left: 47px;
+  width: 24px;
+  height: 13px;
+  background: url("../images/pay/new-pay-icon1.png") no-repeat 0 0;
+  background-size: 500px 500px;
+  -o-background-size: 500px 500px;
+  -moz-background-size: 500px 500px;
+  -webkit-background-size: 500px 500px;
+}
+.new-pay-content .new-pay-top .new-pay-left .new-pay-lmiddle {
+  padding-left: 64px;
+}
+.new-pay-content .new-pay-top .new-pay-left .new-pay-lmiddle .new-pay-lm1 {
+  width: 142px;
+  height: 38px;
+  float: left;
+  margin-right: 16px;
+  border: 1px solid #dde1e8;
+  cursor: pointer;
+}
+.new-pay-content .new-pay-top .new-pay-left .new-pay-lmiddle .new-pay-lm1 em {
+  display: block;
+  width: 142px;
+  height: 38px;
+  background: url("../images/pay/new-pay-icon1.png") no-repeat -194px 0;
+  background-size: 500px 500px;
+  -o-background-size: 500px 500px;
+  -moz-background-size: 500px 500px;
+  -webkit-background-size: 500px 500px;
+}
+.new-pay-content .new-pay-top .new-pay-left .new-pay-lmiddle .new-pay-lm2 {
+  width: 142px;
+  height: 38px;
+  float: left;
+  margin-right: 16px;
+  border: 1px solid #dde1e8;
+  cursor: pointer;
+}
+.new-pay-content .new-pay-top .new-pay-left .new-pay-lmiddle .new-pay-lm2 em {
+  display: block;
+  width: 142px;
+  height: 38px;
+  background: url("../images/pay/new-pay-icon1.png") no-repeat 0 -83px;
+  background-size: 500px 500px;
+  -o-background-size: 500px 500px;
+  -moz-background-size: 500px 500px;
+  -webkit-background-size: 500px 500px;
+}
+.new-pay-content .new-pay-top .new-pay-left .new-pay-lmiddle .new-pay-lm3 {
+  width: 142px;
+  height: 38px;
+  float: left;
+  margin-right: 16px;
+  border: 1px solid #dde1e8;
+  cursor: pointer;
+}
+.new-pay-content .new-pay-top .new-pay-left .new-pay-lmiddle .new-pay-lm3 em {
+  display: block;
+  width: 142px;
+  height: 38px;
+  background: url("../images/pay/new-pay-icon1.png") no-repeat -142px -83px;
+  background-size: 500px 500px;
+  -o-background-size: 500px 500px;
+  -moz-background-size: 500px 500px;
+  -webkit-background-size: 500px 500px;
+}
+.new-pay-content .new-pay-top .new-pay-left .new-pay-lmiddle .current {
+  border: 1px solid #ff6900;
+}
+.new-pay-content .new-pay-top .new-pay-left .new-pay-lmiddle .new-pay-lm-banks {
+  float: left;
+  width: 100%;
+  display: none;
+}
+.new-pay-content .new-pay-top .new-pay-left .new-pay-lmiddle .new-pay-lm-banks .wy-pay {
+  position: relative;
+  width: 480px;
+  border-top: 1px solid #cccccc;
+  padding-top: 10px;
+  margin-top: 30px;
+  display: block;
+}
+.new-pay-content .new-pay-top .new-pay-left .new-pay-lmiddle .new-pay-lm-banks .wy-pay i {
+  width: 26px;
+  height: 14px;
+  position: absolute;
+  display: block;
+  top: -14px;
+  left: 380px;
+  background: url("../images/banks.jpg") no-repeat left bottom;
+}
+.new-pay-content .new-pay-top .new-pay-left .new-pay-lmiddle .new-pay-lm-banks .wy-pay li {
+  width: 153px;
+  float: left;
+  padding: 10px 0;
+}
+.new-pay-content .new-pay-top .new-pay-left .new-pay-lmiddle .new-pay-lm-banks .wy-pay li input {
+  float: left;
+  margin: 7px 7px 0 0;
+}
+.new-pay-content .new-pay-top .new-pay-left .new-pay-lmiddle .new-pay-lm-banks .wy-pay li span {
+  width: 120px;
+  height: 32px;
+  float: left;
+  background: url("../images/banks.jpg?20161026") no-repeat;
+}
+.new-pay-content .new-pay-top .new-pay-left .new-pay-lmiddle .new-pay-lm-banks .wy-pay li span.BOCB2C {
+  background-position: 0 0;
+}
+.new-pay-content .new-pay-top .new-pay-left .new-pay-lmiddle .new-pay-lm-banks .wy-pay li span.ICBCB2C {
+  background-position: 0 -32px;
+}
+.new-pay-content .new-pay-top .new-pay-left .new-pay-lmiddle .new-pay-lm-banks .wy-pay li span.CMB {
+  background-position: 0 -64px;
+}
+.new-pay-content .new-pay-top .new-pay-left .new-pay-lmiddle .new-pay-lm-banks .wy-pay li span.CCB {
+  background-position: 0 -96px;
+}
+.new-pay-content .new-pay-top .new-pay-left .new-pay-lmiddle .new-pay-lm-banks .wy-pay li span.ABC {
+  background-position: 0 -128px;
+}
+.new-pay-content .new-pay-top .new-pay-left .new-pay-lmiddle .new-pay-lm-banks .wy-pay li span.POSTGC {
+  background-position: 0 -160px;
+}
+.new-pay-content .new-pay-top .new-pay-left .new-pay-lmiddle .new-pay-lm-banks .wy-pay li span.SPDB {
+  background-position: 0 -192px;
+}
+.new-pay-content .new-pay-top .new-pay-left .new-pay-lmiddle .new-pay-lm-banks .wy-pay li span.CIB {
+  background-position: 0 -224px;
+}
+.new-pay-content .new-pay-top .new-pay-left .new-pay-lmiddle .new-pay-lm-banks .wy-pay li span.GDB {
+  background-position: 0 -256px;
+}
+.new-pay-content .new-pay-top .new-pay-left .new-pay-lmiddle .new-pay-lm-banks .wy-pay li span.HZCBB2C {
+  background-position: 0 -288px;
+}
+.new-pay-content .new-pay-top .new-pay-left .new-pay-lmiddle .new-pay-lm-banks .wy-pay li span.SHBANK {
+  background-position: 0 -320px;
+}
+.new-pay-content .new-pay-top .new-pay-left .new-pay-lmiddle .new-pay-lm-banks .wy-pay li span.SPABANK {
+  background-position: 0 -352px;
+}
+.new-pay-content .new-pay-top .new-pay-left .new-pay-lmiddle .new-pay-lm-banks .wy-pay li span.NBBANK {
+  background-position: 0 -384px;
+}
+.new-pay-content .new-pay-top .new-pay-left .new-pay-lmiddle .new-pay-lm-banks .wy-pay li span.FDB {
+  background-position: 0 -416px;
+}
+.new-pay-content .new-pay-top .new-pay-left .new-pay-lbottom {
+  padding: 32px 0 46px 64px;
+}
+.new-pay-content .new-pay-top .new-pay-left .new-pay-lbottom .new-pay-lbbtn {
+  display: block;
+  float: left;
+  width: 227px;
+  height: 48px;
+  line-height: 48px;
+  background: #ff6900;
+  border-radius: 2px;
+  -moz-border-radius: 2px;
+  -webkit-border-radius: 2px;
+  position: relative;
+  cursor: pointer;
+}
+.new-pay-content .new-pay-top .new-pay-left .new-pay-lbottom .new-pay-lbbtn .new-pay-lbbl {
+  width: 162px;
+  height: 48px;
+  display: block;
+  color: #ffffff;
+  font-size: 20px;
+  text-align: center;
+  font-weight: bold;
+}
+.new-pay-content .new-pay-top .new-pay-left .new-pay-lbottom .new-pay-lbbtn .new-pay-lbbr {
+  position: absolute;
+  top: 11px;
+  left: 146px;
+  width: 52px;
+  height: 29px;
+  background: url("../images/pay/new-pay-icon1.png") no-repeat -291px -83px;
+  background-size: 500px 500px;
+  -o-background-size: 500px 500px;
+  -moz-background-size: 500px 500px;
+  -webkit-background-size: 500px 500px;
+}
+.new-pay-content .new-pay-top .new-pay-left .new-pay-lbottom .new-pay-lbbtn:hover,
+.new-pay-content .new-pay-top .new-pay-left .new-pay-lbottom .new-pay-lbbtn1:hover,
+.new-pay-content .new-pay-top .new-pay-left .new-pay-lbottom .new-pay-lblook:hover,
+.new-pay-content .new-pay-top .new-pay-left .new-pay-lbottom .new-pay-lbcancel:hover {
+  text-decoration: none;
+}
+.new-pay-content .new-pay-top .new-pay-left .new-pay-lbottom .new-pay-lbbtn:hover,
+.new-pay-content .new-pay-top .new-pay-left .new-pay-lbottom .new-pay-lbbtn1:hover {
+  background: #e55817;
+}
+.new-pay-content .new-pay-top .new-pay-left .new-pay-lbottom .new-pay-lbbtn1 {
+  display: block;
+  float: left;
+  width: 288px;
+  height: 58px;
+  line-height: 58px;
+  background: #ff6900;
+  border-radius: 2px;
+  -moz-border-radius: 2px;
+  -webkit-border-radius: 2px;
+  position: relative;
+  cursor: pointer;
+}
+.new-pay-content .new-pay-top .new-pay-left .new-pay-lbottom .new-pay-lbbtn1 .new-pay-lbbl {
+  width: 162px;
+  height: 58px;
+  display: block;
+  color: #ffffff;
+  font-size: 20px;
+  text-align: center;
+  font-weight: bold;
+}
+.new-pay-content .new-pay-top .new-pay-left .new-pay-lbottom .new-pay-lbbtn1 .new-pay-lbbline {
+  display: block;
+  position: absolute;
+  top: 15px;
+  left: 153px;
+  width: 1px;
+  height: 28px;
+  background: #ff964d;
+}
+.new-pay-content .new-pay-top .new-pay-left .new-pay-lbottom .new-pay-lbbtn1 .new-pay-lbbright {
+  width: 117px;
+  position: absolute;
+  top: 12px;
+  right: 0;
+  line-height: 18px;
+  font-size: 12px;
+  color: #ffffff;
+}
+.new-pay-content .new-pay-top .new-pay-left .new-pay-lbottom .new-pay-lbbtn1 .new-pay-lbbright .new-pay-lbbrtop,
+.new-pay-content .new-pay-top .new-pay-left .new-pay-lbottom .new-pay-lbbtn1 .new-pay-lbbright .new-pay-lbbrbottom {
+  display: block;
+  width: 100%;
+  height: 18px;
+}
+.new-pay-content .new-pay-top .new-pay-left .new-pay-lbottom .new-pay-lblook {
+  margin-left: 26px;
+  width: 88px;
+  float: left;
+  height: 48px;
+  line-height: 48px;
+  font-size: 14px;
+  color: #1848a8;
+  text-align: center;
+}
+.new-pay-content .new-pay-top .new-pay-left .new-pay-lbottom .new-pay-lbcancel {
+  width: 88px;
+  float: left;
+  height: 48px;
+  line-height: 48px;
+  font-size: 14px;
+  color: #1848a8;
+  text-align: center;
+}
+.new-pay-content .new-pay-top .new-pay-right {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding-top: 61px;
+  padding-left: 73px;
+  width: 239px;
+  background: #f7f8fa;
+  height: 100%;
+}
+.new-pay-content .new-pay-top .new-pay-right .new-pay-rtop {
+  height: 117px;
+  position: relative;
+}
+.new-pay-content .new-pay-top .new-pay-right .new-pay-rtop i {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 80px;
+  height: 81px;
+  background: url("../images/pay/new-pay-icon1.png") no-repeat -24px 0;
+  background-size: 500px 500px;
+  -o-background-size: 500px 500px;
+  -moz-background-size: 500px 500px;
+  -webkit-background-size: 500px 500px;
+}
+.new-pay-content .new-pay-top .new-pay-right .new-pay-rtop .new-pay-rttext {
+  padding-left: 96px;
+  padding-top: 15px;
+  line-height: 22px;
+  font-size: 14px;
+  color: #333333;
+}
+.new-pay-content .new-pay-top .new-pay-right .new-pay-rtop .new-pay-rttext span {
+  font-size: 16px;
+  color: #ff5800;
+}
+.new-pay-content .new-pay-top .new-pay-right .new-pay-rbottom {
+  height: 117px;
+  position: relative;
+}
+.new-pay-content .new-pay-top .new-pay-right .new-pay-rbottom i {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 85px;
+  height: 83px;
+  background: url("../images/pay/new-pay-icon1.png") no-repeat -104px 0;
+  background-size: 500px 500px;
+  -o-background-size: 500px 500px;
+  -moz-background-size: 500px 500px;
+  -webkit-background-size: 500px 500px;
+}
+.new-pay-content .new-pay-top .new-pay-right .new-pay-rbottom .new-pay-rbtext {
+  padding-left: 96px;
+  padding-top: 15px;
+  line-height: 22px;
+  font-size: 14px;
+  color: #333333;
+}
+.new-pay-content .new-pay-top .new-pay-right .new-pay-rbottom .new-pay-rbtext span {
+  font-size: 16px;
+  color: #ff5800;
+}
+.new-pay-content .new-pay-middle {
+  width: 990px;
+  border: 1px solid #dde1e8;
+  position: relative;
+  overflow: hidden;
+  margin-top: 24px;
+}
+.new-pay-content .new-pay-middle .new-pay-mt {
+  padding-top: 35px;
+  padding-bottom: 35px;
+}
+.new-pay-content .new-pay-middle .new-pay-mt .new-pay-mt1 {
+  height: 30px;
+  line-height: 30px;
+  font-size: 20px;
+  color: #000000;
+  text-align: center;
+}
+.new-pay-content .new-pay-middle .new-pay-mt .new-pay-mt1 span {
+  font-weight: bold;
+}
+.new-pay-content .new-pay-middle .new-pay-mt .new-pay-mt2 {
+  height: 26px;
+  line-height: 26px;
+  font-size: 16px;
+  color: #000000;
+  text-align: center;
+}
+.new-pay-content .new-pay-middle .new-pay-mall {
+  padding: 0 63px;
+}
+.new-pay-content .new-pay-middle .new-pay-mall .new-pay-mat {
+  width: 862px;
+  border: 1px solid #dde1e8;
+  background: #f8f8fa;
+}
+.new-pay-content .new-pay-middle .new-pay-mall .new-pay-mat .new-pay-mattop {
+  height: 52px;
+  line-height: 52px;
+  border-bottom: 1px solid #dde1e8;
+}
+.new-pay-content .new-pay-middle .new-pay-mall .new-pay-mat .new-pay-mattop .new-pay-matt1 {
+  display: inline-block;
+  *display: inline;
+  *zoom: 1;
+  padding: 0 24px 0 29px;
+  line-height: 52px;
+  font-size: 18px;
+  color: #333333;
+  font-weight: bold;
+}
+.new-pay-content .new-pay-middle .new-pay-mall .new-pay-mat .new-pay-mattop .new-pay-matt2 {
+  display: inline-block;
+  *display: inline;
+  *zoom: 1;
+  padding-right: 30px;
+  line-height: 56px;
+  font-size: 14px;
+  color: #333333;
+}
+.new-pay-content .new-pay-middle .new-pay-mall .new-pay-mat .new-pay-mattop .new-pay-matt2 span {
+  color: #1848a8;
+  font-weight: bold;
+}
+.new-pay-content .new-pay-middle .new-pay-mall .new-pay-mat .new-pay-matbottom {
+  padding-top: 18px;
+}
+.new-pay-content .new-pay-middle .new-pay-mall .new-pay-mat .new-pay-matbottom .new-pay-matbl {
+  float: left;
+  width: 588px;
+  padding-bottom: 32px;
+}
+.new-pay-content .new-pay-middle .new-pay-mall .new-pay-mat .new-pay-matbottom .new-pay-matbl .new-pay-matbl-top {
+  padding-left: 30px;
+  height: 50px;
+  line-height: 50px;
+  font-size: 12px;
+  color: #999999;
+}
+.new-pay-content .new-pay-middle .new-pay-mall .new-pay-mat .new-pay-matbottom .new-pay-matbl .new-pay-matbl-top .new-pay-matbl-t1 {
+  color: #ff5400;
+  font-size: 14px;
+  line-height: 42px;
+}
+.new-pay-content .new-pay-middle .new-pay-mall .new-pay-mat .new-pay-matbottom .new-pay-matbl .new-pay-matbl-top .new-pay-matbl-t1 span {
+  font-size: 20px;
+}
+.new-pay-content .new-pay-middle .new-pay-mall .new-pay-mat .new-pay-matbottom .new-pay-matbl .new-pay-matbl-all {
+  padding-left: 30px;
+  height: 28px;
+  line-height: 28px;
+  font-size: 12px;
+  color: #333333;
+}
+.new-pay-content .new-pay-middle .new-pay-mall .new-pay-mat .new-pay-matbottom .new-pay-matbl .new-pay-matbl-all span {
+  color: #999999;
+}
+.new-pay-content .new-pay-middle .new-pay-mall .new-pay-mat .new-pay-matbottom .new-pay-matbr {
+  float: left;
+  width: 274px;
+  padding-bottom: 28px;
+}
+.new-pay-content .new-pay-middle .new-pay-mall .new-pay-mat .new-pay-matbottom .new-pay-matbr .new-pay-matbr-top {
+  height: 50px;
+}
+.new-pay-content .new-pay-middle .new-pay-mall .new-pay-mat .new-pay-matbottom .new-pay-matbr .new-pay-matbr-top .new-pay-matbr-t1 {
+  line-height: 50px;
+  font-size: 16px;
+  float: left;
+  color: #333333;
+  font-weight: bold;
+  width: 76px;
+}
+.new-pay-content .new-pay-middle .new-pay-mall .new-pay-mat .new-pay-matbottom .new-pay-matbr .new-pay-matbr-top .new-pay-matbr-t2 {
+  line-height: 50px;
+  font-size: 16px;
+  float: left;
+  color: #ffb500;
+  font-weight: bold;
+  width: 46px;
+}
+.new-pay-content .new-pay-middle .new-pay-mall .new-pay-mat .new-pay-matbottom .new-pay-matbr .new-pay-matbr-top .new-pay-matbr-t3 {
+  width: 134px;
+  float: left;
+  position: relative;
+  padding-top: 15px;
+}
+.new-pay-content .new-pay-middle .new-pay-mall .new-pay-mat .new-pay-matbottom .new-pay-matbr .new-pay-matbr-top .new-pay-matbr-t3 span {
+  display: block;
+  width: 17px;
+  height: 16px;
+  float: left;
+  background: url("../images/pay/new-pay-icon1.png?v=1.1") no-repeat -36px -121px;
+  background-size: 500px 500px;
+  -o-background-size: 500px 500px;
+  -moz-background-size: 500px 500px;
+  -webkit-background-size: 500px 500px;
+}
+.new-pay-content .new-pay-middle .new-pay-mall .new-pay-mat .new-pay-matbottom .new-pay-matbr .new-pay-matbr-top .new-pay-matbr-t3 .nostar {
+  background: url("../images/pay/new-pay-icon1.png?v=1.1") no-repeat -53px -121px;
+  background-size: 500px 500px;
+  -o-background-size: 500px 500px;
+  -moz-background-size: 500px 500px;
+  -webkit-background-size: 500px 500px;
+}
+.new-pay-content .new-pay-middle .new-pay-mall .new-pay-mat .new-pay-matbottom .new-pay-matbr .new-pay-matbr-top .new-pay-matbr-t3 .halfstar {
+  background: url("../images/pay/new-pay-icon1.png?v=1.1") no-repeat -70px -121px;
+  background-size: 500px 500px;
+  -o-background-size: 500px 500px;
+  -moz-background-size: 500px 500px;
+  -webkit-background-size: 500px 500px;
+}
+.new-pay-content .new-pay-middle .new-pay-mall .new-pay-mat .new-pay-matbottom .new-pay-matbr .new-pay-matbr-all {
+  padding-bottom: 8px;
+  width: 250px;
+}
+.new-pay-content .new-pay-middle .new-pay-mall .new-pay-mat .new-pay-matbottom .new-pay-matbr .new-pay-matbr-all .new-pay-matbr-a1 {
+  height: 20px;
+  line-height: 20px;
+  font-size: 12px;
+  color: #999999;
+}
+.new-pay-content .new-pay-middle .new-pay-mall .new-pay-mat .new-pay-matbottom .new-pay-matbr .new-pay-matbr-all .new-pay-matbr-a2 {
+  max-height: 40px;
+  line-height: 20px;
+  font-size: 12px;
+  color: #333333;
+  word-break: break-all;
+  overflow: hidden;
+}
+.new-pay-content .new-pay-middle .new-pay-mall .new-pay-mab {
+  height: 72px;
+  position: relative;
+}
+.new-pay-content .new-pay-middle .new-pay-mall .new-pay-mab i {
+  display: block;
+  position: absolute;
+  top: 15px;
+  left: 76px;
+  width: 15px;
+  height: 16px;
+  background: url("../images/pay/new-pay-icon1.png?v=1.2") no-repeat -87px -121px;
+  background-size: 500px 500px;
+  -o-background-size: 500px 500px;
+  -moz-background-size: 500px 500px;
+  -webkit-background-size: 500px 500px;
+}
+.new-pay-content .new-pay-middle .new-pay-mall .new-pay-mab .new-pay-mab1 {
+  width: 303px;
+  float: left;
+  padding-left: 101px;
+  height: 50px;
+  line-height: 50px;
+  font-size: 14px;
+  color: #333333;
+  white-space: nowrap;
+}
+.new-pay-content .new-pay-middle .new-pay-mall .new-pay-mab .new-pay-mab2 {
+  float: left;
+  width: 340px ;
+  height: 48px;
+  line-height: 48px;
+  font-size: 16px;
+  color: #000000;
+  font-weight: bold;
+}
+.new-pay-content .new-pay-bottom {
+  width: 990px;
+  border: 1px solid #dde1e8;
+  position: relative;
+  overflow: hidden;
+  margin-top: 24px;
+  margin-bottom: 40px;
+}
+.new-pay-content .new-pay-bottom .new-pay-btitle {
+  padding-top: 39px;
+  padding-left: 127px;
+  height: 40px;
+  line-height: 40px;
+  position: relative;
+}
+.new-pay-content .new-pay-bottom .new-pay-btitle i {
+  display: block;
+  position: absolute;
+  top: 40px;
+  left: 330px;
+  width: 34px;
+  height: 40px;
+  background: url("../images/pay/new-pay-icon1.png") no-repeat 0 -122px;
+  background-size: 500px 500px;
+  -o-background-size: 500px 500px;
+  -moz-background-size: 500px 500px;
+  -webkit-background-size: 500px 500px;
+}
+.new-pay-content .new-pay-bottom .new-pay-btitle .new-pay-bttext {
+  width: 786px;
+  height: 40px;
+  font-size: 24px;
+  color: #333333;
+  text-align: center;
+}
+.new-pay-content .new-pay-bottom .new-pay-btitle .new-pay-bttext b {
+  font-weight: bold;
+}
+.new-pay-content .new-pay-bottom .new-pay-btitle .new-pay-bttext span {
+  color: #ff5800;
+}
+.new-pay-content .new-pay-bottom .new-pay-bqa {
+  padding: 27px 0 30px 127px;
+}
+.new-pay-content .new-pay-bottom .new-pay-bqa .new-pay-bqall {
+  padding-bottom: 24px;
+}
+.new-pay-content .new-pay-bottom .new-pay-bqa .new-pay-bqall .new-pay-bqa1 {
+  width: 100%;
+}
+.new-pay-content .new-pay-bottom .new-pay-bqa .new-pay-bqall .new-pay-bqa1 .new-pay-bqaleft {
+  width: 20px;
+  height: 24px;
+  line-height: 24px;
+  float: left;
+  font-size: 16px;
+  font-weight: bold;
+  color: #333333;
+}
+.new-pay-content .new-pay-bottom .new-pay-bqa .new-pay-bqall .new-pay-bqa1 .new-pay-bqaright {
+  width: 766px;
+  line-height: 24px;
+  float: left;
+  font-size: 14px;
+  color: #333333;
+}
+.new-pay-content .new-pay-bottom .new-pay-bqa .new-pay-bqall .new-pay-bqa2 {
+  width: 100%;
+}
+.new-pay-content .new-pay-bottom .new-pay-bqa .new-pay-bqall .new-pay-bqa2 .new-pay-bqaleft {
+  width: 20px;
+  height: 24px;
+  line-height: 24px;
+  float: left;
+  font-size: 16px;
+  font-weight: bold;
+  color: #ff5800;
+}
+.new-pay-content .new-pay-bottom .new-pay-bqa .new-pay-bqall .new-pay-bqa2 .new-pay-bqaright {
+  width: 766px;
+  line-height: 24px;
+  float: left;
+  font-size: 14px;
+  color: #333333;
+}
+.new-pay-content .new-pay-bottom .new-pay-bpay {
+  padding-top: 4px;
+  height: 96px;
+  line-height: 96px;
+  font-size: 24px;
+  color: #333333;
+  text-align: center;
+}
+.new-pay-content .new-pay-bottom .new-pay-blist {
+  padding-bottom: 5px;
+}
+.new-pay-content .new-pay-bottom .new-pay-blist li {
+  height: 220px;
+  float: left;
+  margin: 0 0 40px 40px;
+  width: 432px;
+  border: 1px solid #dde1e8;
+  background: #f7f8fa;
+}
+.new-pay-content .new-pay-bottom .new-pay-blist li .new-pay-bltop {
+  padding-top: 27px;
+  width: 374px;
+  margin: 0 auto;
+}
+.new-pay-content .new-pay-bottom .new-pay-blist li .new-pay-bltop .new-pay-blt-l {
+  width: 246px;
+  float: left;
+}
+.new-pay-content .new-pay-bottom .new-pay-blist li .new-pay-bltop .new-pay-blt-l .new-pay-blt-l1 {
+  height: 42px;
+  line-height: 42px;
+  font-size: 20px;
+  color: #333333;
+  font-weight: bold;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.new-pay-content .new-pay-bottom .new-pay-blist li .new-pay-bltop .new-pay-blt-l .new-pay-blt-l2 {
+  height: 37px;
+  width: 100%;
+}
+.new-pay-content .new-pay-bottom .new-pay-blist li .new-pay-bltop .new-pay-blt-l .new-pay-blt-l2 span {
+  display: block;
+  width: 17px;
+  height: 16px;
+  float: left;
+  background: url("../images/pay/new-pay-icon1.png?v=1.1") no-repeat -36px -121px;
+  background-size: 500px 500px;
+  -o-background-size: 500px 500px;
+  -moz-background-size: 500px 500px;
+  -webkit-background-size: 500px 500px;
+}
+.new-pay-content .new-pay-bottom .new-pay-blist li .new-pay-bltop .new-pay-blt-l .new-pay-blt-l2 .nostar {
+  background: url("../images/pay/new-pay-icon1.png?v=1.1") no-repeat -53px -121px;
+  background-size: 500px 500px;
+  -o-background-size: 500px 500px;
+  -moz-background-size: 500px 500px;
+  -webkit-background-size: 500px 500px;
+}
+.new-pay-content .new-pay-bottom .new-pay-blist li .new-pay-bltop .new-pay-blt-l .new-pay-blt-l2 .halfstar {
+  background: url("../images/pay/new-pay-icon1.png?v=1.1") no-repeat -70px -121px;
+  background-size: 500px 500px;
+  -o-background-size: 500px 500px;
+  -moz-background-size: 500px 500px;
+  -webkit-background-size: 500px 500px;
+}
+.new-pay-content .new-pay-bottom .new-pay-blist li .new-pay-bltop .new-pay-blt-r {
+  width: 128px;
+  float: left;
+}
+.new-pay-content .new-pay-bottom .new-pay-blist li .new-pay-bltop .new-pay-blt-r .new-pay-blt-r1 {
+  float: left;
+  width: 64px;
+  height: 79px;
+}
+.new-pay-content .new-pay-bottom .new-pay-blist li .new-pay-bltop .new-pay-blt-r .new-pay-blt-r1 .new-pay-blt-rt {
+  padding-top: 7px;
+  height: 28px;
+  line-height: 28px;
+  font-size: 22px;
+  color: #1848a8;
+  text-align: center;
+  font-weight: bold;
+}
+.new-pay-content .new-pay-bottom .new-pay-blist li .new-pay-bltop .new-pay-blt-r .new-pay-blt-r1 .new-pay-blt-rb {
+  height: 22px;
+  line-height: 22px;
+  font-size: 16px;
+  color: #999999;
+  text-align: center;
+}
+.new-pay-content .new-pay-bottom .new-pay-blist li .new-pay-blbottom {
+  width: 374px;
+  margin: 0 auto;
+  border-top: 1px solid #dde1e8;
+  padding-top: 15px;
+  padding-bottom: 22px;
+}
+.new-pay-content .new-pay-bottom .new-pay-blist li .new-pay-blbottom .new-pay-blb-t {
+  height: 28px;
+  line-height: 28px;
+  font-size: 14px;
+  color: #666666;
+}
+.new-pay-content .new-pay-bottom .new-pay-blist li .new-pay-blbottom .new-pay-blb-b {
+  height: 48px;
+  line-height: 24px;
+  font-size: 14px;
+  color: #333333;
+  overflow: hidden;
+}
+.new-pay-content .new-pay-btn {
+  padding: 0 0 40px 382px;
+}
+.new-pay-content .new-pay-btn .new-pay-lbbtn {
+  display: block;
+  width: 227px;
+  height: 48px;
+  line-height: 48px;
+  background: #ff6900;
+  border-radius: 2px;
+  -moz-border-radius: 2px;
+  -webkit-border-radius: 2px;
+  position: relative;
+  cursor: pointer;
+}
+.new-pay-content .new-pay-btn .new-pay-lbbtn .new-pay-lbbl {
+  width: 162px;
+  height: 48px;
+  display: block;
+  color: #ffffff;
+  font-size: 20px;
+  text-align: center;
+  font-weight: bold;
+}
+.new-pay-content .new-pay-btn .new-pay-lbbtn .new-pay-lbbr {
+  position: absolute;
+  top: 11px;
+  left: 146px;
+  width: 52px;
+  height: 29px;
+  background: url("../images/pay/new-pay-icon1.png?v=1") no-repeat -291px -83px;
+  background-size: 500px 500px;
+  -o-background-size: 500px 500px;
+  -moz-background-size: 500px 500px;
+  -webkit-background-size: 500px 500px;
+}
+.new-pay-content .new-pay-btn a:hover {
+  text-decoration: none;
+  background: #e55817;
+}
+.new-pay-content .new-pay-btn1 {
+  margin-top: 40px;
+  padding: 0 0 40px 382px;
+}
+.new-pay-content .new-pay-btn1 .new-pay-lbbtn1 {
+  display: block;
+  width: 288px;
+  height: 58px;
+  line-height: 58px;
+  background: #ff6900;
+  border-radius: 2px;
+  -moz-border-radius: 2px;
+  -webkit-border-radius: 2px;
+  position: relative;
+  cursor: pointer;
+}
+.new-pay-content .new-pay-btn1 .new-pay-lbbtn1 .new-pay-lbbl {
+  width: 162px;
+  height: 58px;
+  display: block;
+  color: #ffffff;
+  font-size: 20px;
+  text-align: center;
+  font-weight: bold;
+}
+.new-pay-content .new-pay-btn1 .new-pay-lbbtn1 .new-pay-lbbline {
+  display: block;
+  position: absolute;
+  top: 15px;
+  left: 153px;
+  width: 1px;
+  height: 28px;
+  background: #ff964d;
+}
+.new-pay-content .new-pay-btn1 .new-pay-lbbtn1 .new-pay-lbbright {
+  width: 117px;
+  position: absolute;
+  top: 12px;
+  right: 0;
+  line-height: 18px;
+  font-size: 12px;
+  color: #ffffff;
+}
+.new-pay-content .new-pay-btn1 .new-pay-lbbtn1 .new-pay-lbbright .new-pay-lbbrtop,
+.new-pay-content .new-pay-btn1 .new-pay-lbbtn1 .new-pay-lbbright .new-pay-lbbrbottom {
+  display: block;
+  width: 100%;
+  height: 18px;
+}
+.new-pay-content .new-pay-btn1 a:hover {
+  text-decoration: none;
+  background: #e55817;
+}
+.mask {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: none;
+  z-index: 99;
+}
+.mask .mask-out {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #222;
+  opacity: 0.6;
+  filter: alpha(opacity=60);
+}
+.new-pay-mask {
+  padding-top: 30px;
+  padding-left: 34px;
+}
+.new-pay-mask .new-pay-mtop {
+  width: 100%;
+  display: block;
+  position: relative;
+  padding-bottom: 5px;
+}
+.new-pay-mask .new-pay-mtop img {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 111px;
+  height: 74px;
+}
+.new-pay-mask .new-pay-mtop .new-pay-mt1 {
+  display: block;
+  padding-left: 126px;
+  padding-top: 4px;
+  height: 32px;
+  line-height: 32px;
+  font-size: 20px;
+  color: #333333;
+  font-weight: bold;
+}
+.new-pay-mask .new-pay-mtop .new-pay-mt2 {
+  display: block;
+  padding-left: 126px;
+  height: 32px;
+  line-height: 32px;
+  font-size: 20px;
+  color: #333333;
+  font-weight: bold;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.new-pay-mask .new-pay-mtop:hover {
+  text-decoration: none;
+}
+.new-pay-mask .new-pay-mbottom {
+  padding: 0 0 57px 126px;
+  line-height: 30px;
+}
+.new-pay-mask .new-pay-mbottom .new-pay-mball {
+  width: 100%;
+  line-height: 30px;
+  font-size: 14px;
+}
+.new-pay-mask .new-pay-mbottom .new-pay-mball .new-pay-mbaleft {
+  color: #999999;
+}
+.new-pay-mask .new-pay-mbottom .new-pay-mball .new-pay-mbaright {
+  color: #333333;
+}
+.new-pay-mask .new-pay-mbottom .new-pay-mbbtn {
+  padding-top: 23px;
+  height: 48px;
+}
+.new-pay-mask .new-pay-mbottom .new-pay-mbbtn .new-pay-lbbtn {
+  display: block;
+  float: left;
+  width: 227px;
+  height: 48px;
+  line-height: 48px;
+  background: #ff6900;
+  border-radius: 2px;
+  -moz-border-radius: 2px;
+  -webkit-border-radius: 2px;
+  position: relative;
+  cursor: pointer;
+}
+.new-pay-mask .new-pay-mbottom .new-pay-mbbtn .new-pay-lbbtn .new-pay-lbbl {
+  width: 162px;
+  height: 48px;
+  display: block;
+  color: #ffffff;
+  font-size: 20px;
+  text-align: center;
+  font-weight: bold;
+}
+.new-pay-mask .new-pay-mbottom .new-pay-mbbtn .new-pay-lbbtn .new-pay-lbbr {
+  position: absolute;
+  top: 11px;
+  left: 146px;
+  width: 52px;
+  height: 29px;
+  background: url("../images/pay/new-pay-icon1.png?v=1") no-repeat -291px -83px;
+  background-size: 500px 500px;
+  -o-background-size: 500px 500px;
+  -moz-background-size: 500px 500px;
+  -webkit-background-size: 500px 500px;
+}
+.new-pay-mask .new-pay-mbottom .new-pay-mbbtn .new-pay-lbbtn1 {
+  display: block;
+  float: left;
+  width: 288px;
+  height: 58px;
+  line-height: 58px;
+  background: #ff6900;
+  border-radius: 2px;
+  -moz-border-radius: 2px;
+  -webkit-border-radius: 2px;
+  position: relative;
+  cursor: pointer;
+}
+.new-pay-mask .new-pay-mbottom .new-pay-mbbtn .new-pay-lbbtn1 .new-pay-lbbl {
+  width: 162px;
+  height: 58px;
+  display: block;
+  color: #ffffff;
+  font-size: 20px;
+  text-align: center;
+  font-weight: bold;
+}
+.new-pay-mask .new-pay-mbottom .new-pay-mbbtn .new-pay-lbbtn1 .new-pay-lbbline {
+  display: block;
+  position: absolute;
+  top: 15px;
+  left: 153px;
+  width: 1px;
+  height: 28px;
+  background: #ff964d;
+}
+.new-pay-mask .new-pay-mbottom .new-pay-mbbtn .new-pay-lbbtn1 .new-pay-lbbright {
+  width: 117px;
+  position: absolute;
+  top: 12px;
+  right: 0;
+  line-height: 18px;
+  font-size: 12px;
+  color: #ffffff;
+}
+.new-pay-mask .new-pay-mbottom .new-pay-mbbtn .new-pay-lbbtn1 .new-pay-lbbright .new-pay-lbbrtop,
+.new-pay-mask .new-pay-mbottom .new-pay-mbbtn .new-pay-lbbtn1 .new-pay-lbbright .new-pay-lbbrbottom {
+  display: block;
+  width: 100%;
+  height: 18px;
+}
+.new-pay-mask .new-pay-mbottom .new-pay-mbbtn .new-pay-lbbtn:hover,
+.new-pay-mask .new-pay-mbottom .new-pay-mbbtn .new-pay-lbbtn1:hover {
+  background: #e55817;
+  text-decoration: none;
+}
+.footer-v2 {
+  margin-top: 30px !important;
+}
+.new-pay-gift {
+  width: 992px;
+  margin: 0 auto;
+  margin-top: 30px;
+}
+.new-pay-gift .new-pay-gall {
+  width: 990px;
+  border: 1px solid #dde1e8;
+  position: relative;
+  overflow: hidden;
+}
+.new-pay-gift .new-pay-gall .new-pay-gatop {
+  background: #fafafa;
+  height: 48px;
+  line-height: 48px;
+  color: #333333;
+  font-size: 16px;
+  position: relative;
+  border-bottom: 1px solid #dde1e8;
+}
+.new-pay-gift .new-pay-gall .new-pay-gatop span {
+  display: block;
+  width: 700px;
+  float: left;
+  text-indent: 14px;
+  font-weight: bold;
+}
+.new-pay-gift .new-pay-gall .new-pay-gatop .new-pay-gatr {
+  float: right;
+  margin-right: 25px;
+  margin-top: 10px;
+  display: inline-block;
+  line-height: 30px;
+  height: 30px;
+  *display: inline;
+  *zoom: 1;
+  padding: 0 30px;
+  background: #f69006;
+  color: #ffffff;
+  font-size: 14px;
+  text-align: center;
+  cursor: pointer;
+}
+.new-pay-gift .new-pay-gall .new-pay-gatop .new-pay-gatr:hover {
+  background: #e55817;
+}
+.new-pay-gift .new-pay-gall .new-pay-gacontent {
+  padding-left: 30px;
+}
+.new-pay-gift .new-pay-gall .new-pay-gacontent .new-pay-gaca1 {
+  height: 64px;
+  line-height: 64px;
+  position: relative;
+}
+.new-pay-gift .new-pay-gall .new-pay-gacontent .new-pay-gaca1 i {
+  position: absolute;
+  top: 25px;
+  left: 0;
+  *zoom: 1;
+  width: 17px;
+  height: 16px;
+  background: url("../images/pay/new-pay-icon1.png?v=1") no-repeat -105px -121px;
+  background-size: 500px 500px;
+  -o-background-size: 500px 500px;
+  -moz-background-size: 500px 500px;
+  -webkit-background-size: 500px 500px;
+}
+.new-pay-gift .new-pay-gall .new-pay-gacontent .new-pay-gaca1 .new-pay-g-title {
+  display: inline-block;
+  *display: inline;
+  *zoom: 1;
+  padding: 0 20px 0 24px;
+  color: #000000;
+  font-size: 16px;
+}
+.new-pay-gift .new-pay-gall .new-pay-gacontent .new-pay-gaca1 .new-pay-g-vice {
+  display: inline-block;
+  *display: inline;
+  *zoom: 1;
+  line-height: 70px;
+  color: #7c8aa6;
+  font-size: 14px;
+}
+.new-pay-gift .new-pay-gall .new-pay-gacontent .new-pay-gaca1 .new-pay-g-vice:hover {
+  text-decoration: none;
+}
+.new-pay-gift .new-pay-gall .new-pay-gacontent .new-pay-gacalist {
+  height: 128px;
+  position: relative;
+}
+.new-pay-gift .new-pay-gall .new-pay-gacontent .new-pay-gacalist .new-pay-gacaprev {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 44px;
+  height: 120px;
+  cursor: pointer;
+  background: #ffffff;
+}
+.new-pay-gift .new-pay-gall .new-pay-gacontent .new-pay-gacalist .new-pay-gacaprev i {
+  width: 7px;
+  height: 11px;
+  display: block;
+  position: absolute;
+  top: 56px ;
+  right: 14px;
+  background: url("../images/pay/new-pay-icon1.png?v=1") no-repeat -133px -121px;
+  background-size: 500px 500px;
+  -o-background-size: 500px 500px;
+  -moz-background-size: 500px 500px;
+  -webkit-background-size: 500px 500px;
+}
+.new-pay-gift .new-pay-gall .new-pay-gacontent .new-pay-gacalist .new-pay-gacanext {
+  display: block;
+  position: absolute;
+  top: 0;
+  right: 25px;
+  width: 44px;
+  height: 120px;
+  cursor: pointer;
+  background: #ffffff;
+}
+.new-pay-gift .new-pay-gall .new-pay-gacontent .new-pay-gacalist .new-pay-gacanext i {
+  width: 7px;
+  height: 11px;
+  display: block;
+  position: absolute;
+  top: 56px ;
+  right: 27px;
+  background: url("../images/pay/new-pay-icon1.png?v=1") no-repeat -126px -121px;
+  background-size: 500px 500px;
+  -o-background-size: 500px 500px;
+  -moz-background-size: 500px 500px;
+  -webkit-background-size: 500px 500px;
+}
+.new-pay-gift .new-pay-gall .new-pay-gacontent .new-pay-gacalist .new-pay-gacatop {
+  width: 876px;
+  height: 128px;
+  padding-left: 44px;
+  overflow: hidden;
+}
+.new-pay-gift .new-pay-gall .new-pay-gacontent .new-pay-gacalist .new-pay-gacatop ul {
+  height: 128px;
+}
+.new-pay-gift .new-pay-gall .new-pay-gacontent .new-pay-gacalist .new-pay-gacatop ul li {
+  float: left;
+  width: 179px;
+  height: 120px;
+  padding: 0;
+  border: 0;
+  border: none;
+  margin: 0;
+  padding-right: 40px;
+  padding-bottom: 8px;
+}
+.new-pay-gift .new-pay-gall .new-pay-gacontent .new-pay-gacalist .new-pay-gacatop ul li img {
+  width: 100%;
+  height: 100%;
+}
+.new-pay-gift .new-pay-gall .new-pay-gacontent .new-pay-gacalist .new-pay-gacaall {
+  width: 876px;
+  padding-left: 44px;
+}
+.new-pay-gift .new-pay-gall .new-pay-gacontent .new-pay-gacalist .new-pay-gacaall ul li {
+  float: left;
+  width: 179px;
+  height: 120px;
+  padding: 0;
+  padding-right: 40px;
+  padding-bottom: 8px;
+  margin: 0;
+  border: 0;
+  border: none;
+}
+.new-pay-gift .new-pay-gall .new-pay-gacontent .new-pay-gacalist .new-pay-gacaall ul li img {
+  width: 179px;
+  height: 120px;
+}
+.new-pay-gift .new-pay-gall .new-pay-gacontent .new-pay-gacagift {
+  padding-bottom: 25px;
+  margin-top: -15px;
+}
+.new-pay-gift .new-pay-gall .new-pay-gacontent .new-pay-gacagift .new-pay-g-choose {
+  position: relative;
+  height: 28px;
+  line-height: 28px;
+  padding-bottom: 5px;
+  text-indent: 35px;
+}
+.new-pay-gift .new-pay-gall .new-pay-gacontent .new-pay-gacagift .new-pay-g-choose i {
+  position: absolute;
+  top: 12px;
+  left: 26px;
+  *zoom: 1;
+  width: 4px;
+  height: 4px;
+  background: url("../images/pay/new-pay-icon1.png?v=1") no-repeat -122px -121px;
+  background-size: 500px 500px;
+  -o-background-size: 500px 500px;
+  -moz-background-size: 500px 500px;
+  -webkit-background-size: 500px 500px;
+}
+.new-pay-gift .new-pay-gall .new-pay-gacontent .new-pay-gacagift .new-pay-g-clist {
+  padding-left: 44px;
+}
+.new-pay-gift .new-pay-gall .new-pay-gacontent .new-pay-gacagift .new-pay-g-clist li {
+  float: left;
+  width: 179px;
+  height: 120px;
+  padding: 0;
+  border: 0;
+  border: none;
+  margin: 0;
+  padding-right: 40px;
+  padding-bottom: 8px;
+}
+.new-pay-gift .new-pay-gall .new-pay-gacontent .new-pay-gacagift .new-pay-g-clist li img {
+  width: 179px;
+  height: 120px;
+}
+.new-pay-gift .new-pay-gall .new-pay-gacontent .new-pay-gacagift .new-pay-g-clist1 {
+  padding-top: 10px;
+}
+.new-pay-gift .new-pay-gall .new-pay-gacontent .new-pay-gacagift .new-pay-g-cb {
+  padding-left: 44px;
+  height: 30px;
+  line-height: 30px;
+  font-size: 14px;
+  color: #7c8aa6;
+}
+.new-pay-gift .new-pay-gall .new-pay-ga216 {
+  height: 216px;
+  overflow: hidden;
+}
+.new-pay-gift .new-pay-gall .new-pay-gabottom {
+  background: #fafafa;
+  height: 48px;
+  line-height: 48px;
+  color: #333333;
+  font-size: 16px;
+  position: relative;
+  border-top: 1px solid #dde1e8;
+  text-align: center;
+}
+.new-pay-gift .new-pay-gall .new-pay-gabottom .new-pay-gab {
+  display: inline-block;
+  *display: inline;
+  *zoom: 1;
+  cursor: pointer;
+}
+.new-pay-gift .new-pay-gall .new-pay-gabottom .new-pay-gab .new-pay-gab1 {
+  display: inline-block;
+  *display: inline;
+  *zoom: 1;
+  font-size: 14px;
+  color: #335498;
+}
+.new-pay-gift .new-pay-gall .new-pay-gabottom .new-pay-gab i {
+  display: inline-block;
+  *display: inline;
+  *zoom: 1;
+  vertical-align: middle;
+  width: 11px;
+  height: 7px;
+  background: url("../images/pay/new-pay-icon1.png?v=1") no-repeat -151px -121px;
+  background-size: 500px 500px;
+  -o-background-size: 500px 500px;
+  -moz-background-size: 500px 500px;
+  -webkit-background-size: 500px 500px;
+}
+.new-pay-gift .new-pay-gall .new-pay-gabottom .new-pay-gabtop i {
+  background: url("../images/pay/new-pay-icon1.png?v=1") no-repeat -140px -121px;
+  background-size: 500px 500px;
+  -o-background-size: 500px 500px;
+  -moz-background-size: 500px 500px;
+  -webkit-background-size: 500px 500px;
+}

@@ -1,0 +1,566 @@
+ #include("/common/_head_brand.html")
+<link href="/lib/webuploader/0.1.5/webuploader.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div class="page-container">
+	<form action="/car/save" method="post" class="form form-horizontal" id="form-article-add" enctype="multipart/form-data">
+		
+		<!-- 0 -->
+		 <div class="row cl">
+			<label class="form-label col-xs-4 col-sm-2">地区：</label>
+			<div class="formControls col-xs-8 col-sm-9"> 
+			<span class="select-box">
+				<select class="select" id="valueSelect0" name="car.location_id">
+					<option value="0">无</option>
+				#for(l:locationList)
+					<option value="#(l.id)">#(l.name)</option>
+				#end
+				</select>
+			</span> 
+			</div>
+		</div>
+		<div class="row cl">
+			<label class="form-label col-xs-4 col-sm-2">名称：</label>
+			<div class="formControls col-xs-8 col-sm-9 skin-minimal">
+				<div class="check-box">
+					<input type="text" class="input-text" value="" placeholder="" id="value0" name="">
+				</div>
+				<div class="check-box">
+					<a href="javascript:void" id="valueBtn0" class="btn btn-primary radius">添加</a>
+				</div>
+				<div class="check-box">
+					<a href="javascript:void" id="valueUpdate0" class="btn btn-primary radius">修改</a>
+				</div>
+				
+				<div class="check-box">
+					<a href="javascript:void" id="valueDel0" class="btn btn-primary radius">删除</a>
+				</div>
+			</div>
+		</div> 
+		
+		
+		
+		<!-- 1 -->
+		
+		<div class="row cl">
+			<label class="form-label col-xs-4 col-sm-2">颜色：</label>
+			<div class="formControls col-xs-8 col-sm-9"> 
+			<span class="select-box">
+				<select class="select" id="valueSelect1" name="car.color_id">
+			  			<option value="0">无</option>
+					#for(c:colorList)
+						<option value="#(c.id)">#(c.name)</option>
+					#end	
+				</select>
+			</span> 
+			</div>
+		</div>
+		<div class="row cl">
+			<label class="form-label col-xs-4 col-sm-2">名称：</label>
+			<div class="formControls col-xs-8 col-sm-9 skin-minimal">
+				<div class="check-box">
+					<input type="text" id="value1" class="input-text" value="" placeholder="" name="">
+				</div>
+				<div class="check-box">
+					<a href="javascript:void" id="valueBtn1" class="btn btn-primary radius">添加</a>
+				</div>
+				<div class="check-box">
+					<a href="javascript:void" id="valueUpdate1" class="btn btn-primary radius">修改</a>
+				</div>
+				<div class="check-box">
+					<a href="javascript:void" id="valueDel1" class="btn btn-primary radius">删除</a>
+				</div>
+			</div>
+		</div> 
+		
+		
+		
+		<!-- 2 -->
+		<div class="row cl">
+			<label class="form-label col-xs-4 col-sm-2">类型：</label>
+			<div class="formControls col-xs-8 col-sm-9"> 
+			<span class="select-box">
+				<select name="car.level_id" id="valueSelect2" class="select">
+					<option value="0">无</option>
+					#for(c:levelList)
+						<option value="#(c.id)">#(c.name)</option>
+					#end	
+				</select>
+			</span> 
+			</div>
+		</div>
+		<div class="row cl">
+			<label class="form-label col-xs-4 col-sm-2">名称：</label>
+			<div class="formControls col-xs-8 col-sm-9 skin-minimal">
+				<div class="check-box">
+					<input type="text" id="value2" class="input-text" value="" placeholder="" name="">
+				</div>
+				<div class="check-box">
+					<a href="javascript:void" id="valueBtn2" class="btn btn-primary radius">添加</a>
+				</div>
+				<div class="check-box">
+					<a href="javascript:void" id="valueUpdate2" class="btn btn-primary radius">修改</a>
+				</div>
+				<div class="check-box">
+					<a href="javascript:void" id="valueDel2" class="btn btn-primary radius">删除</a>
+				</div>
+			</div>
+		</div> 
+		
+		
+		
+		
+		<!-- 3 -->
+		<div class="row cl">
+			<label class="form-label col-xs-4 col-sm-2">品牌：</label>
+			<div class="formControls col-xs-8 col-sm-9"> 
+			<span class="select-box">
+				<select name="car.brand_id" id="valueSelect3" class="select">
+				<option value="0">无</option>
+					#for(b:brandList)
+						<option value="#(b.id)">#(b.name)</option>
+					#end	
+				</select>
+			</span> 
+			</div>
+		</div>
+		<div class="row cl">
+			<label class="form-label col-xs-4 col-sm-2">名称：</label>
+			<div class="formControls col-xs-8 col-sm-9 skin-minimal">
+				<div class="check-box">
+					<input type="text" id="value3" class="input-text" value="" placeholder="" name="">
+				</div>
+				<div class="check-box">
+					<a href="javascript:void" id="valueUpdate3" class="btn btn-primary radius">修改</a>
+				</div>
+				<div class="check-box">
+					<a href="javascript:void" id="valueDel3" class="btn btn-primary radius">删除</a>
+				</div>
+			</div>
+		</div> 
+		
+		
+		
+		
+		
+		
+		
+		<!-- 4 -->
+		<div class="row cl">
+			<label class="form-label col-xs-4 col-sm-2">系列：</label>
+			<div class="formControls col-xs-8 col-sm-9"> 
+			<span class="select-box">
+				<select class="select" id="valueSelect4" name="car.series_id">
+				<option value="0">无</option>
+				
+				</select>
+			</span> 
+			</div>
+		</div>
+		<div class="row cl">
+			<label class="form-label col-xs-4 col-sm-2">名称：</label>
+			<div class="formControls col-xs-8 col-sm-9 skin-minimal">
+				<div class="check-box">
+					<input type="text" id="value4" class="input-text" value="" placeholder="" name="">
+				</div>
+				<div class="check-box">
+					<a href="javascript:void" id="valueBtn4" class="btn btn-primary radius">添加</a>
+				</div>
+				<div class="check-box">
+					<a href="javascript:void" id="valueUpdate4" class="btn btn-primary radius">修改</a>
+				</div>
+				<div class="check-box">
+					<a href="javascript:void" id="valueDel4" class="btn btn-primary radius">删除</a>
+				</div>
+			</div>
+		</div> 
+		
+		
+		
+		
+		
+		<!-- 5 -->
+		<div class="row cl">
+			<label class="form-label col-xs-4 col-sm-2">车款：</label>
+			<div class="formControls col-xs-8 col-sm-9"> 
+			<span class="select-box">
+				<select class="select" id="valueSelect5" name="car.carmodel_id">
+				<option value="0">无</option>
+				</select>
+			</span> 
+			</div>
+		</div>
+		<div class="row cl">
+			<label class="form-label col-xs-4 col-sm-2">名称：</label>
+			<div class="formControls col-xs-8 col-sm-9 skin-minimal">
+				<div class="check-box">
+					<input type="text" id="value5" class="input-text" value="" placeholder="" name="">
+				</div>
+				<div class="check-box">
+					<a href="javascript:void" id="valueBtn5" class="btn btn-primary radius">添加</a>
+				</div>
+				<div class="check-box">
+					<a href="javascript:void" id="valueUpdate5" class="btn btn-primary radius">修改</a>
+				</div>
+				<div class="check-box">
+					<a href="javascript:void" id="valueDel5" class="btn btn-primary radius">删除</a>
+				</div>
+			</div>
+		</div> 
+		
+		
+		
+		
+		<!-- 6 -->
+		<div class="row cl">
+			<label class="form-label col-xs-4 col-sm-2">年款：</label>
+			<div class="formControls col-xs-8 col-sm-9"> 
+			<span class="select-box">
+				<select class="select" id="valueSelect6" name="car.years_id">
+				<option value="0">无</option>
+					#for(y:yearsList)
+					<option value="#(y.id)">#(y.name)</option>
+					#end
+				</select>
+			</span> 
+			</div>
+		</div>
+		<div class="row cl">
+			<label class="form-label col-xs-4 col-sm-2">名称：</label>
+			<div class="formControls col-xs-8 col-sm-9 skin-minimal">
+				<div class="check-box">
+					<input type="text" id="value6" class="input-text" value="" placeholder="" name="">
+				</div>
+				<div class="check-box">
+					<a href="javascript:void" id="valueBtn6" class="btn btn-primary radius">添加</a>
+				</div>
+				<div class="check-box">
+					<a href="javascript:void" id="valueUpdate6" class="btn btn-primary radius">修改</a>
+				</div>
+				<div class="check-box">
+					<a href="javascript:void" id="valueDel6" class="btn btn-primary radius">删除</a>
+				</div>
+			</div>
+		</div> 
+		
+		
+		
+		
+		
+		<!-- 7 -->
+		<div class="row cl">
+			<label class="form-label col-xs-4 col-sm-2">国别：</label>
+			<div class="formControls col-xs-8 col-sm-9"> 
+			<span class="select-box">
+				<select class="select" id="valueSelect7" name="car.country_id">
+				<option value="0">无</option>
+				#for(c:countryList)
+					<option value="#(c.id)">#(c.name)</option>
+				#end
+				</select>
+			</span> 
+			</div>
+		</div>
+		<div class="row cl">
+			<label class="form-label col-xs-4 col-sm-2">名称：</label>
+			<div class="formControls col-xs-8 col-sm-9 skin-minimal">
+				<div class="check-box">
+					<input type="text" id="value7" class="input-text" value="" placeholder="" name="">
+				</div>
+				<div class="check-box">
+					<a href="javascript:void" id="valueBtn7" class="btn btn-primary radius">添加</a>
+				</div>
+				<div class="check-box">
+					<a href="javascript:void" id="valueUpdate7" class="btn btn-primary radius">修改</a>
+				</div>
+				<div class="check-box">
+					<a href="javascript:void" id="valueDel7" class="btn btn-primary radius">删除</a>
+				</div>
+			</div>
+		</div> 
+		
+		
+		
+		
+		<!-- 8 -->
+		<div class="row cl">
+			<label class="form-label col-xs-4 col-sm-2">能源：</label>
+			<div class="formControls col-xs-8 col-sm-9"> 
+			<span class="select-box">
+				<select class="select" id="valueSelect8" name="car.energ_id">
+				<option value="0">无</option>
+				#for(e:energyList)
+					<option value="#(e.id)">#(e.name)</option>
+				#end
+				</select>
+			</span> 
+			</div>
+		</div>
+		 <div class="row cl">
+			<label class="form-label col-xs-4 col-sm-2">名称：</label>
+			<div class="formControls col-xs-8 col-sm-9 skin-minimal">
+				<div class="check-box">
+					<input type="text" id="value8" class="input-text" value="" placeholder="" name="">
+				</div>
+				<div class="check-box">
+					<a href="javascript:void" id="valueBtn8" class="btn btn-primary radius">添加</a>
+				</div>
+				<div class="check-box">
+					<a href="javascript:void" id="valueUpdate8" class="btn btn-primary radius">修改</a>
+				</div>
+				<div class="check-box">
+					<a href="javascript:void" id="valueDel8" class="btn btn-primary radius">删除</a>
+				</div>
+			</div>
+		</div> 
+		
+		
+		
+		
+		<!-- 9 -->
+		<div class="row cl">
+			<label class="form-label col-xs-4 col-sm-2">排量：</label>
+			<div class="formControls col-xs-8 col-sm-9"> 
+			<span class="select-box">
+					<select class="select" id="valueSelect9" name="car.dis_id">
+					<option value="0">无</option>
+					#for(d:displacementList)
+						<option value="#(d.id)">#(d.name)</option>
+					#end
+				</select>
+			</span> 
+			</div>
+		</div>
+		 <div class="row cl">
+			<label class="form-label col-xs-4 col-sm-2">名称：</label>
+			<div class="formControls col-xs-8 col-sm-9 skin-minimal">
+				<div class="check-box">
+					<input type="text" id="value9" class="input-text" value="" placeholder="" name="">
+				</div>
+				<div class="check-box">
+					<a href="javascript:void" id="valueBtn9" class="btn btn-primary radius">添加</a>
+				</div>
+				<div class="check-box">
+					<a href="javascript:void" id="valueUpdate9" class="btn btn-primary radius">修改</a>
+				</div>
+				<div class="check-box">
+					<a href="javascript:void" id="valueDel9" class="btn btn-primary radius">删除</a>
+				</div>
+			</div>
+		</div> 
+		
+		
+		
+		
+		<!-- 10 -->
+		<div class="row cl">
+			<label class="form-label col-xs-4 col-sm-2">变速箱：</label>
+			<div class="formControls col-xs-8 col-sm-9"> 
+			<span class="select-box">
+				<select class="select" id="valueSelect10" name="car.gearbox_id">
+				<option value="0">无</option>
+					#for(g:gearboxList)
+						<option value="#(g.id)">#(g.name)</option>
+					#end
+				</select>
+			</span> 
+			</div>
+		</div>
+		 <div class="row cl">
+			<label class="form-label col-xs-4 col-sm-2">名称：</label>
+			<div class="formControls col-xs-8 col-sm-9 skin-minimal">
+				<div class="check-box">
+					<input type="text" id="value10" class="input-text" value="" placeholder="" name="">
+				</div>
+				<div class="check-box">
+					<a href="javascript:void" id="valueBtn10" class="btn btn-primary radius">添加</a>
+				</div>
+				<div class="check-box">
+					<a href="javascript:void" id="valueUpdate10" class="btn btn-primary radius">修改</a>
+				</div>
+				<div class="check-box">
+					<a href="javascript:void" id="valueDel10" class="btn btn-primary radius">删除</a>
+				</div>
+			</div>
+		</div> 
+		
+		
+		
+		<!-- 11 -->
+		<div class="row cl">
+			<label class="form-label col-xs-4 col-sm-2">座位数：</label>
+			<div class="formControls col-xs-8 col-sm-9"> 
+			<span class="select-box">
+				<select class="select" id="valueSelect11" name="car.seats_id">
+				<option value="0">无</option>
+					#for(s:seatsList)
+						<option value="#(s.id)">#(s.name)</option>
+					#end
+				</select>
+			</span> 
+			</div>
+		</div>
+		 <div class="row cl">
+			<label class="form-label col-xs-4 col-sm-2">名称：</label>
+			<div class="formControls col-xs-8 col-sm-9 skin-minimal">
+				<div class="check-box">
+					<input type="text" id="value11" class="input-text" value="" placeholder="" name="">
+				</div>
+				<div class="check-box">
+					<a href="javascript:void" id="valueBtn11" class="btn btn-primary radius">添加</a>
+				</div>
+				<div class="check-box">
+					<a href="javascript:void" id="valueUpdate11" class="btn btn-primary radius">修改</a>
+				</div>
+				<div class="check-box">
+					<a href="javascript:void" id="valueDel11" class="btn btn-primary radius">删除</a>
+				</div>
+			</div>
+		</div> 
+		
+		
+		
+		
+		<!-- 12 -->
+		<div class="row cl">
+			<label class="form-label col-xs-4 col-sm-2">驱动：</label>
+			<div class="formControls col-xs-8 col-sm-9"> 
+			<span class="select-box">
+				<select class="select" id="valueSelect12" name="car.drive_id">
+				<option value="0">无</option>
+				#for(d:driveList)
+					<option value="#(d.id)">#(d.name)</option>
+				#end
+				</select>
+			</span> 
+			</div>
+		</div>
+		 <div class="row cl">
+			<label class="form-label col-xs-4 col-sm-2">名称：</label>
+			<div class="formControls col-xs-8 col-sm-9 skin-minimal">
+				<div class="check-box">
+					<input type="text" id="value12" class="input-text" value="" placeholder="" name="">
+				</div>
+				<div class="check-box">
+					<a href="javascript:void" id="valueBtn12" class="btn btn-primary radius">添加</a>
+				</div>
+				<div class="check-box">
+					<a href="javascript:void" id="valueUpdate12" class="btn btn-primary radius">修改</a>
+				</div>
+				<div class="check-box">
+					<a href="javascript:void" id="valueDel12" class="btn btn-primary radius">删除</a>
+				</div>
+			</div>
+		</div> 
+		
+		
+		
+		
+		<!-- 13 -->
+		<div class="row cl">
+			<label class="form-label col-xs-4 col-sm-2">配置：</label>
+			<div class="formControls col-xs-8 col-sm-9"> 
+			<span class="select-box">
+				<select class="select" id="valueSelect13" name="car.set_id">
+				<option value="0">无</option>
+			  		#for(s:setList)
+						<option value="#(s.id??)">#(s.name)</option>
+					#end
+				</select>
+			</span> 
+			</div>
+		</div>
+		 <div class="row cl">
+			<label class="form-label col-xs-4 col-sm-2">名称：</label>
+			<div class="formControls col-xs-8 col-sm-9 skin-minimal">
+				<div class="check-box">
+					<input type="text" id="value13" class="input-text" value="" placeholder="" name="">
+				</div>
+				<div class="check-box">
+					<a href="javascript:void" id="valueBtn13" class="btn btn-primary radius">添加</a>
+				</div>
+				<div class="check-box">
+					<a href="javascript:void" id="valueUpdate13" class="btn btn-primary radius">修改</a>
+				</div>
+				<div class="check-box">
+					<a href="javascript:void" id="valueDel13" class="btn btn-primary radius">删除</a>
+				</div>
+			</div>
+		</div> 
+		
+		
+	</form>
+</div>
+<!--_footer 作为公共模版分离出去-->
+<script type="text/javascript" src="/lib/jquery/1.9.1/jquery.min.js"></script> 
+<script type="text/javascript" src="/lib/layer/2.4/layer.js"></script>
+<script type="text/javascript" src="/static/h-ui/js/H-ui.min.js"></script> 
+<script type="text/javascript" src="/static/h-ui.admin/js/H-ui.admin.js"></script> 
+<!--/_footer 作为公共模版分离出去-->
+<script type="text/javascript">
+function post(str,id,value,cid){
+	$.post(str,{id:id,value:value,cid:cid},function(data){
+		if(data.value==1){
+			alert("保存成功！");
+			location.reload();
+		}
+	});
+}
+function find(str,id,url){
+	$.post("/car/"+url,{id:id},function(data){
+		$("#"+str).append("<option value='0'>无</option>");
+		for(a in data){
+			$("#"+str).append("<option value='"+data[a].id+"'>"+data[a].name+"</option>");
+		}
+	});
+}
+$(function(){
+	find("valueSelect5",3,"carmodel");
+	find("valueSelect4",19,"findSeriesByBrandId");
+	#for(i=0;i<14;i++)
+		$("#valueDel#(i)").click(function(){
+			var id=$("#valueSelect#(i) option:selected").val();
+			if(id!=0){
+				post("/car/valueDel#(i)",id,0,0);
+			}
+		});
+		
+		$("#valueBtn#(i)").click(function(){
+			var cid=$("#valueSelect#(i) option:selected").val();
+			var value=$("#value#(i)").val();
+			if(value!=""){
+				post("/car/valueSave#(i)",0,value,cid);
+			}
+		});
+		$("#valueUpdate#(i)").click(function(){
+			var vs=$("#valueSelect#(i) option:selected");
+			var id=vs.val();
+			var value=$("#value#(i)").val();
+			if(id!=0&&value!=""){
+				post("/car/valueUpdate#(i)",id,value,0);
+			}
+		});
+		$("#valueSelect#(i)").change(function(){
+			var vs=$("#valueSelect#(i) option:selected");
+			var id=vs.val();
+			if(id!=0){
+				$("#value#(i)").val(vs.text());
+			}else{
+				$("#value#(i)").val("");
+			}
+			if("#(i)"=="3"){
+				$("#valueSelect4 option").remove();
+				$("#valueSelect5 option").remove();
+				find("valueSelect4",id,"findSeriesByBrandId");
+			}
+			if("#(i)"=="4"){
+				$("#valueSelect5 option").remove();
+				var series=$("#valueSelect4").val();
+				find("valueSelect5",series,"carmodel");
+			}
+		});
+	#end
+});
+</script>
+</body>
+</html>

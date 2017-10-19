@@ -1,0 +1,207 @@
+#@layout("城市")
+<body>
+    
+    <div id="top" class="header" data-position="fixed" style="">
+    
+    
+    <a id="top-back" href="javascript:" class="turnback"><i class="i-back"></i>返回</a>
+    <h1 id="top-title">选择城市</h1>
+    
+</div>
+    <div class="ui-page">
+        
+<div style="display: none">
+    <img src="./city_files/hm.gif" width="0" height="0">
+</div>
+
+        <div data-role="content">
+            <div class="city-title">当前城市</div>
+            <a href="javascript:void" id="localCity" class="nowplace" data-role="none">广州</a>
+            <div class="city-title">
+                热门城市
+            </div>
+            <div class="city_list">
+                <ul><li class="" data-ccode="201" data-cname="北京" data-code="beijing.m.huimaiche.com"><em></em>北京</li><li class="" data-ccode="2401" data-cname="上海" data-code="shanghai.m.huimaiche.com"><em></em>上海</li><li class="selected" data-ccode="501" data-cname="广州" data-code="guangzhou.m.huimaiche.com"><em></em>广州</li><li class="" data-ccode="502" data-cname="深圳" data-code="shenzhen.m.huimaiche.com"><em></em>深圳</li><li class="" data-ccode="2601" data-cname="天津" data-code="tianjin.m.huimaiche.com"><em></em>天津</li><li class="" data-ccode="1201" data-cname="武汉" data-code="wuhan.m.huimaiche.com"><em></em>武汉</li><li class="" data-ccode="3001" data-cname="杭州" data-code="hangzhou.m.huimaiche.com"><em></em>杭州</li><li class="" data-ccode="2501" data-cname="成都" data-code="chengdu.m.huimaiche.com"><em></em>成都</li><li class="" data-ccode="2301" data-cname="西安" data-code="xian.m.huimaiche.com"><em></em>西安</li><li class="" data-ccode="2101" data-cname="济南" data-code="jinan.m.huimaiche.com"><em></em>济南</li><li class="" data-ccode="1301" data-cname="长沙" data-code="changsha.m.huimaiche.com"><em></em>长沙</li><li class="" data-ccode="1502" data-cname="苏州" data-code="suzhou.m.huimaiche.com"><em></em>苏州</li><li class="" data-ccode="1001" data-cname="郑州" data-code="zhengzhou.m.huimaiche.com"><em></em>郑州</li><li class="" data-ccode="307" data-cname="泉州" data-code="quanzhou.m.huimaiche.com"><em></em>泉州</li><li class="" data-ccode="401" data-cname="兰州" data-code="lanzhou.m.huimaiche.com"><em></em>兰州</li><li class="" data-ccode="101" data-cname="合肥" data-code="hefei.m.huimaiche.com"><em></em>合肥</li><li class="" data-ccode="3101" data-cname="重庆" data-code="chongqing.m.huimaiche.com"><em></em>重庆</li><li class="" data-ccode="1101" data-cname="哈尔滨" data-code="haerbin.m.huimaiche.com"><em></em>哈尔滨</li><li class="" data-ccode="901" data-cname="石家庄" data-code="shijiazhuang.m.huimaiche.com"><em></em>石家庄</li><li class="" data-ccode="301" data-cname="福州" data-code="fuzhou.m.huimaiche.com"><em></em>福州</li><li class="" data-ccode="2102" data-cname="青岛" data-code="qingdao.m.huimaiche.com"><em></em>青岛</li><li class="" data-ccode="1501" data-cname="南京" data-code="nanjing.m.huimaiche.com"><em></em>南京</li><li class="" data-ccode="504" data-cname="东莞" data-code="dongguan.m.huimaiche.com"><em></em>东莞</li><li class="" data-ccode="2201" data-cname="太原" data-code="taiyuan.m.huimaiche.com"><em></em>太原</li><li class="" data-ccode="2901" data-cname="昆明" data-code="kunming.m.huimaiche.com"><em></em>昆明</li><li class="" data-ccode="2105" data-cname="潍坊" data-code="weifang.m.huimaiche.com"><em></em>潍坊</li><li class="" data-ccode="3002" data-cname="宁波" data-code="ningbo.m.huimaiche.com"><em></em>宁波</li><li class="" data-ccode="1701" data-cname="沈阳" data-code="shenyang.m.huimaiche.com"><em></em>沈阳</li><li class="" data-ccode="3003" data-cname="温州" data-code="wenzhou.m.huimaiche.com"><em></em>温州</li><li class="" data-ccode="601" data-cname="南宁" data-code="nanning.m.huimaiche.com"><em></em>南宁</li><li class="" data-ccode="1708" data-cname="大连" data-code="dalian.m.huimaiche.com"><em></em>大连</li><li class="" data-ccode="1401" data-cname="长春" data-code="changchun.m.huimaiche.com"><em></em>长春</li></ul>
+            </div>
+            <ul class="other-city">
+                <li><a href="http://guangzhou.m.huimaiche.com/cityinteractive" class="ui-link"><strong>其他城市</strong><i class="i-link"></i></a></li>
+            </ul>
+            <address class="psuccess">
+                目前已开通了<span>32</span>个城市，更多城市正在开通中...
+            </address>
+            <div id="foot" data-role="footer" style="">
+    <div class="footer">
+        <div class="fl"><a href="http://www.huimaiche.com/index.aspx?viewPc=1" rel="external">电脑版</a><a href="http://guangzhou.m.huimaiche.com/app">下载APP</a></div>
+        <div class="fr"><a href="http://help.m.huimaiche.com/">帮助中心</a></div>
+    </div>
+</div>
+
+<div id="vmask" style="display:none" class="mask">
+    <div class="get-voucher">
+        <div class="get-voucher-cot"></div>
+        <h2 id="moneyH2"></h2>
+        <div class="get-voucher-intro">
+            油卡已经放入我的礼品<br>在<strong id="endDate"></strong>前完成购车即可领取
+        </div>
+        <a href="javascript:void(0);" id="btnSureButton" class="main-btn">确定</a>
+    </div>
+</div>
+<script type="text/javascript" src="./city_files/hmcstat"></script>
+<!--方晓春统计代码-->
+<script type="text/javascript" src="./city_files/saved_resource(1)"></script><img alt="" border="0" name="DCIMG" width="1" height="1" style="display:none;" src="./city_files/x.gif">
+<script type="text/javascript" src="./city_files/dcs_tag_huimc.js.下载"></script>
+<script type="text/javascript" src="http://hm.baidu.com/h.js?3F01234567890ABCDEF01234567890ABCDEF"></script>
+<script type="text/javascript">
+    (function () {
+        var hm = document.createElement("script");
+        hm.src = "//hm.baidu.com/hm.js?34b070f600a54baeebad2039a605f793";
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(hm, s);
+    })();
+</script>
+<script type="text/javascript">
+    (function () {
+        var hm = document.createElement("script");
+        hm.src = "//hm.baidu.com/hm.js?ac157e5dcb15848680a2a42733170e82";
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(hm, s);
+    })();
+</script>
+<script type="text/javascript">
+    $(function () {
+        $(document).on("click", "[data-hmclog]", function () {
+            if (typeof HMC_LOG !== "undefined" && typeof HMC_LOG.SentClickStat === "function") {
+                try {
+                    HMC_LOG.SentClickStat(this);
+                } catch (e) { }
+            }
+        });
+
+    });
+</script>
+<script>
+    (function () {
+        var bp = document.createElement('script');
+        var curProtocol = window.location.protocol.split(':')[0];
+        if (curProtocol === 'https') {
+            bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+        }
+        else {
+            bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+        }
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(bp, s);
+    })();
+</script>
+            <script type="text/javascript">
+                $(document).ready(function () {
+                    topfootload({ 
+                        DefaultReturnBack: "",
+                        Title: "选择城市", 
+                        CityCode: 501,
+                        CityName: "广州",
+                        ShowBack:true,
+                        CallbackFn:function(){
+                            $("#foot>div.footer>div.fl").html("<a href=\"//www.huimaiche.com/index.aspx?viewPc=1\" rel=\"external\">电脑版</a><a href=\"/app\">下载APP</a>");
+                        }
+                    });
+                    $.getScript(window.location.protocol + "//img.huimaiche.com/web/js/citylist.js", function () {
+                        $("#localCity").on("click", function () {
+                            window.history.back();
+                            //window.location.href="/";
+                        });
+                        var lis = [];
+                        cityList.sort(function (a, b) { return a.co - b.co; });
+                        for (var i = 0; i < cityList.length; i++) {
+                            var link = cityList[i].d.replace(".maiche.biz", ".m.maiche.biz").replace(".huimaiche.com", ".m.huimaiche.com");
+                            lis.push("<li class=\"" + (cityList[i].i === "501" ? "selected" : "") + "\" data-ccode=\"" + cityList[i].i + "\" data-cname=\"" + cityList[i].n + "\" data-code=\"" + link + "\"><em></em>" + cityList[i].n + "</li>");
+                        }
+                        $(".psuccess span").html(cityList.length);
+                        $(".city_list ul").empty().append(lis.join(""));
+                        $(".city_list li").on("click", function () {
+                            $(".city_list li").removeClass("selected");
+                            var $li_city=$(this);
+                            $li_city.addClass("selected");
+                            //设置cookie标示已经选择城市
+                            setCookie("cusloced", "1", 30 * 24 * 60 * 60);
+                            var Tolink = "";
+                            //上线前需 去掉 replace
+                            Tolink = "//" + $li_city.attr("data-code");
+                            if ("" == "") {
+                                setCookie("loc", encodeURIComponent($li_city.attr("data-ccode") + "|" +$li_city.attr("data-cname")), 30 * 24 * 60 * 60);
+                                var re= getQueryString("re")||"";
+                                if(re!=""){
+                                    re=$.trim(decodeURIComponent(re));
+                                    var index=re.indexOf('http');
+                                    if(index==0){//外站跳转
+                                        Tolink=re;
+                                    }else{//本站相对跳转
+                                        Tolink=Tolink+re;
+                                    }
+                                }
+                                pageChange(Tolink);
+                            } else {
+                                //城市切换后 弹出层改变城市
+                                $("#city").html($li_city.attr("data-cname"));
+                                $.post("/Ajax/CheckCar.ashx", { carid: "", ccode: $li_city.attr("data-ccode") }, function (data) {
+                                    if (data.IsExist) {
+                                        setCookie("loc", encodeURIComponent($li_city.attr("data-ccode") + "|" +$li_city.attr("data-cname")), 30 * 24 * 60 * 60);
+                                        Tolink ="//trade.m.huimaiche.com/order/auction/order1?";
+                                        pageChange(Tolink);
+                                    } else {
+                                        var host=document.location.host;
+                                        if(host){
+                                            var index=host.indexOf('m');
+                                            if(index>-1){
+                                                host=host.substr(index,host.lenth);
+                                            }
+                                        }
+                                        Tolink ="//"+host + "/search?ccode="+$li_city.attr("data-ccode");
+                                        $("#NoCar").show();
+                                        $("#OtherCar").attr("href", Tolink);
+                                    }
+                                }, "json");
+                            }
+                        });
+                    });
+                    $("#close").on("click", function () {
+                        $("#NoCar").hide();
+                    });
+                    function getQueryString(name) {
+                        var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)");
+                        var r = window.location.search.substr(1).match(reg);
+                        if (r != null) return unescape(r[2]); return null;
+                    }
+                })
+            </script>
+        </div>
+    </div>
+    <div class="mask" id="NoCar" style="display: none">
+        <div class="maskcontent">
+            <div class="mask-cot">
+                <div class="c1">
+                    <div class="c1-header">
+                        <i class="close" id="close"></i>
+                    </div>
+                    <div class="c1-content">
+                        <p class="txt-1">
+                            您选择的买车城市：<em id="city"></em><br>
+                            该城市暂时没有&nbsp;<i></i>&nbsp;这款车，您还可以：
+                        </p>
+                    </div>
+                    <div class="btn">
+                        <a href="javascript:;" data-role="none" id="OtherCar" data-transition="slide" class="main-btn">再看看其他车</a>
+                    </div>
+                </div>
+            </div>
+            <!--<div class="mask-btns">-->
+            <!--<a href="#" data-role="none" data-transition="slide" class="main-btn">完成</a>-->
+            <!--<a href="#">关闭</a>-->
+            <!--<a href="#">立即拨打</a>-->
+            <!--</div>-->
+        </div>
+    </div>
+
+
+
+<img src="./city_files/x(1).gif" alt="" name="DCIMG" style="display:none"></body></html>

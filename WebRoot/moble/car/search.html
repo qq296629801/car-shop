@@ -1,0 +1,707 @@
+#@layout("搜索")
+<body>
+<!--搜索模块-->
+<div class="seach-wrap">
+    <div class="sf">
+        <div class="h">
+            <input id="search-input" data-hmclog="{pageid: 45, eventid: 639}" type="text" placeholder="请输入品牌或车型" data-isval="0" autocomplete="off" class="ac_input">
+            <i id="search-close" class="i-close" style="display:none;"></i>
+        </div>
+        <a id="btn-close" href="javascript:;" class="btn-close">取消</a>
+    </div>
+    <div class="c1">
+            <h3>热门搜索</h3>
+            <ul>
+                    <li><a href="http://guangzhou.m.huimaiche.com/siyucivic" data-hmclog="{pageid: 45, eventid: 657}">思域</a></li>
+                    <li><a href="http://guangzhou.m.huimaiche.com/changancs75" data-hmclog="{pageid: 45, eventid: 657}">CS75</a></li>
+                    <li><a href="http://guangzhou.m.huimaiche.com/suteng" data-hmclog="{pageid: 45, eventid: 657}">速腾</a></li>
+                    <li><a href="http://guangzhou.m.huimaiche.com/dongfengbentiancrv" data-hmclog="{pageid: 45, eventid: 657}">CR-V</a></li>
+                    <li><a href="http://guangzhou.m.huimaiche.com/kaluola" data-hmclog="{pageid: 45, eventid: 657}">卡罗拉</a></li>
+            </ul>
+    </div>
+    <div class="c2" id="searchbox" style="display:none;"></div>
+    <div class="zm-scblock c3" style="display:none;"><div class="d-content no-result"><div class="n-block"><i class="i-search"></i><p class="txt">非常抱歉，没有搜索到您想要的车型哦！</p></div><p class="h2 no-bb"></p><ul class="r-search clearfix"></ul></div></div>
+</div>
+<div class="main-body">
+    <div id="top" class="header" data-position="fixed" style="">
+    
+    
+    <a id="top-back" href="javascript:" class="turnback"><i class="i-back"></i>返回</a>
+    <h1 id="top-title">选车</h1>
+    <div id="top-menu" class="h-menu-wrap">
+        <i class="h-menu" id="h-menu" data-hmclog="{pageid: 45, eventid: 637}"></i>
+        <div class="hm-wrap">
+            <ul class="ms-list">
+                <li id="top-menu-index"><a href="http://m.huimaiche.com/">首页</a></li>
+                <li id="top-menu-search"><a href="http://m.huimaiche.com/search/">选车</a></li>
+                <li id="top-menu-px" style="display:none;"><a href="http://m.huimaiche.com/jinkou">平行进口</a></li>
+                <li id="top-menu-dg"><a href="http://news.m.huimaiche.com/">导购频道</a></li>
+                <li id="top-menu-order"><a href="http://i.m.huimaiche.com/order/list.aspx">我的订单</a></li>
+                <li id="top-menu-app"><a href="http://m.huimaiche.com/app/?apkname=wapdb&amp;tracker_u=669_wapdb">手机APP</a></li>
+            </ul>
+            <i class="triangle-up"></i>
+        </div>
+    </div>
+</div><div data-role="content">
+        <!--选车模块-->
+        <div class="zm-scblock sc-v2">
+            <div class="search-box">
+                    <a href="http://guangzhou.m.huimaiche.com/city?re=/search" data-hmclog="{pageid: 45, eventid: 638}" class="ch-city">广州<i class="i-down"></i></a>
+                    <div id="seach-bar" class="sl"><i></i>请输入品牌或车型</div>
+            </div>
+            <section class="p2-sec">
+                <header id="re" class="hv1 bh-li" data-key="热">
+                    <ul id="tab1" class="tab-nav clearfix">
+                        <li><a href="javascript:;" class="cur" data-hmclog="{pageid: 45, eventid: 641}">热门品牌</a></li>
+                        <li><a href="javascript:;" data-hmclog="{pageid: 45, eventid: 640}">条件选车</a></li>
+                    </ul>
+                </header>
+                <div class="tab-content">
+                    <div class="li">
+                        <ul class="ul-l1 clearfix">
+                                <li>
+                                    <a href="http://guangzhou.m.huimaiche.com/search/carlist?scode=62" ondblclick="return false;" data-hmclog="{pageid: 45, eventid: 591}" data-mbid="8" data-mbname="大众" data-mblogo="//image.bitautoimg.com/bt/car/default/images/logo/masterbrand/png/55/m_8_55.png" class="brand-item" data-action="car">
+                                        <img src="./search_files/m_8_55.png">
+                                        <p class="p-name">大众</p>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="http://guangzhou.m.huimaiche.com/search/carlist?scode=76" ondblclick="return false;" data-hmclog="{pageid: 45, eventid: 591}" data-mbid="26" data-mbname="本田" data-mblogo="//image.bitautoimg.com/bt/car/default/images/logo/masterbrand/png/55/m_26_55.png" class="brand-item" data-action="car">
+                                        <img src="./search_files/m_26_55.png">
+                                        <p class="p-name">本田</p>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="http://guangzhou.m.huimaiche.com/search/carlist?scode=61" ondblclick="return false;" data-hmclog="{pageid: 45, eventid: 591}" data-mbid="7" data-mbname="丰田" data-mblogo="//image.bitautoimg.com/bt/car/default/images/logo/masterbrand/png/55/m_7_55.png" class="brand-item" data-action="car">
+                                        <img src="./search_files/m_7_55.png">
+                                        <p class="p-name">丰田</p>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="http://guangzhou.m.huimaiche.com/search/carlist?scode=183" ondblclick="return false;" data-hmclog="{pageid: 45, eventid: 591}" data-mbid="136" data-mbname="长安" data-mblogo="//image.bitautoimg.com/bt/car/default/images/logo/masterbrand/png/55/m_136_55.png" class="brand-item" data-action="car">
+                                        <img src="./search_files/m_136_55.png">
+                                        <p class="p-name">长安</p>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="http://guangzhou.m.huimaiche.com/search/carlist?scode=80" ondblclick="return false;" data-hmclog="{pageid: 45, eventid: 591}" data-mbid="30" data-mbname="日产" data-mblogo="//image.bitautoimg.com/bt/car/default/images/logo/masterbrand/png/55/m_30_55.png" class="brand-item" data-action="car">
+                                        <img src="./search_files/m_30_55.png">
+                                        <p class="p-name">日产</p>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="http://guangzhou.m.huimaiche.com/search/carlist?scode=176" ondblclick="return false;" data-hmclog="{pageid: 45, eventid: 591}" data-mbid="127" data-mbname="别克" data-mblogo="//image.bitautoimg.com/bt/car/default/images/logo/masterbrand/png/55/m_127_55.png" class="brand-item" data-action="car">
+                                        <img src="./search_files/m_127_55.png">
+                                        <p class="p-name">别克</p>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="http://guangzhou.m.huimaiche.com/search/carlist?scode=57" ondblclick="return false;" data-hmclog="{pageid: 45, eventid: 591}" data-mbid="3" data-mbname="宝马" data-mblogo="//image.bitautoimg.com/bt/car/default/images/logo/masterbrand/png/55/m_3_55.png" class="brand-item" data-action="car">
+                                        <img src="./search_files/m_3_55.png">
+                                        <p class="p-name">宝马</p>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="http://guangzhou.m.huimaiche.com/search/carlist?scode=63" ondblclick="return false;" data-hmclog="{pageid: 45, eventid: 591}" data-mbid="9" data-mbname="奥迪" data-mblogo="//image.bitautoimg.com/bt/car/default/images/logo/masterbrand/png/55/m_9_55.png" class="brand-item" data-action="car">
+                                        <img src="./search_files/m_9_55.png">
+                                        <p class="p-name">奥迪</p>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="http://guangzhou.m.huimaiche.com/search/carlist?scode=99" ondblclick="return false;" data-hmclog="{pageid: 45, eventid: 591}" data-mbid="49" data-mbname="雪佛兰" data-mblogo="//image.bitautoimg.com/bt/car/default/images/logo/masterbrand/png/55/m_49_55.png" class="brand-item" data-action="car">
+                                        <img src="./search_files/m_49_55.png">
+                                        <p class="p-name">雪佛兰</p>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="http://guangzhou.m.huimaiche.com/search/carlist?scode=194" ondblclick="return false;" data-hmclog="{pageid: 45, eventid: 591}" data-mbid="147" data-mbname="广汽传祺" data-mblogo="//image.bitautoimg.com/bt/car/default/images/logo/masterbrand/png/55/m_147_55.png" class="brand-item" data-action="car">
+                                        <img src="./search_files/m_147_55.png">
+                                        <p class="p-name">广汽传祺</p>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="http://guangzhou.m.huimaiche.com/search/carlist?scode=70" ondblclick="return false;" data-hmclog="{pageid: 45, eventid: 591}" data-mbid="17" data-mbname="福特" data-mblogo="//image.bitautoimg.com/bt/car/default/images/logo/masterbrand/png/55/m_17_55.png" class="brand-item" data-action="car">
+                                        <img src="./search_files/m_17_55.png">
+                                        <p class="p-name">福特</p>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="http://guangzhou.m.huimaiche.com/search/carlist?scode=242" ondblclick="return false;" data-hmclog="{pageid: 45, eventid: 591}" data-mbid="196" data-mbname="哈弗" data-mblogo="//image.bitautoimg.com/bt/car/default/images/logo/masterbrand/png/55/m_196_55.png" class="brand-item" data-action="car">
+                                        <img src="./search_files/m_196_55.png">
+                                        <p class="p-name">哈弗</p>
+                                    </a>
+                                </li>
+                        </ul>
+                    </div>
+                    <div class="li" style="display:none">
+
+                            <ul class="li-block">
+                                    <li><a href="http://guangzhou.m.huimaiche.com/search/carconditionlist?pcode=1" data-hmclog="{pageid: 45, eventid:642}">8万以内</a></li>
+                                    <li><a href="http://guangzhou.m.huimaiche.com/search/carconditionlist?pcode=2" data-hmclog="{pageid: 45, eventid:643}">8~12万</a></li>
+                                    <li><a href="http://guangzhou.m.huimaiche.com/search/carconditionlist?pcode=4" data-hmclog="{pageid: 45, eventid:644}">12~18万</a></li>
+                                    <li><a href="http://guangzhou.m.huimaiche.com/search/carconditionlist?pcode=8" data-hmclog="{pageid: 45, eventid:645}">18~25万</a></li>
+                                    <li><a href="http://guangzhou.m.huimaiche.com/search/carconditionlist?pcode=16" data-hmclog="{pageid: 45, eventid:646}">25~40万</a></li>
+                                    <li><a href="http://guangzhou.m.huimaiche.com/search/carconditionlist?pcode=32" data-hmclog="{pageid: 45, eventid:647}">40~80万</a></li>
+                                    <li><a href="http://guangzhou.m.huimaiche.com/search/carconditionlist?pcode=64" data-hmclog="{pageid: 45, eventid:648}">80万以上</a></li>
+                            </ul>
+                        
+                            <ul class="li-block">
+                                        <li><a href="http://guangzhou.m.huimaiche.com/search/carconditionlist?lcode=1" data-hmclog="{pageid: 45, eventid:654}">微型</a></li>
+                                        <li><a href="http://guangzhou.m.huimaiche.com/search/carconditionlist?lcode=2" data-hmclog="{pageid: 45, eventid:649}">小型</a></li>
+                                        <li><a href="http://guangzhou.m.huimaiche.com/search/carconditionlist?lcode=4" data-hmclog="{pageid: 45, eventid:650}">紧凑型</a></li>
+                                        <li><a href="http://guangzhou.m.huimaiche.com/search/carconditionlist?lcode=8" data-hmclog="{pageid: 45, eventid:651}">中型</a></li>
+                                        <li><a href="http://guangzhou.m.huimaiche.com/search/carconditionlist?lcode=16" data-hmclog="{pageid: 45, eventid:652}">中大型</a></li>
+                                        <li><a href="http://guangzhou.m.huimaiche.com/search/carconditionlist?lcode=32" data-hmclog="{pageid: 45, eventid:653}">豪华型</a></li>
+                                        <li><a href="http://guangzhou.m.huimaiche.com/search/carconditionlist?lcode=64" data-hmclog="{pageid: 45, eventid:655}">SUV</a></li>
+                                <li><a href="http://guangzhou.m.huimaiche.com/search/carconditionlist" class="more" data-hmclog="{pageid: 45, eventid: 656}">更多<i class="i-right"></i></a></li>
+                            </ul>
+                    </div>
+                </div>
+                    <header data-key="A" id="a" class="h2 bh-li">A</header>
+                    <ul class="ul-l2">
+                            <li>
+                                <a href="http://guangzhou.m.huimaiche.com/search/carlist?scode=63" ondblclick="return false;" data-hmclog="{pageid: 45, eventid: 592}" data-mbid="9" data-mbname="奥迪" data-mblogo="//image.bitautoimg.com/bt/car/default/images/logo/masterbrand/png/55/m_9_55.png" class="brand-item">
+                                    <img src="./search_files/m_9_55.png">
+                                    <p class="p-name">奥迪</p>
+                                </a>
+                            </li>
+                    </ul>
+                    <header data-key="B" id="b" class="h2 bh-li">B</header>
+                    <ul class="ul-l2">
+                            <li>
+                                <a href="http://guangzhou.m.huimaiche.com/search/carlist?scode=76" ondblclick="return false;" data-hmclog="{pageid: 45, eventid: 592}" data-mbid="26" data-mbname="本田" data-mblogo="//image.bitautoimg.com/bt/car/default/images/logo/masterbrand/png/55/m_26_55.png" class="brand-item">
+                                    <img src="./search_files/m_26_55.png">
+                                    <p class="p-name">本田</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="http://guangzhou.m.huimaiche.com/search/carlist?scode=176" ondblclick="return false;" data-hmclog="{pageid: 45, eventid: 592}" data-mbid="127" data-mbname="别克" data-mblogo="//image.bitautoimg.com/bt/car/default/images/logo/masterbrand/png/55/m_127_55.png" class="brand-item">
+                                    <img src="./search_files/m_127_55.png">
+                                    <p class="p-name">别克</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="http://guangzhou.m.huimaiche.com/search/carlist?scode=57" ondblclick="return false;" data-hmclog="{pageid: 45, eventid: 592}" data-mbid="3" data-mbname="宝马" data-mblogo="//image.bitautoimg.com/bt/car/default/images/logo/masterbrand/png/55/m_3_55.png" class="brand-item">
+                                    <img src="./search_files/m_3_55.png">
+                                    <p class="p-name">宝马</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="http://guangzhou.m.huimaiche.com/search/carlist?scode=56" ondblclick="return false;" data-hmclog="{pageid: 45, eventid: 592}" data-mbid="2" data-mbname="奔驰" data-mblogo="//image.bitautoimg.com/bt/car/default/images/logo/masterbrand/png/55/m_2_55.png" class="brand-item">
+                                    <img src="./search_files/m_2_55.png">
+                                    <p class="p-name">奔驰</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="http://guangzhou.m.huimaiche.com/search/carlist?scode=68" ondblclick="return false;" data-hmclog="{pageid: 45, eventid: 592}" data-mbid="15" data-mbname="比亚迪" data-mblogo="//image.bitautoimg.com/bt/car/default/images/logo/masterbrand/png/55/m_15_55.png" class="brand-item">
+                                    <img src="./search_files/m_15_55.png">
+                                    <p class="p-name">比亚迪</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="http://guangzhou.m.huimaiche.com/search/carlist?scode=59" ondblclick="return false;" data-hmclog="{pageid: 45, eventid: 592}" data-mbid="5" data-mbname="标致" data-mblogo="//image.bitautoimg.com/bt/car/default/images/logo/masterbrand/png/55/m_5_55.png" class="brand-item">
+                                    <img src="./search_files/m_5_55.png">
+                                    <p class="p-name">标致</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="http://guangzhou.m.huimaiche.com/search/carlist?scode=209" ondblclick="return false;" data-hmclog="{pageid: 45, eventid: 592}" data-mbid="163" data-mbname="北京" data-mblogo="//image.bitautoimg.com/bt/car/default/images/logo/masterbrand/png/55/m_163_55.png" class="brand-item">
+                                    <img src="./search_files/m_163_55.png">
+                                    <p class="p-name">北京</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="http://guangzhou.m.huimaiche.com/search/carlist?scode=241" ondblclick="return false;" data-hmclog="{pageid: 45, eventid: 592}" data-mbid="195" data-mbname="北汽绅宝" data-mblogo="//image.bitautoimg.com/bt/car/default/images/logo/masterbrand/png/55/m_195_55.png" class="brand-item">
+                                    <img src="./search_files/m_195_55.png">
+                                    <p class="p-name">北汽绅宝</p>
+                                </a>
+                            </li>
+                    </ul>
+                    <header data-key="C" id="c" class="h2 bh-li">C</header>
+                    <ul class="ul-l2">
+                            <li>
+                                <a href="http://guangzhou.m.huimaiche.com/search/carlist?scode=183" ondblclick="return false;" data-hmclog="{pageid: 45, eventid: 592}" data-mbid="136" data-mbname="长安" data-mblogo="//image.bitautoimg.com/bt/car/default/images/logo/masterbrand/png/55/m_136_55.png" class="brand-item">
+                                    <img src="./search_files/m_136_55.png">
+                                    <p class="p-name">长安</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="http://guangzhou.m.huimaiche.com/search/carlist?scode=205" ondblclick="return false;" data-hmclog="{pageid: 45, eventid: 592}" data-mbid="159" data-mbname="长安欧尚" data-mblogo="//image.bitautoimg.com/bt/car/default/images/logo/masterbrand/png/55/m_159_55.png" class="brand-item">
+                                    <img src="./search_files/m_159_55.png">
+                                    <p class="p-name">长安欧尚</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="http://guangzhou.m.huimaiche.com/search/carlist?scode=74" ondblclick="return false;" data-hmclog="{pageid: 45, eventid: 592}" data-mbid="21" data-mbname="长城" data-mblogo="//image.bitautoimg.com/bt/car/default/images/logo/masterbrand/png/55/m_21_55.png" class="brand-item">
+                                    <img src="./search_files/m_21_55.png">
+                                    <p class="p-name">长城</p>
+                                </a>
+                            </li>
+                    </ul>
+                    <header data-key="D" id="d" class="h2 bh-li">D</header>
+                    <ul class="ul-l2">
+                            <li>
+                                <a href="http://guangzhou.m.huimaiche.com/search/carlist?scode=62" ondblclick="return false;" data-hmclog="{pageid: 45, eventid: 592}" data-mbid="8" data-mbname="大众" data-mblogo="//image.bitautoimg.com/bt/car/default/images/logo/masterbrand/png/55/m_8_55.png" class="brand-item">
+                                    <img src="./search_files/m_8_55.png">
+                                    <p class="p-name">大众</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="http://guangzhou.m.huimaiche.com/search/carlist?scode=79" ondblclick="return false;" data-hmclog="{pageid: 45, eventid: 592}" data-mbid="29" data-mbname="东南" data-mblogo="//image.bitautoimg.com/bt/car/default/images/logo/masterbrand/png/55/m_29_55.png" class="brand-item">
+                                    <img src="./search_files/m_29_55.png">
+                                    <p class="p-name">东南</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="http://guangzhou.m.huimaiche.com/search/carlist?scode=188" ondblclick="return false;" data-hmclog="{pageid: 45, eventid: 592}" data-mbid="141" data-mbname="东风风神" data-mblogo="//image.bitautoimg.com/bt/car/default/images/logo/masterbrand/png/55/m_141_55.png" class="brand-item">
+                                    <img src="./search_files/m_141_55.png">
+                                    <p class="p-name">东风风神</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="http://guangzhou.m.huimaiche.com/search/carlist?scode=225" ondblclick="return false;" data-hmclog="{pageid: 45, eventid: 592}" data-mbid="179" data-mbname="DS" data-mblogo="//image.bitautoimg.com/bt/car/default/images/logo/masterbrand/png/55/m_179_55.png" class="brand-item">
+                                    <img src="./search_files/m_179_55.png">
+                                    <p class="p-name">DS</p>
+                                </a>
+                            </li>
+                    </ul>
+                    <header data-key="F" id="f" class="h2 bh-li">F</header>
+                    <ul class="ul-l2">
+                            <li>
+                                <a href="http://guangzhou.m.huimaiche.com/search/carlist?scode=61" ondblclick="return false;" data-hmclog="{pageid: 45, eventid: 592}" data-mbid="7" data-mbname="丰田" data-mblogo="//image.bitautoimg.com/bt/car/default/images/logo/masterbrand/png/55/m_7_55.png" class="brand-item">
+                                    <img src="./search_files/m_7_55.png">
+                                    <p class="p-name">丰田</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="http://guangzhou.m.huimaiche.com/search/carlist?scode=70" ondblclick="return false;" data-hmclog="{pageid: 45, eventid: 592}" data-mbid="17" data-mbname="福特" data-mblogo="//image.bitautoimg.com/bt/car/default/images/logo/masterbrand/png/55/m_17_55.png" class="brand-item">
+                                    <img src="./search_files/m_17_55.png">
+                                    <p class="p-name">福特</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="http://guangzhou.m.huimaiche.com/search/carlist?scode=90" ondblclick="return false;" data-hmclog="{pageid: 45, eventid: 592}" data-mbid="40" data-mbname="菲亚特" data-mblogo="//image.bitautoimg.com/bt/car/default/images/logo/masterbrand/png/55/m_40_55.png" class="brand-item">
+                                    <img src="./search_files/m_40_55.png">
+                                    <p class="p-name">菲亚特</p>
+                                </a>
+                            </li>
+                    </ul>
+                    <header data-key="G" id="g" class="h2 bh-li">G</header>
+                    <ul class="ul-l2">
+                            <li>
+                                <a href="http://guangzhou.m.huimaiche.com/search/carlist?scode=194" ondblclick="return false;" data-hmclog="{pageid: 45, eventid: 592}" data-mbid="147" data-mbname="广汽传祺" data-mblogo="//image.bitautoimg.com/bt/car/default/images/logo/masterbrand/png/55/m_147_55.png" class="brand-item">
+                                    <img src="./search_files/m_147_55.png">
+                                    <p class="p-name">广汽传祺</p>
+                                </a>
+                            </li>
+                    </ul>
+                    <header data-key="H" id="h" class="h2 bh-li">H</header>
+                    <ul class="ul-l2">
+                            <li>
+                                <a href="http://guangzhou.m.huimaiche.com/search/carlist?scode=242" ondblclick="return false;" data-hmclog="{pageid: 45, eventid: 592}" data-mbid="196" data-mbname="哈弗" data-mblogo="//image.bitautoimg.com/bt/car/default/images/logo/masterbrand/png/55/m_196_55.png" class="brand-item">
+                                    <img src="./search_files/m_196_55.png">
+                                    <p class="p-name">哈弗</p>
+                                </a>
+                            </li>
+                    </ul>
+                    <header data-key="J" id="j" class="h2 bh-li">J</header>
+                    <ul class="ul-l2">
+                            <li>
+                                <a href="http://guangzhou.m.huimaiche.com/search/carlist?scode=85" ondblclick="return false;" data-hmclog="{pageid: 45, eventid: 592}" data-mbid="35" data-mbname="江淮" data-mblogo="//image.bitautoimg.com/bt/car/default/images/logo/masterbrand/png/55/m_35_55.png" class="brand-item">
+                                    <img src="./search_files/m_35_55.png">
+                                    <p class="p-name">江淮</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="http://guangzhou.m.huimaiche.com/search/carlist?scode=148" ondblclick="return false;" data-hmclog="{pageid: 45, eventid: 592}" data-mbid="98" data-mbname="捷豹" data-mblogo="//image.bitautoimg.com/bt/car/default/images/logo/masterbrand/png/55/m_98_55.png" class="brand-item">
+                                    <img src="./search_files/m_98_55.png">
+                                    <p class="p-name">捷豹</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="http://guangzhou.m.huimaiche.com/search/carlist?scode=89" ondblclick="return false;" data-hmclog="{pageid: 45, eventid: 592}" data-mbid="39" data-mbname="金杯" data-mblogo="//image.bitautoimg.com/bt/car/default/images/logo/masterbrand/png/55/m_39_55.png" class="brand-item">
+                                    <img src="./search_files/m_39_55.png">
+                                    <p class="p-name">金杯</p>
+                                </a>
+                            </li>
+                    </ul>
+                    <header data-key="K" id="k" class="h2 bh-li">K</header>
+                    <ul class="ul-l2">
+                            <li>
+                                <a href="http://guangzhou.m.huimaiche.com/search/carlist?scode=157" ondblclick="return false;" data-hmclog="{pageid: 45, eventid: 592}" data-mbid="107" data-mbname="凯迪拉克" data-mblogo="//image.bitautoimg.com/bt/car/default/images/logo/masterbrand/png/55/m_107_55.png" class="brand-item">
+                                    <img src="./search_files/m_107_55.png">
+                                    <p class="p-name">凯迪拉克</p>
+                                </a>
+                            </li>
+                    </ul>
+                    <header data-key="L" id="l" class="h2 bh-li">L</header>
+                    <ul class="ul-l2">
+                            <li>
+                                <a href="http://guangzhou.m.huimaiche.com/search/carlist?scode=144" ondblclick="return false;" data-hmclog="{pageid: 45, eventid: 592}" data-mbid="94" data-mbname="雷克萨斯" data-mblogo="//image.bitautoimg.com/bt/car/default/images/logo/masterbrand/png/55/m_94_55.png" class="brand-item">
+                                    <img src="./search_files/m_94_55.png">
+                                    <p class="p-name">雷克萨斯</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="http://guangzhou.m.huimaiche.com/search/carlist?scode=146" ondblclick="return false;" data-hmclog="{pageid: 45, eventid: 592}" data-mbid="96" data-mbname="路虎" data-mblogo="//image.bitautoimg.com/bt/car/default/images/logo/masterbrand/png/55/m_96_55.png" class="brand-item">
+                                    <img src="./search_files/m_96_55.png">
+                                    <p class="p-name">路虎</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="http://guangzhou.m.huimaiche.com/search/carlist?scode=69" ondblclick="return false;" data-hmclog="{pageid: 45, eventid: 592}" data-mbid="16" data-mbname="铃木" data-mblogo="//image.bitautoimg.com/bt/car/default/images/logo/masterbrand/png/55/m_16_55.png" class="brand-item">
+                                    <img src="./search_files/m_16_55.png">
+                                    <p class="p-name">铃木</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="http://guangzhou.m.huimaiche.com/search/carlist?scode=126" ondblclick="return false;" data-hmclog="{pageid: 45, eventid: 592}" data-mbid="76" data-mbname="力帆" data-mblogo="//image.bitautoimg.com/bt/car/default/images/logo/masterbrand/png/55/m_76_55.png" class="brand-item">
+                                    <img src="./search_files/m_76_55.png">
+                                    <p class="p-name">力帆</p>
+                                </a>
+                            </li>
+                    </ul>
+                    <header data-key="M" id="m" class="h2 bh-li">M</header>
+                    <ul class="ul-l2">
+                            <li>
+                                <a href="http://guangzhou.m.huimaiche.com/search/carlist?scode=71" ondblclick="return false;" data-hmclog="{pageid: 45, eventid: 592}" data-mbid="18" data-mbname="马自达" data-mblogo="//image.bitautoimg.com/bt/car/default/images/logo/masterbrand/png/55/m_18_55.png" class="brand-item">
+                                    <img src="./search_files/m_18_55.png">
+                                    <p class="p-name">马自达</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="http://guangzhou.m.huimaiche.com/search/carlist?scode=131" ondblclick="return false;" data-hmclog="{pageid: 45, eventid: 592}" data-mbid="81" data-mbname="MINI" data-mblogo="//image.bitautoimg.com/bt/car/default/images/logo/masterbrand/png/55/m_81_55.png" class="brand-item">
+                                    <img src="./search_files/m_81_55.png">
+                                    <p class="p-name">MINI</p>
+                                </a>
+                            </li>
+                    </ul>
+                    <header data-key="Q" id="q" class="h2 bh-li">Q</header>
+                    <ul class="ul-l2">
+                            <li>
+                                <a href="http://guangzhou.m.huimaiche.com/search/carlist?scode=78" ondblclick="return false;" data-hmclog="{pageid: 45, eventid: 592}" data-mbid="28" data-mbname="起亚" data-mblogo="//image.bitautoimg.com/bt/car/default/images/logo/masterbrand/png/55/m_28_55.png" class="brand-item">
+                                    <img src="./search_files/m_28_55.png">
+                                    <p class="p-name">起亚</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="http://guangzhou.m.huimaiche.com/search/carlist?scode=92" ondblclick="return false;" data-hmclog="{pageid: 45, eventid: 592}" data-mbid="42" data-mbname="奇瑞" data-mblogo="//image.bitautoimg.com/bt/car/default/images/logo/masterbrand/png/55/m_42_55.png" class="brand-item">
+                                    <img src="./search_files/m_42_55.png">
+                                    <p class="p-name">奇瑞</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="http://guangzhou.m.huimaiche.com/search/carlist?scode=203" ondblclick="return false;" data-hmclog="{pageid: 45, eventid: 592}" data-mbid="156" data-mbname="启辰" data-mblogo="//image.bitautoimg.com/bt/car/default/images/logo/masterbrand/png/55/m_156_55.png" class="brand-item">
+                                    <img src="./search_files/m_156_55.png">
+                                    <p class="p-name">启辰</p>
+                                </a>
+                            </li>
+                    </ul>
+                    <header data-key="R" id="r" class="h2 bh-li">R</header>
+                    <ul class="ul-l2">
+                            <li>
+                                <a href="http://guangzhou.m.huimaiche.com/search/carlist?scode=80" ondblclick="return false;" data-hmclog="{pageid: 45, eventid: 592}" data-mbid="30" data-mbname="日产" data-mblogo="//image.bitautoimg.com/bt/car/default/images/logo/masterbrand/png/55/m_30_55.png" class="brand-item">
+                                    <img src="./search_files/m_30_55.png">
+                                    <p class="p-name">日产</p>
+                                </a>
+                            </li>
+                    </ul>
+                    <header data-key="S" id="s" class="h2 bh-li">S</header>
+                    <ul class="ul-l2">
+                            <li>
+                                <a href="http://guangzhou.m.huimaiche.com/search/carlist?scode=64" ondblclick="return false;" data-hmclog="{pageid: 45, eventid: 592}" data-mbid="10" data-mbname="斯柯达" data-mblogo="//image.bitautoimg.com/bt/car/default/images/logo/masterbrand/png/55/m_10_55.png" class="brand-item">
+                                    <img src="./search_files/m_10_55.png">
+                                    <p class="p-name">斯柯达</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="http://guangzhou.m.huimaiche.com/search/carlist?scode=75" ondblclick="return false;" data-hmclog="{pageid: 45, eventid: 592}" data-mbid="25" data-mbname="三菱" data-mblogo="//image.bitautoimg.com/bt/car/default/images/logo/masterbrand/png/55/m_25_55.png" class="brand-item">
+                                    <img src="./search_files/m_25_55.png">
+                                    <p class="p-name">三菱</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="http://guangzhou.m.huimaiche.com/search/carlist?scode=139" ondblclick="return false;" data-hmclog="{pageid: 45, eventid: 592}" data-mbid="89" data-mbname="smart" data-mblogo="//image.bitautoimg.com/bt/car/default/images/logo/masterbrand/png/55/m_89_55.png" class="brand-item">
+                                    <img src="./search_files/m_89_55.png">
+                                    <p class="p-name">smart</p>
+                                </a>
+                            </li>
+                    </ul>
+                    <header data-key="W" id="w" class="h2 bh-li">W</header>
+                    <ul class="ul-l2">
+                            <li>
+                                <a href="http://guangzhou.m.huimaiche.com/search/carlist?scode=98" ondblclick="return false;" data-hmclog="{pageid: 45, eventid: 592}" data-mbid="48" data-mbname="五菱" data-mblogo="//image.bitautoimg.com/bt/car/default/images/logo/masterbrand/png/55/m_48_55.png" class="brand-item">
+                                    <img src="./search_files/m_48_55.png">
+                                    <p class="p-name">五菱</p>
+                                </a>
+                            </li>
+                    </ul>
+                    <header data-key="X" id="x" class="h2 bh-li">X</header>
+                    <ul class="ul-l2">
+                            <li>
+                                <a href="http://guangzhou.m.huimaiche.com/search/carlist?scode=99" ondblclick="return false;" data-hmclog="{pageid: 45, eventid: 592}" data-mbid="49" data-mbname="雪佛兰" data-mblogo="//image.bitautoimg.com/bt/car/default/images/logo/masterbrand/png/55/m_49_55.png" class="brand-item">
+                                    <img src="./search_files/m_49_55.png">
+                                    <p class="p-name">雪佛兰</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="http://guangzhou.m.huimaiche.com/search/carlist?scode=66" ondblclick="return false;" data-hmclog="{pageid: 45, eventid: 592}" data-mbid="13" data-mbname="现代" data-mblogo="//image.bitautoimg.com/bt/car/default/images/logo/masterbrand/png/55/m_13_55.png" class="brand-item">
+                                    <img src="./search_files/m_13_55.png">
+                                    <p class="p-name">现代</p>
+                                </a>
+                            </li>
+                    </ul>
+                    <header data-key="Y" id="y" class="h2 bh-li">Y</header>
+                    <ul class="ul-l2">
+                            <li>
+                                <a href="http://guangzhou.m.huimaiche.com/search/carlist?scode=185" ondblclick="return false;" data-hmclog="{pageid: 45, eventid: 592}" data-mbid="138" data-mbname="野马" data-mblogo="//image.bitautoimg.com/bt/car/default/images/logo/masterbrand/png/55/m_138_55.png" class="brand-item">
+                                    <img src="./search_files/m_138_55.png">
+                                    <p class="p-name">野马</p>
+                                </a>
+                            </li>
+                    </ul>
+                    <header data-key="Z" id="z" class="h2 bh-li">Z</header>
+                    <ul class="ul-l2">
+                            <li>
+                                <a href="http://guangzhou.m.huimaiche.com/search/carlist?scode=127" ondblclick="return false;" data-hmclog="{pageid: 45, eventid: 592}" data-mbid="77" data-mbname="众泰" data-mblogo="//image.bitautoimg.com/bt/car/default/images/logo/masterbrand/png/55/m_77_55.png" class="brand-item">
+                                    <img src="./search_files/m_77_55.png">
+                                    <p class="p-name">众泰</p>
+                                </a>
+                            </li>
+                    </ul>
+            </section>
+        </div>
+    </div>
+    <aside class="letter-menu fixed-nav" id="letter-menu" style="height: 739.2px; top: 92.4px; opacity: 1; display: none;">
+        <ul class="rows-box" style="height: 285px;">
+            <li style="height: 38.9053px;"><a href="http://guangzhou.m.huimaiche.com/search#re">热</a></li>
+                <li style="height: 38.9053px;"><a href="http://guangzhou.m.huimaiche.com/search#a">A</a></li>
+                <li style="height: 38.9053px;"><a href="http://guangzhou.m.huimaiche.com/search#b">B</a></li>
+                <li style="height: 38.9053px;"><a href="http://guangzhou.m.huimaiche.com/search#c">C</a></li>
+                <li style="height: 38.9053px;"><a href="http://guangzhou.m.huimaiche.com/search#d">D</a></li>
+                <li style="height: 38.9053px;"><a href="http://guangzhou.m.huimaiche.com/search#f">F</a></li>
+                <li style="height: 38.9053px;"><a href="http://guangzhou.m.huimaiche.com/search#g">G</a></li>
+                <li style="height: 38.9053px;"><a href="http://guangzhou.m.huimaiche.com/search#h">H</a></li>
+                <li style="height: 38.9053px;"><a href="http://guangzhou.m.huimaiche.com/search#j">J</a></li>
+                <li style="height: 38.9053px;"><a href="http://guangzhou.m.huimaiche.com/search#k">K</a></li>
+                <li style="height: 38.9053px;"><a href="http://guangzhou.m.huimaiche.com/search#l">L</a></li>
+                <li style="height: 38.9053px;"><a href="http://guangzhou.m.huimaiche.com/search#m">M</a></li>
+                <li style="height: 38.9053px;"><a href="http://guangzhou.m.huimaiche.com/search#q">Q</a></li>
+                <li style="height: 38.9053px;"><a href="http://guangzhou.m.huimaiche.com/search#r">R</a></li>
+                <li style="height: 38.9053px;"><a href="http://guangzhou.m.huimaiche.com/search#s">S</a></li>
+                <li style="height: 38.9053px;"><a href="http://guangzhou.m.huimaiche.com/search#w">W</a></li>
+                <li style="height: 38.9053px;"><a href="http://guangzhou.m.huimaiche.com/search#x">X</a></li>
+                <li style="height: 38.9053px;"><a href="http://guangzhou.m.huimaiche.com/search#y">Y</a></li>
+                <li style="height: 38.9053px;"><a href="http://guangzhou.m.huimaiche.com/search#z">Z</a></li>
+        </ul>
+    </aside>
+</div>
+<input type="text" style="display:none">
+<div class="alert" style="display: none;"><span></span></div>
+<div class="over-delay n1 leftmask leftmask3">
+    <a href="javascript:;" class="i-ch"></a>
+</div>
+<div class="gotop" style="display: block;"></div>
+<div id="appdownload-area" class="app_mask fixed_b" data-area-id="2"><div class="common-down"><span class="close_btn">&nbsp;</span><p>获取底价更及时<br>底价买车更方便</p><a href="http://www.huimaiche.com/hmcapk/wapxcpp.apk" data-hmclog="{pageid: 346, eventid: 843}">立即打开</a></div></div>
+<script type="text/javascript" src="./search_files/iscroll-yiche.js.下载"></script>
+<script type="text/javascript" src="./search_files/zmplugin.model.js.下载"></script>
+<script type="text/javascript" src="./search_files/iscrollnew.js.下载"></script>
+<script type="text/javascript">
+    $(function () {
+        //goto
+        $(window).on('load scroll', function () {
+            $(window).scrollTop() > 300 ? $(".gotop").show() : $(".gotop").hide();
+        });
+        $(".gotop").on("click", function () {
+            $("html, body").animate({ scrollTop: 0 }, 300);
+        });
+        $("#tab1 a").on("click", function () {
+            if (!$(this).hasClass("cur")) {
+                var $this = $(this), index = $("#tab1").find("li").index($this.parent());
+                $("#tab1").find(".cur").removeClass("cur");
+                $(this).addClass("cur");
+                $(".tab-content .li").hide();
+                $(".tab-content .li").eq(index).show();
+            }
+        });
+        $("#seach-bar").on("click", function () {
+            $("body").addClass("s-show");
+            $("#search-input").focus();
+        });
+        $("#search-close").on("click", function () {
+            $("#search-input").val("");
+            $("#search-input").focus();
+            $("div.c1").show();
+            $("div.c2").hide().find("ul").html("");
+            $("div.c3").hide();
+            $(this).hide();
+        });
+        $("#btn-close").on("click", function () {
+            $("body").removeClass("s-show");
+            $("#search-input").val("");
+            $("div.c1").show();
+            $("div.c2").hide().find("ul").html("");
+            $("div.c3").hide();
+            $("#search-close").hide();
+        });
+        //自动联想匹配
+        var timer_0 = setInterval(function () {
+            var kwurl = '//img.huimaiche.com/web/kw/kw_501.js';
+            $.getScript(kwurl, function () {
+                var data = keywords;
+                $.getScript('//img.huimaiche.cn/uimg/m/v20170317/js/search/libs/jquery.browser.js', function () {
+                    $.getScript('//img.huimaiche.cn/uimg/m/v20170317/js/search/libs/jquery.autocomplete.js', function () {
+                        $('#search-input').autocomplete(data, {
+                            resultsClass: '',
+                            loadingClass: '',
+                            max: 12,
+                            minChars: 0,
+                            scrollHeight: 290,
+                            matchContains: true,
+                            autoFill: false,
+                            formatItem: function (row, i, max) {
+                                var li = '';
+                                if (row.type > 0) {
+                                    li = '<span>' + row.show + '</span>';
+                                    if (row.spell) {
+                                        li += '<a href=\'/' + row.spell + '/\'>查看全部&gt;</a> ';
+                                    } else return false;
+                                } else if (row.type == 0) {
+                                    li = '<a href=\'/' + row.spell + '/\'>' + row.show + '</a>';
+                                }
+                                if ($.trim($('#search-input').val()) == "") {
+                                    $("#search-close").hide();
+                                    $("div.c1").show();
+                                    $("div.c2").hide().find("ul").html("");
+                                    $("div.c3").hide();
+                                    li = "";
+                                }
+                                else {
+                                    $("div.c1").hide();
+                                    $("div.c3").hide();
+                                    $("#search-close").show();
+                                }
+                                $("div.c2>ul>li").attr("data-hmclog", "{pageid: 45, eventid: 658}");
+                                return li;
+                            },
+                            formatMatch: function (row, i, max) {
+                                return row.keywords;
+                            },
+                            formatResult: function (row) {
+                                return row.show;
+                            }
+                        }).result(function (event, row, formatted) {
+                            window.location.href = '/' + row.spell;
+                        });
+                    });
+                });
+            });
+            clearInterval(timer_0);
+        }, 200);
+        //搜索框+内容框监听内容变化
+        //-----bengin
+        $('#search-input').bind("input", function () {
+            if ($.trim($(this).val()) != "") {
+                if ($("div.c2").is(":hidden")) {
+                    $("div.c1").hide();
+                    $("#search-close").show();
+                    $("div.c3").show();
+                }
+            }
+        });
+        $("div.c2").bind('DOMNodeInserted', function (e) {
+            var $this = $(this);
+            $this.find("ul>li").attr("data-hmclog", "{pageid: 45, eventid: 658}");
+        }).bind("DOMNodeRemoved", function () {
+            var $this = $(this);
+            if ($this.is(":hidden")) {
+                if ($.trim($('#search-input').val()) != "") {
+                    $("div.c1").hide();
+                    $("#search-close").show();
+                    $("div.c3").show();
+                }
+            }
+        });
+        //------end
+        //防止回车提交
+        $('#search-input').keydown(function (event) {
+            if (event.keyCode == 13) {
+                event.keyCode = 0;
+                return false;
+            }
+        });
+    });
+</script>
+
+
+    <div id="vmask" style="display:none" class="mask">
+    <div class="get-voucher">
+        <div class="get-voucher-cot"></div>
+        <h2 id="moneyH2"></h2>
+        <div class="get-voucher-intro">
+            油卡已经放入我的礼品<br>在<strong id="endDate"></strong>前完成购车即可领取
+        </div>
+        <a href="javascript:void(0);" id="btnSureButton" class="main-btn">确定</a>
+    </div>
+</div>
+<script type="text/javascript" src="./search_files/hmcstat"></script>
+<!--方晓春统计代码-->
+<script type="text/javascript" src="./search_files/saved_resource(1)"></script><img alt="" border="0" name="DCIMG" width="1" height="1" style="display:none;" src="./search_files/x.gif">
+<script type="text/javascript" src="./search_files/dcs_tag_huimc.js.下载"></script>
+<script type="text/javascript" src="http://hm.baidu.com/h.js?3F01234567890ABCDEF01234567890ABCDEF"></script>
+
+<script type="text/javascript">
+    (function () {
+        var hm = document.createElement("script");
+        hm.src = "//hm.baidu.com/hm.js?34b070f600a54baeebad2039a605f793";
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(hm, s);
+    })();
+</script>
+
+<script type="text/javascript">
+    (function () {
+        var hm = document.createElement("script");
+        hm.src = "//hm.baidu.com/hm.js?ac157e5dcb15848680a2a42733170e82";
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(hm, s);
+    })();
+</script>
+
+<script type="text/javascript">
+    $(function () {
+        $(document).on("click", "[data-hmclog]", function () {
+            if (typeof HMC_LOG !== "undefined" && typeof HMC_LOG.SentClickStat === "function") {
+                try {
+                    HMC_LOG.SentClickStat(this);
+                } catch (e) { }
+            }
+        });
+
+    });
+</script>
+<script>
+    (function () {
+        var bp = document.createElement('script');
+        var curProtocol = window.location.protocol.split(':')[0];
+        if (curProtocol === 'https') {
+            bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+        }
+        else {
+            bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+        }
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(bp, s);
+    })();
+</script>
+
+
+    <script type="text/javascript">
+        function app_state_callback() {
+            $('#app_state_div').hide();
+        }
+    </script>
+    <script src="./search_files/appdownload.js.下载"></script>
+
+
+<img src="./search_files/x(1).gif" alt="" name="DCIMG" style="display:none"></body></html>

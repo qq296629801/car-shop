@@ -1,0 +1,62 @@
+#@head("登录")
+    <div class="login-top">
+        <div class="login-top-wrap">
+            <a href="http://www.huimaiche.com/"></a>
+            <span class="login-mylogin">欢迎登录</span>
+        </div>
+    </div>
+    <div class="login-wrap">
+        <div class="login-content clearfix">
+            <div class="login-content-left">
+                <i></i>
+            </div>
+            <div class="login-content-right">
+                <div class="login-content-right-top">
+                    <div class="login-content-right-tl">登录车集市</div>
+                    <div class="login-content-right-tr">
+                        还没有账号？
+                        <a data-hmclog="{pageid: 15, eventid: 13}" href="http://passport.huimaiche.com/register/?re=http%253a%252f%252fi.huimaiche.com%252fuser">立即注册</a>
+                    </div>
+                </div>
+                <div id="errSystem" style="height: 25px; width: 100%; font-size: 12px; line-height: 12px; color: rgb(255, 70, 0);display:none;"></div>
+                <div class="login-content-right-middle">
+                    <div class="login-content-right-maccount-wrap clearfix">
+                        <div class="login-content-right-maccount clearfix txtbox">
+                            <div class="login-content-right-maccount-l">账号：</div>
+                            <input type="text" id="login-name" class="login-content-right-maccount-r" autocomplete="off" placeholder="请输入手机号、用户名或者Email">
+                        </div>
+                    </div>
+                    <div id="errName" style="display: none" class="login-content-right-mpassword-tips"></div>
+                    <div class="login-content-right-mpassword clearfix txtbox">
+                        <div class="login-content-right-mpassword-l">密码：</div>
+                        <input maxlength="20" id="pwd" name="pwd" type="password" autocomplete="off" class="login-content-right-mpassword-r" placeholder="请输入您的密码">
+                    </div>
+                    <div id="errPwd" style="display: none" class="login-content-right-mpassword-tips"></div>
+
+                    <div class="login-content-right-mcode-wrap clearfix" id="" style="display: none">
+                        <div class="login-content-right-mcode clearfix">
+                            <div class="login-content-right-mcode-l">验证码：</div>
+                            <input maxlength="6" type="text" id="vcode" autocomplete="off" class="login-content-right-mcode-r" placeholder="请输入右侧验证码">
+                        </div>
+                        <img id="vcode-img" class="login-content-right-mcode1 changecode">
+                        <div class="login-content-right-mcode2 changecode">看不清，换一换</div>
+                    </div>
+                    <div id="errVcode" style="display: none" class="login-content-right-mcode-tips"></div>
+                    <a href="http://passport.huimaiche.com/retrieve/?re=http%253a%252f%252fi.huimaiche.com%252fuser" class="login-content-right-middle-a">忘记密码</a>
+                </div>
+                <div class="login-content-right-bottom" id="login-submit">登录，开始买车</div>
+            </div>
+        </div>
+        <div class="login-bottom">
+            京公网安备&nbsp;11010802020002  京ICP备09064160号  京ICP证060175号  CopyRight© 2016版权所有 北京比特易湃信息技术有限公司
+        </div>
+    </div>
+    <script type="text/javascript">
+        $(function () {
+            $.login.init({
+                redirectUrl: "/user"
+            });
+        });
+    </script>
+
+</body></html>

@@ -1,0 +1,200 @@
+#@head("交流平台")
+<link rel="stylesheet" type="text/css"
+	href="/css/share-20150811.css" media="all" />
+    <div class="share-experience bt_page">
+        <div class="bread-crumbs-link-share">
+            <a href="/">首页</a> &gt; <a href="/bbs" id="qbrul"><span>全部分享</span></a> &gt; <span>#(bbs.title)</span>
+        </div>
+        <div class="col-main">
+            <div class="share-experience-detail">
+                <div class="share-detail-address">
+                    <span>阅读<em>#(bbs.zan??)</em>次</span> <strong>分享日期：#(bbs.share_date??)</strong></div>
+                <h1>
+                    #(bbs.title)</h1>
+                <ul class="keys-list">
+                    <li class="type"><span>所购车辆：</span> <a href="#" target="_blank">
+                        #(bbs.yname??)款#(bbs.carName)#(bbs.seriesName??)#(bbs.carModelName)</a> </li>
+                    <li class="owner"><span>车&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;主：</span>吴芳芳
+                    </li>
+                    <li class="date"><span>购车日期：</span>#(bbs.buy_date??)
+                    </li>
+                    <!-- <li class="clear">&nbsp;</li> -->
+                    <li class="show-price"><span>指&nbsp;&nbsp;导&nbsp;&nbsp;价：</span><em>#(bbs.guide_price??)</em>
+                    </li>
+                    <li class="real-price"><span>购车价格：</span>#(bbs.buy_price??)
+                    </li>
+                    <li class="save-money">
+                        省<em>#(bbs.saveMoney)</em>万
+                    </li>
+                </ul>
+                <div class="topic-img">
+                    <img src="/img/bbs/#(bbs.url??)" alt="" data-bd-imgshare-binded="1">
+                </div>
+                <div class="article-content">
+                    <div class="inner">
+                    #(bbs.comment)
+                    </div>
+                </div>
+            </div>
+            <div class="share-ctrl">
+                <div class="share-out">
+                    <span>分享：</span>
+                    <!-- 百度分享代码开始 -->
+                    <div class="bdsharebuttonbox bdshare-button-style0-24" data-tag="share_1" data-bd-bind="1506959745470">
+                        <a class="bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a><a class="bds_qzone" data-cmd="qzone" href="http://hd./share/detail/12623#" title="分享到QQ空间">
+                        </a><a class="bds_tqq" data-cmd="tqq" title="分享到腾讯微博"></a><a class="bds_weixin" data-cmd="weixin" title="分享到微信">
+                        </a>
+                    </div>
+                    <script>
+                        window._bd_share_config = {
+                            common: {
+                                bdText: '红色丰田凯美瑞2.0G购车经历',
+                                bdDesc: '因为家庭需要，购车提上了日程。首先是选择车型。各种车型对比，品牌选择，最后还是考虑选择丰田凯美瑞。考虑到更多的是周末家庭市内出行，所以没有考虑太大容量的SUV，但是仍然希望空间大一些，看到推广较多的就是日系三杰了。三家反复对比了一下，也去4S店看过车，差别不是很大，整......',
+                                bdUrl: window.location.protocol+ '//hd./share/detail/12623',
+                                bdPic: 'https://img1.huimaiche.cn/wapimg-670-0/sense/share/pc/201706/20170622204352472_e170f6.jpg'
+                            },
+                            share: [{
+                                "bdSize": 24
+                            }],
+                            slide: [{
+                                bdImg: 0,
+                                bdPos: "right",
+                                bdTop: 100
+                            }],
+                            image: [{
+                                viewType: 'list',
+                                viewPos: 'top',
+                                viewColor: 'black',
+                                viewSize: '16',
+                                viewList: ['tsina', 'qzone', 'tqq', 'weixin']
+                            }],
+                            selectShare: [{
+                                "bdselectMiniList": ['tsina', 'qzone', 'tqq', 'weixin']
+                            }]
+                        }
+                        with (document) 0[(getElementsByTagName('head')[0] || body).appendChild(createElement('script')).src = '//img./hd/baidushare/api/js/share.js?cdnversion=' + ~(-new Date() / 36e5)];
+                    </script>
+                    <!-- 百度分享代码结束 -->
+                </div>
+                <a href="javascript:void(0)" class="share-greet share-btn-on" id="DianZan"><i></i><em id="zanCnt">
+                    4</em></a>
+            </div>
+            <div class="share-car">
+                <img src="./index_files/1010486504_6.jpg" alt="" data-bd-imgshare-binded="1">
+                <div>
+                    <h2>#(bbs.yname??)款#(bbs.seriesName??)</h2>
+                    	<h3>
+                        #(bbs.carName)#(bbs.carModelName)
+                        </h3>
+                    <p>
+                        平均节省：<strong>#(bbs.CarSavePrice??)</strong></p>
+                    
+                </div>
+                <span class="button_orange button_m_40"><a href="#" target="_blank">开始底价买车</a></span>
+            </div>
+            
+            <div class="share-appraise">
+                <h3>
+                    该车主对4S店的评价</h3>
+                <div class="appraise-cot">
+                    <table width="100%" cellpadding="0" cellspacing="0">
+                        <tbody><tr>
+                            <td class="appraise-tb-left">
+                                <h4>
+                                    <span>评价</span>
+                                    
+                                    <i></i>
+                                    
+                                    <i></i>
+                                    
+                                    <i></i>
+                                    
+                                    <i></i>
+                                    
+                                    <i></i>
+                                    </h4>
+                                <p>
+                                    通过APP付费报价，选择了丰田兆方店约看车。蔡圆圆销售很热心的接待，期间反复讨论价钱，都耐心的和我们沟通，当前就敲下来了。等车的过程很漫长，不过圆圆都一直及时给我们反馈进展，看车、付款、提车都很顺利，选的车牌也挺不错，后面的行驶证也是帮忙给寄了过来，服务真的很周到，很愉快的一次购车经历。</p>
+                            </td>
+                            <td class="appraise-tb-right">
+                                <h5>
+                                    广汽丰田兆方店</h5>
+                                <h4>
+                                    
+                                    <i></i>
+                                    
+                                    <i></i>
+                                    
+                                    <i></i>
+                                    
+                                    <i></i>
+                                    
+                                    <i></i>
+                                    <span>27条服务评价</span></h4>
+                                <p>
+                                    深圳市南山区侨香西路兆方汽车广场</p>
+                            </td>
+                        </tr>
+                    </tbody></table>
+                </div>
+            </div>
+            
+        </div>
+        <div class="col-sub">
+            <div class="sub-header related-share-subheader">
+                <strong>相关推荐</strong>
+            </div>
+            <div class="related-share">
+                <ul>
+                    
+                    <li><a href="http://hd./share/detail/11268">
+                        <div class="related-share-img">
+                            <span></span><img src="./index_files/151120151109770_0cd6.jpg" alt="" data-bd-imgshare-binded="1">
+                        </div>
+                        <div class="related-share-right">
+                            <h3>
+                                车到山前必有路--丰田凯美瑞购车记</h3>
+                            
+                            <p>
+                                <span>
+                                    张工</span><em>9</em></p>
+                        </div>
+                    </a></li>
+                    
+                    <li><a href="http://hd./share/detail/10994">
+                        <div class="related-share-img">
+                            <span></span><img src="./index_files/150905190454418_b646.jpg" alt="" data-bd-imgshare-binded="1">
+                        </div>
+                        <div class="related-share-right">
+                            <h3>
+                                在30岁送给自己的礼物 购凯美瑞经验分享</h3>
+                            <strong>节省2.38万</strong>
+                            <p>
+                                <span>
+                                    杨水平</span><em>20</em></p>
+                        </div>
+                    </a></li>
+                    
+                    <li><a href="http://hd./share/detail/10884">
+                        <div class="related-share-img">
+                            <span></span><img src="./index_files/150814151712973_5fa9.jpg" alt="" data-bd-imgshare-binded="1">
+                        </div>
+                        <div class="related-share-right">
+                            <h3>
+                                凯凯牵回家-记惠买车之旅</h3>
+                            <strong>节省2.6万</strong>
+                            <p>
+                                <span>
+                                    张路</span><em>27</em></p>
+                        </div>
+                    </a></li>
+                    
+                </ul>
+            </div>
+            
+        </div>
+    </div>
+    <div id="divScript">
+    </div>
+    
+#include("/common/_footer.html")

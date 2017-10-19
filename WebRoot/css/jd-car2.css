@@ -1,0 +1,115 @@
+.act-li {
+	margin:0;
+	margin-bottom:0px !important;
+	margin-top:0px !important;
+	border-left:0;
+	list-style: none;
+}
+.actv-col1 {
+	width:104px;
+	height:30px;
+	margin:0px;
+	padding:0px;
+	border-left-width:1px;
+	border-left-style: solid;
+	border-left-color:#000;
+	border-top-width:1px;
+	border-top-style: solid;
+	border-top-color:#000;
+	text-align:center;
+	display:inline-block;
+}
+.actv-col2 {
+	width:208px;
+	height:30px;
+	margin:0px;
+	padding:0px;
+	border-left-width:1px;
+	border-left-style: solid;
+	border-left-color:#000;
+	border-top-width:1px;
+	border-top-style: solid;
+	border-top-color:#000;
+	text-align:center;
+	display:inline-block;
+}
+.actv-col3 {
+	width:312px;
+	height:30px;
+	margin:0px;
+	padding:0px;
+	border-left-width:1px;
+	border-left-style: solid;
+	border-left-color:#000;
+	border-top-width:1px;
+	border-top-style: solid;
+	border-top-color:#000;
+	text-align:center;
+	display:inline-block;
+}
+.actv-col4 {
+	width:416px;
+	height:30px;
+	margin:0px;
+	padding:0px;
+	border-left-width:1px;
+	border-left-style: solid;
+	border-left-color:#000;
+	border-top-width:1px;
+	border-top-style: solid;
+	border-top-color:#000;
+	text-align:center;
+	display:inline-block;
+}
+
+.actv-col1 {
+	width:104px;
+	height:30px;
+	margin:0px;
+	padding:0px;
+	border-left-width:1px;
+	border-left-style: solid;
+	border-left-color:#000;
+	border-top-width:1px;
+	border-top-style: solid;
+	border-top-color:#000;
+	text-align:center;
+	display:inline-block;
+}
+.actv-col2 {
+	width:208px;
+	height:30px;
+	margin:0px;
+	padding:0px;
+	border-left-width:1px;
+	border-left-style: solid;
+	border-left-color:#000;
+	border-top-width:1px;
+	border-top-style: solid;
+	border-top-color:#000;
+	border-right-width:1px;
+	border-right-style: solid;
+	border-right-color:#000;
+	text-align:center;
+	display:inline-block;
+}
+.actv-col3 {
+	width:312px;
+	height:30px;
+	margin:0px;
+	padding:0px;
+	border-left-width:1px;
+	border-left-style: solid;
+	border-left-color:#000;
+	border-top-width:1px;
+	border-top-style: solid;
+	border-top-color:#000;
+	text-align:center;
+	display:inline-block;
+}
+
+.actv-row-last {
+	border-bottom-width:1px;
+	border-bottom-style: solid;
+	border-bottom-color:#000;
+}

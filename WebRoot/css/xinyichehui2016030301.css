@@ -1,0 +1,356 @@
+/*登录头*/
+.bit990 { width: 1200px }
+.header_style { height: 100px; width: 1200px; position: relative; margin: 0 auto; z-index: 13 }
+.header_style .yiche_logo { margin: 30px 34px 0 4px; float: left }
+.header_style .yiche_logo a { line-height: 1000px; display: block; width: 248px; height: 33px; overflow: hidden; background: url(http://img1.bitautoimg.com/uimg/yichehui/2015/pc/images/yichehui_logo_new.png); }
+.header_style h1 { float: left }
+/*.header_style .city_name { border: 1px #fff solid; position: relative; z-index: 99; float: left; padding: 2px 26px 2px 7px; margin: 36px 0 0 0; font-size: 14px; font-weight: bold; color: #164a84 }
+.header_style .city_name em { display: block; overflow: hidden; border: 6px solid #06a; border-color: #a6a6a6 #fff; border-width: 5px 5px 0 5px; width: 0; position: absolute; top: 9px; right: 8px }
+.header_style .city_name ul { margin: 0 0 0 -1px; position: absolute; border: 1px solid #ccc; background: #fff; top: 25px; left: 0; padding: 12px 0 0 10px; z-index: 11; width: 298px; overflow: hidden; box-shadow: 1px 1px 1px #ccc }
+.header_style .city_name ul li { float: left; font-size: 14px; font-weight: normal; width: 56px; height: 24px }
+.header_style .city_name ul li.lastcity { width: 288px; border-top: 1px solid #E9E9E9; clear: both; line-height: 24px; padding: 4px 0 8px 0; margin: 1px 0 0 0 }
+.header_style .city_name ul li.lastcity a:link, .header_style .city_name ul li.lastcity a:visited { color: #56616D }
+.header_style .city_name ul li.lastcity a:hover { color: #c00 }
+.header_style .city_name_hover { border: 1px #ccc solid; border-width: 1px 1px 0; height: 21px; _border: 1px #fff solid; box-shadow: 1px 1px 1px #ccc; margin: 36px 0 0 0;}
+.header_style .city_name_hover em { border-color: #333 #fff }
+.header_style .city_name_hover sub { z-index: 12; background: #fff; position: absolute; bottom: -1px; left: 0; width: 100%; _width: auto; height: 1px; overflow: hidden }
+*/
+
+.city_name { border: 1px #fff solid; position: relative; z-index: 99; float: left; padding: 2px 26px 2px 7px; margin: 36px 0 0 0; color: #164a84 }
+.city_name .pop{ font-family: "microsoft yahei"; font-size: 16px}
+.city_name .jt{ position: absolute; top: 9px; right: 8px; display: block; width: 8px; height: 5px; background: url(http://image.bitautoimg.com/uimg/index2014/images2/tools_selectcar_ico_arrow.gif) 0 0 no-repeat}
+.city_name_hover .jt{ background-position: 0 -100px}
+
+
+
+
+
+.h_nav{ float: right; color: #ddd; font-family: "microsoft yahei"; font-size: 18px; margin: 40px -10px 0 0}
+.h_nav a{margin: 0 20px}
+.h_nav a:hover{ color: #f60; text-decoration: none}
+.h_nav a.current{ color: #f60}
+/*------------------------------------通栏幻灯片 start------------------------------*/
+.slider-root-box { width: 100%; height: 500px; position: relative; }
+.slider-root-box .slider-list { position: absolute; width: 100%; height: 500px; overflow: hidden; }
+.slider-root-box .slider-list ul { list-style: none; }
+.slider-root-box .slider-list ul li { position: absolute; width: 100%; height: 500px; left: 50%; margin-left: -960px; display: none; }
+.slider-root-box .slider-list ul li.active { display: block; }
+.slider-root-box .slider-list ul li a { display: block; }
+.slider-root-box .slider-list ul li a img { display: block; }
+.slider-root-box .slider-menu-1 { position: absolute; bottom: 22px; width: 1210px; height: 22px; left: 50%; margin-left: -605px; z-index: 50; }
+.slider-root-box .slider-menu-1 ul { position: absolute; list-style: none; right: 30px; }
+.slider-root-box .slider-menu-1 ul li { float: left; background: url(http://img1.bitautoimg.com/uimg/yichehui/2015/pc/images/icons.png) no-repeat -448px 0; width: 20px; height: 22px; margin-left: 10px; position: relative; left: -10px; }
+.slider-root-box .slider-menu-1 ul li.current { background-position: -417px 0 }
+.slider-root-box .slider-menu-1 ul li a { display: block; width: 100%; height: 100%; }
+/*------------------------------------通栏幻灯片 end------------------------------*/
+/*轮播*/
+.id_box { width: 1200px; margin: 0 auto; position: relative }
+.id_list_line { position: relative; width: 1200px; height: 405px; overflow: hidden }
+.id_list { position: absolute; top: 0; left: 0; width: 120000px; height: 405px; background: none }
+
+.id_list .dbor { display: block; border: 2px solid #f90; position: absolute; top: -3px; left: -3px; width: 382px; height: 362px; opacity: 0;filter:alpha(opacity=0); transition: opacity 0.5s }
+.id_list li.hover .dbor { opacity: 1;filter:alpha(opacity=100);background:url(about:blank) }
+.focus_button { width: 82px; height: 154px; overflow: hidden; position: absolute; top: 295px; display: block; text-indent: -999px; opacity: 0.3;filter:alpha(opacity=30); }
+.focus_left { background: url(http://img1.bitautoimg.com/uimg/yichehui/2015/pc/images/icons.png) no-repeat -240px -171px; left: -107px; }
+.focus_right { background: url(http://img1.bitautoimg.com/uimg/yichehui/2015/pc/images/icons.png) no-repeat -325px -171px; right: -107px }
+.focus_button:hover { opacity: 1;filter:alpha(opacity=100); }
+.focus_txt { position: absolute; top: 182px; font-size: 20px; font-family: "microsoft yahei" }
+.focus_txt span { color: #c00; font-size: 30px }
+.focus_left_txt { left: -50px }
+.focus_right_txt { right: -50px }
+.focus_dot { height: 22px; float: left; margin-top: 12px; display: block }
+.focus_dot li { width: 20px; height: 22px; float: left; background: url(http://img1.bitautoimg.com/uimg/yichehui/2015/pc/images/icons.png) no-repeat -448px -30px; margin-right: 10px; overflow: hidden; line-height: 1000px; cursor: pointer }
+.focus_dot li.current { background-position: -417px -30px }
+
+/*首页热门车列表*/
+.carpic_list_line{ height:767px}
+.carpic_list { overflow: hidden;height:767px}
+.carpic_list ul { width: 1300px; float: left }
+.carpic_list li { position: relative; float: left;width: 300px; height: 298px; margin: 0 20px 20px 0; padding: 30px 40px 30px 40px; background: #fff; border: 3px solid #fff }
+.carpic_list a.pic { width: 300px; height: 200px; display: block; overflow: hidden; margin: 0 auto 5px }
+.carpic_list a.pic img { width: 300px; height: 200px }
+.carpic_list p { color: #999; }
+.carpic_list .title { height: 50px; line-height: 50px; overflow: hidden }
+.carpic_list .carname { font-family: "microsoft yahei"; font-size: 24px; font-weight: bold }
+.carpic_list .txtbox { line-height: 24px }
+.carpic_list .txtbox em { font-family: "microsoft yahei"; font-size: 24px; font-weight: bold; color: #c00 }
+.carpic_list .txtbox .fz14 { font-size: 14px }
+.carpic_list .txtbox .fz18 { font-size: 18px }
+.carpic_list .txtbox del { font-family: "microsoft yahei"; color: #999; font-size: 18px; margin-left: 15px }
+.carpic_list .txtbox2 { font-family: Tahoma; color: #999; font-size: 14px }
+
+
+
+/*首页块背景*/
+.tm_backg { background: #3c759c url(http://img1.bitautoimg.com/uimg/yichehui/2015/pc/images/tm_bg.jpg) no-repeat center 0; border-top: 1px solid #e9e9e9; padding-bottom: 20px; min-width: 1200px }
+.pp_backg { background: url(http://img1.bitautoimg.com/brandmarket/yichehuinew/pc/images/pp_bg.jpg) no-repeat center 0; min-width: 1200px; padding-bottom:30px; }
+.foot_box .link_a { min-width: 1200px }
+.foot_box .copright_p { min-width: 1200px }
+/*块标题*/
+.clike_tit { text-align: center; padding: 80px 0 50px 0; font-family: "microsoft yahei"; color: #21488c }
+.clike_tit h2 { height: 60px; line-height: 60px; font-size: 56px; font-weight: bold; padding-bottom: 20px; letter-spacing: 2px }
+.clike_tit h2 a,.clike_tit h2 a:visited,.clike_tit h2 a:hover{ color: #21488c; text-decoration: none; }
+.clike_tit p { font-size: 14px;color: #333;/*word-spacing:8px;*/ letter-spacing: 5px }
+/*新车预售*/
+.ad_focus_box { height: 700px; padding: 0 0 30px 0 }
+.ad_focus_box .ad_focus li {background:#fff; float: left; width: 380px; height: 380px; padding: 0; border: 1px solid #e9e9e9; margin: 0 27px 0 0; position: relative; }
+.ad_focus ul { width: 1300px; float: left; font-family: "microsoft yahei" }
+.ad_focus li .pic { width: 380px; height: 250px; display: block; overflow: hidden; position: relative; }
+.ad_focus li .pic span { position: absolute; bottom: 0; left: 0; display: block; width: 380px; height: 40px; background: url(http://img1.bitautoimg.com/uimg/yichehui/2015/pc/images/icons.png) no-repeat 0 -375px }
+.ad_focus .txtbox { padding: 20px 0 0 30px }
+.ad_focus .txtbox .cs_img { float: left; width: 55px; height: 55px; margin-right: 20px }
+.ad_focus .txtbox strong { font-size: 20px; font-weight: bold; display: block; margin: 8px 0 }
+.ad_focus .col9 { color: #999 }
+.ad_focus .col_btn { display: block; width: 240px; height: 50px; line-height: 50px; font-size: 16px; text-align: center; color: #fff; background: #f60; position: absolute; top: 355px; left: 70px; z-index: 11 }
+.ad_focus .col_btn:hover { text-decoration: none }
+.ad_focus li .dbor { width:378px;  height: 380px; border: 2px solid #f60; top: -1px; left: -1px; z-index: 10 }
+.ad_focus li.hover .dbor { border: 2px solid #f60; height: 380px;background:url(about:blank) }
+.ad_focus_box .focus_dot { display: block; margin-top: 30px }
+
+
+.ad_focus_box .focus_button { top: 130px; width: 60px; height: 126px; opacity: 0.8;filter:alpha(opacity=80); }
+.ad_focus_box .focus_button:hover { opacity: 1;filter:alpha(opacity=100); }
+.ad_focus_box .focus_left { background-position: -254px -31px; left: -90px }
+.ad_focus_box .focus_right { background-position: -324px -31px; right: -90px; }
+/*品牌合作*/
+.hezuo_box { width: 1200px;padding: 0 0 40px; height: 242px; margin: 0 auto; position: relative }
+.hezuo_box .id_list_line { height: 243px; overflow: hidden; border: 1px solid #dfe9f6; }
+.hezuo_box .focus_dot{ margin:30px 0 60px;}
+.hezuo_box .focus_button { display: block; top: 130px }
+.hezuo_box .focus_txt { top: 154px; color: #333 }
+.hezuo_box .focus_txt span { color: #c00 }
+.hezuo { height: 240px; top: 1px; }
+.hezuo ul { float: left; width: 1200px; height: 240px; background: #fff }
+.hezuo li { float: left; width: 225px; height: 80px; margin: 0; padding: 20px 0 20px 15px; border: 0; border-bottom: 1px solid #e9e9e9; position: relative; background:#fff }
+.hezuo li span { display: block; width: 200px; height: 80px; overflow: hidden; border-right: 1px solid #e9e9e9; padding-right: 24px }
+
+.hezuo_box .focus_button { top: 92px; display: none; }
+.hezuo li.end span { border-right: 0; padding-right: 22px }
+.hezuo li a { display: block; width: 236px; height: 118px; border: 2px solid #f60; opacity: 0;filter:alpha(opacity=0); transition: opacity 0.5s; position: absolute; top: -1px; left: 0; z-index: 10 }
+.hezuo li.hover a { opacity: 1;filter:alpha(opacity=100);background:url(about:blank) }
+/*优惠活动*/
+.act_backg { background: #f8f8fa }
+.act_box { padding-bottom: 80px; width: 1200px; margin: 0 auto; font-family: "microsoft yahei" }
+.lf_cont { width: 812px; float: left; }
+.lf_cont li { width: 810px; height: 250px; border: 1px solid #ededef; box-shadow: 0 0 12px 0 #ededef; margin-bottom: 20px; background: #fff; position: relative; }
+.lf_cont li .img560 { width: 560px; height: 250px; overflow: hidden; float: left }
+.lf_cont li .img_rt { width: 250px; float: left; padding-top: 20px }
+.lf_cont li .pp_logo { width: 160px; height: 64px; overflow: hidden; margin: 0 auto 15px }
+.lf_cont li .pp_logo img { width: 160px; height: 64px}
+
+.lf_cont li h2 { font-size: 16px; text-align: center; line-height: 26px; margin-top: 6px }
+.lf_cont li .btn { display: block; margin: 0 auto; width: 120px; height: 40px; line-height: 40px; text-align: center; color: #666; border: 1px solid #e9e9e9; border-radius: 4px; font-size: 16px; margin-top: 22px; background-color: #fff; transition: background-color 0.5s, color 0.5s }
+.lf_cont li.hover .btn { background-color: #c00; color: #fff }
+.lf_cont li .alink { display: block; width: 808px; height: 248px; border: 2px solid #f60; opacity: 0;filter:alpha(opacity=0); transition: opacity 0.5s; position: absolute; top: -1px; left: 0; z-index: 10 }
+.lf_cont li.hover .alink { opacity: 1;filter:alpha(opacity=100);background:url(about:blank) }
+.nonetxt_city,.moretxt_city { text-align:center;}
+.nonetxt_city { font-size:24px; line-height:36px; padding-top:90px;}
+.moretxt_city { color:#f60; font-size:14px;}
+.rt_cont { float: right; width: 330px }
+.rt_tit { height: 72px; line-height: 72px; border: 1px solid #ededef; box-shadow: 0 0 12px 0 #ededef; padding-left: 30px; font-size: 22px; margin-bottom: 20px; background: #fff; position: relative; }
+.rt_tit span { background: #f60; color: #fff; border-radius: 5px; padding: 2px 5px 0; margin-right: 10px; font-size: 14px }
+.rt_tit i{background:url(http://img1.bitautoimg.com/uimg/yichehui/2015/pc/images/icons.png) no-repeat -484px -33px; width: 21px; height: 17px; display: block; position: absolute;bottom: -17px;left: 20px}
+.rt_cont li {background: #fff; border: 1px solid #ededef; box-shadow: 0 0 12px 0 #ededef; clear: both; padding: 26px; margin-bottom: 20px; overflow: hidden; zoom: 1; position: relative; }
+.rt_cont li span { background: #fff; color: #f60; border: 1px solid #f60; border-radius: 5px; padding: 2px 5px 0; margin-right: 10px; font-size: 14px; float: left; }
+.rt_cont .nonetxt { float: left; width: 278px; padding:35px 0; line-height: 22px; text-align:center; margin-top: -5px }
+.rt_cont .nonetxt_b { font-size:18px; color:#333;}
+.rt_cont .hottxt { float: left; width: 219px; font-size: 18px; line-height: 22px; margin-top: -5px }
+.rt_cont .hottxt a { line-height: 30px; margin-bottom: 10px; display: block; }
+.rt_cont li p { color: #999; font-size: 14px }
+.rt_cont li .dbor{background:url(about:blank); border: 2px solid #f60; transition: border 0.5s; opacity: 0;filter:alpha(opacity=0); width:324px; height: 127px; position: absolute;top:0;left: 0  }
+.rt_cont li.hover .dbor{ opacity: 1;filter:alpha(opacity=100); }
+.rt_cont li .h157{ height: 157px}
+.rt_cont li.hover span { background: #f60; color: #fff; }
+.more_blc{width: 810px;border: 1px solid #ededef; box-shadow: 0 0 12px 0 #ededef; height: 50px; line-height: 50px; text-align: center; font-size: 16px; background: #fff}
+/*尾部*/
+.ft_box { width: 100%; height: 252px; background-color: #21488c; padding-top: 50px; color: #5884cf; font-size: 14px; min-width: 1200px; font-family: "microsoft yahei" }
+.footer-sec2 { width: 1200px; margin: 0 auto }
+.ft_logo { width: 292px; height: 175px; float: left; padding-right: 60px; border-right: 1px dotted #5884cf }
+.ych { background: url(http://img1.bitautoimg.com/uimg/yichehui/2015/pc/images/ft_logo.jpg) no-repeat 0 0; display: block; height: 35px; padding-top: 55px }
+.ych span { border-top: 1px solid #5884cf; color: #5884cf; display: block; height: 35px; line-height: 35px }
+.ych:hover { text-decoration: none }
+.ft_tel { padding-top: 24px; }
+.ft_tel strong { font-size: 31px; font-weight: bold; color: #ffffff; line-height: 40px; font-family: "Georgia"; letter-spacing: 0.02em; z-index: 20; }
+.ft_tel a, .foot_photo a:link, .foot_photo a:visited, .foot_photo a:hover { color: #ffffff; text-decoration: none; }
+.ft_tel p { line-height: 20px; margin-top: 4px; }
+.ft_box ul { padding-left: 12px; float: left; }
+.ft_box ul li { width: 108px; padding-left: 60px; float: left; height: 150px; }
+.ft_box ul li.w170 { width: 105px; }
+.ft_box ul li h3 { height: 40px; line-height: 45px; font-size: 24px; font-weight: bold; margin-bottom: 25px; }
+.ft_box ul li p { font-style: normal; color: #fff; line-height: 36px; height: 36px; overflow: hidden }
+.ft_box ul li i { margin-right: 10px; font-size: 30px; display: inline-block; height: 36px; vertical-align: top; }
+.ft_box ul li a, .ft_box ul li a:visited { font-size: 16px; color: #fff; text-decoration: none; display: inline-block; height: 36px; vertical-align: top; }
+.ft_box ul li a:hover { color: #fff; text-decoration: underline; }
+.ft_box ul li.erwm { background: #fff url(http://img1.bitautoimg.com/uimg/yichehui/2015/pc/images/erwm.png) no-repeat 20px 20px; width: 150px; height: 40px; padding: 130px 0 0; line-height: 40px; text-align: center; color: #333; margin-left: 150px }
+/* -------------------------脚部样式start-------------------------*/
+.footer { background-color: #f7f7f7; border-top: 2px solid #e9e9e9; }
+.footer_bottom { width: 100%; height: 40px; background-color: #333; }
+.footer_bottom .center { width: 1200px; display: block; margin: 0px auto; }
+.footer_bottom .center .pull-left { padding-top: 14px; float: left; }
+.footer_bottom .center .pull-left i { width: 58px; height: 21px; background-image: url(http://img1.bitautoimg.com/uimg/yichehui/2015/pc/images/yc_logo.jpg); background-repeat: no-repeat; position: relative; float: left; top: -5px; }
+.footer_bottom .center .pull-left label { float: left; font-size: 12px; color: #999; line-height: 1; padding-left: 15px; }
+.footer_bottom .center .pull-left ul { list-style: none; float: left; overflow: hidden; position: relative; top: -3px; }
+.footer_bottom .center .pull-left ul li { float: left; position: relative; left: -1px; }
+.footer_bottom .center .pull-left ul li a, .footer .footer_bottom .center .pull-left ul li a:visited { font-size: 12px; color: #999; padding: 0 7px; border-left: 1px solid #666; }
+.footer_bottom .center .pull-left ul li a:hover { }
+.footer_bottom .center .pull-right { padding-top: 14px; float: right; font-size: 12px; color: #999; line-height: 13px; }
+/* -------------------------脚部样式end-------------------------*/
+
+
+
+
+
+
+
+
+
+/*1200px导航*/
+.publicTabNew { width: 1200px }
+.publicTabNew .tab { width: 1200px }
+.publicTabNew .tab li { width: 199px }
+.publicTabNew .tab li a { padding: 0; float: none; display: block }
+.warp { width: 100%; min-width: 1200px; margin: 0 auto; background: #f8f8f8; border-top: 1px solid #e6e6e8; min-height: 450px }
+/*面包屑*/
+.bread { width: 1200px; margin: 0 auto; height: 60px; line-height: 60px; background: #eeeef2; color: #999; font-size: 16px; text-indent: 30px }
+.bread span { color: #a6a6a6 }
+/*特卖列表页*/
+.tm_list { width: 1200px; margin: 0 auto; padding-bottom: 100px }
+/*列表页广告*/
+.adbox_w1200 { width: 1200px; margin: 20px auto 0; overflow: hidden }
+/*列表页车型列表-4个*/
+.carpic_list_num4 { background: url(http://img1.bitautoimg.com/uimg/carservice/2015/pc/http://img1.bitautoimg.com/uimg/yichehui/2015/pc/images/line.png) repeat-x 0 bottom }
+.carpic_list_num4 a.pic { width: 270px; height: 180px; margin: 0 auto 7px }
+.carpic_list_num4 a.pic img { width: 270px; height: 180px }
+.carpic_list_num4 li { width: 270px; height: 260px; margin: 0; padding: 15px 15px 15px 15px }
+.carpic_list_num4 .title { height: 27px; line-height: 25px }
+.carpic_list_num4 .carname { font-size: 16px }
+.carpic_list_num4 .txtbox { margin-bottom: 0 }
+.carpic_list_num4 .txtbox em { font-size: 20px; color: #c00 }
+.carpic_list_num4 .txtbox del { font-size: 14px }
+.carpic_list_num4 .txtbox2 { font-size: 12px }
+/*列表页车型列表卡片-4个*/
+.carpic_list_card { background: none; padding-bottom: 2px; height:auto }
+.carpic_list_card li { border: 1px solid #e9e9e9; margin: 30px 23px 0 0; width: 240px; height: 240px; padding: 20px; position: relative; }
+.carpic_list_card li.hover { border: 1px solid #fff }
+.carpic_list_card a.pic { width: 240px; height: 160px }
+.carpic_list_card a.pic img { width: 240px; height: 160px }
+.carpic_list_card .dbor { display: block; border: 2px solid #ff6600; position: absolute; top: -1px; left: -1px; width: 280px; height: 280px; opacity: 0;filter:alpha(opacity=0); transition: opacity 0.5s }
+.carpic_list_card li.hover .dbor { opacity: 1;filter:alpha(opacity=100); }
+/*列表页-无结果*/
+.warp .act_box { margin-top: 30px }
+/*新车预售列表页*/
+.newcar_list { font-family: "microsoft yahei"; width: 1200px; margin: 30px auto 70px; overflow: hidden; }
+.newcar_list ul { width: 1240px }
+.newcar_list li { float: left; width: 380px; height: 380px; padding: 0; border: 1px solid #e9e9e9; margin: 0 27px 30px 0; position: relative; background: #fff }
+.newcar_list li .pic { width: 380px; height: 250px; display: block; overflow: hidden; position: relative; }
+.newcar_list li .pic span { position: absolute; bottom: 0; left: 0; display: block; width: 380px; height: 40px; background: url(http://img1.bitautoimg.com/uimg/yichehui/2015/pc/images/icons.png) no-repeat 0 -375px }
+.newcar_list .txtbox { padding: 20px 0 0 30px }
+.newcar_list .txtbox .cs_img { float: left; width: 55px; height: 55px; margin-right: 20px }
+.newcar_list .txtbox strong { font-size: 20px; font-weight: bold; display: block; margin: 8px 0 }
+.newcar_list .col9 { color: #999; font-size: 12px }
+.newcar_list .red { color: #c00; font-size: 16px; padding: 10px 0 0 75px }
+.newcar_list li .dbor { width: 376px; height: 376px; border: 2px solid #f60; top: 0px; left: 0px; z-index: 10; position: absolute; opacity: 0;filter:alpha(opacity=0); transition: opacity 0.5s; -moz-transition: opacity 0.5s; -webkit-transition: opacity 0.5s; -o-transition: opacity 0.5s }
+.newcar_list li.hover .dbor { opacity: 1;filter:alpha(opacity=100); }
+
+
+/*10新车预售*/
+.cont_col{ width: 1200px; margin: 20px auto 0;padding-bottom:30px; overflow: hidden;zoom:1;}
+.lf_side{ width:140px; background: #fff;padding: 60px 40px 10px 40px;font-family: "microsoft yahei"; float: left; margin-right: 30px}
+.navli{margin-bottom: 50px}
+.navli h3{font-weight: bold; font-size: 24px; border-bottom: 1px solid #e9e9e9; height: 50px; line-height: 26px}
+.navli li{ font-size: 16px; height: 50px; line-height: 50px; border-bottom: 1px solid #e9e9e9}
+.navli li em{ font-size: 30px; display: inline-block; vertical-align: middle; margin:-5px 15px 0 0}
+.navli li.current{ color: #ff8042}
+
+.main_txt{padding: 70px 80px 25px 80px; width: 790px; min-height: 686px; background: #fff; float: left;font-family: "microsoft yahei"; font-size: 18px}
+.main_txt h2{font-size: 36px; font-weight: bold; border-bottom: 5px solid #e9e9e9;padding-bottom: 30px; margin-bottom: 25px}
+.main_txt h3{font-size: 20px; font-weight: bold;padding:20px 0 30px}
+.txt_box p{line-height: 45px; margin-bottom: 45px}
+.txt_list{ border-top: 1px solid #e9e9e9}
+.txt_list li{ border-bottom: 1px solid #e9e9e9; height: 50px; line-height: 50px}
+.txt_list li span{color: #999; margin-left: 30px; font-size: 16px}
+
+/*10平台介绍*/
+.pingtai{ position: relative;padding-right: 440px  }
+.yichehui{background: url(http://img1.bitautoimg.com/uimg/yichehui/2015/pc/images/yichehui.png) no-repeat 0 0; border:1px solid #e9e9e9; width:400px; height: 240px; position: absolute;top: 10px;right: 0}
+
+/*10合作品牌*/
+.txt_box .hezuo{ height: auto; margin: -15px 0 15px 0}
+.txt_box .hezuo ul{ width: 790px; border-top: 1px solid #e9e9e9; height: auto;}
+.txt_box .hezuo li{ width: 180px; height: 70px}
+.txt_box .hezuo span{ width:155px;padding-top: 5px; height: 68px }
+.txt_box .hezuo  img{ width: 160px; height: 64px}
+.txt_box .col9{ color: #999}
+
+/*10常见问题*/
+.qa_list {}
+.qa_list ul { padding:15px }
+.qa_list li { margin-bottom:20px; border-bottom: 1px solid #e9e9e9;padding-bottom: 20px }
+.qa_list li h3 { font-weight:bold; font-size:14px; height:28px; line-height:28px; color:#333; background:url(http://image.bitauto.com/uimg/ued/http://img1.bitautoimg.com/uimg/yichehui/2015/pc/images/icons_a.png) no-repeat -44px -393px; padding-left:22px; }
+.qa_list li h3 a { color:#333 }
+.qa_list li h3 a:hover { color:#333; text-decoration:none; cursor:text }
+.qa_list li p{ line-height:36px;margin-bottom: 0}
+.qa_list li p.titq{ font-weight: bold;}
+.qa_list li p.titq { background:url(http://img1.bitautoimg.com/uimg/yichehui/2015/pc/images/icons.png) no-repeat -486px -63px; padding:0 0 0 45px;}
+.qa_list li p.tita { background:url(http://img1.bitautoimg.com/uimg/yichehui/2015/pc/images/icons.png) no-repeat -486px -98px; padding:0 0 0 45px;}
+.qa_list li.end{ border-bottom: 0}
+
+
+/*10联系我们*/
+.lx_we{padding-top: 20px}
+.tel_box{ width: 400px; float: left; margin-right: 40px; border-right: 1px solid #e9e9e9}
+.tel_box strong{ display: block; font-size: 24px; font-weight: bold; height: 24px; line-height: 24px;}
+.tel_box span{ display: block; font-family: Georgia; font-size: 48px; font-weight: bold; height: 100px; line-height: 100px}
+.tel_box p{ margin: 0; line-height: 40px}
+.adr_box{ width: 348px;float: left;}
+.adr_box strong{ display: block; font-size: 24px; font-weight: bold; height: 24px; line-height: 24px;padding-bottom: 10px}
+.adr_box span{ display: block; font-size: 22px; line-height: 35px; margin-bottom: 20px}
+.adr_box p{ margin: 0; ; line-height: 40px}
+/*10买车流程*/
+.liuc_list{ background: url(http://img1.bitautoimg.com/uimg/yichehui/2015/pc/images/line.png) repeat-y 47px 30px; margin-top: -20px}
+.liuc_list li{ clear: both; overflow: hidden;zoom:1;}
+.liuc_list span{ width: 40px; height: 58px;padding:45px 30px 30px 30px; overflow: hidden; float: left; background: url(http://img1.bitautoimg.com/uimg/yichehui/2015/pc/images/icons.png) no-repeat 0 -435px; margin:0 20px 0 0}
+.liuc_list li p{ border-bottom: 1px solid #e9e9e9; width: 670px; float: left; line-height: 35px; margin-bottom: 0;padding:30px 0}
+.liuc_list li.first span{ background-color: #fff}
+.liuc_list li.dd span{ margin-top: 105px}
+.liuc_list li.end span{ background-position: -118px -435px; background-color: #fff;padding-top: 50px}
+.liuc_list li.end p{ border-bottom: 0}
+
+/*无结果页*/
+.no_pages{ width: 1200px; margin: 30px auto 0; background: #fff; border: 1px solid #e9e9e9}
+.tjsq_succ{padding:20px 0 40px 0;}
+.button_86_28{ width:86px; height: 28px; margin: 15px 0 0 0 }
+.button_86_28 a{ display: block;; height: 28px; line-height: 28px}
+
+
+/*购车需知*/
+.catalog_con.txt_box p { margin-bottom:0;}
+.catalog_con.txt_box p:first-child{ margin-bottom:45px;}
+.catalog_box li{float:left; width:260px; line-height:32px;  }
+.txt_box h3.catalog_title{ clear:both; text-align:center; padding:60px 0 20px 0;}
+
+
+
+/*首页通栏广告*/
+.ad_box{ width: 1200px; height: 100px; overflow: hidden; margin: 0 auto; background: #fff; border: 1px solid #e4ecf2; box-shadow: 0 0 6px 2px #e4ecf2}
+
+
+/*header 我的订单*/
+.h_nav a.my_order { position:relative; top:-3px; padding:0 16px; margin:0 20px 0 0; display:inline-block; height:30px; line-height:30px; font-size:14px; color:#fff; background-color:#f69006; border-radius:3px;}
+.h_nav a.my_order:hover{ background-color:#F26E04;}
+
+
+/*header 顶部通栏*/
+.top_ads { position:relative; }
+.top_ads a {display:block; height:100px; background:url(http://img1.bitautoimg.com/brandmarket/yichehuinew/pc/images/sale1111/banner_top.jpg) center top;}
+.top_ads span { position:absolute; top:10px; right:10px; display:block; width:20px; height:20px; border-radius:50%; cursor:pointer; color:#fff; font-size:16px;font-family:"Microsoft YaHei" ; background-color:#999; text-align:center; line-height:20px; }
+
+/*优惠列表图片宽度 595*/
+.lf_cont_595 { width: 847px;}
+.lf_cont_595 li { width: 845px; }
+.lf_cont_595 li .img560 { width: 595px;}
+.lf_cont_595 li .alink {width: 843px; }
+
+/*备案*/
+.pull-right a { display: inline-block; padding-left: 20px;line-height:17px; color: #999!important; background:url(http://img1.bitautoimg.com/uimg/index2014/images/2014indexbg18all24.png) no-repeat -234px -1381px;}
+.pull-right a:hover { color: #fff!important;text-decoration: underline;}

@@ -1,0 +1,121 @@
+	<div id="foot" data-role="footer" style="">
+	    <div class="footer">
+	        <div class="fl">
+	            
+	            
+	            <a id="foot-login" href="http://passport.m.huimaiche.com/login/?re=http%25253A%25252F%25252Fguangzhou.m.huimaiche.com%25252F" data-hmclog="{pageid: 19, eventid: 58}">登录</a>
+	            <a href="http://m.huimaiche.com/app/?apkname=wapdib&amp;tracker_u=670_wapdib" rel="external">手机APP</a>
+	        </div>
+	        <div class="fr"><a href="http://help.m.huimaiche.com/">帮助中心</a></div>
+	    </div>
+	</div>
+</div>
+<script type="text/javascript">
+    $(function () {
+        $(document).on("click", "[data-hmclog]", function () {
+            if (typeof HMC_LOG !== "undefined" && typeof HMC_LOG.SentClickStat === "function") {
+                try {
+                    HMC_LOG.SentClickStat(this);
+                } catch (e) { }
+            }
+        });
+
+    });
+</script>
+    <div class="mask" style="display: none" id="CheckCity">
+        <div class="maskcontent">
+            <div class="mask-cot">
+                <div class="c1 c2">
+                    <div class="c1-header">
+                        <p class="lead">
+                            选择买车城市
+                        </p>
+                    </div>
+                    <div class="c1-content">
+                        <p class="txt-2">
+                            当前买车城市为：<em>广州</em><br>
+                            如果您不在广州买车，可以选择其他城市。
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="mask-btns">
+                <a href="/city" data-hmclog="{pageid: 1, eventid: 163}">其他城市</a> <a href="javascript:;" data-hmclog="{pageid: 1, eventid: 162}" id="LocalCity"><i class="i-location"></i>
+                    广州</a>
+            </div>
+        </div>
+    </div>
+<script type="text/javascript" name="baidu-tc-cerfication" src="./index_files/lightapp.js"></script>
+<script src="./index_files/swiper3.4.0.min.js" type="text/javascript"></script>
+<script src="./index_files/jquery.marquee.js" type="text/javascript"></script>
+<script src="./index_files/clamp.min.js" type="text/javascript"></script>
+<script src="./index_files/timerg.js" type="text/javascript"></script>
+<script src="./index_files/index.js" type="text/javascript"></script>
+<script src="./index_files/indexad.js" type="text/javascript"></script>
+<script type="text/javascript">
+    window.bd && bd._qdc && bd._qdc.init({
+        app_id: '5da5b83aa60c89c3831d15ed'
+    });
+    var current_url = window.location.href;
+    $("#a_login").attr("href", "//passport.m.huimaiche.com/login" + "?re=" + encodeURIComponent(encodeURIComponent(current_url)));
+
+    $.share.init({
+        title: "【广州惠买车】广州底价买车_广州买车优惠平台-惠买车",
+        link: window.location.href,
+        imgurl: window.location.protocol + "//img.huimaiche.cn/uimg/m/v20150831/images/icon_hmc_wx.png",
+        content: "广州惠买车，易车旗下的汽车电商平台，在线销售千余款车型，认证的广州经销商4s店提供底价报价、最高优惠购车等服务。广州惠买车，低价买车服务平台。"
+    });
+
+    $.index.init({
+        ccode: "501",
+        cityname: "广州",
+        appDownUrl: "//www.huimaiche.com/hmcapk/hmc_wap.apk?v=20150820",
+        jsPath: "//img.huimaiche.cn/uimg/m/v20170605/js/main",
+        cssPath: '//img.huimaiche.cn/uimg/m/v20170515/css',
+    });
+    //车型关键词跳转
+    function search_url(url) {
+        var carurl = '/search';
+        if (url) {
+            carurl = "/" + url;
+        }
+        carurl += "?re=" + encodeURIComponent(encodeURIComponent(current_url));
+        window.location.href = carurl
+    }
+
+    $.ajax({
+        type: "GET",
+        url: '/Ajax/CheckClient.ashx',
+        cache: false,
+        success: function (data) {
+            if (data.Code == 2) {//app
+                $("#CheckCity").remove();
+                setCookie("cusloced", "1", 30 * 24 * 60 * 60);
+                var $_top = $('div.header'), $_foot = $('#foot'), $_appdowndiv = $('#common-down-div');
+                if ($_top) {
+                    $_top.remove();
+                    $("div.main-body").css("padding-top", "0");
+                }
+                if ($_foot) {
+                    $_foot.remove();
+                }
+                if ($_appdowndiv) {
+                    $_appdowndiv.remove();
+                }
+            }
+        }
+    });
+</script>
+<script type="text/javascript">
+    var _hmt = _hmt || [];
+    (function () {
+        var hm = document.createElement("script");
+        hm.src = "//hm.baidu.com/hm.js?34b070f600a54baeebad2039a605f793";
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(hm, s);
+    })();
+</script>
+<script type="text/javascript" src="./index_files/WapIndex_501.js"></script>
+<script src="./index_files/indexad.js" type="text/javascript"></script>
+<script src="./index_files/appdownload.js"></script>
+</body></html>

@@ -1,0 +1,304 @@
+<!--–[if lt IE 7]-->
+<meta http-equiv="“X-UA-Compatible”" content="“IE=8″">
+<!--[endif]–-->
+<link rel="stylesheet" type="text/css" href="/css/commontopfoot-2.css">
+<link rel="shortcut icon" type="image/x-icon" href="/images/favicon.ico">
+<link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+<link rel="stylesheet" type="text/css" href="/css/common.css" media="all">
+<link rel="stylesheet" type="text/css" href="/css/usercenter.css" media="screen">
+<script src="/js/jquery-3.2.1.min.js"></script> 
+<script src="/js/jquery.superslide.2.1.1.js"></script> 
+</head>
+<body>
+ <!--  begin login div -->
+ <div class="jqmOverlay" style="height: 100%; width: 100%;display: none;  position: fixed; left: 0px; top: 0px; z-index: 2999; opacity: 0.5;"></div>
+ <div class="jqmWindow jqmID1" id="logframe" style="display: none; top: 292px; margin-left: -264px; z-index: 3000;"><div class="fuc_box fuc_w520"><div class="fuc_close jqmClose"><a href="javascript:">X</a></div><h2 class="fuc_tit lay_tit">登录</h2><div class="ps_cont lay_cont div_float_login">
+    <div class="carinfor" style="padding-top: 30px;">
+        <ul>
+            <li class="formli">
+                <div class="txtbox">
+                    <label>
+                        账&nbsp;&nbsp;&nbsp;&nbsp;号：</label>
+                    <input type="text" data-tip="请输入手机号、用户名或者Email" maxlength="60" style="color: rgb(153, 153, 153);" class="txt" id="user_name">
+                </div>
+            </li>
+            <li class="formli">
+                <div class="txtbox">
+                    <label>
+                        密&nbsp;&nbsp;&nbsp;&nbsp;码：</label>
+                    <input type="password" class="txt" id="pwd" maxlength="21">
+                </div>
+            </li>
+            <li class="formli" style="margin-bottom: 5px;"><span class="button_orange button_auto_50">
+                <a id="submitButton" href="javascript:">立即登录</a>
+            </span></li>
+            <li class="formli t_c clearfix"><a class="fleft" href="http://www.huimaiche.com/retrieve">忘记密码</a>
+                <div class="r_tit fright" style="margin: 0;">
+                    没有账号？ <a href="javascript:" id="noreg">
+                        立即注册</a></div>
+            </li>
+        </ul>
+    </div>
+    <div class="dl_foot">
+        <a href="/servicecontract" target="_blank" class="fright">车集市服务协议</a>
+    </div>
+    <div id="log_loginsuccess" style="display: none;">
+    </div>
+</div>
+</div></div>
+ <!--  end -->
+ <!-- 注册begin -->
+ <div class="jqmWindow jqmID1" id="regframe" style="top: 214px; margin-left: -264px; z-index: 3000;"><div class="fuc_box fuc_w520"><div class="fuc_close regClose"><a href="#">关闭</a></div><h2 class="fuc_tit lay_tit">注册</h2><div class="ps_cont lay_cont div_float_reg">
+    <div class="carinfor pt30">
+        <ul>
+            <li class="formli">
+                <div class="txtbox">
+                    <label>
+                        账&nbsp;&nbsp;&nbsp;&nbsp;号：</label>
+                    <input type="text" maxlength="11" class="txt" style="color: rgb(153, 153, 153);" id="user_name2">
+                </div>
+            </li>
+              <li class="formli">
+                <div class="txtbox">
+                    <label>
+                        密&nbsp;&nbsp;&nbsp;&nbsp;码：</label><input type="password" maxlength="16" class="txt" id="pwd2"></div>
+            </li>
+            <li class="formli">
+                <div class="txtbox">
+                    <label>
+                        手&nbsp;&nbsp;&nbsp;&nbsp;机：</label>
+                    <input type="text" maxlength="11" class="txt" style="color: rgb(153, 153, 153);" id="phone2">
+                </div>
+            </li>
+            <li class="formli">
+                <div class="txtbox">
+                    <label>
+                        姓&nbsp;&nbsp;&nbsp;&nbsp;名：</label><input maxlength="6" type="text" class="txt" id="nick_name2"></div>
+            </li>
+          
+            <li class="formli"><span class="button_orange button_auto_50"><a id="submitButtonReg" href="javascript:">立即注册</a></span> </li>
+        </ul>
+    </div>
+    <div class="r_tit">
+        已有账号？ <a href="javascript:" id="yeslogo">
+            直接登录</a></div>
+    <div class="dl_foot">
+        
+        <a href="/servicecontract" target="_blank" class="fright">车集市服务协议</a>
+    </div>
+    <div id="log_float_regsuccess" style="display: none;"></div>
+</div>
+</div></div>
+ <!-- end -->
+     <script type="text/javascript">
+	  	function init(){
+	  	     //关闭登陆
+	  		 $(".login-box").hide();
+			  //显示登录信息
+			  $("#hmctb_holderplace_user").show();
+			  //关闭登录界面
+			  $(".jqmOverlay").hide();
+	          $("#logframe").hide();
+	  	}
+	  	
+	  	
+    $(function () {	
+    	
+    	$("#hmctb_btnLogout").click(function(){
+   		 $.post("/user/logout",{},function(result){
+   			 if(result){
+   				 alert("注销成功！");
+   				window.location.reload();
+   			 }
+   		 });
+   		});
+    	
+    	$("#yeslogo").click(function(){
+    		$(".jqmOverlay").show();
+        	$("#logframe").show();
+        	$("#regframe").hide();
+    	});
+    	
+    	
+    	
+    	$("#noreg").click(function(){
+    		$(".jqmOverlay").show();
+        	$("#logframe").hide();
+        	$("#regframe").show();
+    	});
+    	
+    	$(".regClose").click(function(){
+    		$(".jqmOverlay").hide();
+        	$("#regframe").hide();
+        	
+    	});
+    	$("#hmctb_btnReg").click(function(){
+    		$(".jqmOverlay").show();
+        	$("#regframe").show();
+    	});
+    	
+    	$("#submitButton").click(function(){
+    		 var user_name =$("#user_name").val();
+    		 var pwd=$("#pwd").val();
+    		 $.post("/user/login",{user_name:user_name,pwd:pwd},function(result){
+    			  if(result!=false){
+    				  //关闭登陆
+    				  init(); 
+    				  window.location.reload();
+    			  }else{
+    				  alert("登陆失败");
+    			  }
+    		 });
+    	});
+    	
+    	$("#submitButtonReg").click(function(){
+    		var user_name =$("#user_name2").val();
+   		 var phone =$("#phone2").val();
+   		 var pwd=$("#pwd2").val();
+   		var nick_name=$("#nick_name2").val();
+   		 $.post("/user/reg",{user_name:user_name,phone:phone,pwd:pwd,nick_name:nick_name},function(result){
+   			  if(result){
+   				  //关闭登陆
+   				  init(); 
+   				 alert("注册成功！~");
+   				window.location.reload();
+   			  }else{
+   				  alert("注册失败！~");
+   			  }
+   		 });
+   	});
+    	
+    	$("#hmctb_btnLogin").click(function(){
+    		$(".jqmOverlay").show();
+        	$("#logframe").show();
+    	});
+    	$(".jqmClose").click(function(){
+    		$(".jqmOverlay").hide();
+        	$("#logframe").hide();
+        	
+    	});
+    	
+    	
+		$("#mobile-contact-1").mouseover(function(){
+		
+		});
+		$("#mobile-contact-2").mouseover(function(){
+			$("#mobile-contact-div-2").css("display","block");
+		});
+		$("#mobile-contact-3").mouseover(function(){
+			$("#mobile-contact-div-3").css("display","block");
+		});
+		$("#mobile-contact-4").mouseover(function(){
+			$("#mobile-contact-div-4").css("display","block");
+		});
+		$("#mobile-contact-5").mouseover(function(){
+		$("#mobile-contact-div-5").css("display","block");
+	});
+  
+        
+        
+        $(document).click(function (e) {
+            if ($(e.target).attr("id") !== "keyword") {
+                $("#searchbox").hide();
+            }
+        });
+        $("#keyword").focus(function () {
+            if ($(this).val() == $(this).data("tip")) {
+                $(this).val("").css({ color: "#333" });
+            }
+            $(this).parent().parent().addClass("search-box-focus");
+        }).blur(function () {
+            if ($(this).val() == "") {
+                $(this).val($(this).data("tip")).css({ color: "#999" });
+            }
+            $(this).parent().parent().removeClass("search-box-focus");
+        }).val($("#keyword").data("tip"));
+        
+    });
+   
+</script>
+    <!-- 头部 star-->
+
+<div class="header-wrapper-v2 header-wrapper-v2-990">
+    <div class="header-content">
+        <div class="header-col-left">
+            <a target="_blank" href="/" class="home"><i class="icons i-home"></i>首页</a>
+            <a target="_blank" href="#">买车指南</a> <a target="_blank" href="http://www.huimaiche.com/dealer/">
+                认证商家
+            </a> <a target="_blank" href="#">网站导航</a>
+            
+            <div class="header-drop-box">
+                关注车集市
+                <i class="i-triangle"></i>
+                <div class="header-drop-content">
+                    <i class="icons i-box-arrow"></i>
+                    
+                    <img src="./buy_files/top-weixin-qr.png" alt="车集市公众号">
+                    <span>关注获取优惠信息</span>
+                </div>
+            </div>
+          
+        </div>
+        
+<script type="text/javascript">
+$(function(){
+	$("#hmctb_btnLogout").click(function(){
+		 $.post("/user/logout",{},function(result){
+			 if(result){
+				 alert("注销成功！");
+				 location.href = "/user";
+			 }
+		 });
+	});
+});
+</script>
+        
+        <div class="header-col-right">
+     #if(session.user.nick_name??!=null)
+            <div class="personal-status" id="hmctb_holderplace_user">
+    <a target="_blank" href="/order" class="my-order-list">我的订单 
+        <span class="num">
+           #(session.num??)</span>
+        </a><em>|</em>
+    <div class="personal-info-box header-drop-box">
+        <span>#(session.user.nick_name??) <i class="i-triangle"></i></span>
+        <div class="header-drop-content">
+            <i class="icons i-box-arrow"></i>
+            <p>
+                <a target="_blank" class="header-drop-ca" href="/my">个人设置</a> 
+                <a id="hmctb_btnLogout" class="header-drop-ca" href="javascript:">退出</a>
+            </p>
+        </div>
+    </div>
+</div>
+#else
+<span class="login-box nologined">
+                <a href="javascript:" id="hmctb_btnLogin" class="login-btn">
+                    登录
+                </a><em>/</em> <a href="javascript:" id="hmctb_btnReg" data-hmclog="{pageid:19, eventid: 1}" class="register-btn">注册</a>
+            </span>
+            
+        #end    
+            
+        </div>
+    </div>
+</div>
+<div class="header-nav-wrapper header-nav-wrapper-990">
+    <div class="header-nav-content">
+        <h1 title="车集市" class="logo overimg">
+            <a href="http://www.szcarshop.com/">
+                <span>车集市</span>
+            </a>
+             <i class="light"></i>   
+        </h1>
+        <a id="hmctb_holderplace_city"></a>
+		 <ul class="nav-list"> 
+		      <li><a target="_blank" class="common-link"  href="/team">团购</a></li> 
+		      <li><a target="_blank" class="common-link"  href="/insure">保险</a></li> 
+		      <li><a target="_blank" class="common-link"  href="/shop">车载用品</a></li> 
+		      <li><a target="_blank" class="common-link"  href="/blog">车主分享</a></li> 
+		      <li><a target="_blank" class="common-link"  href="/">晒合同</a></li> 
+    	 </ul> 
+    </div>
+</div>
+<!-- 头部 end-->

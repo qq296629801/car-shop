@@ -1,0 +1,250 @@
+#@layout("分页")
+<body style="padding-bottom: 0px;">
+    <script type="text/javascript" src="./category_files/waptopfoot_loader.js.下载"></script>
+<script type="text/javascript">
+    setCookie("loc", encodeURIComponent("501|广州"), 30 * 24 * 60 * 60);
+    var backurl='/search';
+    if (typeof (backurl) === "undefined" && backurl === "") {
+        backurl="";
+    }
+    var re = getQueryString("re") || "";
+    if (re != "") {
+        backurl = decodeURIComponent(re);
+    }
+    if(backurl.indexOf("?")>-1){
+        backurl=backurl+"&v=20170504210223"
+    }else{
+        backurl=backurl+"?v=20170504210223"
+    }
+    $.waptopfoot_loader.init({
+        loadComplete: function () {
+            $.waptopfoot.init({
+                backurl: backurl,
+                title: "选车结果",
+                cityID: 501,
+                cityName: "广州",
+                loadComplete:function(){
+                    $("i.h-menu").attr("data-hmclog","{pageid: 45, eventid: 637}");
+                    $.getScript("//img.huimaiche.cn/uimg/m/v20170317/js/search/libs/note.js");
+                    var $div_content=$("div[data-role='content']");
+                    if($div_content.length>0){
+                        $div_content.before($("#top"));
+                    }
+                }
+            });
+        }
+    });
+    //获取url参数值
+    function getQueryString(name) {
+        var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)");
+        var r = window.location.search.substr(1).match(reg);
+        if (r != null) return unescape(r[2]); return null;
+    }
+</script>
+
+    
+<link rel="stylesheet" href="./category_files/selectcar-v2.css">
+
+<style type="text/css">
+    .n-block {
+        padding: 50px 0;
+        text-align: center;
+    }
+    .n-block .i-search {
+        display: inline-block;
+        width: 51px;
+        height: 51px;
+        margin-right: 16px;
+        background: url("//img.huimaiche.cn/uimg/m/v20160415/images/selectcar-v2/i-search.png") no-repeat;
+        background-size: 51px 51px;
+    }
+    .n-block .txt {
+        display: inline-block;
+        text-align: left;
+        font-size: 1.5rem;
+        line-height: 24px;
+        color: #8f9bb2;
+        vertical-align: top;
+    }
+</style>
+<div id="top" class="header" data-position="fixed" style="">
+    
+    
+    <a id="top-back" href="javascript:" class="turnback"><i class="i-back"></i>返回</a>
+    <h1 id="top-title">选车结果</h1>
+    <div id="top-menu" class="h-menu-wrap">
+        <i class="h-menu" id="h-menu" data-hmclog="{pageid: 45, eventid: 637}"></i>
+        <div class="hm-wrap">
+            <ul class="ms-list">
+                <li id="top-menu-index"><a href="http://m.huimaiche.com/">首页</a></li>
+                <li id="top-menu-search"><a href="http://m.huimaiche.com/search/">选车</a></li>
+                <li id="top-menu-px" style="display:none;"><a href="http://m.huimaiche.com/jinkou">平行进口</a></li>
+                <li id="top-menu-dg"><a href="http://news.m.huimaiche.com/">导购频道</a></li>
+                <li id="top-menu-order"><a href="http://i.m.huimaiche.com/order/list.aspx">我的订单</a></li>
+                <li id="top-menu-app"><a href="http://m.huimaiche.com/app/?apkname=wapdb&amp;tracker_u=669_wapdb">手机APP</a></li>
+            </ul>
+            <i class="triangle-up"></i>
+        </div>
+    </div>
+</div><div data-role="content" class="scar-wrap">
+    <!--商品列表-->
+    <div class="brand-list-block">
+        <ul class="l1" id="ul_hotBrands">
+                <li>
+                    <a href="http://m.huimaiche.com/search/carlist?scode=62" ondblclick="return false;" data-hmclog="{pageid: 45, eventid: 593}" data-mbid="8" data-mbname="大众" data-mblogo="//image.bitautoimg.com/bt/car/default/images/logo/masterbrand/png/55/m_8_55.png" class="brand-item" data-action="brand">
+                        <img src="./category_files/m_8_55.png">
+                    </a>
+                </li>
+                <li>
+                    <a href="http://m.huimaiche.com/search/carlist?scode=76" ondblclick="return false;" data-hmclog="{pageid: 45, eventid: 593}" data-mbid="26" data-mbname="本田" data-mblogo="//image.bitautoimg.com/bt/car/default/images/logo/masterbrand/png/55/m_26_55.png" class="brand-item" data-action="brand">
+                        <img src="./category_files/m_26_55.png">
+                    </a>
+                </li>
+                <li>
+                    <a href="http://m.huimaiche.com/search/carlist?scode=61" ondblclick="return false;" data-hmclog="{pageid: 45, eventid: 593}" data-mbid="7" data-mbname="丰田" data-mblogo="//image.bitautoimg.com/bt/car/default/images/logo/masterbrand/png/55/m_7_55.png" class="brand-item" data-action="brand">
+                        <img src="./category_files/m_7_55.png">
+                    </a>
+                </li>
+                <li class="active"><a href="javascript:window.location.href=&#39;/search/carlist?scode=57&#39;" ondblclick="return false;" data-hmclog="{pageid: 45, eventid: 598}" data-scode="57" data-mbid="{masterBrandID}" data-mbname="" data-mblogo="//image.bitautoimg.com/bt/car/default/images/logo/masterbrand/png/55/m_3_55.png" class="brand-item" data-action="brand"><img src="./category_files/m_3_55.png"><p class="p-name"></p></a></li>
+            <li class="li-more" id="more-brand" data-action="car"><a href="javascript:;" data-hmclog="{pageid: 45, eventid: 594}">更多品牌 &gt;</a></li>
+        </ul>
+    </div>
+    <div class="zm-scblock">
+        <div class="d-content no-result" style="display:none;">
+            <div class="n-block">
+                <i class="i-search"></i>
+                <p class="txt">非常抱歉，没有查询到符合条件的车型哦！</p>
+            </div>
+            <p class="h2 no-bb"></p>
+            <ul class="r-search clearfix"></ul>
+        </div>
+    </div>
+    <div class="c-list-block">
+        <ul class="nav-tab" id="ul_sort">
+            <li class="cur"><a href="javascript:;" data-hmclog="{pageid: 45, eventid: 595}">按关注度</a></li>
+            <li><a href="javascript:;" data-hmclog="{pageid: 45, eventid: 596}">按价格<i class="icon-1"></i></a></li>
+        </ul>
+        <ul class="list-2" id="ul_cars"><li><a href="http://m.huimaiche.com/baoma3xi/?page=search_brdsku&amp;re=http%253A//m.huimaiche.com/search/carlist%253Fscode%253D57%2526ccode%253D501" data-hmclog="{pageid: 45, eventid: 597}"><div class="img-wrap"><img src="./category_files/0538094828_6.jpg" alt=""></div><div class="txt-wrap"><p class="p1">宝马3系</p><p class="p2">多商家实时为您报底价</p><p class="p3">指导价28.8-48.69万</p><p class="pi"></p></div></a></li><li><a href="http://m.huimaiche.com/baoma5xichangzhoujuban/?page=search_brdsku&amp;re=http%253A//m.huimaiche.com/search/carlist%253Fscode%253D57%2526ccode%253D501" data-hmclog="{pageid: 45, eventid: 597}"><div class="img-wrap"><img src="./category_files/0541453872_6.jpg" alt=""></div><div class="txt-wrap"><p class="p1">宝马5系</p><p class="p2">多商家实时为您报底价</p><p class="p3">指导价43.56-77.86万</p><p class="pi"></p></div></a></li><li><a href="http://m.huimaiche.com/huachenbaomax1/?page=search_brdsku&amp;re=http%253A//m.huimaiche.com/search/carlist%253Fscode%253D57%2526ccode%253D501" data-hmclog="{pageid: 45, eventid: 597}"><div class="img-wrap"><img src="./category_files/0813211654_6.jpg" alt=""></div><div class="txt-wrap"><p class="p1">宝马X1</p><p class="p2">多商家实时为您报底价</p><p class="p3">指导价28.6-43.9万</p><p class="pi"></p></div></a></li><li><a href="http://m.huimaiche.com/baomax5/?page=search_brdsku&amp;re=http%253A//m.huimaiche.com/search/carlist%253Fscode%253D57%2526ccode%253D501" data-hmclog="{pageid: 45, eventid: 597}"><div class="img-wrap"><img src="./category_files/0433155751_6.jpg" alt=""></div><div class="txt-wrap"><p class="p1">宝马X5</p><p class="p2">多商家实时为您报底价</p><p class="p3">指导价69-107.8万</p><p class="pi"></p></div></a></li><li><a href="http://m.huimaiche.com/baomax3/?page=search_brdsku&amp;re=http%253A//m.huimaiche.com/search/carlist%253Fscode%253D57%2526ccode%253D501" data-hmclog="{pageid: 45, eventid: 597}"><div class="img-wrap"><img src="./category_files/0607560935_6.jpg" alt=""></div><div class="txt-wrap"><p class="p1">宝马X3</p><p class="p2">多商家实时为您报底价</p><p class="p3">指导价42.1-75万</p><p class="pi"></p></div></a></li><li><a href="http://m.huimaiche.com/baoma7xi/?page=search_brdsku&amp;re=http%253A//m.huimaiche.com/search/carlist%253Fscode%253D57%2526ccode%253D501" data-hmclog="{pageid: 45, eventid: 597}"><div class="img-wrap"><img src="./category_files/1049335235_6.jpg" alt=""></div><div class="txt-wrap"><p class="p1">宝马7系</p><p class="p2">多商家实时为您报底价</p><p class="p3">指导价89.8-265.8万</p><p class="pi"></p></div></a></li><li><a href="http://m.huimaiche.com/2xilvxingche/?page=search_brdsku&amp;re=http%253A//m.huimaiche.com/search/carlist%253Fscode%253D57%2526ccode%253D501" data-hmclog="{pageid: 45, eventid: 597}"><div class="img-wrap"><img src="./category_files/0815429228_6.jpg" alt=""></div><div class="txt-wrap"><p class="p1">宝马2系旅行车</p><p class="p2">多商家实时为您报底价</p><p class="p3">指导价23.69-33.19万</p><p class="pi"></p></div></a></li><li><a href="http://m.huimaiche.com/baoma1xi-4853/?page=search_brdsku&amp;re=http%253A//m.huimaiche.com/search/carlist%253Fscode%253D57%2526ccode%253D501" data-hmclog="{pageid: 45, eventid: 597}"><div class="img-wrap"><img src="./category_files/1105418328_6.jpg" alt=""></div><div class="txt-wrap"><p class="p1">宝马1系</p><p class="p2">多商家实时为您报底价</p><p class="p3">指导价20.48-31.98万</p><p class="pi"></p></div></a></li><li><a href="http://m.huimaiche.com/baoma5xigt/?page=search_brdsku&amp;re=http%253A//m.huimaiche.com/search/carlist%253Fscode%253D57%2526ccode%253D501" data-hmclog="{pageid: 45, eventid: 597}"><div class="img-wrap"><img src="./category_files/0438575901_6.jpg" alt=""></div><div class="txt-wrap"><p class="p1">宝马5系GT</p><p class="p2">多商家实时为您报底价</p><p class="p3">指导价68.8-168.8万</p><p class="pi"></p></div></a></li><li><a href="http://m.huimaiche.com/3xigt/?page=search_brdsku&amp;re=http%253A//m.huimaiche.com/search/carlist%253Fscode%253D57%2526ccode%253D501" data-hmclog="{pageid: 45, eventid: 597}"><div class="img-wrap"><img src="./category_files/0544471275_6.jpg" alt=""></div><div class="txt-wrap"><p class="p1">宝马3系GT</p><p class="p2">多商家实时为您报底价</p><p class="p3">指导价39.8-69.8万</p><p class="pi"></p></div></a></li></ul>
+        <div class="leftPopup" id="div_listload" style="display: none;">
+            <div class="loading">
+                <img src="./category_files/loading.gif"><p>正在加载...</p>
+            </div>
+        </div>
+        <p class="loading-tips" style="">滚动加载更多</p>
+        <p class="loading-tips" style="display: none;">已全部加载完毕</p>
+    </div>
+</div>
+<!--侧滑浮层-->
+<div class="over-delay leftmask leftmask3">
+    <a href="javascript:;" class="i-ch"></a>
+</div>
+<aside class="nav-menu-aside leftPopup car" data-back="leftmask3" style="display: none;">
+    <aside class="letter-menu fixed-nav" id="letter-menu" style="z-index: 999999; height: 739.2px; top: 92.4px; display: none;">
+        <ul class="rows-box" id="ul_index" style="height: 30px;">
+            <li style="height: 369.6px;"><a href="javascript:;" data-target="ff">#</a></li>
+            <li style="height: 369.6px;"><a href="javascript:;" data-target="ff">热</a></li>
+        </ul>
+    </aside>
+    <div class="swipeLeft" id="div_brands"></div>
+</aside>
+<div class="gotop" style="display: none;"></div>
+<div id="appdownload-area" class="app_mask fixed_b" data-area-id="3"></div>
+<script type="text/javascript" src="./category_files/iscroll-v2.js.下载"></script>
+<script type="text/javascript" src="./category_files/zmplugin.model.js.下载"></script>
+<script type="text/javascript" src="./category_files/searchlist.js.下载"></script>
+<script type="text/javascript">
+    $(function(){
+        //goto
+        $(window).on('load scroll', function () {
+            $(window).scrollTop() > 300 ? $(".gotop").show() : $(".gotop").hide();
+        });
+        $(".gotop").on("click", function () {
+            $("html, body").animate({scrollTop: 0}, 300);
+        });
+        $.search.init({
+            carListUrl:'/search/carlist',
+            postCarsUrl:'Home/GetCars',
+            postBrandsUrl:"Home/GetBrands",
+            ctbSKUUrl:'//item.m.huimaiche.com',
+            mallSKUUrl:'//item.m.huimaiche.com/mall/zx',
+            scode:'57',
+            ccode:501,
+            citypinyin:"guangzhou",
+            currentUrl:escape(escape(window.location.href))
+        });
+    });
+</script>
+
+
+
+    <div id="vmask" style="display:none" class="mask">
+    <div class="get-voucher">
+        <div class="get-voucher-cot"></div>
+        <h2 id="moneyH2"></h2>
+        <div class="get-voucher-intro">
+            油卡已经放入我的礼品<br>在<strong id="endDate"></strong>前完成购车即可领取
+        </div>
+        <a href="javascript:void(0);" id="btnSureButton" class="main-btn">确定</a>
+    </div>
+</div>
+<script type="text/javascript" src="./category_files/hmcstat"></script>
+<!--方晓春统计代码-->
+<script type="text/javascript" src="./category_files/saved_resource(1)"></script><img src="./category_files/x.gif" alt="" name="DCIMG" style="display:none"><img alt="" border="0" name="DCIMG" width="1" height="1" style="display:none;" src="./category_files/x(1).gif">
+<script type="text/javascript" src="./category_files/dcs_tag_huimc.js.下载"></script>
+<script type="text/javascript" src="http://hm.baidu.com/h.js?3F01234567890ABCDEF01234567890ABCDEF"></script>
+
+<script type="text/javascript">
+    (function () {
+        var hm = document.createElement("script");
+        hm.src = "//hm.baidu.com/hm.js?34b070f600a54baeebad2039a605f793";
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(hm, s);
+    })();
+</script>
+
+<script type="text/javascript">
+    (function () {
+        var hm = document.createElement("script");
+        hm.src = "//hm.baidu.com/hm.js?ac157e5dcb15848680a2a42733170e82";
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(hm, s);
+    })();
+</script>
+
+<script type="text/javascript">
+    $(function () {
+        $(document).on("click", "[data-hmclog]", function () {
+            if (typeof HMC_LOG !== "undefined" && typeof HMC_LOG.SentClickStat === "function") {
+                try {
+                    HMC_LOG.SentClickStat(this);
+                } catch (e) { }
+            }
+        });
+
+    });
+</script>
+<script>
+    (function () {
+        var bp = document.createElement('script');
+        var curProtocol = window.location.protocol.split(':')[0];
+        if (curProtocol === 'https') {
+            bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+        }
+        else {
+            bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+        }
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(bp, s);
+    })();
+</script>
+
+
+    <script type="text/javascript">
+        function app_state_callback() {
+            $('#app_state_div').hide();
+        }
+    </script>
+    <script src="./category_files/appdownload.js.下载"></script>
+
+
+</body></html>

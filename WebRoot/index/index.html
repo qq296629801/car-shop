@@ -1,0 +1,1209 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "//www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="//www.w3.org/1999/xhtml">
+ <head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /> 
+  <meta name="renderer" content="webkit" /> 
+  <!--360 浏览器--> 
+  <title>
+    	  首页 - 车集市
+  </title> 
+  <meta content="#" name="keywords" /> 
+  <meta content="#" name="description" /> 
+  <link rel="stylesheet" type="text/css" href="/css/common.css" media="screen" />
+  <link rel="shortcut icon" type="image/x-icon" href="/images/favicon.ico" /> 
+  <link rel="icon" type="image/x-icon" href="/images/favicon.ico" /> 
+  <link href="/css/jqmodal.css" rel="stylesheet" type="text/css" /> 
+  <meta name="mobile-agent" content="format=html5; url=/" /> 
+   <link rel="stylesheet" type="text/css" href="/css/index_style20170309.css" /> 
+  <link rel="stylesheet" type="text/css" href="/css/index-v2.css" /> 
+  <link rel="stylesheet" type="text/css" href="/css/jd.css" /> 
+  <link rel="stylesheet" type="text/css" href="/css/auto.css" /> 
+   
+  <link href="/css/commontopfoot.css" rel="stylesheet" type="text/css" /> 
+  <script src="/js/jquery-2.1.1.js"></script>
+ </head> 
+ <body> 
+ <!--  begin login div -->
+ <div class="jqmOverlay" style="height: 100%; width: 100%;display: none;  position: fixed; left: 0px; top: 0px; z-index: 2999; opacity: 0.5;"></div>
+ <div class="jqmWindow jqmID1" id="logframe" style="display: none; top: 292px; margin-left: -264px; z-index: 3000;"><div class="fuc_box fuc_w520"><div class="fuc_close jqmClose"><a href="javascript:">X</a></div><h2 class="fuc_tit lay_tit">登录</h2><div class="ps_cont lay_cont div_float_login">
+    <div class="carinfor" style="padding-top: 30px;">
+        <ul>
+            <li class="formli">
+                <div class="txtbox">
+                    <label>
+                        账&nbsp;&nbsp;&nbsp;&nbsp;号：</label>
+                    <input type="text" data-tip="请输入手机号、用户名或者Email" maxlength="60" style="color: rgb(153, 153, 153);" class="txt" id="user_name">
+                </div>
+            </li>
+            <li class="formli">
+                <div class="txtbox">
+                    <label>
+                        密&nbsp;&nbsp;&nbsp;&nbsp;码：</label>
+                    <input type="password" class="txt" id="pwd" maxlength="21">
+                </div>
+            </li>
+            <li class="formli" style="margin-bottom: 5px;"><span class="button_orange button_auto_50">
+                <a id="submitButton" href="javascript:">立即登录</a>
+            </span></li>
+            <li class="formli t_c clearfix"><a class="fleft" href="/retrieve">忘记密码</a>
+                <div class="r_tit fright" style="margin: 0;">
+                    没有账号？ <a href="javascript:" id="noreg">
+                        立即注册</a></div>
+            </li>
+        </ul>
+    </div>
+    <div class="dl_foot">
+        <a href="/servicecontract" target="_blank" class="fright">车集市服务协议</a>
+    </div>
+    <div id="log_loginsuccess" style="display: none;">
+    </div>
+</div>
+</div></div>
+ <!--  end -->
+ <!-- 注册begin -->
+ <div class="jqmWindow jqmID1" id="regframe" style="top: 214px; margin-left: -264px; z-index: 3000;"><div class="fuc_box fuc_w520"><div class="fuc_close regClose"><a href="#"></a></div><h2 class="fuc_tit lay_tit">注册</h2><div class="ps_cont lay_cont div_float_reg">
+    <div class="carinfor pt30">
+        <ul>
+            <li class="formli">
+                <div class="txtbox">
+                    <label>
+                        账&nbsp;&nbsp;&nbsp;&nbsp;号：</label>
+                    <input type="text" maxlength="11" class="txt" style="color: rgb(153, 153, 153);" id="user_name2">
+                </div>
+            </li>
+              <li class="formli">
+                <div class="txtbox">
+                    <label>
+                        密&nbsp;&nbsp;&nbsp;&nbsp;码：</label><input type="password" maxlength="16" class="txt" id="pwd2"></div>
+            </li>
+            <li class="formli">
+                <div class="txtbox">
+                    <label>
+                        手&nbsp;&nbsp;&nbsp;&nbsp;机：</label>
+                    <input type="text" maxlength="11" class="txt" style="color: rgb(153, 153, 153);" id="phone2">
+                </div>
+            </li>
+            <li class="formli">
+                <div class="txtbox">
+                    <label>
+                        姓&nbsp;&nbsp;&nbsp;&nbsp;名：</label><input maxlength="6" type="text" class="txt" id="nick_name2"></div>
+            </li>
+            <li class="formli"><span class="button_orange button_auto_50"><a id="submitButtonReg" href="javascript:">立即注册</a></span> </li>
+        </ul>
+    </div>
+    <div class="r_tit">
+        已有账号？ <a href="javascript:" id="yeslogo">
+            直接登录</a></div>
+    <div class="dl_foot">
+        <a href="http://www.huimaiche.com/servicecontract" target="_blank" class="fright">车集市服务协议</a>
+    </div>
+    <div id="log_float_regsuccess" style="display: none;"></div>
+</div>
+</div></div>
+ <!-- end -->
+  <div class="index-v2 section3"> 
+   <!-- 头部 star--> 
+   <div class="header-wrapper-v2"> 
+    <div class="header-content"> 
+     <div class="header-col-left"> 
+      <a target="_blank" href="/" class="home"><i class="icons i-home"> </i>首页</a> 
+      <a target="_blank" href="/issue">买车指南</a> 
+      <a target="_blank" href="/dealer">认证商家 </a>
+      <a target="_blank" href="/map">网站导航</a> 
+ 
+      <div class="header-drop-box header-color-black">
+        关注车集市 
+       <i class="i-triangle"></i> 
+       <div class="header-drop-content"> 
+        <i class="icons i-box-arrow"></i> 
+        <img src="/images/top-weixin-qr.png" alt="惠买车公众号" /> 
+        <span>关注获取优惠信息</span> 
+       </div> 
+      </div> 
+
+     </div> 
+     <script type="text/javascript">
+	  	function init(){
+	  	     //关闭登陆
+	  		 $(".login-box").hide();
+			  //显示登录信息
+			  $("#hmctb_holderplace_user").show();
+			  //关闭登录界面
+			  $(".jqmOverlay").hide();
+	          $("#logframe").hide();
+	  	}
+    $(function () {	
+    	$("#hmctb_btnLogout").click(function(){
+   		 $.post("/user/logout",{},function(result){
+   			 if(result){
+   				 alert("注销成功！");
+   				window.location.reload();
+   			 }
+   		 });
+   		});
+    	$("#yeslogo").click(function(){
+    		$(".jqmOverlay").show();
+        	$("#logframe").show();
+        	$("#regframe").hide();
+    	});
+    	$("#noreg").click(function(){
+    		$(".jqmOverlay").show();
+        	$("#logframe").hide();
+        	$("#regframe").show();
+    	});
+    	$(".regClose").click(function(){
+    		$(".jqmOverlay").hide();
+        	$("#regframe").hide();
+        	
+    	});
+    	$("#hmctb_btnReg").click(function(){
+    		$(".jqmOverlay").show();
+        	$("#regframe").show();
+    	});
+    	$("#submitButton").click(function(){
+    		 var user_name =$("#user_name").val();
+    		 var pwd=$("#pwd").val();
+    		 $.post("/user/login",{user_name:user_name,pwd:pwd},function(result){
+    			  if(result!=false){
+    				  //关闭登陆
+    				  init(); 
+    				  window.location.reload();
+    			  }
+    		 });
+    	});
+    	$("#submitButtonReg").click(function(){
+    		var user_name =$("#user_name2").val();
+   		 var phone =$("#phone2").val();
+   		 var pwd=$("#pwd2").val();
+   		var nick_name=$("#nick_name2").val();
+   		 $.post("/user/reg",{user_name:user_name,phone:phone,pwd:pwd,nick_name:nick_name},function(result){
+   			  if(result){
+   				  //关闭登陆
+   				  init(); 
+   				 alert("注册成功！~");
+   				window.location.reload();
+   			  }else{
+   				  alert("注册失败！~");
+   			  }
+   		 });
+   	});
+    	$("#hmctb_btnLogin").click(function(){
+    		$(".jqmOverlay").show();
+        	$("#logframe").show();
+    	});
+    	$(".jqmClose").click(function(){
+    		$(".jqmOverlay").hide();
+        	$("#logframe").hide();
+        	
+    	});
+		$("#mobile-contact-1").mouseover(function(){
+		
+		});
+		$("#mobile-contact-2").mouseover(function(){
+			$("#mobile-contact-div-2").css("display","block");
+		});
+		$("#mobile-contact-3").mouseover(function(){
+			$("#mobile-contact-div-3").css("display","block");
+		});
+		$("#mobile-contact-4").mouseover(function(){
+			$("#mobile-contact-div-4").css("display","block");
+		});
+		$("#mobile-contact-5").mouseover(function(){
+		$("#mobile-contact-div-5").css("display","block");
+	});
+  
+        
+        
+        $(document).click(function (e) {
+            if ($(e.target).attr("id") !== "keyword") {
+                $("#searchbox").hide();
+            }
+        });
+        $("#keyword").focus(function () {
+            if ($(this).val() == $(this).data("tip")) {
+                $(this).val("").css({ color: "#333" });
+            }
+            $(this).parent().parent().addClass("search-box-focus");
+        }).blur(function () {
+            if ($(this).val() == "") {
+                $(this).val($(this).data("tip")).css({ color: "#999" });
+            }
+            $(this).parent().parent().removeClass("search-box-focus");
+        }).val($("#keyword").data("tip"));
+        
+    });
+   
+</script>
+     
+     <div class="header-col-right"> 
+     	#if(session.user.nick_name??!=null)
+     	    <!-- beign 登录以后 -->
+     	    <div class="personal-status" id="hmctb_holderplace_user">
+			    <a target="_blank" href="/order" class="my-order-list">我的订单
+			        <span class="num">
+			            #(session.num??)</span>
+			        </a><em>|</em>
+			    <div class="personal-info-box header-drop-box">
+			        <span>#(session.user.nick_name??)<i class="i-triangle"></i></span>
+			        <div class="header-drop-content">
+			            <i class="icons i-box-arrow"></i>
+			            <p>
+			                <a target="_blank" class="header-drop-ca" href="/my">个人设置</a> 
+			                <a id="hmctb_btnLogout" class="header-drop-ca" href="javascript:">退出</a>
+			            </p>
+			        </div>
+			    </div>
+			</div>
+     	    <!--  end -->
+     	  #else  
+       <!-- beign 未登录 -->
+      <span class="login-box nologined"> <a href="javascript:" id="hmctb_btnLogin" class="login-btn"> 登录 </a><em>/</em> <a href="javascript:" id="hmctb_btnReg" class="register-btn">注册</a> </span> 
+       <!--  end -->
+       #end
+     </div> 
+    </div> 
+   </div> 
+   
+   <div class="index-search-box-wrapper"> 
+    <h1 title="车集市" class="logo overimg">
+            <a href="http://www.szcarshop.com/">
+                <span>车集市</span>
+            </a>
+             <i class="light"></i>   
+        </h1>
+    <a data-code="501" id="hmctb_btnCity" href="http://guangzhou.#/city" target="_blank" class="header_location"> 广州</a> 
+    <div class="searchouter"> 
+     <div class="search search01 searchpop"> 
+      <div class="search-box-a" id="search-box"> 
+       <input class="search-text" autocomplete="off" data-placeholder="请输入关键字" type="text" value="请输入关键字" id="searchText" /> 
+       <i class="icon icon-search2" style="background-position: -60px -220px;"></i> 
+      </div> 
+      <a class="btn" href="javascript:void(0);" id="btnSearch">搜 索</a> 
+      <div class="search-pop" id="searchPop" style="display: none;"> 
+      </div> 
+     </div> 
+    </div> 
+    <div data-navadcode="34"> 
+    </div> 
+    <div class="choose-site lay_cont" style="display:none;"> 
+     <div class="site-list">
+      <dl>
+       <dt>
+        华北：
+       </dt>
+       <dd>
+        <a href="http://beijing.#/">北京</a>
+        <a href="http://tianjin.#/">天津</a>
+        <a href="http://shijiazhuang.#/">石家庄</a>
+        <a href="http://taiyuan.#/">太原</a>
+       </dd>
+      </dl>
+      <dl>
+       <dt>
+        华南：
+       </dt>
+       <dd>
+        <a href="http://guangzhou.#/">广州</a>
+        <a href="http://shenzhen.#/">深圳</a>
+        <a href="http://dongguan.#/">东莞</a>
+       </dd>
+      </dl>
+      <dl>
+       <dt>
+        华东：
+       </dt>
+       <dd>
+        <a href="http://shanghai.#/">上海</a>
+        <a href="http://hangzhou.#/">杭州</a>
+        <a href="http://jinan.#/">济南</a>
+        <a href="http://suzhou.#/">苏州</a>
+        <a href="http://quanzhou.#/">泉州</a>
+        <a href="http://hefei.#/">合肥</a>
+        <a href="http://fuzhou.#/">福州</a>
+        <a href="http://qingdao.#/">青岛</a>
+        <a href="http://nanjing.#/">南京</a>
+        <a href="http://weifang.#/">潍坊</a>
+        <a href="http://ningbo.#/">宁波</a>
+        <a href="http://wenzhou.#/">温州</a>
+       </dd>
+      </dl>
+      <dl>
+       <dt>
+        华中：
+       </dt>
+       <dd>
+        <a href="http://wuhan.#/">武汉</a>
+        <a href="http://changsha.#/">长沙</a>
+        <a href="http://zhengzhou.#/">郑州</a>
+       </dd>
+      </dl>
+      <dl>
+       <dt>
+        东北：
+       </dt>
+       <dd>
+        <a href="http://haerbin.#/">哈尔滨</a>
+        <a href="http://shenyang.#/">沈阳</a>
+        <a href="http://dalian.#/">大连</a>
+        <a href="http://changchun.#/">长春</a>
+       </dd>
+      </dl>
+      <dl>
+       <dt>
+        西南：
+       </dt>
+       <dd>
+        <a href="http://chengdu.#/">成都</a>
+        <a href="http://chongqing.#/">重庆</a>
+        <a href="http://kunming.#/">昆明</a>
+        <a href="http://nanning.#/">南宁</a>
+       </dd>
+      </dl>
+      <dl>
+       <dt>
+        西北：
+       </dt>
+       <dd>
+        <a href="http://xian.#/">西安</a>
+        <a href="http://lanzhou.#/">兰州</a>
+       </dd>
+      </dl>
+     </div>
+     <div class="more-site">
+      <a href="http://#/cityinteractive">更多城市&gt;</a>
+     </div>
+    </div> 
+   </div> 
+  
+   <div class="header-nav-wrapper-index"> 
+    <div class="header-nav-content"> 
+     <div class="cars-type-wrapper" id="hmc_top_cardropbox"> 
+      <span class="nav-drop-btn">全部车型<i></i></span> 
+      <div class="nav-drop-content" id="hmc_top_leftnavagation" style=""> 
+       <dl class="brands-list"> 
+        <dt>
+         品牌
+        </dt> 
+        <dd> 
+        #for(c:brandList)
+        	#if(c.url==null)
+       	 	 <a href="/list?brand_id=#(c.id)"> #(c.name)</a> 
+        	 #end
+         #end
+        
+        </dd> 
+       </dl> 
+       <dl class="price-list"> 
+        <dt>
+         价格
+        </dt> 
+        <dd> 
+        #for(p:priceList)
+	        #if(p.id==3)
+	        <a href="/list?price_id=#(p.id)" target="_blank">#(p.name)<i class="icons i-hot"></i></a> 
+	        #else
+	         <a href="/list?price_id=#(p.id)" target="_blank">#(p.name)</a> 
+	        #end
+         #end
+        </dd> 
+       </dl> 
+       <dl class="cars-type-list"> 
+        <dt>
+         车型
+        </dt> 
+        <dd> 
+        #for(l:leList)
+      	  #if(l.id==10)
+          <a href="/list?level_id=#(l.id)" target="_blank">#(l.name)<i class="icons i-hot"></i></a> 
+		  	#else
+		  	  <a href="/list?level_id=#(l.id)" target="_blank">#(l.name)</a> 
+		  	#end
+         #end
+        </dd> 
+       </dl> 
+       <div class="brands-list-details" style="display: none;"> 
+        <ul class="brands-list-details-list"> 
+        #for(i:[1..3])
+         <li> 
+	         #for(l:letterList)
+	         	#if(l.num==i)
+		          <dl class="sub-list clearfix"> 
+		           <dt>
+		           			#(l.letter)
+		           </dt> 
+		           <dd> 
+		           		#for(b:brandList)
+			           		#if(b.num==i && b.letter==l.letter)
+				            	<a href="/list?brand_id=#(b.id)"> #(b.name)</a> 
+				            #end
+			            #end
+		           </dd> 
+		          </dl> 
+		          #end
+	          #end
+          </li> 
+         #end
+        </ul> 
+        <div data-navadcode="35"></div> 
+       </div> 
+      </div> 
+     </div> 
+     <ul class="nav-list"> 
+      <li><a target="_blank" href="/team">团购</a></li> 
+      <li><a target="_blank" href="/">合同</a></li> 
+      <li><a target="_blank" href="/shop">商城</a></li> 
+     </ul> 
+    </div> 
+    <script type="text/javascript">
+    var i=1;
+    function test(){
+    	$("#scrollItem1").css("display","none");
+    	$("#scrollItem2").css("display","none");
+    	$("#scrollItem3").css("display","none");
+    	$("#scrollItem"+i).css("display","block");
+    	if(i<3){
+    		i++;
+    	}else{
+    		i=1;
+    	}
+    	setTimeout(test,3000);
+    }
+        $(function () {
+        	test();
+            var timerBot = setInterval(function () {
+                if (typeof (hmc_topfoot) !== 'undefined') {
+                    if (hmc_topfoot.busType) {
+                        $('.nav-list li').removeClass('current');
+                        $('.nav-list li[data-busType=' + hmc_topfoot.busType + ']').addClass('current');
+                    }
+                    clearInterval(timerBot);
+                }
+            }, 200);
+            (function () {
+                var tabContent = $('.brands-list,.brands-list-details');
+                tabContent.on('mouseenter', function () {
+                    $('.brands-list').addClass('current');
+                    $('.brands-list-details').show();
+                });
+                tabContent.on('mouseleave', function () {
+                    $('.brands-list').removeClass('current');
+                    $('.brands-list-details').hide();
+                });
+            })();
+
+            $('.nav-drop-btn').hover(function () {
+                var i = $(this).find('i');
+                i.addClass('up');
+            }, function () {
+                var i = $(this).find('i');
+                i.removeClass('up');
+            });
+           
+        });
+       
+		
+       
+    </script> 
+   </div> 
+   <!-- 头部 end--> 
+   <!--scroll  images start--> 
+   <div class="scroll-images-box" id="scrollBox"> 
+    <div class="scroll-images-box-content" style="margin-left: auto;margin-right: auto;position: relative; width: 1330px; height: 400px;"> 
+     <div class="scroll-images-item" id="scrollItem1" style="position:absolute;width: 1330px;left: 367px;top: -1px;display: none;">
+      <a href="https://dsapi.#/huimaicheadapi/ad/skip.aspx?adId=905&amp;typeid=0&amp;cityid=501&amp;url=http%3a%2f%2fhd.#%2fhd%2f201705" target="_blank"><img src="./images/8e436ebf-1c86-4a5f-965b-eae95c122b72.jpg" width="890" height="400" /></a>
+     </div>
+     <div class="scroll-images-item" id="scrollItem2" style="position:absolute;width: 1330px;left: 367px;top: -1px;display: none;">
+      <a href="https://dsapi.#/huimaicheadapi/ad/skip.aspx?adId=400&amp;typeid=0&amp;cityid=501&amp;url=http%3a%2f%2fhd.#%2fkanjia" target="_blank"><img src="/images/11111.jpg" width="890" height="400"/></a>
+     </div>
+     <div class="scroll-images-item" id="scrollItem3" style="position:absolute;width: 1330px;left: 367px;top: -1px;display: none;">
+      <a href="https://dsapi.#/huimaicheadapi/ad/skip.aspx?adId=401&amp;typeid=0&amp;cityid=501&amp;url=http%3a%2f%2fhd.#%2fchoujiang" target="_blank"><img src="./images/test.jpg" width="890" height="400" /></a>
+     </div>  
+     <div class="scroll-pointer" id="main-scroll">
+         <ul> 
+         <li class="sup_ind_item J_sup_ind_item"></li> 
+         <li class="sup_ind_item J_sup_ind_item active"></li> 
+         <li class="sup_ind_item J_sup_ind_item"></li> 
+        </ul> 
+     </div> 
+     <div class="new-all-advertisement"></div> 
+    </div> 
+    <!--scroll images end--> 
+    <!--品牌--> 
+    <div class="all-models"> 
+     <div class="pinboxl">
+       品牌旗舰店 
+     </div> 
+     <ul class="pinboxr"> 
+      #for(b:brandList)
+	      #if(b.img??)
+	      	 <li><a class="p1" href="/list?brand_id=#(b.id)"> <img src="./img/u/#(b.img)" alt="#(b.name)" /> </a></li> 
+	      #end
+       #end
+     </ul> 
+    </div> 
+    <!-- 推荐车型--> 
+    <div class="sk"> 
+     <div class="tuijian"> 
+      <div class="box_hd clearfix" clstag="h|keycount|2016|13a">
+       <div class="box_hd_col1">
+        <i class="box_hd_dec"></i>
+        <i class="box_hd_icon"></i>
+        <h3 class="box_tit">车集网秒杀</h3>
+        <a href="//#" target="_blank" class="box_subtit">总有你想不到的低价<i class="box_subtit_arrow"></i></a>
+       </div>
+       <div class="box_hd_col2">
+        <div class="J_sk_cd sk_cd">
+         <span class="sk_cd_tip">当前场次</span>
+         <div class="sk_cd_main J_sk_cd_main">
+          <div class="cd clearfix">
+           <div class="cd_item cd_hour">
+            <span class="cd_item_txt">01</span>
+           </div>
+           <div class="cd_split">
+            <i class="cd_split_dot cd_split_top"></i>
+            <i class="cd_split_dot cd_split_bottom"></i>
+           </div>
+           <div class="cd_item cd_minute">
+            <span class="cd_item_txt">37</span>
+           </div>
+           <div class="cd_split">
+            <i class="cd_split_dot cd_split_top"></i>
+            <i class="cd_split_dot cd_split_bottom"></i>
+           </div>
+           <div class="cd_item cd_second">
+            <span class="cd_item_txt">21</span>
+           </div>
+          </div>
+         </div>
+         <span class="sk_cd_tip">后结束抢购</span>
+        </div>
+       </div>
+      </div> 
+      <div class="box_bd clearfix"> 
+       <div class="J_sk_list_wrapper sk_list_wrapper"> 
+        <ul class="J_sk_list sk_list clearfix" style=""> 
+        #for(c:carHot)
+         <li class="J_sk_item sk_item sk_item_15">
+          <div class="sk_item_pic">
+           <a href="#" target="_blank" class="sk_item_pic_lk"><img src="/img/u/#(c.url)" width="130" height="130" alt="#" title="#(c.name)" class="sk_item_img" /><p class="sk_item_name">#(c.bname)#(c.name)</p></a>
+           <span class="sk_item_shadow"></span>
+          </div><p class="sk_item_price"><span class="mod_price sk_item_price_new"><i>&yen;</i><span>#(c.price)万元</span></span><span class="mod_price sk_item_price_origin"><i>&yen;</i>
+            <del>
+             #(c.gprice)万元
+            </del></span></p></li> 
+          #end
+        </ul> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+    <!--热门车型 start--> 
+    <div class="item-box hot-cars"> 
+     <h2 class="item-title"><a href="http://guangzhou.#/search/" class="more">更多<i class="icons i-more"></i></a><span>特价车型</span> </h2> 
+     <div class="item-box-outside"> 
+      <div class="item-box-left-border"> 
+      </div> 
+      <div class="item-box-middle-border"> 
+      </div> 
+      <div class="item-box-right-border"> 
+      </div> 
+     </div> 
+     
+      <script type="text/javascript">
+      function find(id){
+    	  for(var i=0;i<=8;i++){
+    		  if(i!=id){
+    			  $("#hotcarprice"+i).css("display","none");
+    		  }
+    		  
+    	  }
+    	  $(".li-underline").css("transform","translateX("+(id)*148+"px)");
+    	  $("#hotcarprice"+id).css("display","block");
+    	  
+      }
+      </script>
+     
+     <div class="item-tab"> 
+      <ul class="item-tab-list"> 
+       <li id="li0"><a href="javascript:void(0);" onmousemove="find(0);">猜你喜欢</a></li> 
+       <li id="li1"><a href="javascript:void(0);" onmousemove="find(1);">热门车</a></li> 
+       <li id="li2"><a href="javascript:void(0);" onmousemove="find(2);">8万以下</a></li> 
+       <li id="li3"><a href="javascript:void(0);" onmousemove="find(3);">8-15万</a></li> 
+       <li id="li4"><a href="javascript:void(0);" onmousemove="find(4);">15-30万</a></li> 
+       <li id="li5"><a href="javascript:void(0);" onmousemove="find(5);">SUV</a></li> 
+       <li id="li6"><a href="javascript:void(0);" onmousemove="find(6);">中型</a></li> 
+       <li id="li7"><a href="javascript:void(0);" onmousemove="find(7);">紧凑型</a></li> 
+       <li id="li8"><a href="javascript:void(0);" onmousemove="find(8);">小型</a></li> 
+       <li class="li-underline current"></li>
+      </ul> 
+     </div> 
+     <div class="item-content" id="hotcarprice0" style=""> 
+      <ul class="item-car-list"> 
+       <li class="li-ad"> <a href="#" target="_blank"><img src="/images/123.jpg" alt="热门车型焦点图-团购聚合页" /></a> 
+       <p class="ad-info"> <a href="#" target="_blank">低首付低月供，贷款买车还送好礼！</a><a href="#" target="_blank">就要性价比，大家都在买这些SUV！</a>
+       <a href="#l" target="_blank">带着全家出去玩，7座大车5.79万起！</a> </p> </li> 
+       #for(h:hotList)
+       <li id="RecCarTemplate" class="li-car"><a target="_blank" href="#"><h3 class="car-name mb0">#(h.bname??)</h3><p class="car-status">有<b class="num">#(h.count)</b>人正在买</p><img src="/img/u/#(h.url)" alt="" style="right: -40px;" /></a></li>
+      	#end
+      </ul> 
+     </div> 
+     <div class="item-content" id="hotcarprice1" style="display: none"> 
+      <ul class="item-car-list"> 
+      <li class="li-ad"> <a href="#" target="_blank"><img src="/images/123.jpg" alt="热门车型焦点图-团购聚合页" /></a> 
+       <p class="ad-info"> <a href="#" target="_blank">低首付低月供，贷款买车还送好礼！</a><a href="#" target="_blank">就要性价比，大家都在买这些SUV！</a>
+       <a href="#l" target="_blank">带着全家出去玩，7座大车5.79万起！</a> </p> </li> 
+      #for(c:carList)
+       <li class="li-car"> <a target="_blank" href="#"> <h3 class="car-name mb0">#(c.bname)</h3> <p class="car-status">有<b class="num">#(c.count)</b>人正在买</p> <img data-url="/img/u/#(c.url)" alt="#(c.bname)" src="/img/u/#(c.url)" /> </a> </li> 
+     #end
+      </ul> 
+     </div> 
+     <div class="item-content" id="hotcarprice2" style="display: none"> 
+      <ul class="item-car-list"> 
+      <li class="li-ad"> <a href="#" target="_blank"><img src="/images/123.jpg" alt="热门车型焦点图-团购聚合页" /></a> 
+       <p class="ad-info"> <a href="#" target="_blank">低首付低月供，贷款买车还送好礼！</a><a href="#" target="_blank">就要性价比，大家都在买这些SUV！</a>
+       <a href="#l" target="_blank">带着全家出去玩，7座大车5.79万起！</a> </p> </li> 
+       #for(c:carList)
+      #if(c.price_id==1)
+       <li class="li-car"> <a target="_blank" href="#"> <h3 class="car-name mb0">#(c.bname)</h3> <p class="car-status">有<b class="num">#(c.count)</b>人正在买</p> <img data-url="/img/u/#(c.url)" alt="#(c.bname)" src="/img/u/#(c.url)" /> </a> </li> 
+     #end
+     #end
+      </ul> 
+     </div> 
+     <div class="item-content" id="hotcarprice3" style="display: none"> 
+      <ul class="item-car-list"> 
+      <li class="li-ad"> <a href="#" target="_blank"><img src="/images/123.jpg" alt="热门车型焦点图-团购聚合页" /></a> 
+       <p class="ad-info"> <a href="#" target="_blank">低首付低月供，贷款买车还送好礼！</a><a href="#" target="_blank">就要性价比，大家都在买这些SUV！</a>
+       <a href="#l" target="_blank">带着全家出去玩，7座大车5.79万起！</a> </p> </li> 
+        #for(c:carList)
+	      #if(c.price_id==2)
+	       <li class="li-car"> <a target="_blank" href="#"> <h3 class="car-name mb0">#(c.bname)</h3> <p class="car-status">有<b class="num">#(c.count)</b>人正在买</p> <img data-url="/img/u/#(c.url)" alt="#(c.bname)" src="/img/u/#(c.url)" /> </a> </li> 
+	     #end
+     	#end
+      </ul> 
+     </div> 
+     <div class="item-content" id="hotcarprice4" style="display: none"> 
+      <ul class="item-car-list"> 
+      <li class="li-ad"> <a href="#" target="_blank"><img src="/images/123.jpg" alt="热门车型焦点图-团购聚合页" /></a> 
+       <p class="ad-info"> <a href="#" target="_blank">低首付低月供，贷款买车还送好礼！</a><a href="#" target="_blank">就要性价比，大家都在买这些SUV！</a>
+       <a href="#l" target="_blank">带着全家出去玩，7座大车5.79万起！</a> </p> </li> 
+     	#for(c:carList)
+	      #if(c.price_id==3)
+	       <li class="li-car"> <a target="_blank" href="#"> <h3 class="car-name mb0">#(c.bname)</h3> <p class="car-status">有<b class="num">#(c.count)</b>人正在买</p> <img data-url="/img/u/#(c.url)" alt="#(c.bname)" src="/img/u/#(c.url)" /> </a> </li> 
+	     #end
+     	#end
+      </ul> 
+     </div> 
+     <div class="item-content" id="hotcarprice5" style="display: none"> 
+      <ul class="item-car-list"> 
+      <li class="li-ad"> <a href="#" target="_blank"><img src="/images/123.jpg" alt="热门车型焦点图-团购聚合页" /></a> 
+       <p class="ad-info"> <a href="#" target="_blank">低首付低月供，贷款买车还送好礼！</a><a href="#" target="_blank">就要性价比，大家都在买这些SUV！</a>
+       <a href="#l" target="_blank">带着全家出去玩，7座大车5.79万起！</a> </p> </li> 
+      #for(c:carList)
+	      #if(c.level_id==7)
+	       <li class="li-car"> <a target="_blank" href="#"> <h3 class="car-name mb0">#(c.bname)</h3> <p class="car-status">有<b class="num">#(c.count)</b>人正在买</p> <img data-url="/img/u/#(c.url)" alt="#(c.bname)" src="/img/u/#(c.url)" /> </a> </li> 
+	     #end
+     	#end
+      </ul> 
+     </div> 
+     <div class="item-content" id="hotcarprice6" style="display: none"> 
+      <ul class="item-car-list"> 
+      <li class="li-ad"> <a href="#" target="_blank"><img src="/images/123.jpg" alt="热门车型焦点图-团购聚合页" /></a> 
+       <p class="ad-info"> <a href="#" target="_blank">低首付低月供，贷款买车还送好礼！</a><a href="#" target="_blank">就要性价比，大家都在买这些SUV！</a>
+       <a href="#l" target="_blank">带着全家出去玩，7座大车5.79万起！</a> </p> </li> 
+       #for(c:carList)
+	      #if(c.level_id==4)
+	       <li class="li-car"> <a target="_blank" href="#"> <h3 class="car-name mb0">#(c.bname)</h3> <p class="car-status">有<b class="num">#(c.count)</b>人正在买</p> <img data-url="/img/u/#(c.url)" alt="#(c.bname)" src="/img/u/#(c.url)" /> </a> </li> 
+	     #end
+     	#end
+      </ul> 
+     </div> 
+     <div class="item-content" id="hotcarprice7" style="display: none"> 
+      <ul class="item-car-list"> 
+      <li class="li-ad"> <a href="#" target="_blank"><img src="/images/123.jpg" alt="热门车型焦点图-团购聚合页" /></a> 
+       <p class="ad-info"> <a href="#" target="_blank">低首付低月供，贷款买车还送好礼！</a><a href="#" target="_blank">就要性价比，大家都在买这些SUV！</a>
+       <a href="#l" target="_blank">带着全家出去玩，7座大车5.79万起！</a> </p> </li> 
+        #for(c:carList)
+	      #if(c.level_id==3)
+	       <li class="li-car"> <a target="_blank" href="#"> <h3 class="car-name mb0">#(c.bname)</h3> <p class="car-status">有<b class="num">#(c.count)</b>人正在买</p> <img data-url="/img/u/#(c.url)" alt="#(c.bname)" src="/img/u/#(c.url)" /> </a> </li> 
+	     #end
+     	#end
+      </ul> 
+     </div> 
+     <div class="item-content" id="hotcarprice8" style="display: none"> 
+      <ul class="item-car-list"> 
+      <li class="li-ad"> <a href="#" target="_blank"><img src="/images/123.jpg" alt="热门车型焦点图-团购聚合页" /></a> 
+       <p class="ad-info"> <a href="#" target="_blank">低首付低月供，贷款买车还送好礼！</a><a href="#" target="_blank">就要性价比，大家都在买这些SUV！</a>
+       <a href="#l" target="_blank">带着全家出去玩，7座大车5.79万起！</a> </p> </li> 
+       #for(c:carList)
+	      #if(c.level_id==2)
+	       <li class="li-car"> <a target="_blank" href="#"> <h3 class="car-name mb0">#(c.bname)</h3> <p class="car-status">有<b class="num">#(c.count)</b>人正在买</p> <img data-url="/img/u/#(c.url)" alt="#(c.bname)" src="/img/u/#(c.url)" /> </a> </li> 
+	     #end
+     	#end
+      </ul> 
+     </div> 
+    </div> 
+    <!--热门车型 end--> 
+    <!--团购 start--> 
+    <div class="more-cat"> 
+     <div class="more-cat-click"> 
+      <a href="#">更多车信息 点击查看</a> 
+     </div> 
+    </div> 
+    <!--团购 end--> 
+    <!--广告上部通栏 start--> 
+    <div class="g-box-s" style="display:none"> 
+     <div class="g-box-mi"> 
+      <img src="/images/01.png" /> 
+     </div> 
+    </div> 
+    <!--广告 end--> 
+    <!--车保险 车团购 车用品 start--> 
+    <div class="J_f J_fbt need_ani fbt" id="fbt" data-tpl="fbt_tpl" data-custom="true" data-inlazyqueue="true"> 
+     <div class="grid_c1 fbt_inner clearfix"> 
+      <div class="box find fbt_col1 J_find"> 
+       <div class="box_hd clearfix"> 
+        <i class="box_hd_arrow"></i> 
+        <i class="box_hd_dec"></i> 
+        <h3 class="box_tit">车团购</h3> 
+        <a href="//fxhh.jd.com/index.html" target="_blank" class="box_subtit" style="color:#fff">发现惊喜 <i class="box_subtit_arrow"></i></a> 
+       </div> 
+       <div class="box_bd clearfix"> 
+        <ul class="find_list clearfix"> 
+        #for(c:carList)
+        #if(c.team_id==1)
+         <li class="find_item find_item_#(for.count)"> <a href="#" target="_blank" class="find_item_lk" > 
+         <p class="find_item_name">#(c.bname)#(c.name)</p>
+          <img src="/img/u/#(c.url)" data-lazy-img="done" alt="2" title="" class="find_item_img" /></a> 
+          </li> 
+		#end       
+        #end
+        </ul> 
+       </div> 
+      </div> 
+      <div class="box sup fbt_col2 J_sup"> 
+       <div class="box_hd clearfix"> 
+        <i class="box_hd_arrow"></i> 
+        <i class="box_hd_dec"></i> 
+        <h3 class="box_tit">车保险</h3> 
+        <a href="#" target="_blank" class="box_subtit" style="color:#fff">您的安全我来保障 <i class="box_subtit_arrow"></i></a> 
+       </div> 
+       <div class="box_bd sup_tab J_sup_tab"> 
+        <div class="sup_page J_sup_page active" style="opacity: 1; z-index: 2; position: absolute;"> 
+         <a class="sup_page_lk" href="#" target="_blank"> <p class="sup_desc">5万多家网点全国通赔</p> <img class="sup_img J_sup_img" src="/images/5847b74fN4d414c3e.png" data-lazy-src="/images/5847b74fN4d414c3e.png" /> <img class="sup_img J_sup_img" src="/images/5847b74fN4d414c3e.png" data-lazy-src="/images/5847b74fN4d414c3e.png" /> <img class="sup_img J_sup_img" src="/images/5847b74fN4d414c3e.png" data-lazy-src="/images/5847b74fN4d414c3e.png" /></a> 
+         <div class="sup_sep"></div> 
+         <a class="sup_page_lk" href="#" target="_blank"> <p class="sup_desc">在线投保方便快捷</p> <img class="sup_img J_sup_img" src="/images/584e4645Nb064fb69.png" data-lazy-src="/images/584e4645Nb064fb69.png" /> <img class="sup_img J_sup_img" src="/images/5847bf2bNeb9ed040.png" data-lazy-src="/images/584e4645Nb064fb69.png" /> <img class="sup_img J_sup_img" src="/images/591c15cfNb7d1d0ae.jpg" data-lazy-src="/images/591c15cfNb7d1d0ae.jpg" /></a> 
+        </div> 
+  
+       </div> 
+      </div> 
+      <div class="box top fbt_col3 J_top"> 
+       <div class="box_hd clearfix"> 
+        <i class="box_hd_arrow"></i> 
+        <i class="box_hd_dec"></i> 
+        <h3 class="box_tit">车用品</h3> 
+        <a href="#" target="_blank" class="box_subtit" style="color:#fff">专属你的爱车配件 <i class="box_subtit_arrow"></i></a> 
+       </div> 
+        <script type="text/javascript">
+      function carfind(id){
+    	  for(var i=1;i<=5;i++){
+    		  $("#mobile-contact-div-"+i).css("display","none");
+    	  }    
+		  $("#model").css("transform","translateX("+(id-1)*78+"px)");
+    	  $("#mobile-contact-div-"+id).css("display","block");
+      }
+      </script>
+       <div class="box_bd top_tab J_top_tab"> 
+        <div class="top_tab_head J_tab_head clearfix"> 
+         #for(m:modelList)
+         #if(m.id==1)
+          <a href="#" target="_blank" class="J_tab_head_item top_tab_head_item top_tab_head_item_first top_tab_head_item_on" onmouseover="carfind(#(m.id))">#(m.name)</a> 
+         #else
+          <a href="#" target="_blank" class="J_tab_head_item top_tab_head_item" onmouseover="carfind(#(m.id))">#(m.name)</a>
+         #end
+         #end
+         <div class="top_tab_active J_top_tab_active" id="model" style="transform: translateX(0px);"></div> 
+        </div> 
+       
+        <div class="top_tab_content J_tab_content"> 
+        #for(m:modelList)
+        #if(m.id==1)
+         <div class="J_tab_content_item top_tab_content_item" id="mobile-contact-div-#(m.id)" style="display:block"> 
+          <ul class="top_list clearfix"> 
+          #for(s:shopList)
+	          #if(s.model_id==m.id)
+	           <li class="top_item top_item_1"> <a href="/shop/#(s.id)" target="_blank" class="top_lk"> 
+	             <div class="top_rank top_rank_1">
+	             #(for.count)
+	             </div> 
+	             <div class="top_pic"> 
+	              <img src="/img/u/#(s.url)" data-lazy-img="done" alt="#(s.name)" title="#(s.name)" class="top_img" />
+	             </div> <p class="top_name">#(s.title)</p></a> 
+	             </li>
+             #end
+            #end 
+          </ul> 
+         </div> 
+         #else
+          <div class="J_tab_content_item top_tab_content_item" id="mobile-contact-div-#(m.id)" style="display:none"> 
+          <ul class="top_list clearfix"> 
+          #for(s:shopList)
+	          #if(s.model_id==m.id)
+	           <li class="top_item top_item_1"> <a href="/shop/#(s.id)" target="_blank" class="top_lk"> 
+	             <div class="top_rank top_rank_1">
+	             #(s.id)
+	             </div> 
+	             <div class="top_pic"> 
+	              <img src="/img/u/#(s.url)" data-lazy-img="done" alt="#(s.name)" title="#(s.name)" class="top_img" />
+	             </div> <p class="top_name">#(s.name)</p></a> 
+	             </li>
+             #end
+            #end 
+          </ul> 
+         </div> 
+         #end
+       #end
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+    <!--车保险 车团购 车用品 end--> 
+    <!--广告上部通栏 start--> 
+    <div class="g-box-s" style="display:none"> 
+     <div class="g-box-mi"> 
+      <img src="/images/01.png" /> 
+     </div> 
+    </div> 
+    <!--广告 end--> 
+    <!--车载配件 start--> 
+    <div class="w"> 
+     <!--  /widget/auto-floors/auto-floors.vm --> 
+     <div class="m auto-floors floor" id="car-chargers" data-lazy-img-install="1" data-idx="3"> 
+      <div class="mt"> 
+       <h3>车载电器</h3> 
+      </div> 
+      <div class="mc"> 
+       <div class="col01"> 
+        <ul class="ext"> 
+         <li><a title="网易云音乐 车载播放器音乐一起出发" href="//sale.jd.com/act/dFS8HC3MX5npzA.html" target="_blank"><b></b>网易云音乐 车载播放器音乐一起出发</a></li> 
+         <li><a title="有它不怕霾！" href="//#/2427202.html" target="_blank"><b></b>有它不怕霾！</a></li> 
+         <li><a title="好车充，大家都在买！" href="//#/1330619.html" target="_blank"><b></b>好车充，大家都在买！</a></li> 
+        </ul> 
+        <ul class="af-nav"> 
+         <li class="ui-switchable-item curr"><a title="行车记录仪">行车记录仪<b></b></a></li> 
+         <li class="ui-switchable-item"><a title="冰箱电源">冰箱电源<b></b></a></li> 
+         <li class="ui-switchable-item"><a title="车载净化器">车载净化器<b></b></a></li> 
+         <li class="ui-switchable-item"><a title="车载导航">车载导航<b></b></a></li> 
+         <li class="ui-switchable-item"><a title="胎压充气">胎压充气<b></b></a></li> 
+        </ul> 
+        <div class="l-img">
+         <img width="220" height="295" data-lazy-img="done" alt="" src="/images/345.jpg" />
+        </div> 
+       </div> 
+       <div class="ui-switchable-panel ui-switchable-panel-selected" style="display: block;"> 
+        <div class="col02"> 
+         <a href="//sale.jd.com/act/yuY3eNhKjfR.html" target="_blank">
+                  <iframe id="le-video" frameborder="0" scrolling="no" style="display:block; width:533px; height:401px; margin:0 auto;" class="" src="https://s.yuntv.letv.com/bcloud.html?uu=82abd5491f&amp;vu=57326e93db&amp;pu=098df6fe6d&amp;auto_play=0&amp;width=750&amp;height=422"></iframe>
+         </a> 
+        </div> 
+        <div class="col03" clstag="firsttype|keycount|auto|chezai_tab1_danpin"> 
+         <ul class="p-list"> 
+          <li class="fore1"> <a class="p-name" target="_blank" title="小蚁（YI）行车记录仪1296P超高清夜视 青春版 小米生态链公司  165&deg;广角 智能辅助驾驶（太空灰）" href="#">小蚁（YI）行车记录仪1296P超高清夜视 青春版 小米生态链公司 165&deg;广角 智能辅助驾驶（太空灰）</a> 
+          <a class="p-tips" target="_blank" title="" href="#">1296P超高清夜视 青春版 小米生态链公司  165°广角 智能辅助驾驶（太空灰）</a> 
+          <a class="p-prom" target="_blank" title="" href="#">导航一体机 高清录制智能后视镜 智能交互声控</a> 
+          <a class="p-img" target="_blank" href="#"> 
+          <img title="小蚁（YI）行车记录仪1296P超高清夜视 青春版 小米生态链公司  165&deg;广角 智能辅助驾驶（太空灰）" width="160" height="160" src="https://img10.360buyimg.com/n7/jfs/t5299/194/478970979/52716/7a5cab7d/5900840eN492b16ef.jpg" alt="" /> </a> </li> 
+          
+          
+          <li class="fore2"> <a class="p-name" target="_blank" title="米家（MIJIA）米家行车记录仪 高清夜视 触摸按键 背胶式安装" href="#">米家（MIJIA）米家行车记录仪 高清夜视 触摸按键 背胶式安装</a> <a class="p-tips" target="_blank" title="" href="#"></a> <a class="p-prom" target="_blank" title="" href="#"></a> <a class="p-img" target="_blank" href="#"> <img title="米家（MIJIA）米家行车记录仪 高清夜视 触摸按键 背胶式安装" width="90" height="90" src="https://img10.360buyimg.com/n7/jfs/t4192/90/556991552/136125/81fd5362/58b69d04N43c4873c.jpg" alt="" /> </a> </li> 
+          <li class="fore3"> <a class="p-name" target="_blank" title="捷渡（JADO） D680S行车记录仪高清夜视双镜头前后录像轨道偏移预警一键倒车影像" href="//#/3510748.html">捷渡（JADO） D680S行车记录仪高清夜视双镜头前后录像轨道偏移预警一键倒车影像</a> <a class="p-tips" target="_blank" title="" href="//#/3510748.html"></a> <a class="p-prom" target="_blank" title="" href="//#/3510748.html"></a> <a class="p-img" target="_blank" href="//#/3510748.html"> <img title="捷渡（JADO） D680S行车记录仪高清夜视双镜头前后录像轨道偏移预警一键倒车影像" width="90" height="90" src="/images/01.png" alt="" /> </a> </li> 
+          <li class="fore4"> <a class="p-name" target="_blank" title="DOD车载行车记录仪LS400wPlus超高清广角夜视1080P停车监控迷你一体机" href="//#/1133154424.html">DOD车载行车记录仪LS400wPlus超高清广角夜视1080P停车监控迷你一体机</a> <a class="p-tips" target="_blank" title="" href="//#/1133154424.html"></a> <a class="p-prom" target="_blank" title="" href="//#/1133154424.html"></a> <a class="p-img" target="_blank" href="//#/1133154424.html"> <img title="DOD车载行车记录仪LS400wPlus超高清广角夜视1080P停车监控迷你一体机" width="160" height="160" src="/images/01.png" alt="" /> </a> </li> 
+         </ul> 
+        </div> 
+       </div> 
+       <div class="ui-switchable-panel" style="display: none;"> 
+        <div class="col02"> 
+         <a clstag="firsttype|keycount|auto|chezai_tab2_pic" href="//sale.jd.com/act/BtYG0zqChQvke42c.html" target="_blank"><img title="电源" width="332" height="401" data-lazy-img="/images/01.png" alt="" /></a> 
+        </div> 
+        <div class="col03" clstag="firsttype|keycount|auto|chezai_tab2_danpin"> 
+         <ul class="p-list"> 
+          <li class="fore1"> <a class="p-name" target="_blank" title="方正 汽车应急启动电源 " href="//#/3459522.html">方正 汽车应急启动电源 </a> <a class="p-tips" target="_blank" title=" 适用4.0L(T)及以下车系" href="//#/3459522.html"> 适用4.0L(T)及以下车系</a> <a class="p-prom" target="_blank" title="" href="//#/3459522.html"></a> <a class="p-img" target="_blank" href="//#/3459522.html"> <img title="方正 汽车应急启动电源 " width="160" height="160" data-lazy-img="/images/01.png" alt="" /> </a> </li> 
+          <li class="fore2"> <a class="p-name" target="_blank" title="英得尔车载冰箱" href="//#/911804.html">英得尔车载冰箱</a> <a class="p-tips" target="_blank" title="爱上自驾游！" href="//#/911804.html">爱上自驾游！</a> <a class="p-prom" target="_blank" title="" href="//#/911804.html"></a> <a class="p-img" target="_blank" href="//#/911804.html"> <img title="英得尔车载冰箱" width="90" height="90" data-lazy-img="/images/01.png" alt="" /> </a> </li> 
+          <li class="fore3"> <a class="p-name" target="_blank" title="百事泰（BESTEK） 逆变器 " href="//#/1309004.html">百事泰（BESTEK） 逆变器 </a> <a class="p-tips" target="_blank" title="自驾出游必备" href="//#/1309004.html">自驾出游必备</a> <a class="p-prom" target="_blank" title="" href="//#/1309004.html"></a> <a class="p-img" target="_blank" href="//#/1309004.html"> <img title="百事泰（BESTEK） 逆变器 " width="90" height="90" data-lazy-img="/images/01.png" alt="" /> </a> </li> 
+          <li class="fore4"> <a class="p-name" target="_blank" title="先科（SAST） 车载充电器" href="//#/1191032.html">先科（SAST） 车载充电器</a> <a class="p-tips" target="_blank" title="3.1A双USB一拖三" href="//#/1191032.html">3.1A双USB一拖三</a> <a class="p-prom" target="_blank" title="" href="//#/1191032.html"></a> <a class="p-img" target="_blank" href="//#/1191032.html"> <img title="先科（SAST） 车载充电器" width="160" height="160" data-lazy-img="/images/01.png" alt="" /> </a> </li> 
+         </ul> 
+        </div> 
+       </div> 
+       <div class="ui-switchable-panel" style="display: none;"> 
+        <div class="col02"> 
+         <a clstag="firsttype|keycount|auto|chezai_tab3_pic" href="//#/4294710.html" target="_blank"><img title="空气净化器" width="332" height="401" data-lazy-img="/images/01.png" alt="" /></a> 
+        </div> 
+        <div class="col03" clstag="firsttype|keycount|auto|chezai_tab3_danpin"> 
+         <ul class="p-list"> 
+          <li class="fore1"> <a class="p-name" target="_blank" title="博世 空气净化器" href="//#/3529979.html">博世 空气净化器</a> <a class="p-tips" target="_blank" title="旗舰产品，极速净化！" href="//#/3529979.html">旗舰产品，极速净化！</a> <a class="p-prom" target="_blank" title="" href="//#/3529979.html"></a> <a class="p-img" target="_blank" href="//#/3529979.html"> <img title="博世 空气净化器" width="160" height="160" data-lazy-img="/images/01.png" alt="" /> </a> </li> 
+          <li class="fore2"> <a class="p-name" target="_blank" title="3M车载空气净化器" href="//#/4362638.html">3M车载空气净化器</a> <a class="p-tips" target="_blank" title="过滤甲醛小能手！" href="//#/4362638.html">过滤甲醛小能手！</a> <a class="p-prom" target="_blank" title="" href="//#/4362638.html"></a> <a class="p-img" target="_blank" href="//#/4362638.html"> <img title="3M车载空气净化器" width="90" height="90" data-lazy-img="/images/01.png" alt="" /> </a> </li> 
+          <li class="fore3"> <a class="p-name" target="_blank" title="车玛仕车载净化" href="//#/1107366981.html">车玛仕车载净化</a> <a class="p-tips" target="_blank" title="" href="//#/1107366981.html"></a> <a class="p-prom" target="_blank" title="" href="//#/1107366981.html"></a> <a class="p-img" target="_blank" href="//#/1107366981.html"> <img title="车玛仕车载净化" width="90" height="90" data-lazy-img="/images/01.png" alt="" /> </a> </li> 
+          <li class="fore4"> <a class="p-name" target="_blank" title="飞利浦车载空气净化器" href="//#/10421822594.html">飞利浦车载空气净化器</a> <a class="p-tips" target="_blank" title="" href="//#/10421822594.html"></a> <a class="p-prom" target="_blank" title="" href="//#/10421822594.html"></a> <a class="p-img" target="_blank" href="//#/10421822594.html"> <img title="飞利浦车载空气净化器" width="160" height="160" data-lazy-img="/images/01.png" alt="" /> </a> </li> 
+         </ul> 
+        </div> 
+       </div> 
+       <div class="ui-switchable-panel" style="display: none;"> 
+        <div class="col02"> 
+         <a clstag="firsttype|keycount|auto|chezai_tab4_pic" href="//sale.jd.com/act/aVeDThm2XzZHk.html" target="_blank"><img title="车载导航" width="332" height="401" data-lazy-img="/images/01.png" alt="" /></a> 
+        </div> 
+        <div class="col03" clstag="firsttype|keycount|auto|chezai_tab4_danpin"> 
+         <ul class="p-list"> 
+          <li class="fore1"> <a class="p-name" target="_blank" title="极豆 D1S标配版 " href="//#/4006677.html">极豆 D1S标配版 </a> <a class="p-tips" target="_blank" title="车载电脑" href="//#/4006677.html">车载电脑</a> <a class="p-prom" target="_blank" title="" href="//#/4006677.html"></a> <a class="p-img" target="_blank" href="//#/4006677.html"> <img title="极豆 D1S标配版 " width="160" height="160" data-lazy-img="/images/01.png" alt="" /> </a> </li> 
+          <li class="fore2"> <a class="p-name" target="_blank" title="E路航  小度M6 " href="//#/4676528.html">E路航 小度M6 </a> <a class="p-tips" target="_blank" title="1080P前后双镜头记录仪" href="//#/4676528.html">1080P前后双镜头记录仪</a> <a class="p-prom" target="_blank" title="" href="//#/4676528.html"></a> <a class="p-img" target="_blank" href="//#/4676528.html"> <img title="E路航  小度M6 " width="90" height="90" data-lazy-img="/images/01.png" alt="" /> </a> </li> 
+          <li class="fore3"> <a class="p-name" target="_blank" title="善领  新款二代云狗" href="//#/2351844.html">善领 新款二代云狗</a> <a class="p-tips" target="_blank" title="出游必备" href="//#/2351844.html">出游必备</a> <a class="p-prom" target="_blank" title="" href="//#/2351844.html"></a> <a class="p-img" target="_blank" href="//#/2351844.html"> <img title="善领  新款二代云狗" width="90" height="90" data-lazy-img="/images/01.png" alt="" /> </a> </li> 
+          <li class="fore4"> <a class="p-name" target="_blank" title="GARMIN DriveAssist50 " href="//#/4576378.html">GARMIN DriveAssist50 </a> <a class="p-tips" target="_blank" title="新品上市" href="//#/4576378.html">新品上市</a> <a class="p-prom" target="_blank" title="" href="//#/4576378.html"></a> <a class="p-img" target="_blank" href="//#/4576378.html"> <img title="GARMIN DriveAssist50 " width="160" height="160" data-lazy-img="/images/01.png" alt="" /> </a> </li> 
+         </ul> 
+        </div> 
+       </div> 
+       <div class="ui-switchable-panel" style="display: none;"> 
+        <div class="col02"> 
+         <a clstag="firsttype|keycount|auto|chezai_tab5_pic" href="//sale.jd.com/act/RI5UmuGxKzdlj3Cb.html" target="_blank"><img title="胎压充气专场" width="332" height="401" data-lazy-img="/images/01.png" alt="" /></a> 
+        </div> 
+        <div class="col03" clstag="firsttype|keycount|auto|chezai_tab5_danpin"> 
+         <ul class="p-list"> 
+          <li class="fore1"> <a class="p-name" target="_blank" title="固特异 车载充气泵 " href="//#/1095072.html">固特异 车载充气泵 </a> <a class="p-tips" target="_blank" title="预设自动打气" href="//#/1095072.html">预设自动打气</a> <a class="p-prom" target="_blank" title="" href="//#/1095072.html"></a> <a class="p-img" target="_blank" href="//#/1095072.html"> <img title="固特异 车载充气泵 " width="160" height="160" data-lazy-img="/images/01.png" alt="" /> </a> </li> 
+          <li class="fore2"> <a class="p-name" target="_blank" title="飞利浦（PHILIPS）太阳能内置无线胎压监测系统TD600i 7x24小时监测 分级警报 胎温胎压精确同显 " href="//#/3738794.html">飞利浦（PHILIPS）太阳能内置无线胎压监测系统TD600i 7x24小时监测 分级警报 胎温胎压精确同显 </a> <a class="p-tips" target="_blank" title="无线布局，四轮同显，太阳能内置款" href="//#/3738794.html">无线布局，四轮同显，太阳能内置款</a> <a class="p-prom" target="_blank" title="" href="//#/3738794.html"></a> <a class="p-img" target="_blank" href="//#/3738794.html"> <img title="飞利浦（PHILIPS）太阳能内置无线胎压监测系统TD600i 7x24小时监测 分级警报 胎温胎压精确同显 " width="90" height="90" data-lazy-img="/images/01.png" alt="" /> </a> </li> 
+          <li class="fore3"> <a class="p-name" target="_blank" title="米其林智能打气泵" href="//#/1013983.html">米其林智能打气泵</a> <a class="p-tips" target="_blank" title="国际大咖 正版授权" href="//#/1013983.html">国际大咖 正版授权</a> <a class="p-prom" target="_blank" title="" href="//#/1013983.html"></a> <a class="p-img" target="_blank" href="//#/1013983.html"> <img title="米其林智能打气泵" width="90" height="90" data-lazy-img="/images/01.png" alt="" /> </a> </li> 
+          <li class="fore4"> <a class="p-name" target="_blank" title="居尚铁将军胎压监测内置式汽车轮胎检测仪无线太阳能外置高精度报警器 960N内置款+充气泵不包安装" href="//#/12346090410.html">居尚铁将军胎压监测内置式汽车轮胎检测仪无线太阳能外置高精度报警器 960N内置款+充气泵不包安装</a> <a class="p-tips" target="_blank" title="" href="//#/12346090410.html"></a> <a class="p-prom" target="_blank" title="" href="//#/12346090410.html"></a> <a class="p-img" target="_blank" href="//#/12346090410.html"> <img title="居尚铁将军胎压监测内置式汽车轮胎检测仪无线太阳能外置高精度报警器 960N内置款+充气泵不包安装" width="160" height="160" data-lazy-img="/images/01.png" alt="" /> </a> </li> 
+         </ul> 
+        </div> 
+       </div> 
+       <div class="col04" clstag="firsttype|keycount|auto|chezai_zhishi"> 
+        <h4>嵌入式导航<b></b></h4> 
+        <ul class="kg-list"> 
+         <li><a title="品牌云集 智能导航专场" href="//sale.jd.com/act/dRVKX7onSB428Psu.html" target="_blank"><b></b>品牌云集 智能导航专场</a></li> 
+         <li><a title="汽车玻璃上门换" href="//xinyiglass.jd.com/" target="_blank"><b></b>汽车玻璃上门换</a></li> 
+         <li><a title="中原通ETC旗舰店" href="//myetc.jd.com" target="_blank"><b></b>中原通ETC旗舰店</a></li> 
+         <li><a title="车载净化器怎么选？" href="//sale.jd.com/act/Nnrb0lYHVWapUXzZ.html" target="_blank"><b></b>车载净化器怎么选？</a></li> 
+        </ul> 
+        <div class="p-img">
+         <img width="219" height="317" data-lazy-img="done" alt="" src="/images/01.png" />
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+     <!--/ /widget/auto-floors/auto-floors.vm --> 
+     <!--  /widget/p-scroll/p-scroll.vm --> 
+     <div class="scroll-box p-scroll" id="scroll-box" clstag="firsttype|keycount|auto|chezai_dibu"> 
+      <a class="prev disabled" href="#none" style="display: none;"><b></b></a> 
+      <a class="next disabled" href="#none" style="display: none;"><b></b></a> 
+      <div class="scroll-list"> 
+       <ul> 
+        <li sku="10225487489"> 
+         <div class="p-img">
+          <a title="【满199减100】盯盯拍mini2亮黑 行车记录仪 高清夜视无线wifi 1440P min2亮黑" href="//#/11017828673.html" target="_blank"><img width="90" height="90" data-lazy-img="done" alt="【满199减100】盯盯拍mini2亮黑 行车记录仪 高清夜视无线wifi 1440P min2亮黑" src="/images/01.png" /></a>
+         </div> 
+         <div class="p-name">
+          <a title="【满199减100】盯盯拍mini2亮黑 行车记录仪 高清夜视无线wifi 1440P min2亮黑" href="//#/11017828673.html" target="_blank">【满199减100】盯盯拍mini2亮黑 行车记录仪 高清夜视无线wifi 1440P min2亮黑</a>
+         </div> 
+         <div class="p-price">
+          <span class="J-p-10225487489">￥499.00</span>
+         </div> 
+         <div class="p-comm">
+          <a title="【满199减100】盯盯拍mini2亮黑 行车记录仪 高清夜视无线wifi 1440P min2亮黑" href="//#/review/10225487489-1-1.html" target="_blank">已有<span clsku="10225487489" class="clcomment">700+</span>人评论</a>
+         </div> </li> 
+        <li sku="10746916729"> 
+         <div class="p-img">
+          <a title="征服者电子狗自动升级安全预警仪汽车载流动雷达测速仪一体机新款 征服者2017官方推荐款" href="//#/10746916729.html" target="_blank"><img width="90" height="90" data-lazy-img="done" alt="征服者电子狗自动升级安全预警仪汽车载流动雷达测速仪一体机新款 征服者2017官方推荐款" src="/images/01.png" /></a>
+         </div> 
+         <div class="p-name">
+          <a title="征服者电子狗自动升级安全预警仪汽车载流动雷达测速仪一体机新款 征服者2017官方推荐款" href="//#/10746916729.html" target="_blank">征服者电子狗自动升级安全预警仪汽车载流动雷达测速仪一体机新款 征服者2017官方推荐款</a>
+         </div> 
+         <div class="p-price">
+          <span class="J-p-10746916729">￥499.00</span>
+         </div> 
+         <div class="p-comm">
+          <a title="征服者电子狗自动升级安全预警仪汽车载流动雷达测速仪一体机新款 征服者2017官方推荐款" href="//#/review/10746916729-1-1.html" target="_blank">已有<span clsku="10746916729" class="clcomment">900+</span>人评论</a>
+         </div> </li> 
+        <li sku="1590663"> 
+         <div class="p-img">
+          <a title="EK2 无线胎压监测器 点烟器即插即用" href="//#/1590663.html" target="_blank"><img width="90" height="90" data-lazy-img="done" alt="EK2 无线胎压监测器 点烟器即插即用" src="/images/01.png" /></a>
+         </div> 
+         <div class="p-name">
+          <a title="EK2 无线胎压监测器 点烟器即插即用" href="//#/1590663.html" target="_blank">EK2 无线胎压监测器 点烟器即插即用</a>
+         </div> 
+         <div class="p-price">
+          <span class="J-p-1590663">￥269.00</span>
+         </div> 
+         <div class="p-comm">
+          <a title="EK2 无线胎压监测器 点烟器即插即用" href="//#/review/1590663-1-1.html" target="_blank">已有<span clsku="1590663" class="clcomment">2500+</span>人评论</a>
+         </div> </li> 
+        <li sku="1460663499"> 
+         <div class="p-img">
+          <a title="江南绣车载空气净化器太阳能汽车负离子氧吧除甲醛异味PM2.5香薰加湿 珍珠白" href="//#/1460663499.html" target="_blank"><img width="90" height="90" data-lazy-img="done" alt="江南绣车载空气净化器太阳能汽车负离子氧吧除甲醛异味PM2.5香薰加湿 珍珠白" src="/images/01.png" /></a>
+         </div> 
+         <div class="p-name">
+          <a title="江南绣车载空气净化器太阳能汽车负离子氧吧除甲醛异味PM2.5香薰加湿 珍珠白" href="//#/1460663499.html" target="_blank">江南绣车载空气净化器太阳能汽车负离子氧吧除甲醛异味PM2.5香薰加湿 珍珠白</a>
+         </div> 
+         <div class="p-price">
+          <span class="J-p-1460663499">￥158.00</span>
+         </div> 
+         <div class="p-comm">
+          <a title="江南绣车载空气净化器太阳能汽车负离子氧吧除甲醛异味PM2.5香薰加湿 珍珠白" href="//#/review/1460663499-1-1.html" target="_blank">已有<span clsku="1460663499" class="clcomment">6200+</span>人评论</a>
+         </div> </li> 
+        <li sku="10561003739"> 
+         <div class="p-img">
+          <a title="靓知渝360度全景行车记录仪隐藏式手机wifi高清夜视广角1080P汽车停车监控一体机 黑色 自行安装+送32G卡" href="//#/10561003739.html" target="_blank"><img width="90" height="90" data-lazy-img="done" alt="靓知渝360度全景行车记录仪隐藏式手机wifi高清夜视广角1080P汽车停车监控一体机 黑色 自行安装+送32G卡" src="/images/01.png" /></a>
+         </div> 
+         <div class="p-name">
+          <a title="靓知渝360度全景行车记录仪隐藏式手机wifi高清夜视广角1080P汽车停车监控一体机 黑色 自行安装+送32G卡" href="//#/10561003739.html" target="_blank">靓知渝360度全景行车记录仪隐藏式手机wifi高清夜视广角1080P汽车停车监控一体机 黑色 自行安装+送32G卡</a>
+         </div> 
+         <div class="p-price">
+          <span class="J-p-10561003739">￥980.00</span>
+         </div> 
+         <div class="p-comm">
+          <a title="靓知渝360度全景行车记录仪隐藏式手机wifi高清夜视广角1080P汽车停车监控一体机 黑色 自行安装+送32G卡" href="//#/review/10561003739-1-1.html" target="_blank">已有<span clsku="10561003739" class="clcomment">1900+</span>人评论</a>
+         </div> </li> 
+       </ul> 
+      </div> 
+     </div> 
+     <!--/ /widget/p-scroll/p-scroll.vm --> 
+    </div> 
+    <!--车载配件 end--> 
+    <!--广告底部通栏 start--> 
+    <!--广告 end--> 
+    <!--车主论坛 晒合同 begin--> 
+    <div class="other-info-box "> 
+     <div class="other-right-col"> 
+      <div class="item-box"> 
+       <h2 class="item-title"><a href="//news.huimaiche.com" class="more">更多<i class="icons i-more"></i></a><span>晒合同</span></h2> 
+       <div class="item-content"> 
+        <div class="evaluation-box"> 
+         <a href="//news.huimaiche.com/n73419/" target="_blank"> <img data-url="/images/01.png" alt="" src="/images/01.png" style="width: 100%; height: auto; margin-top: 0px;" /></a> 
+         <i>深度评测</i> 
+         <p class="evaluation-name">评测2017款大众朗逸1.4T</p> 
+         <p class="over-lay"></p> 
+        </div> 
+        <ul class="evaluation-list"> 
+         <li> <a href="//news.huimaiche.com/n80477/" target="_blank"> <img data-url="/images/01.png" alt="" src="/images/01.png" /> <h3>途昂对比汉兰达/锐界</h3> <p>选车指南 2017-04-27</p> </a> </li> 
+        </ul> 
+        <p class="evaluation-description"> </p>
+        <div class="evaluation-ad">
+         <div class="new-all-advertisement"></div>
+        </div>
+        <div class="evaluation-title">
+         热门活动
+        </div>
+        <div class="evaluation-acts">
+         <a href="https://dsapi.huimaiche.com/huimaicheadapi/ad/skip.aspx?adId=872&amp;typeid=0&amp;cityid=501&amp;url=http%3a%2f%2fhd.huimaiche.com%2fkanjia" target="_blank"><i></i>全民齐砍价，就要惠买车！</a>
+         <a href="https://dsapi.huimaiche.com/huimaicheadapi/ad/skip.aspx?adId=873&amp;typeid=0&amp;cityid=501&amp;url=http%3a%2f%2fhd.huimaiche.com%2fchoujiang" target="_blank"><i></i>分享真实买车经历，抽500元大奖！</a>
+         <a href="https://dsapi.huimaiche.com/huimaicheadapi/ad/skip.aspx?adId=907&amp;typeid=0&amp;cityid=501&amp;url=http%3a%2f%2fhd.huimaiche.com%2fhd%2f201705" target="_blank"><i></i>一张身份证，实现买车梦！</a>
+        </div> 
+        <p></p> 
+       </div> 
+      </div> 
+     </div>
+     <div class="other-left-col"> 
+      <div class="item-box"> 
+       <h2 class="item-title"><a href="/list" class="more">更多<i class="icons i-more"></i></a><span>车主交流平台</span></h2> 
+       <div class="item-content"> 
+        <ul class="share-list"> 
+         <li> <img data-url="/images/01.png" alt="我在惠买车平台买的人生第......" class="share-pic" src="/images/01.png" /> <h3 class="share-title"> <span>省<strong>0.6</strong>万</span> <a href="//hd.huimaiche.com/share/detail/12547">我在惠买车平台买的人生第......</a> </h3> <p class="share-description">我人生第一辆车～广汽本田飞度（FIT）2016款1.5LLXSCVT舒适天窗版。我是自己的钱买的，没用父母一分钱，从此正式做个“家庭经济适用男”??！惠买车平台买车确实很实......</p> <p class="share-info">车主：冯汉伟<span>车款：飞度 1.5L LXS CVT 舒适天窗版</span></p> </li> 
+        </ul> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+    <!-- end--> 
+   </div> 
+
+   <!--中间内容 --> 
+   
+   <!--尾部 --> 
+   <div class="footer-v2"> 
+    <div class="footer-content"> 
+	
+     <div class="footer-details"> 
+      <div class="footer-col-left"> 
+         <img src="/images/logo-2.png" />
+      </div> 
+      <div class="footer-col-right"> 
+       <dl> 
+        <dt>
+         买车指南
+        </dt> 
+        <dd> 
+         <a target="_blank" href="/guide/">底价买车</a> 
+        </dd> 
+        <dd> 
+         <a target="_blank" rel="nofollow" href="/tuangou/">团购买车</a> 
+        </dd> 
+        <dd> 
+         <a target="_blank" href="/issue/tiche">提车相关</a> 
+        </dd> 
+       </dl> 
+       <dl> 
+        <dt>
+         买车服务
+        </dt> 
+        <dd> 
+         <a target="_blank" href="/adviser/">买车顾问</a> 
+        </dd> 
+        <dd> 
+         <a target="_blank" rel="nofollow" href="/zhifu">支付相关</a> 
+        </dd> 
+        <dd> 
+         <a target="_blank" href="/getgift/">买车礼品</a> 
+        </dd> 
+       </dl> 
+       <dl> 
+        <dt>
+         商务合作
+        </dt> 
+        <dd> 
+         <a target="_blank" rel="nofollow" href="/act/">入驻须知</a> 
+        </dd> 
+        <dd> 
+         <a target="_blank" rel="nofollow" href="/cooperation">合作优势</a> 
+        </dd> 
+        <dd> 
+         <a target="_blank" rel="nofollow" href="/blogroll">合作媒体</a> 
+        </dd> 
+       </dl> 
+       <dl> 
+        <dt>
+         关于我们
+        </dt> 
+        <dd> 
+         <a target="_blank" rel="nofollow" href="/introduce/">平台介绍</a> 
+        </dd> 
+        <dd> 
+         <a target="_blank" rel="nofollow" href="/contact/">联系我们</a> 
+        </dd> 
+        <dd> 
+         <a target="_blank" rel="nofollow" href="/servicecontract/">服务协议</a> 
+        </dd> 
+       </dl> 
+       <dl class="footer-qr"> 
+        <dt> 
+         <img src="/images/foot-huimaiche-qr.png" alt="" /> 
+        </dt> 
+        <dd> 
+         <a href="/app/" target="_blank"> <span class="footer-new-downloadapp"> 关注微信公众号 </span> </a> 
+        </dd> 
+       </dl> 
+      </div> 
+     </div> 
+     <div class="footer-nav"> 
+      <div class="footer-col-left"> 
+      
+       <p class="police-record"> <a href="#" rel="nofollow" target="_blank"><i></i>粤ICP备17084451号</a>  CopyRight &copy; 2017 版权所有深圳市集市达科技有限公司
+</p> 
+      </div> 
+      <div class="footer-col-right"> 
+       
+      </div> 
+     </div> 
+    </div> 
+   </div>
+   <!-- end -->
+
+   
+  </div>
+ </body>
+</html>

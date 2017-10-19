@@ -1,0 +1,94 @@
+#@head("xxxx")
+    <!-- 头部 star-->
+    <link href="/css/helpcenter-protocol.css" rel="stylesheet">
+    <!-- 头部 end-->
+    <div>
+        <div class="helpcenter-protocol-wrap clearfix">
+            <div class="helpcenter-protocol-left">
+                <div class="helpcenter-protocol-lwrap">
+                <!-- for -->
+                	#for(a:columnList)
+	                	#if(a.pid??==null)
+		                    <div class="helpcenter-protocol-ltitle firstclass_bangzhuzhongxin">#(a.name)</div>
+		                    <div class="helpcenter-protocol-lsecond">
+			                    <ul class="helpcenter-protocol-lslist" style="display: block">
+			                    	#for(b:columnList)
+										#if(a.id==b.pid)
+				                  	 		 <li class="thirdclass_issue"><a href="/help?cid=#(b.id)"> #(b.name) </a></li>
+				                  	  	#end
+			                  	 	#end
+			                    </ul>
+		                    </div>
+	                    #end
+                    #end
+                <!-- end -->  
+                </div>
+            </div>
+            <div class="helpcenter-protocol-right">
+                <div class="helpcenter-protocol-rtitle">
+                    <span>帮助中心</span>&gt; <span>#(cname??)</span>
+                </div>
+                <div class="helpcenter-protocol-rcontent">
+                    <div class="helpcenter-protocol-choose-wrap clearfix">
+                    	#(post.context??"未发现内容")
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--尾部 -->
+      #include("/common/_footer.html")
+    <!--尾部 end -->
+    <script type="text/javascript">
+      $(function () {
+        var $left = $('.helpcenter-protocol-left');
+        var $lsecond = $('.helpcenter-protocol-lsecond',$left);
+
+        $lsecond.on('click','.helpcenter-protocol-ls-wrap', function (ev) {
+            var $turn = $(this).find('i');
+            var $text = $(this).find('.helpcenter-protocol-lstop');
+            var $list = $(this).siblings('.helpcenter-protocol-lslist');
+            if($list.length != 0){
+                var ev = ev || event;
+                ev.preventDefault();
+                if($list.is(':visible')){
+                    $turn.removeClass('helpcenter-protocol-ls-i');
+                    $list.hide();
+                }else{
+                    $turn.addClass('helpcenter-protocol-ls-i');
+                    $list.show();
+                }
+            }
+        });
+    });    </script>
+    <!--<script type="text/javascript" src="http://img.huimaiche.cn/uimg/www/v20160505/js/navigation/1184_2_nocity_login_400.js?v=2016050601"></script>-->
+    <script type="text/javascript" src="./help_files/1184_2_nocity_login_nobrand_Top400_Bottom.js.下载"></script>  
+    <script>
+    var _hmt = _hmt || [];
+    </script>
+    <script src="./help_files/dcs_tag_huimc.js.下载" type="text/javascript"></script>
+    <script type="text/javascript">
+    $(function () {
+        $(document).on("click", "[data-hmclog]", function () {
+            if (typeof HMC_LOG !== "undefined" && typeof HMC_LOG.SentClickStat === "function") {
+                try {
+                    HMC_LOG.SentClickStat(this);
+                } catch (e) { }
+            }
+        });
+    });
+    (function () {
+        var bp = document.createElement('script');
+        var curProtocol = window.location.protocol.split(':')[0];
+        if (curProtocol === 'https') {
+            bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+        }
+        else {
+            bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+        }
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(bp, s);
+    })();    </script>
+
+</body></html>

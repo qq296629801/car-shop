@@ -1,0 +1,320 @@
+#@head("团购")
+     <link href="/css/index_style20170309.css" rel="stylesheet" type="text/css">
+     <script type="text/javascript">
+	var carModel = {
+		cmkId : -1,
+		cmdId : -1,
+		cmkName : '',
+		cmdName : ''
+	};
+	var serverTime = 1494496820;
+	var cityId = 1701;
+</script>
+<script src="/js/bigarea.js" type="text/javascript"></script>
+<script src="/js/bitauto.js" type="text/javascript"></script>
+<script src="/js/purl.js" type="text/javascript"></script>
+<script src="/js/inputverify.js" type="text/javascript"></script>
+    <div class="main_box _box slider_box" style="display: block">
+        <div class="slider_img">
+            #for(img:imgList)
+            	#if(for.Index==0)
+	            <a href="#" target="_blank" style="display: block;">
+	                <img src="/img/team/#(img.url)" />
+	            </a>
+	            #else
+	             <a href="#" target="_blank" style="display: none;">
+	                <img src="/img/team/#(img.url)" />
+	            </a>
+	            #end
+            #end
+        </div>
+        <span class="prev prev1" style="display: inline;"></span><span class="next next1" style="display: inline;"></span>
+        <div class="slider-menu-1">
+            <div class="slider-menu-1-box">
+                <ul>
+                    <li class=""><b class="left_corner"></b><a href="javascript:;"></a></li>
+                    
+                    <li class="current"><b class="right_corner"></b><a href="javascript:;"></a></li>
+                    
+                    <li class=""><b class="right_corner"></b><a href="javascript:;"></a></li>
+                    
+                </ul>
+            </div>
+        </div>
+        
+    </div>
+    <!--轮播图结束-->
+	
+	<div class="groupBuying-list-content">
+	<h1 class="popular-brand-title">
+                广州热门品牌</h1>
+				<ul class="popular-brand-list">
+				#for(b:brandHotList)
+					#if(b.img??)
+                    <li><a href="/list?brand_id=#(b.id)" style="text-decoration: none" target="_blank">
+                        <img src="/img/u/#(b.img)" alt="#(b.name)">
+                        <div>
+                  #(b.name)
+                        </div>
+                        </a>
+                    </li>
+                    #end
+                 #end   
+                   
+            </ul>
+	
+	</div>
+	
+	
+    <!--列表内容开始-->
+    <div class="main_box clearfix" style="padding-top: 10px;">
+        <div class="main_con">
+            <!--搜索框开始-->
+            <div class="select_box">
+                <div class="form_box z40">
+                    <span>
+                        <img src="./images/zoom.jpg" width="30" height="30"></span>
+                    <div class="simulate_box">
+                        <div class="simulate_select select_choice" id="divCarMake" cmkid="-1">
+                            请选择品牌 <i class="choice"></i>
+                        </div>
+                        <div class="simulate_option" style="width: 290px;" id="cmbCarMake">
+                            
+                            <a cmkid="-1">
+                                请选择品牌</a>
+                            
+                            <a cmkid="10046">
+                                东风日产</a>
+                            
+                            <a cmkid="20159">
+                                广汽传祺</a>
+                            
+                        </div>
+                    </div>
+                </div>
+                <div class="form_box z40">
+                    <div class="simulate_box">
+                        <div class="simulate_select" id="divCarModel" cmdid="-1">
+                            请选择车型 <i></i>
+                        </div>
+                        <div class="simulate_option" style="width: 290px; display: none;" id="cmbCarModel">
+                        </div>
+                    </div>
+                </div>
+                <div class="search_box">
+                    <a href="javascript:;" class="search_btn" id="btnSearch">搜 索</a>
+                </div>
+            </div>
+            <!--搜索框结束-->
+            <div class="main_box clearfix">
+                <div class="main_con">
+                    <!-- 循环开始 -->
+                    #for(a:activeList)
+                    <div class="list_box">
+                        <div class="list_img">
+                            <img src="/img/u/#(a.url)" alt="#(a.name)"></div>
+                        <div class="list_txt">
+                            <div class="list_logo">
+                                <img src="/img/u/#(a.img)" width="160" height="70">
+                                </div>
+                            <h2 class="list_title">
+                                #(a.name)</h2>
+                            <p class="list_time">
+                             		   活动日期：#(a.time)</p>
+                            <b class="list_num" style="display: block">已报名<i>9</i>人</b>
+                        </div>
+                        <div class="list_tag">
+                            <img src="./images/type1.png" width="102" height="46"></div>
+                        <div class="list_count" status="1" datetime="#(a.time_keep)"></div>
+                        <div class="join" style="bottom: -55px;">
+                            <span class="type">参团车型：</span>
+                            <ul class="car">
+          						   <li><a href="#" target="_blank">xx</a></li>
+                            </ul>
+                            <ul class="tips">
+                                <li>报名开始：#(a.start_time)</li>
+                                <li class="w350">活动地点：#(a.address)</li>
+                                <li>报名结束：#(a.end_time)</li>
+                                <li>活动说明：#(a.context)</li>
+                            </ul>
+                        </div>
+                        <a href="/team/single?id=#(a.id)" target="_blank" class="list_link"></a>
+                    </div>
+                    #end
+                    <!-- 循环end -->
+                    <div class="more_box" style="display: block">
+                        <span class="line_left"></span>
+                        <p>
+                            这是我的底线...</p>
+                        <span class="line_right"></span>
+                    </div>
+                    <div class="main_box page_box clearfix" style="display: none">
+                        <div class="page_con">
+                            
+                        </div>
+                    </div>
+                </div>
+                <div class="assist_side">
+                    <div class="apply_box clearfix" style="border-bottom: 0;">
+                        <div class="cover">
+                        </div>
+                        <h3>
+                            邀约报名<b></b></h3>
+                        <div class="form_box">
+                            <input type="text" id="txtUserName">
+                            <p>
+                                请输入您的姓名</p>
+                            <i class="hint_mark"></i>
+                        </div>
+                        <div class="form_box">
+                            <input type="text" id="txtUserPhone">
+                            <p>
+                                请输入您的手机号</p>
+                            <i class="hint_mark"></i>
+                        </div>
+                        <div class="form_box z30">
+                            <div class="simulate_box">
+                                <div class="simulate_select" id="divSCmd" cmdid="-1">
+                                    请选择车型 <i></i>
+                                </div>
+                                <div class="simulate_option" id="cmbSCmb">
+                                    <a href="javascript:;">请选择活动车型</a>
+                                <a href="javascript:;" cmbid="9">A 奥迪</a><a href="javascript:;" cmbid="12">A 奥克斯</a><a href="javascript:;" cmbid="92">A 阿尔法·罗密欧</a><a href="javascript:;" cmbid="97">A 阿斯顿·马丁</a><a href="javascript:;" cmbid="151">A 阿尔特</a><a href="javascript:;" cmbid="180">A AC Schnitzer</a><a href="javascript:;" cmbid="228">A Artega</a><a href="javascript:;" cmbid="272">A ARCFOX</a><a href="javascript:;" cmbid="2">B 奔驰</a><a href="javascript:;" cmbid="3">B 宝马</a><a href="javascript:;" cmbid="5">B 标致</a><a href="javascript:;" cmbid="14">B 北汽制造</a><a href="javascript:;" cmbid="15">B 比亚迪</a><a href="javascript:;" cmbid="26">B 本田</a><a href="javascript:;" cmbid="59">B 奔腾</a><a href="javascript:;" cmbid="68">B 宝龙</a><a href="javascript:;" cmbid="82">B 保时捷</a><a href="javascript:;" cmbid="85">B 宾利</a><a href="javascript:;" cmbid="127">B 别克</a><a href="javascript:;" cmbid="135">B 布加迪</a><a href="javascript:;" cmbid="157">B 宝骏</a><a href="javascript:;" cmbid="163">B 北京</a><a href="javascript:;" cmbid="168">B 北汽威旺</a><a href="javascript:;" cmbid="172">B 巴博斯</a><a href="javascript:;" cmbid="184">B 保斐利</a><a href="javascript:;" cmbid="195">B 北汽绅宝</a><a href="javascript:;" cmbid="211">B 北汽幻速</a><a href="javascript:;" cmbid="216">B 北汽新能源</a><a href="javascript:;" cmbid="236">B 宝沃</a><a href="javascript:;" cmbid="261">B 北汽瑞丽</a><a href="javascript:;" cmbid="263">B 比速汽车</a><a href="javascript:;" cmbid="20">C 长安微车</a><a href="javascript:;" cmbid="21">C 长城</a><a href="javascript:;" cmbid="129">C 昌河</a><a href="javascript:;" cmbid="136">C 长安汽车</a><a href="javascript:;" cmbid="159">C 长安欧尚</a><a href="javascript:;" cmbid="221">C 成功</a><a href="javascript:;" cmbid="230">C 长安跨越</a><a href="javascript:;" cmbid="231">C 长城华冠</a><a href="javascript:;" cmbid="250">C 长久汽车</a><a href="javascript:;" cmbid="254">C 长江汽车</a><a href="javascript:;" cmbid="8">D 大众</a><a href="javascript:;" cmbid="27">D 东风</a><a href="javascript:;" cmbid="29">D 东南</a><a href="javascript:;" cmbid="66">D 大迪</a><a href="javascript:;" cmbid="69">D 大发</a><a href="javascript:;" cmbid="106">D 大宇</a><a href="javascript:;" cmbid="113">D 道奇</a><a href="javascript:;" cmbid="115">D 东风风行</a><a href="javascript:;" cmbid="141">D 东风风神</a><a href="javascript:;" cmbid="179">D DS</a><a href="javascript:;" cmbid="192">D 底特律电动车</a><a href="javascript:;" cmbid="197">D 东风风度</a><a href="javascript:;" cmbid="198">D 东风校车系列</a><a href="javascript:;" cmbid="205">D 东风小康</a><a href="javascript:;" cmbid="215">D 东风御风</a><a href="javascript:;" cmbid="217">D Dacia</a><a href="javascript:;" cmbid="235">D 东风·郑州日产</a><a href="javascript:;" cmbid="253">D 东风风光</a><a href="javascript:;" cmbid="256">D 东风风诺</a><a href="javascript:;" cmbid="7">F 丰田</a><a href="javascript:;" cmbid="17">F 福特</a><a href="javascript:;" cmbid="40">F 菲亚特</a><a href="javascript:;" cmbid="61">F 富奇</a><a href="javascript:;" cmbid="67">F 福迪</a><a href="javascript:;" cmbid="91">F 法拉利</a><a href="javascript:;" cmbid="128">F 福田</a><a href="javascript:;" cmbid="154">F 福达</a><a href="javascript:;" cmbid="164">F 菲斯克</a><a href="javascript:;" cmbid="187">F Faralli Mazzanti</a><a href="javascript:;" cmbid="190">F 弗那萨利</a><a href="javascript:;" cmbid="199">F 飞驰商务车</a><a href="javascript:;" cmbid="208">F 福汽启腾</a><a href="javascript:;" cmbid="257">F Faraday Future</a><a href="javascript:;" cmbid="63">G 广汽吉奥</a><a href="javascript:;" cmbid="109">G GMC</a><a href="javascript:;" cmbid="110">G 光冈</a><a href="javascript:;" cmbid="133">G 广汽日野</a><a href="javascript:;" cmbid="147">G 广汽传祺</a><a href="javascript:;" cmbid="182">G 观致汽车</a><a href="javascript:;" cmbid="237">G GTA</a><a href="javascript:;" cmbid="252">G 广汽中兴</a><a href="javascript:;" cmbid="265">G GLM</a><a href="javascript:;" cmbid="269">G 广汽乘用车</a><a href="javascript:;" cmbid="31">H 哈飞</a><a href="javascript:;" cmbid="32">H 海马</a><a href="javascript:;" cmbid="44">H 华普</a><a href="javascript:;" cmbid="45">H 汇众</a><a href="javascript:;" cmbid="52">H 黄海</a><a href="javascript:;" cmbid="58">H 红旗</a><a href="javascript:;" cmbid="70">H 航天圆通</a><a href="javascript:;" cmbid="108">H 悍马</a><a href="javascript:;" cmbid="112">H 华泰</a><a href="javascript:;" cmbid="119">H 汉江</a><a href="javascript:;" cmbid="124">H 黑豹</a><a href="javascript:;" cmbid="130">H 华阳</a><a href="javascript:;" cmbid="149">H 海马商用车</a><a href="javascript:;" cmbid="170">H 海格</a><a href="javascript:;" cmbid="181">H 恒天汽车</a><a href="javascript:;" cmbid="196">H 哈弗</a><a href="javascript:;" cmbid="225">H 华颂</a><a href="javascript:;" cmbid="251">H 华泰新能源</a><a href="javascript:;" cmbid="259">H 汉腾</a><a href="javascript:;" cmbid="262">H 华凯</a><a href="javascript:;" cmbid="271">H 华骐</a><a href="javascript:;" cmbid="4">J Jeep</a><a href="javascript:;" cmbid="34">J 吉利汽车</a><a href="javascript:;" cmbid="35">J 江淮</a><a href="javascript:;" cmbid="37">J 江铃</a><a href="javascript:;" cmbid="38">J 江南</a><a href="javascript:;" cmbid="39">J 金杯</a><a href="javascript:;" cmbid="57">J 金龙</a><a href="javascript:;" cmbid="74">J 金程</a><a href="javascript:;" cmbid="98">J 捷豹</a><a href="javascript:;" cmbid="121">J 吉林江北</a><a href="javascript:;" cmbid="122">J 济南汽车</a><a href="javascript:;" cmbid="143">J 吉利帝豪</a><a href="javascript:;" cmbid="144">J 吉利全球鹰</a><a href="javascript:;" cmbid="148">J 吉利英伦</a><a href="javascript:;" cmbid="152">J 九龙</a><a href="javascript:;" cmbid="161">J 金旅客车</a><a href="javascript:;" cmbid="177">J 俊风</a><a href="javascript:;" cmbid="219">J 江西五十铃</a><a href="javascript:;" cmbid="224">J 江铃集团轻汽</a><a href="javascript:;" cmbid="51">K 克莱斯勒</a><a href="javascript:;" cmbid="107">K 凯迪拉克</a><a href="javascript:;" cmbid="145">K 科尼赛克</a><a href="javascript:;" cmbid="150">K 开瑞</a><a href="javascript:;" cmbid="188">K 卡尔森</a><a href="javascript:;" cmbid="212">K KTM</a><a href="javascript:;" cmbid="213">K 卡威</a><a href="javascript:;" cmbid="218">K 科瑞斯的</a><a href="javascript:;" cmbid="220">K 凯翼</a><a href="javascript:;" cmbid="241">K 康迪全球鹰电动汽车</a><a href="javascript:;" cmbid="16">L 铃木</a><a href="javascript:;" cmbid="36">L 陆风</a><a href="javascript:;" cmbid="76">L 力帆</a><a href="javascript:;" cmbid="80">L 劳斯莱斯</a><a href="javascript:;" cmbid="83">L 路特斯</a><a href="javascript:;" cmbid="86">L 兰博基尼</a><a href="javascript:;" cmbid="90">L 蓝旗亚</a><a href="javascript:;" cmbid="94">L 雷克萨斯</a><a href="javascript:;" cmbid="95">L 林肯</a><a href="javascript:;" cmbid="96">L 路虎</a><a href="javascript:;" cmbid="99">L 雷诺</a><a href="javascript:;" cmbid="101">L 罗孚</a><a href="javascript:;" cmbid="146">L 莲花</a><a href="javascript:;" cmbid="153">L 猎豹汽车</a><a href="javascript:;" cmbid="166">L 理念</a><a href="javascript:;" cmbid="200">L 蓝海房车</a><a href="javascript:;" cmbid="223">L 领志</a><a href="javascript:;" cmbid="227">L 朗世</a><a href="javascript:;" cmbid="229">L 雷丁电动</a><a href="javascript:;" cmbid="249">L 陆地方舟</a><a href="javascript:;" cmbid="255">L LeSEE</a><a href="javascript:;" cmbid="267">L 领克</a><a href="javascript:;" cmbid="18">M 马自达</a><a href="javascript:;" cmbid="55">M 美亚</a><a href="javascript:;" cmbid="79">M MG</a><a href="javascript:;" cmbid="81">M MINI</a><a href="javascript:;" cmbid="88">M 迈巴赫</a><a href="javascript:;" cmbid="93">M 玛莎拉蒂</a><a href="javascript:;" cmbid="123">M 牡丹汽车</a><a href="javascript:;" cmbid="183">M 迈凯伦</a><a href="javascript:;" cmbid="201">M 摩根</a><a href="javascript:;" cmbid="155">N 纳智捷</a><a href="javascript:;" cmbid="234">N Noble</a><a href="javascript:;" cmbid="84">O 讴歌</a><a href="javascript:;" cmbid="104">O 欧宝</a><a href="javascript:;" cmbid="171">O 欧朗</a><a href="javascript:;" cmbid="243">O 欧联</a><a href="javascript:;" cmbid="105">P 旁蒂克</a><a href="javascript:;" cmbid="185">P 帕加尼</a><a href="javascript:;" cmbid="191">P PGO</a><a href="javascript:;" cmbid="210">P 皮特比尔特卡车</a><a href="javascript:;" cmbid="28">Q 起亚</a><a href="javascript:;" cmbid="42">Q 奇瑞</a><a href="javascript:;" cmbid="43">Q 庆铃</a><a href="javascript:;" cmbid="156">Q 启辰</a><a href="javascript:;" cmbid="226">Q 乔治·巴顿</a><a href="javascript:;" cmbid="30">R 日产</a><a href="javascript:;" cmbid="78">R 荣威</a><a href="javascript:;" cmbid="142">R 瑞麒</a><a href="javascript:;" cmbid="10">S 斯柯达</a><a href="javascript:;" cmbid="25">S 三菱</a><a href="javascript:;" cmbid="50">S 双环</a><a href="javascript:;" cmbid="73">S 顺旅</a><a href="javascript:;" cmbid="89">S smart</a><a href="javascript:;" cmbid="102">S 双龙</a><a href="javascript:;" cmbid="103">S 萨博</a><a href="javascript:;" cmbid="111">S 斯巴鲁</a><a href="javascript:;" cmbid="117">S 三星</a><a href="javascript:;" cmbid="137">S 世爵</a><a href="javascript:;" cmbid="162">S SPIRRA</a><a href="javascript:;" cmbid="165">S 上汽大通</a><a href="javascript:;" cmbid="169">S 陕汽通家</a><a href="javascript:;" cmbid="173">S 首望</a><a href="javascript:;" cmbid="209">S 山姆</a><a href="javascript:;" cmbid="239">S 赛麟SALEEN</a><a href="javascript:;" cmbid="242">S STARTECH</a><a href="javascript:;" cmbid="244">S 上喆汽车</a><a href="javascript:;" cmbid="260">S SWM斯威汽车</a><a href="javascript:;" cmbid="54">T 天马</a><a href="javascript:;" cmbid="56">T 通田</a><a href="javascript:;" cmbid="120">T 田野</a><a href="javascript:;" cmbid="139">T 塔菲克</a><a href="javascript:;" cmbid="160">T 特拉蒙塔纳</a><a href="javascript:;" cmbid="175">T 腾势</a><a href="javascript:;" cmbid="189">T 特斯拉</a><a href="javascript:;" cmbid="202">T 泰卡特</a><a href="javascript:;" cmbid="19">W 沃尔沃</a><a href="javascript:;" cmbid="46">W 万丰</a><a href="javascript:;" cmbid="48">W 五菱</a><a href="javascript:;" cmbid="125">W 万通</a><a href="javascript:;" cmbid="132">W 五十铃</a><a href="javascript:;" cmbid="140">W 威麟</a><a href="javascript:;" cmbid="186">W 威兹曼</a><a href="javascript:;" cmbid="207">W 潍柴英致</a><a href="javascript:;" cmbid="247">W 潍柴欧睿</a><a href="javascript:;" cmbid="266">W 蔚来</a><a href="javascript:;" cmbid="270">W WEY</a><a href="javascript:;" cmbid="6">X 雪铁龙</a><a href="javascript:;" cmbid="13">X 现代</a><a href="javascript:;" cmbid="49">X 雪佛兰</a><a href="javascript:;" cmbid="62">X 新雅途</a><a href="javascript:;" cmbid="65">X 新大地</a><a href="javascript:;" cmbid="71">X 新凯</a><a href="javascript:;" cmbid="87">X 西雅特</a><a href="javascript:;" cmbid="174">X 星客特</a><a href="javascript:;" cmbid="264">X 小鹏汽车</a><a href="javascript:;" cmbid="41">Y 依维柯</a><a href="javascript:;" cmbid="47">Y 仪征</a><a href="javascript:;" cmbid="53">Y 一汽</a><a href="javascript:;" cmbid="75">Y 永源</a><a href="javascript:;" cmbid="100">Y 英菲尼迪</a><a href="javascript:;" cmbid="118">Y 云豹</a><a href="javascript:;" cmbid="126">Y 云雀</a><a href="javascript:;" cmbid="138">Y 野马汽车</a><a href="javascript:;" cmbid="176">Y 友谊客车</a><a href="javascript:;" cmbid="178">Y 宇通</a><a href="javascript:;" cmbid="193">Y 英特诺帝</a><a href="javascript:;" cmbid="194">Y 扬州亚星客车</a><a href="javascript:;" cmbid="238">Y 御捷</a><a href="javascript:;" cmbid="245">Y 游侠汽车</a><a href="javascript:;" cmbid="248">Y 扬州亚星商用车有限公司</a><a href="javascript:;" cmbid="258">Y 驭胜</a><a href="javascript:;" cmbid="268">Y 雅宾纳</a><a href="javascript:;" cmbid="274">Y 云度</a><a href="javascript:;" cmbid="33">Z 中兴</a><a href="javascript:;" cmbid="60">Z 中华</a><a href="javascript:;" cmbid="64">Z 中客华北</a><a href="javascript:;" cmbid="72">Z 中顺</a><a href="javascript:;" cmbid="77">Z 众泰</a><a href="javascript:;" cmbid="167">Z 中欧奔驰房车</a><a href="javascript:;" cmbid="203">Z 之诺</a><a href="javascript:;" cmbid="204">Z 中通客车</a><a href="javascript:;" cmbid="214">Z 浙江卡尔森</a><a href="javascript:;" cmbid="233">Z 知豆</a><a href="javascript:;" cmbid="240">Z Zenvo</a><a href="javascript:;" cmbid="246">Z 重汽王牌</a><a href="javascript:;" cmbid="273">Z 正道</a></div>
+                                <div class="simulate_option2" id="cmbSCmd">
+                                    <a href="javascript:;">请选择活动省份</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form_box z10">
+                            <div class="simulate_box">
+                                <div class="simulate_select" id="divSCity" cityid="-1">
+                                    请选择团购城市 <i></i>
+                                </div>
+                                <div class="simulate_option" id="cmbSPro">
+                                    <a href="javascript:;" proid="-1">请选择活动省份</a>
+                                <a href="javascript:;" proid="1" proname="安徽省">安徽</a><a href="javascript:;" proid="2" proname="北京">北京</a><a href="javascript:;" proid="3" proname="福建省">福建</a><a href="javascript:;" proid="4" proname="甘肃省">甘肃</a><a href="javascript:;" proid="5" proname="广东省">广东</a><a href="javascript:;" proid="6" proname="广西壮族自治区">广西</a><a href="javascript:;" proid="7" proname="贵州省">贵州</a><a href="javascript:;" proid="8" proname="海南省">海南</a><a href="javascript:;" proid="9" proname="河北省">河北</a><a href="javascript:;" proid="10" proname="河南省">河南</a><a href="javascript:;" proid="11" proname="黑龙江省">黑龙江</a><a href="javascript:;" proid="12" proname="湖北省">湖北</a><a href="javascript:;" proid="13" proname="湖南省">湖南</a><a href="javascript:;" proid="14" proname="吉林省">吉林</a><a href="javascript:;" proid="15" proname="江苏省">江苏</a><a href="javascript:;" proid="16" proname="江西省">江西</a><a href="javascript:;" proid="17" proname="辽宁省">辽宁</a><a href="javascript:;" proid="18" proname="内蒙古自治区">内蒙古</a><a href="javascript:;" proid="19" proname="宁夏回族自治区">宁夏</a><a href="javascript:;" proid="20" proname="青海省">青海</a><a href="javascript:;" proid="21" proname="山东省">山东</a><a href="javascript:;" proid="22" proname="山西省">山西</a><a href="javascript:;" proid="23" proname="陕西省">陕西</a><a href="javascript:;" proid="24" proname="上海">上海</a><a href="javascript:;" proid="25" proname="四川省">四川</a><a href="javascript:;" proid="26" proname="天津">天津</a><a href="javascript:;" proid="27" proname="西藏自治区">西藏</a><a href="javascript:;" proid="28" proname="新疆维吾尔自治区">新疆</a><a href="javascript:;" proid="29" proname="云南省">云南</a><a href="javascript:;" proid="30" proname="浙江省">浙江</a><a href="javascript:;" proid="31" proname="重庆">重庆</a></div>
+                                <div class="simulate_option2" id="cmbSCity">
+                                    <a href="javascript:;">请选择活动城市</a>
+                                </div>
+                            </div>
+                        </div>
+                        <a href="javascript:;" class="submit_btn" id="btnSignup">提 交</a>
+                    </div>
+                    <div class="price_box" style="border-bottom: 0;">
+                        <h3>
+                            <b></b>报名流程</h3>
+                        <div class="cover1">
+                        </div>
+                        <div class="cover">
+                        </div>
+                        <div class="price_con" id="price_scroll">
+                           <div class="right-col">
+                <div class="item-box steps">
+                    <h2 class="item-title">
+                        轻松三步团好车</h2>
+                    <dl class="step1">
+                        <dt></dt>
+                        <dd>
+                            第1步：免费报名</dd>
+                    </dl>
+                    <dl class="step2">
+                        <dt></dt>
+                        <dd>
+                            第2步：邀约参团</dd>
+                    </dl>
+                    <dl class="step3">
+                        <dt></dt>
+                        <dd>
+                            第3步：到店看车</dd>
+                    </dl>
+                </div>
+                <div class="car-activities">
+                </div>
+                <!--为您推荐-->
+    <div class="item-box">
+        <h2 class="item-title">
+            为您推荐</h2>
+        <ul class="car-list-ul">
+                <li><a href="https://www.#/siyucivic?page=gplist_recom" style="text-decoration: none" target="_blank">
+                        <img data-url="https://img3.bitautoimg.com/autoalbum/files/20160721/981/0415589818_6.jpg" class="lazyload" alt="思域" title="思域" src="https://img3.bitautoimg.com/autoalbum/files/20160721/981/0415589818_6.jpg">
+                    <p class="car-name">
+                        思域</p>
+                    <p class="car-discount">
+                        平均节省<span class="num">0.54
+                        </span><span class="metric">万</span>
+                    </p>
+                </a></li>
+                <li><a href="https://www.#/langyi?page=gplist_recom" style="text-decoration: none" target="_blank">
+                        <img data-url="https://img3.bitautoimg.com/autoalbum/files/20160725/235/1102082359_6.jpg" class="lazyload" alt="朗逸" title="朗逸" src="https://img3.bitautoimg.com/autoalbum/files/20160725/235/1102082359_6.jpg">
+                    <p class="car-name">
+                        朗逸</p>
+                    <p class="car-discount">
+                        平均节省<span class="num">0.00
+                        </span><span class="metric">万</span>
+                    </p>
+                </a></li>
+                <li><a href="https://www.#/hafuh6?page=gplist_recom" style="text-decoration: none" target="_blank">
+                        <div class="car-label">
+                                                            <i class="cheng" title="该车型部分车款有最低承诺价"></i>
+                        </div>
+                        <img data-url="https://img3.bitautoimg.com/autoalbum/files/20150608/029/0622000295_6.jpg" class="lazyload" alt="哈弗H6" title="哈弗H6" src="https://img3.bitautoimg.com/autoalbum/files/20150608/029/0622000295_6.jpg">
+                    <p class="car-name">
+                        哈弗H6</p>
+                    <p class="car-discount">
+                        平均节省<span class="num">0.00
+                        </span><span class="metric">万</span>
+                    </p>
+                </a></li>
+        </ul>
+    </div>
+
+            </div>
+                        </td></tr></tbody></table></div>
+                    </div>
+                    <div class="away_box" style="display: none;" id="divHotCar">
+                        <h3>
+                            <b></b>热门车型</h3>
+                        <ul id="ulHotCar">
+                            
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--列表内容结束-->
+    <div class="actGotop">
+        <a href="javascript:;" title="Top"></a>
+    </div>
+    <!--弹窗-->
+    <!--报名成功-->
+    <div class="pop pop_city_box" id="tip_exists">
+        <h4>
+            提示</h4>
+        <p class="p3 p32" style="width:250px;">
+            <i></i>您已经报过名啦</p>
+            <p class="p5">感谢您的参与</p>
+        
+        <a href="javascript:;" class="confirm_btn">谢谢</a>
+    </div>
+    <div class="pop pop_city_box" id="tip_ok">
+        <h4>
+            提示</h4>
+        <p class="p3">
+            <i></i>提交成功</p>
+             <p class="p1">感谢您的参与</p>
+        <p class="p1">
+            当您关注的品牌有优惠活动时，客服人员会与您电话联系！</p>
+        <a href="javascript:;" class="confirm_btn">谢谢</a>
+    </div>
+    <div class="mask">
+    </div>
+    <!--返回顶部-->
+    <div class="actGotop">
+        <a href="javascript:;" title="Top"></a>
+    </div>
+    <!--尾部-->
+     #include("/common/_footer_team.html")
+    <!--/尾部-->
+</body></html>

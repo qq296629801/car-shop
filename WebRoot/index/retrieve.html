@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<!-- saved from url=(0039)http://passport.huimaiche.com/retrieve/ -->
+<html><head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>重置密码 - 车集市</title>
+   #include("/common/_head.html")
+    <!--中间内容 -->
+    <div class="bt_page">
+        <div class="ps_cont m_t_t90">
+            <h2>
+                通过注册手机号找回您的密码</h2>
+            <div class="carinfor">
+                <ul>
+                    <li class="formli">
+                        <div class="txtbox">
+                            <label>
+                                手&nbsp;&nbsp;&nbsp;&nbsp;机：</label>
+                            <input type="text" class="txt" maxlength="11" autocomplete="off" placeholder="请输入手机号" id="mobile">
+                        </div>
+                        <div style="display: none" id="errMobile" class="error">
+                        </div>
+                    </li>
+                    <li class="formli" style="">
+                        <div class="txtbox wvercode">
+                            <label>
+                                验证码：</label>
+                            <input type="text" maxlength="4" class="txt" autocomplete="off" placeholder="请输入验证码" id="vcode">
+                        </div>
+                        <img width="95" height="40" src="/user/img" alt="" class="vercode changecode" id="img_code_1">
+                        <a href="javascript:;" class="changevercode changecode" id="changeCode">看不清换一换</a>
+                        <div style="display: none" id="errVcode" class="error">
+                        </div>
+                    </li>
+                    <li class="formli">
+                        <div class="txtbox w290">
+                            <label>
+                                确认码：</label>
+                            <input type="text" class="txt" autocomplete="off" placeholder="请输入手机收到的确认码" id="mcode">
+                        </div>
+                        <a href="javascript:" id="sendcode" class="surebtn">发送确认码</a>
+                        <div class="clear">
+                        </div>
+                        <div class="order-tips" id="code-tip" style="width: 398px; position: relative; top: 10px;
+                            padding: 5px 20px; display: none; margin-bottom: 10px;">
+                            <div class="tips-arrow" style="left: 380px;">
+                                <em>◆</em><span>◆</span>
+                            </div>
+                            <p>
+                               </p>
+                        </div>
+                        <div style="display: none" id="errMcode" class="error">
+                        </div>
+                    </li>
+                    <li class="formli">
+                        <div class="txtbox">
+                            <label>
+                                新密码：</label>
+                            <input type="password" class="txt" id="pwd" autocomplete="off" maxlength="16">
+                        </div>
+                        <div style="display: none" id="errPwd" class="error">
+                        </div>
+                    </li>
+                </ul>
+                <div class="btn">
+                    <div style="display: none" id="errSystem" class="error">
+                    </div>
+                    <span class="button_orange button_l_50 w-resetpsw"><a id="retrieve-submit" href="javascript:;">
+                        设置新密码</a></span><br>
+                    <p class="tac">
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+  #include("/common/_footer.html")

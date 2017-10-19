@@ -1,0 +1,253 @@
+﻿@charset "utf-8";
+/* edit for yituangou by Songcf */
+/*reset*/
+body,div,ul,ol,li,p,dl,dt,dd,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,button,textarea,blockquote,th,td {margin:0; padding:0;}
+h1, h2, h3, h4, h5, h6 {font-size:100%; font-weight:normal}
+body {text-align:left; font-family:(SimSun, serif); font-size:12px; color:#000; line-height:20px;background-color:#f4f4f4;}
+html,body { height:100%;}
+ul,ol {list-style:none;}
+img {border:0;vertical-align:middle;}
+table {border-collapse:collapse; border-spacing:0;}
+caption,th {text-align:left;}
+/*清除浮动*/
+.clearfix:after {visibility:hidden; display:block; font-size:0; content:""; clear:both; height:0;}
+.clearfix{*zoom:1;}
+.fl { float:left;}
+.fr { float:right;}
+a { text-decoration:none;}
+/* 页尾 */
+.infobar { height:30px; text-align:center;background:#c5c5c5}
+.infobar .cont_f { line-height:30px; width:1200px;height:30px; margin:0 auto;color: #767676;background:#c5c5c5}
+.infobar .cont_f .txt_l {float:left;}
+.infobar .cont_f .txt_r {float:right;}
+.header_yc {background:#fff; height:40px;}
+.footer_yc {background:#fff;}
+/*以上为公用样式*/
+
+/*主区域公用样式*/
+.main_box { width:1200px; margin:0 auto; font-family:"Micsoft Yahei","微软雅黑";}
+
+
+/*logo*/
+.logo_box { position:relative; height:67px; margin-bottom:8px; border-bottom:2px solid #ececec; background-color:#fff;  z-index:20; zoom:1;}
+.logo_box img { padding-top: 14px;}
+.head_box { position: relative;}
+/*更多精彩活动*/
+.more_box { position:relative; padding:50px 0;}
+.more_box p { font-size:18px; color:#999; text-align:center; line-height:36px;}
+.more_box span { position:absolute; top:0px; height:67px; width:282px; border-bottom:1px solid #e0e0e0; }
+.line_left { left:0px;}
+.line_right { right:0px;}
+.bot_box  { width: 1160px; height:130px; padding:40px 0 0 40px; background-color: #fff;-webkit-box-shadow:0 0 10px rgba(234, 233, 233, .9);-moz-box-shadow:0 0 10px rgba(234, 233, 233, .9);box-shadow:0 0 4px rgba(234, 233, 233, .9); }
+.bot_box dl { position: relative; float: left; height: 79px; padding: 6px 60px 0 100px; *padding: 6px 60px 0 90px; background: url(http://img1.bitautoimg.com/brandmarket/yituangou/pc/images/promise_icon.png) no-repeat; }
+.bot_box dl.b1 { background-position: 0 0; }
+.bot_box dl.b2 { background-position: 0 -95px;}
+.bot_box dl.b3 { background-position: 0 -190px;}
+.bot_box dl.b4 { background-position: 0 -285px; }
+.bot_box dt { font-size: 20px; color: #333; line-height: 40px;}
+.bot_box dd {font-size: 14px; color: #666; line-height: 18px;}
+.top_bar { padding-top: 23px;}
+.top_bar span { float: right; height: 33px; padding-left: 36px; margin-left: 18px; line-height: 33px; font-size: 12px; color: #666; background: url(http://img1.bitautoimg.com/brandmarket/yituangou/pc/images/promise_icon.png) no-repeat; }
+.top_bar span.t1 { background-position: -367px 0; }
+.top_bar span.t2 { background-position: -367px -43px;}
+.top_bar span.t3 { background-position: -367px -86px;}
+.top_bar span.t4 { background-position: -367px -129px; }
+/*选择城市*/
+.host_city { position: absolute; top: 20px; left: 280px; width: 61px; z-index: 2;}
+.city_current { position: absolute; top: 0px; left: 0px; display: inline-block; *display: inline; *zoom:1; padding-right: 14px; font-size: 16px; color: #666; line-height: 32px; cursor: pointer;}
+.arrow_down { position: absolute; right: 0px; top: 15px; width: 10px; height: 5px;}
+.gray_arrow { position: absolute; left: 0px; top: 0px; width: 0; height: 0; border:5px solid transparent; border-top: 5px solid #a7a7a7; z-index: 1;}
+.white_arrow { position: absolute; left: 1px; top: 0px; width: 0; height: 0; border:4px solid transparent; border-top: 4px solid #fff; z-index: 2;}
+.city_all { position: absolute; top: 32px; left: 0px; width: 567px; padding: 10px 10px 10px 30px; border:1px solid #dbdbdb; background-color: #fff; display: none;}
+.hot_city { padding: 8px 0; border-bottom:1px solid #dbdbdb; font-size: 16px; }
+.hot_city .hot_title {float: left; width: 104px; color: #034989; line-height: 32px;}
+.hot_city_con {float: left; width: 446px;}
+.hot_city_con a,.city_part dd a { float: left; width: 64px; padding-right: 10px; text-indent: 0; color: #333; line-height: 32px;overflow:hidden;text-overflow:ellipsis;-o-text-overflow:ellipsis;white-space:nowrap;}
+.hot_city_con a:hover,.city_part dd a:hover { color: #034989; font-weight: bold;}
+.city_part{ padding-bottom: 18px;}
+.city_part dt {float: left; width: 104px; line-height: 32px; text-align:center;  color: #034989;}
+.city_part dd {float: left; width: 446px;color: #333;}
+.city_more {border-top:1px solid #dbdbdb; font-size: 14px; color: #999; line-height: 34px; text-align: center;}
+/* roll */
+.roll {width: 567px; max-height:288px; margin: 10px 0;  font-size: 16px; overflow:hidden;zoom:1;}
+.mCSB_scrollTools {right:0;top:0;width:10px;height:288px;}
+.mCSB_dragger {width:10px;}
+.mCSB_dragger_bar {width:10px;height:60px; background:#dbdbdb; cursor:pointer; }
+.mCSB_draggerRail {width:10px;height:288px;}
+.mCustomScrollBox { padding-right:10px;}
+
+/*团购面包屑*/
+.crumbs_box { padding: 0 0 10px; font-size: 14px; color: #333; line-height: 30px;}
+.crumbs_box a {font-size: 14px; color: #333; line-height: 30px;}
+.crumbs_box a:hover { text-decoration: underline; }
+
+/*团购详情*/
+.details_left { float: left; width: 420px;}
+.details_left_top { width: 418px; height: 298px; margin-bottom: 10px; border: 1px solid #ddd; background-color: #fff; overflow: hidden;position:relative;}
+.details_left_top img { width: 100%;}
+.details_left_bot { position: relative; width: 200px; height: 55px; padding:20px 120px 20px 100px; background: url(http://img1.bitautoimg.com/brandmarket/yituangou/pc/images/icon160411.png) no-repeat 0 0 #3659a9;}
+.num_box { position: absolute; top: 0; right: 0; width: 106px; height: 81px; padding:6px; border: 1px solid #315199; text-align: center; background-color: #fff;}
+.num_con { padding-top: 8px;  *padding-top: 12px;  font-size: 14px; color: #333; line-height: 31px; overflow: hidden;white-space:nowrap;  }
+.num_con b { position: relative; top: 2px; height: 31px; font-size: 24px; color: #3659a9; font-weight: bold;}
+.num_txt { font-size: 14px; color: #999; line-height: 16px; *line-height: 28px; font-weight: bold;}
+.time_box { font-size: 14px; color: #ccc; line-height: 27px;}
+.time_box b { font-weight: bold; color: #fff;}
+.start_box {font-size: 14px; color: #ccc; line-height: 55px;}
+.details_right { float: right; width: 690px; height: 301px; padding: 4px 40px; border: 1px solid #ddd; background-color: #fff;border-bottom:none;}
+.details_right h1 { border-bottom: 1px solid #ccc; font-size: 18px; color: #333; font-weight: bold; line-height: 54px;}
+.sign_box { float: left; width: 360px; padding-top: 28px;}
+/*--表单--*/
+.form_box { position:relative; height:36px; padding-bottom:22px;background: white}
+.form_box.z20 { z-index:20;}
+.form_box.z10 { z-index:10;}
+.form_box span { float:left; width:76px; line-height:36px; text-align:left; font-size:14px; color: #333; }
+.form_con { float:left; position:relative; width:238px; height:34px; border:1px solid #e5e5e5;}
+.simulate_box { position:relative; float:left; width:240px;}
+.simulate_select{ position:relative; width:238px; height:34px; border:1px solid #e5e5e5;  color:#c7c7c7; font-size:14px; line-height:34px; text-indent:6px;white-space:nowrap; overflow:hidden; cursor:pointer;}
+.simulate_select.cur{ color:#333;border:1px solid #999;}
+.simulate_select i { display:block; position:absolute; top:0px; right:0px; width:14px; height:10px; padding:13px 6px;  background:url(http://img1.bitautoimg.com/brandmarket/yituangou/pc/images/icon.png) no-repeat 6px -30px #fff;}
+.simulate_option { position:absolute; top:38px; left:0px; width:218px; padding: 20px 10px 10px; border:1px solid #e5e5e5;  color:#333; background-color:#fff; overflow-y:auto; overflow-x:auto;display:none;}
+.simulate_option dt { float: left; width: 36px; padding-right: 6px; font-weight: bold;font-size: 14px; line-height: 24px;  }
+.simulate_option dd { float: left; width: 176px; }
+.simulate_option a { float: left; display:block; margin:0 16px 10px 0; line-height:21px; font-size:14px; color:#b6b6b6; border-bottom: 1px solid #fff; background-color:#fff; white-space:nowrap;text-decoration:none;  }
+.simulate_option a:hover { border-bottom: 1px solid #ff9900; color: #333;}
+.form_con input { position:absolute; top:7px; left:6px; vertical-align:middle; font-size:14px; color:#333; font-family:"Micsoft Yahei","微软雅黑"; height:21px; line-height:21px; width:200px; border:none; background:none; outline:none;}
+.form_con p { position:absolute; top:7px; left:6px; font-size:14px; color:#c7c7c7; font-family:"Micsoft Yahei","微软雅黑"; line-height:21px; cursor: pointer; z-index: 1;}
+.form_con .focus_color { color:#333;}
+.form_box select {height:36px; width:167px; line-height:36px; vertical-align:middle; visibility:text-indent:6px; margin-right:14px; border:1px solid #ccc; font-family:"Micsoft Yahei","微软雅黑"; color:#333;background:none; outline:none;}
+.form_box option{height:36px; width:167px; line-height:36px;  vertical-align:middle;text-indent:6px;}
+
+/*sprit*/
+.name,.phone,.hint_s i {background:url(http://img1.bitautoimg.com/brandmarket/yituangou/pc/images/icon.png) no-repeat;}
+.form_box .name { background-position:-122px 1px;}
+.form_box .phone { background-position:-124px -54px;}
+/*input 聚焦状态*/
+.form_box.focus .form_con { border:1px solid #999;}
+.form_box.focus .simulate_select { border:1px solid #999;color:#333;}
+/*input 输入错误*/
+.form_box.error .form_con { border:1px solid #ff0000;}
+.form_box.error .simulate_select { border:1px solid #ff0000;}
+/*input 输入正确*/
+.form_box.correct .form_con  { background-position:-10px -160px;}
+.hint_s {  position:absolute; top:38px; left:80px; padding-left:18px;  font-size:12px; line-height:17px; display:none;  }
+.hint_s i { position:absolute; top:2px; left:0px; width:13px; height:13px; display:block;}
+/*提示*/
+.form_box.focus .hint_s {  color:#333; }
+.form_box.focus .hint_s i {background-position:-347px -292px;}
+/*错误*/
+.form_box.error .hint_s {  color:#f00;  }
+.form_box.error .hint_s i {background-position:-347px -342px;}
+
+.sign_box .submit_btn {display:block;  width:317px; height:52px; margin-top: 6px; line-height:52px; text-align:center; color:#fff; font-size:25px; font-weight:bold; background-color:#ff9900; font-family:"Micsoft Yahei","微软雅黑";}
+.sign_box .submit_btn:hover { background-color:#ff3300;}
+/*活动结束添加类名over_btn*/
+.submit_btn.over_btn { background-color:#999;}
+.submit_btn.over_btn:hover { background-color:#ccc;}
+
+.txt_box { float: left; width: 330px; height: 292px; padding-top: 28px; }
+.txt_con { position: relative;  font-size:14px; color:#333; line-height:38px;} 
+.txt_con p{ position: relative; padding-left: 30px; color: #3659a9; line-height: 28px;margin-bottom:0px;}
+.txt_con p i { position: absolute; left: 1px; top: 6px; width: 16px; height: 16px; background: url(http://img1.bitautoimg.com/brandmarket/yituangou/pc/images/icon160411.png) no-repeat;}
+.txt_con p i.style_1 { background-position: -80px -113px;}
+.txt_con p i.style_2 { background-position: -80px -143px;}
+.txt_con p i.style_3 { background-position: -80px -173px;}
+.c_orange { padding-bottom: 10px; color:#f69006; cursor: pointer;}
+.c_gary { color:#999;}
+.pl0 { padding-left:10px;}
+.ptb10 { padding:10px 0;}
+.jiathis_style span.jiathis_txt { font-size: 14px;}
+.pt30 { padding-top: 36px;}
+.reason_box { display:none;  position:absolute; top:32px; left:94px; width:214px; padding:10px; border:1px solid #ccc; background-color:#fff; }
+.reason_box span { display:block; text-indent:-12px; margin-left:12px;font-size:12px; line-height:16px; color:#f69006;}
+.reason_box i {position:absolute; top:-5px; left:88px; width:9px; height:5px; background:url(http://img1.bitautoimg.com/brandmarket/yituangou/pc/images/icon.png) no-repeat 0 0;}
+
+/*团购相关*/
+.other_box { margin-bottom: 46px;}
+.other_left { float: left; width: 898px; margin-top: 10px; border: 1px solid #ddd; background-color: #fff; overflow: hidden;}
+.other_left img { width: 100%;}
+.other_right { float: right; width: 290px; margin-top: 10px; border: 1px solid #ddd; background-color: #fff; overflow: hidden;}
+.title_1,.title_2 { position: relative; padding: 10px 16px; height: 24px;}
+.title_1 h2,.title_2 h2 { font-size: 18px; font-weight: bold; line-height: 24px; color: #333;}
+.title_1 i,.title_2 i { position: absolute; right: 16px; top: 12px; width: 22px; height: 20px; background: url(http://img1.bitautoimg.com/brandmarket/yituangou/pc/images/icon160411.png) no-repeat;}
+.title_1 i { background-position:0 -115px;}
+.title_2 i { background-position:0 -144px;}
+.price_box { padding: 16px 26px 20px; width: 238px; height: auto; border-top: 1px solid #ddd; border-bottom: 1px solid #ddd;}
+.price_con {width: 238px; height: auto; overflow: hidden;}
+.price_con td { height: 38px; line-height: 38px; color: #333; font-size: 14px;overflow: hidden;
+text-overflow: ellipsis;white-space: nowrap;} 
+.price_con td.last_td { width: 80px; text-align: right;}
+.hot_car { padding: 20px; border-top: 1px solid #ddd;} 
+.hot_car_img { width: 250px; height: 160px; overflow: hidden;}
+.hot_car_img img { width: 100%;}
+.hot_car p { font-size: 14px; color: #333; line-height: 28px; text-align: center;}
+.hot_car p.mb6 { margin-top: 10px; margin-bottom: -6px;}
+.hot_car b { font-weight: bold;}
+.hot_car em { font-size: 24px; color: #3659a9; font-style: normal;}
+.hot_car span { display: block; width: 118px; height: 29px; margin:10px auto 12px; line-height: 29px; text-align: center; font-size: 16px; color: #3659a9; border:1px solid #3659a9;}
+.hot_car a:hover span {color: #fff; background-color: #3659a9;}
+
+/* 弹窗 */
+.pop_close { position:absolute; top:0px; right:0px; width:46px; height:46px; cursor: pointer; background:url(http://img1.bitautoimg.com/brandmarket/yituangou/pc/images/icon1.png) no-repeat -136px 15px;}
+.mask { position:fixed; width:3000px; height:10000px; left:50%;; top:0; margin:0 0 0 -1500px;; background:url(http://img1.bitautoimg.com/brandmarket/yituangou/pc/images/mask.png);z-index:99; display:none;}
+.pop { z-index:100;position:fixed; left:50%; top:50%; font-family:"Microsoft YaHei";  display:none;}
+.pop_city_box { width:514px; min-height:238px; padding-bottom: 60px; margin:-149px 0 0 -257px; border:1px solid #2c4c8f; background-color:#fff; }
+.pop_city_box h4 { height:46px; background-color:#2c4c8f; line-height:46px; text-indent:20px; color:#fff; font-size:18px;}
+.pop_city_box .p3 { position:relative; padding-left:45px; margin:30px auto 10px; font-size:28px; color:#73a822; line-height:48px; width:116px;}
+.pop_city_box .p3.p32 {width:390px;}
+.pop_city_box .p3 i { position:absolute; left:0px; top:10px; width:30px; height:30px; background:url(http://img1.bitautoimg.com/brandmarket/yituangou/pc/images/icon1.png) no-repeat 0 -216px;}
+.pop_city_box .p1{ font-size:18px; color:#666; text-align:center; line-height:33px;}
+.pop_city_box .p2{ font-size:12px; color:#666; text-align:center; line-height:20px; margin-bottom:15px;}
+.pop_city_box .p2 span{ color:#f90;}
+.pop_city_box .p4{ font-size:16px; color:#73a822; text-align:center; line-height:20px; margin:15px 0 0px;}
+.pop_city_box .p5{ font-size:16px; color:#666; text-align:center; line-height:20px; margin:15px 0 15px;}
+.pop_city_box ul{ margin:0 50px;}
+.pop_city_box ul.bor_bot { border-bottom:1px solid #e5e5e5; margin-bottom:20px;}
+.pop_city_box li { float:left;height:26px; padding:0 20px; margin:0 20px 20px 0; font-size:16px; color:#666; line-height:26px;}
+.pop_city_box li.cur,.pop_city_box li:hover { background-color:#a0bee7; color:#fff;}
+.confirm_btn { position:absolute; bottom:30px; left: 50%; margin-left: -58px; width:116px; height:30px; border:1px solid #2c4c8f; line-height: 30px; border-radius: 3px; font-size: 16px; text-align: center; cursor: pointer; color: #2c4c8f; background-color: #fff;}
+.confirm_btn:hover { background-image: none; background-color: #2c4c8f; color: #fff;}
+
+/*fixed*/
+.hot_car a { background: url(#);}
+.top_box .main_box { height: 95px; background-color: #f4f4f4;}
+.top_left { float: left; width: 420px;}
+.details_left_bot { position: relative; width: 200px; height: 55px; padding:20px 120px 20px 100px; background: url(http://img1.bitautoimg.com/brandmarket/yituangou/pc/images/icon160411.png) no-repeat 0 0 #3659a9;}
+.num_box { position: absolute; top: 0; right: 0; width: 106px; height: 81px; padding:6px; border: 1px solid #315199; text-align: center; background-color: #fff;}
+.num_con { padding-top: 8px;  *padding-top: 12px;  font-size: 14px; color: #333; line-height: 31px; overflow: hidden;white-space:nowrap;  }
+.num_con b { position: relative; top: 2px; height: 31px; font-size: 24px; color: #3659a9; font-weight: bold;}
+.num_txt { font-size: 14px; color: #999; line-height: 16px; *line-height: 28px; font-weight: bold;}
+.time_box { font-size: 14px; color: #ccc; line-height: 27px;}
+.time_box b { font-weight: bold; color: #fff;}
+.start_box {font-size: 14px; color: #ccc; line-height: 55px;}
+.top_right { float: right; width: 690px; height: 86px; padding: 4px 40px; border: 1px solid #ddd; border-top: 0 solid #ddd; background-color: #fff;}
+.top_right .sign_box { padding-top: 10px;}
+.top_right .txt_box { height: 75px; padding-top: 0px; }
+.fixed { position: fixed; top: 0px; left: 0; left: 0; width: 100%; height: 95px; background-color: #fff; _position: absolute;_bottom: auto;z-index: 20; _top: expression(eval(document.documentElement.scrollTop));}
+.pop_apply_box .pop_close { position:absolute; top:236px; left: 50%; margin-left: -58px; width:116px; height:30px; border:1px solid #2c4c8f; line-height: 30px; border-radius: 3px; font-size: 16px; text-align: center; cursor: pointer; color: #2c4c8f; background-color: #fff;}
+.pop_apply_box .pop_close:hover { background-image: none; background-color: #2c4c8f; color: #fff;}
+.pop_apply_box p.pop_txt2 { margin-top:36px;}
+.pt24 { padding-top: 10px;}
+.pop_apply_box p.pop_txt2.mt60 { margin-top:60px; padding-left: 214px;background: url(http://img1.bitautoimg.com/brandmarket/yituangou/pc/images/icon.png) no-repeat -152px -228px;}
+.txt_con p i { position: absolute; left: 1px; top: 6px; width: 16px; height: 16px; background: url(http://img1.bitautoimg.com/brandmarket/yituangou/pc/images/icon160411.png) no-repeat -80px -173px;}
+.top_fixed {width: 100%; height: 95px; }
+.fixed .main_box { background-color: #fff;}
+
+.other_left p { width:698px; padding:0 150px 0 50px;}
+
+
+/* 新增图片切换效果 */
+.car_show {  position:relative;width:418px; height:298px;overflow:hidden}
+.car_show li { float:left;width:418px; height:298px;}
+.aBtn { position:absolute; width:27px; height:55px; top:121px;}
+.lBtn { left:-27px; background:url(http://img1.bitautoimg.com/brandmarket/yituangou/pc/images/left.png) no-repeat 0 0  }
+.rBtn { right:-27px; background:url(http://img1.bitautoimg.com/brandmarket/yituangou/pc/images/right.png) no-repeat 0 0  }
+.control {
+	position: absolute;
+	width: 130px;
+	height: 5px;
+	left: 150px;
+	bottom: 10px;
+	
+}
+.control a { float:left;width:20px; height:5px; background:#e1e1e1; border-radius:25px; margin:0 5px 0 0;}
+.control a.cur { background:#676767}

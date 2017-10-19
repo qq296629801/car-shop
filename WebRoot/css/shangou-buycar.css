@@ -1,0 +1,548 @@
+@charset "utf-8";
+/*
+* @type:less
+* @author:songjie
+* @createDate:2014-12-05
+*/
+/*
+* @type:less
+* @author:mazz
+* @createDate:2014-08-17
+* @modifyDate:2015-04-27
+*/
+.clear {
+  clear: both;
+  height: 0;
+  overflow: hidden;
+}
+.clearfix:after {
+  content: "";
+  display: block;
+  overflow: hidden;
+  height: 0;
+  clear: both;
+}
+.jiezi {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.cube {
+  -webkit-transform: translateZ(0);
+  -moz-transform: translateZ(0);
+  -ms-transform: translateZ(0);
+  -o-transform: translateZ(0);
+  transform: translateZ(0);
+  /* Other transform properties here */
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  -ms-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -webkit-perspective: 1000;
+  -moz-perspective: 1000;
+  -ms-perspective: 1000;
+  perspective: 1000;
+}
+.br {
+  word-break: break-all;
+  word-wrap: break-word;
+}
+* {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+.shangou-order-flow {
+  height: 56px;
+}
+.shangou-order-flow .step1,
+.shangou-order-flow .step2 {
+  height: 56px;
+  background: url("../images/order-flow.png?v=20150521") 0 -256px no-repeat !important;
+}
+.shangou-order-flow .step1 li,
+.shangou-order-flow .step2 li {
+  width: 33.33%;
+  line-height: 20px;
+  text-indent: 0;
+}
+.shangou-order-flow .step1 li span,
+.shangou-order-flow .step2 li span {
+  padding: 19px 0 0 104px;
+}
+.shangou-order-flow .step2 {
+  background-position: 0 -312px;
+}
+.order-contain {
+  margin-top: 26px;
+  padding-bottom: 40px;
+  border-top: 1px solid #e1e1e1;
+}
+.order-contain .order-form dl dd.order-btns .btn {
+  float: none;
+  margin-left: 125px;
+}
+.order-contain .order-form dl dd.order-btns input.disabled {
+  border: 0;
+}
+.order-contain .order-form .out-inner {
+  margin-top: -20px;
+  *margin-top: -4px;
+  overflow: hidden;
+}
+.order-contain .order-form .out-inner li {
+  margin-top: 20px;
+  *margin-top: 14px;
+  overflow: hidden;
+  zoom: 1;
+}
+.order-contain .order-form .out-inner li .property {
+  padding: 1px;
+  overflow: hidden;
+}
+.order-contain .order-form .out-inner li .property a {
+  width: 268px;
+  height: 38px;
+  line-height: 38px;
+  border: 1px solid #e1e1e1;
+  display: block;
+  color: #333;
+}
+.order-contain .order-form .out-inner li .property a:hover {
+  margin: -1px;
+  border: 2px solid #f65100;
+  text-decoration: none;
+}
+.order-contain .order-form .out-inner li .hue {
+  display: inline-block;
+  margin: 0 6px;
+  border: 1px solid #e1e1e1;
+  width: 18px;
+  height: 18px;
+  vertical-align: -4px;
+  *vertical-align: -1px;
+}
+.order-contain .order-form .out-inner li .rests {
+  margin-left: 10px;
+  height: 38px;
+  line-height: 38px;
+  color: #666;
+}
+.order-contain .order-form .out-inner li.over .property a {
+  background: #f5f5f5;
+  color: #999;
+  border: 1px dashed #e1e1e1;
+  cursor: default;
+}
+.order-contain .order-form .out-inner li.over .rests {
+  color: #999;
+}
+.order-contain .order-form .out-inner li.over:hover {
+  cursor: default;
+}
+.order-contain .order-form .out-inner li.over:hover .property a {
+  margin: 0;
+  border: 1px dashed #e1e1e1;
+}
+.order-contain .order-form .out-inner li.active .property a {
+  color: #f65100;
+  margin: -1px;
+  border: 2px solid #f65100;
+  text-decoration: none;
+}
+.order-contain .order-form .error-tip {
+  float: left;
+  margin-top: 25px;
+  *margin-top: 15px;
+  padding: 6px 28px 6px 25px;
+  color: #cc3300;
+  font-size: 14px;
+}
+.order-contain .order-form .error-tip .icon-error-tip {
+  position: absolute;
+  margin: 2px 0 0 -24px;
+  width: 14px;
+  height: 14px;
+  background: url("../images/icon-chey.png?v=20150521") 0 -520px no-repeat;
+}
+.order-contain .order-form .order-text {
+  display: block;
+  line-height: 40px;
+}
+.order-contain .order-form .treaty label {
+  cursor: pointer;
+}
+.order-contain .order-form .treaty input {
+  margin-right: 4px;
+  vertical-align: -1px;
+  *vertical-align: -1px;
+}
+.order-contain .order-form .treaty .error {
+  margin-top: 10px;
+}
+.order-contain table .qf_btn .disabled a {
+  background: #aaa;
+  border: 1px solid #aaa;
+  cursor: default;
+}
+.order-contain table .qf_btn .qf-tip {
+  width: 454px;
+  height: 50px;
+  margin-right: -20px;
+  font-size: 14px;
+  *position: relative;
+  padding-left: 6px;
+}
+.order-contain table .qf_btn .qf-tip i {
+  color: #f65100;
+  padding: 0 4px;
+}
+.order-contain table .qf_btn .qf-tip a {
+  display: inline-block;
+  text-decoration: underline;
+}
+.order-contain table .qf_btn .qf-tip-con {
+  display: table;
+  height: 50px;
+  *height: auto;
+  *position: absolute;
+  *top: 50%;
+}
+.order-contain table .qf_btn .qf-tip-text {
+  display: table-cell;
+  vertical-align: middle;
+  *position: relative;
+  *top: -50%;
+}
+.order-contain .order-details {
+  position: relative;
+  margin: 0 -51px;
+  padding: 30px 35px 20px;
+  border: 1px solid #ccc;
+  background: #f2f2f2;
+  font-size: 14px;
+}
+.order-contain .order-details .btn-more {
+  position: absolute;
+  left: 300px;
+  top: 66px;
+}
+.order-contain .order-details h2 {
+  font-size: 18px;
+  font-weight: normal;
+}
+.order-contain .order-details dl {
+  margin-top: 10px;
+}
+.order-contain .order-details dl dt {
+  width: 76px;
+  float: left;
+  position: relative;
+  line-height: 22px;
+  zoom: 1;
+  text-align: right;
+}
+.order-contain .order-details dl dd {
+  overflow: hidden;
+  zoom: 1;
+  padding-bottom: 12px;
+  line-height: 22px;
+}
+.order-contain .order-details dl dd .icon {
+  display: inline-block;
+  margin: 0 4px 0 15px;
+  padding: 0 4px;
+  color: #fff;
+  font-size: 12px;
+  font-weight: normal;
+  height: 16px;
+  line-height: 16px;
+}
+.order-contain .order-details dl dd .icon.icon-fenqi {
+  background: #3cad63;
+}
+.order-contain .order-details dl dd .icon.icon-zhihuan {
+  background: #158bd2;
+}
+.order-contain .order-details.hidden-text {
+  overflow: hidden;
+  height: 40px;
+}
+.order-flow {
+  margin-top: 26px;
+}
+.order-flow li span {
+  display: block;
+  padding: 15px 0 0 74px;
+  font-size: 16px;
+}
+.order-flow li span i {
+  font-size: 12px;
+  font-weight: normal;
+}
+.order-pay-success {
+  position: relative;
+  padding: 70px 0 300px 110px;
+}
+.order-pay-success .zf-suc {
+  position: absolute;
+  margin-left: -110px;
+}
+.order-pay-success h3 {
+  margin: 18px 0 12px 0;
+  font-size: 24px;
+}
+.order-pay-success p {
+  margin-bottom: 10px;
+  font-size: 16px;
+  line-height: 24px;
+}
+.order-pay-success p i {
+  padding: 0 4px;
+  color: #f65100;
+}
+.order-pay-success a {
+  text-decoration: underline;
+  font-size: 15px;
+}
+.order-pay-success .pay-tip {
+  margin-top: 45px;
+  font-size: 15px;
+}
+.order-pay-success .pay-tip .icon {
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  vertical-align: -3px;
+  *vertical-align: -1px;
+  background: url("../images/usercenter.png?v=20150521") 0 0 no-repeat;
+}
+.order-pay-success .pay-tip ul {
+  margin-top: 10px;
+}
+.order-pay-success .pay-tip li {
+  padding: 4px 0;
+}
+.fuc_box .zf-warning {
+  padding-right: 45px;
+}
+.fuc_box .zf-warning ul {
+  font-size: 16px;
+}
+.fuc_box .zf-warning ul li {
+  position: relative;
+  padding-left: 20px;
+  line-height: 24px;
+}
+.fuc_box .zf-warning ul li span {
+  position: absolute;
+  margin-left: -20px;
+  width: 20px;
+}
+.fuc_box .zf-over p {
+  padding-left: 0;
+  text-align: center;
+  font-weight: bold;
+}
+.fuc_box .zf-over p strong {
+  color: #f65100;
+  padding: 0 4px;
+}
+.fuc_box p.vice-tip {
+  padding-top: 10px;
+  font-size: 14px !important;
+  font-weight: normal !important;
+}
+.fuc_box p.vice-tip i {
+  padding: 0 2px;
+  color: #f65100;
+}
+.shangou-price {
+  *position: relative;
+  font-size: 18px;
+  text-align: right;
+  color: #f65100;
+}
+.shangou-price strong {
+  vertical-align: -2px;
+  font-weight: bold;
+  font-size: 24px;
+}
+.shangou-price em {
+  font-size: 14px;
+  color: #999;
+  text-decoration: line-through;
+}
+.order-car {
+  width: 100%;
+}
+.order-car .shangou-price {
+  margin-top: 15px;
+}
+.order-car h1 {
+  margin-left: 180px;
+  font-size: 18px;
+  font-weight: bold;
+}
+.order-car .order-car-details {
+  margin-left: 32px;
+  width: 700px;
+}
+.order-car dl {
+  margin-top: 6px;
+  font-size: 14px;
+}
+.order-car dt,
+.order-car dd {
+  height: 30px;
+  line-height: 30px;
+}
+.order-car dt {
+  float: left;
+  width: 170px;
+  color: #f65100;
+}
+.order-car dt .name {
+  float: left;
+  width: 70px;
+}
+.order-car dt b {
+  font-size: 16px;
+}
+.order-car dt em {
+  margin-left: 15px;
+  color: #aaa;
+}
+.order-car dt i {
+  font-size: 16px;
+}
+.order-car dd {
+  overflow: hidden;
+}
+.order-car dd .icon {
+  display: inline-block;
+  margin-right: 4px;
+  padding: 0 4px;
+  color: #fff;
+  font-size: 12px;
+  font-weight: normal;
+  height: 16px;
+  line-height: 16px;
+}
+.order-car dd .icon.icon-fenqi {
+  background: #3cad63;
+}
+.order-car dd .icon.icon-zhihuan {
+  background: #158bd2;
+}
+/* 列表页 */
+.order_list li {
+  position: relative;
+}
+.order_list li.shangou-list .car_status .emp {
+  color: #f65100;
+}
+.order_list .icon-shangou {
+  display: inline-block;
+  margin: 0 10px 0 -23px;
+  vertical-align: -7px;
+  width: 42px;
+  height: 27px;
+  background: url("../images/icon-chey.png?v=20150521") -120px -500px no-repeat;
+}
+.order_list .icon-shangou.i2 {
+  background: url("../images/group-buy/bg-1.png?v=20150521") 0 -125px no-repeat;
+}
+.order_list .icon-shangou.i3 {
+  width: 115px;
+  height: 27px;
+  background: url("../images/icon-bar-1.png?v=20150521") no-repeat;
+}
+.order_list .icon-shangou.i4 {
+  width: 42px;
+  height: 27px;
+  background: url("../images/zying/icon-zy-temai.png?v=20150521") no-repeat;
+}
+.order_list .icon-shangou.i5 {
+  width: 80px;
+  height: 27px;
+  background: url("../images/zying/icon-zy-ping.png?v=20150521") no-repeat;
+}
+.order_list .icon-shangou.zhixiao {
+  width: 42px;
+  background: url("../images/direct-order-list.png") 0 -150px no-repeat;
+}
+.order_list .car_status .share {
+  display: block;
+  margin-top: 8px;
+}
+.order_list .car_status .s1 {
+  color: #4ca940;
+}
+.order_list .d12-price {
+  margin-top: 10px;
+  font-size: 14px;
+  color: #f65100;
+}
+.order_list .d12-price b {
+  vertical-align: -2px;
+  font-size: 20px;
+}
+.add-mcar {
+  display: block;
+  margin-top: 20px;
+  font-size: 14px;
+  height: 60px;
+  line-height: 60px;
+  font-weight: bold;
+  border: 1px dashed #e1e1e1;
+  background-color: #fafafa;
+  color: #333333;
+  text-align: center;
+}
+.add-mcar:hover,
+.add-mcar:active {
+  text-decoration: none;
+}
+.add-mcar i {
+  font-size: 18px;
+}
+.reminder {
+  position: absolute;
+  right: 20px;
+  top: 50px;
+  z-index: 1000;
+  opacity: 0;
+  filter: alpha(opacity=0)\9;
+}
+.reminder .con {
+  width: 230px;
+  height: 60px;
+  background: #000\9;
+  filter: alpha(opacity=90)\9;
+  background: rgba(0, 0, 0, 0.75);
+  *position: relative;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+}
+.reminder p {
+  padding: 0 22px;
+  height: 60px;
+  display: table;
+  color: #ffaa1c;
+  font-size: 14px;
+  *position: absolute;
+  *top: 50%;
+}
+.reminder span {
+  display: table-cell;
+  vertical-align: middle;
+  *position: relative;
+  *top: -10px;
+  line-height: 22px;
+}
+.mckf.m1 {
+  padding-top: 0px;
+  margin-top: 0px;
+  border-top: 0px;
+  margin-bottom: 40px;
+}

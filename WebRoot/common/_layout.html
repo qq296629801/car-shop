@@ -1,0 +1,90 @@
+#define layout(title)
+<!DOCTYPE html>
+<!-- saved from url=(0033)http://guangzhou.m.huimaiche.com/ -->
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=0">
+    <title>【广州车集市】#(name)-车集市</title>
+    <meta content="广州买车,广州底价买车, 广州买车优惠,车集市,易车惠买车商城,汽车商城,www.huimaiche.com" name="keywords">
+    <meta content="广州惠买车，易车旗下的汽车电商平台，在线销售千余款车型，认证的广州经销商4s店提供底价报价、最高优惠购车等服务。广州惠买车，低价买车服务平台。" name="description">
+<meta name="BitautoCustom" content="Title=我的车;Url=/moble;Type=1;ShowShare=0">
+<link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
+<link rel="icon" type="image/x-icon" href="/favicon.ico">
+<link rel="apple-touch-icon-precomposed" href="/images/iconweb.png">
+<link href="/moble_css/common.css" rel="stylesheet" type="text/css">
+<link href="/moble_css/style.css" rel="stylesheet" type="text/css">
+<link href="/moble_css/idangerous.swiper.css" rel="stylesheet" type="text/css">
+<link href="/moble_css/selectcar.css" rel="stylesheet" type="text/css">
+<script src="/index_files/push.js"></script>
+<script src="/index_files/hm.js(1)"></script>
+<script src="/index_files/hm.js"></script>
+<script src="/index_files/saved_resource"></script>
+<script type="text/javascript" src="./index_files/idangerous.swiper-2.1.min.js"></script>
+<script type="text/javascript" src="./index_files/jquery-1.9.1.min.js"></script>
+<script type="text/javascript" src="./index_files/common.js"></script>
+<script type="text/javascript" src="./index_files/json2_min.js"></script>
+<script type="text/javascript" src="./index_files/ejs_production.js"></script>
+<script type="text/javascript" src="./index_files/waptopfoot_loader.js"></script>
+<script type="text/javascript" src="./index_files/topfooter.js"></script>
+<script type="text/javascript" src="./index_files/switchery.min.js"></script>
+<script type="text/javascript" src="./index_files/ssoloader.js"></script>
+<script type="text/javascript" src="./index_files/share.js"></script>
+<script type="text/javascript">
+    var _hmt = _hmt || [];
+    function app_state_callback() {
+        $('#app_state_div').hide();
+    }
+    $.ajax({
+        type: "GET",
+        url: '/Ajax/CheckClient.ashx',
+        success: function (data) {
+            if (data.Code == 2) {//app
+                $("#CheckCity").remove();
+                setCookie("cusloced", "1", 30 * 24 * 60 * 60);
+                var $_top = $('#top'), $_foot = $('#foot'), $_appdowndiv = $('#common-down-div'), $select_city = $("a.choose-city"), $div_dl = $("div.dl");
+                if ($select_city) {
+                    $select_city.remove();
+                }
+                if ($div_dl) {
+                    $div_dl.remove();
+                }
+                if ($_top) {
+                    $_top.remove();
+                }
+                if ($_foot) {
+                    $_foot.remove();
+                }
+                if ($_appdowndiv) {
+                    $_appdowndiv.remove();
+                }
+            }
+        }
+    });
+</script>
+    <link href="/moble_css/selectcar-v2.css" rel="stylesheet">
+    <link href="/moble_css/home-v2.1.0.css" rel="stylesheet">
+    <link href="/moble_css/swiper-3.4.0.min.css" rel="stylesheet">
+    <style type="text/css">
+        #searchbox ul li {
+            overflow: hidden;
+        }
+
+            #searchbox ul li.lead span {
+                float: left;
+                font-weight: bold;
+            }
+
+            #searchbox ul li.lead a {
+                display: inline-block;
+                float: right;
+            }
+    </style>
+<script src="/index_files/wtid.js"></script>
+<link href="/moble_css/commonheaderfooter.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" href="./index_files/app_down.css">
+<link href="/moble_css/jplayer.video.theme.css" rel="stylesheet">
+<link href="/moble_css/style(1).css" rel="stylesheet">
+<script src="/index_files/jquery.jplayer.min.js" type="text/javascript"></script>
+</head>
+#end

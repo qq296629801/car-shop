@@ -1,0 +1,22 @@
+.light{    
+    cursor:pointer;    
+    position: absolute;    
+    left: -180px;    
+    top: 0;    
+    width: 180px;    
+    height: 67px;    
+    background-image: -moz-linear-gradient(0deg,rgba(255,255,255,0),rgba(255,255,255,0.5),rgba(255,255,255,0));    
+    background-image: -webkit-linear-gradient(0deg,rgba(255,255,255,0),rgba(255,255,255,0.5),rgba(255,255,255,0));    
+    transform: skewx(-25deg);    
+    -o-transform: skewx(-25deg);    
+    -moz-transform: skewx(-25deg);    
+    -webkit-transform: skewx(-25deg);    
+     
+}    
+.overimg:hover .light{    
+    left:180px;    
+    -moz-transition:0.5s;    
+    -o-transition:0.5s;    
+    -webkit-transition:0.5s;    
+    transition:0.5s;    
+}   

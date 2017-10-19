@@ -1,0 +1,190 @@
+@charset "UTF-8";
+/* 按钮*/
+.body_bg1{background-color:#fafafa;}
+.cheybox{width:990px;background-color:#ffffff;margin:30px auto 0 auto;-webkit-box-shadow:0 0 5px  #ebe9e9;
+	-moz-box-shadow: 0 0 5px  #ebe9e9;
+	box-shadow: 0 0 5px  #ebe9e9;
+	padding-bottom:30px;
+	position:relative;
+	overflow:hidden;
+}
+.pb10{padding-bottom:10px;}
+.padd_30{padding:0 30px 30px 30px;}
+.cheybox h2{font-size:20px;font-weight:bold;line-height:25px;margin:0 30px 20px 30px;padding-top:25px;}
+.chymore{position:absolute;right:30px;top:30px;}
+
+/*焦点图*/
+.chey_colorbox{width:420px;float:left;padding:20px;position:relative;}
+.chey_colorpic ul{width:420px;height:280px;overflow:hidden;}
+.chey_colorpic li img{width:420px;height:280px;overflow:hidden;}
+.chey_color{width:300px;height:40px;overflow:hidden;padding-right:22px;position:absolute;text-align:center;top:275px;left:65px;}
+.chey_color ul{width:9999em;text-align:center;}
+.chey_color li{width:30px;height:30px;margin-left:10px;_margin-left:9px;display:inline-block;float:left;margin-top:4px;position:relative;}
+.chey_color li a{width:28px;height:28px;border:1px solid #cccccc;display:inline-block;border-radius: 15px 15px 15px 15px;}
+.chey_color li a span{display:block;width:28px;height:28px;border-radius: 15px 15px 15px 15px;}
+/*.chey_color li.current{border:1px solid #f00;cursor:pointer;}*/
+.chey_color li.current em{width:0;height:0;font-size:0;border-width:4px;overflow:hidden;  border-style: dashed  dashed  solid dashed ; border-color: transparent  transparent #d0d0d0  transparent;position:absolute;left:11px;top:-8px;}
+
+
+.chey_color li img{width:54px;height:38px;}
+.piccolor_left a,.piccolor_right a{background:url(../images/maiche_ico1.gif) no-repeat;width:0px;padding-left:21px;font-size:0;overflow:hidden;height:31px;position:absolute;display:block;}
+.piccolor_left a{top:278px;left:21px;background-position:-121px -336px;}
+.piccolor_left a:hover{background:url(../images/maiche_ico1.gif) no-repeat -121px -302px;}
+.piccolor_right a{top:278px;right:20px;background-position:-147px -336px;}
+.piccolor_right a:hover{background:url(../images/maiche_ico1.gif) no-repeat -147px -302px;}
+.chey_colortext{text-align:center;height:20px;line-height:20px;text-align:center;font-size:14px;width:420px;overflow:hidden;position:absolute;left:20px;top:320px;color:#000000;}
+
+
+.chey_jisbox{width:467px;float:right;margin-right:30px;border-left:1px solid #e5e5e5;padding-left:30px;margin-top:10px;padding-bottom:15px;}
+.chey_jisbox h3{font-size:30px;font-weight:bold;line-height:40px;margin-top:12px;margin-bottom:12px;}
+.chey_xxjs{line-height:23px;font-size:14px;font-weight:bold;margin-bottom:15px;}
+.chey_xxjs span{margin-right:10px;}
+.chey_xxjs a{font-size:14px;font-weight:normal;white-space: nowrap; }
+.chyjs_text{line-height:25px;font-size:18px;border-top:1px solid #e5e5e5;border-bottom:1px solid #e5e5e5;padding:13px 0 8px 0;margin-bottom:20px;}
+.chyjs_text p{margin-bottom:10px;}
+.chyjs_text em{font-size:30px;color:#f69006;font-weight:bold;}
+.chyjs_text i{color:#ce3800;}
+.cyyjbut{padding-bottom:5px;}
+.cyyjbut .button_l_50 a{padding:0 40px;font-size:24px;font-weight:bold;}
+
+.chey_jisbox ul{height:60px;border-top:1px solid #e5e5e5;border-bottom:1px solid #e5e5e5;padding:15px 0 15px 0;margin-bottom:30px;}
+.chey_jisbox ul li{height:60px;float:left;width:110px;padding-left:20px;border-left:1px solid #e5e5e5;font-size:14px;color:#999999;line-height:25px;}
+.chey_jisbox ul li p{font-size:22px;color:#333333;line-height:35px;}
+.chey_jisbox ul li.first{border-left:none;}
+.yjdjbox{height:32px;line-height:32px;margin-top:20px;}
+.yjdjbox span{height:32px;display:inline-block;margin-right:14px;}
+.yjdjbox span i{background:url(../images/maiche_ico1.gif) no-repeat;float:left;margin-right:5px;display:inline-block;height:32px;}
+.yjdjbox span.dijcl i{background-position:-5px -266px;width:22px;}
+.yjdjbox span.doujj i{background-position:-100px -268px;width:25px;}
+.yjdjbox span.bhys i{background-position:-203px -268px;width:22px;}
+.yjdjbox span.djth i{background-position:-312px -268px;width:29px;}
+
+
+.chansxq{margin-left:30px;margin-right:30px;}
+.chansxq table th,.chansxq table td{border:1px solid #e5e5e5;line-height:24px;padding-top:7px;padding-bottom:7px;font-size:14px;}
+.chansxq table th{color:#999999;padding-left:20px;border-right:none;}
+.chansxq table td{padding-left:20px;border-left:none;}
+.chansxq table .leftnoline,.rxpp_logo table .leftnoline{border-left:none;}
+.chansxq table .rightnoline,.rxpp_logo table .rightnoline{border-right:none;}
+.chansxq .topline_two td,.chansxq .topline_two th{border-top:3px solid #e5e5e5;}
+.chansxq .topline_two  .coline_blue {border-top:3px solid #8fa1c5;}
+
+
+.rxpp_logo table td{border:1px solid #e5e5e5;text-align:center;color:#999999;padding-top:10px;font-size:14px;line-height:23px;width:162px;*width:161px;height:140px;}
+.rxpp_logo table td strong{font-size:16px;color:#333333;}
+.rxpp_logo table td em{color:#cf1e46;}
+.rxpp_logo table td .rxpp_box{height:140px;overflow:hidden;}
+.rxpp_logo table td  .rxpp_pt40{width:162px;*width:161px;height:100px;overflow:hidden;padding-top:40px;}
+.rxpp_logo table td .rxpp_text{height:90px;margin-top:20px;}
+.rxpp_logo table td .mt0{margin-top:0;}
+.rxpp_logo table td .rxpp_box  p{text-decoration:none;}
+.rxpp_logo table td .rxpp_box a,.rxpp_logo table td .rxpp_box a:link,.rxpp_logo table td .rxpp_box a:visited,
+.rxpp_logo table td .rxpp_box a:hover{text-decoration:none;}
+
+
+
+.goum{height:40px;line-height:40px;text-align:center;color:#ffffff;background-color:#f69006;margin-top:12px;*margin-left:1px;}
+.rxpp_logo table td .rmbp strong{color:#999999;}
+.chexpicbox {margin-left:30px;}
+.chex_bigpic{width:640px;height:426px;float:left;margin-right:2px;position:relative;}
+.chex_bigpic ul{width:640px;height:426px;overflow:hidden;}
+.chex_bigpic ul li{width:640px;height:426px;}
+.chex_leftpic,.chex_rightpic{position:absolute;width:30px;height:46px; background:url(../images/jiantao.png);    _background:none;    _filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../images/jiantao.png',sizingMethod='crop');top:190px;}
+.chex_leftpic{background-position:-1px -1px;left:10px;}
+.chex_rightpic{ background-position:-50px -1px;right:10px;}
+.chex_leftpic a,.chex_rightpic a{width:0;padding-left:30px;font-size:0;overflow:hidden;display:inline-block;height:46px;background:none;}
+
+
+.chex_minpic{float:left;margin-left:17px;width:273px;_width:274px;overflow:hidden;height:426px;}
+.chex_minpic ul{height:366px;overflow:hidden;margin-top:1px;position:relative;}
+.chex_minpic ul li{width:90px;height:60px;float:left;margin-left:1px;margin-bottom:1px;overflow:hidden;}
+.chex_minpic ul li a{position:relative;width:90px;height:60px;float:left;overflow:hidden;}
+.chex_minpic ul li a em{position:absolute;left:0;top:0;}
+.chex_minpic ul li a:hover em{position:absolute;width:84px;height:54px;border:3px solid #f69006;left:0;display:inline-block;z-index:20;}
+.chex_minpic ul li.current a em{position:absolute;width:84px;height:54px;border:3px solid #f69006;left:0;display:inline-block;z-index:20;}
+
+.rxpinp{width:990px;background-color:#ffffff;margin:30px auto 0 auto;-webkit-box-shadow:0 0 5px  #ebe9e9;
+	-moz-box-shadow: 0 0 5px  #ebe9e9;
+	box-shadow: 0 0 5px  #ebe9e9;
+	position:relative;
+	overflow:hidden;
+}
+
+
+
+
+.minpic_top a{margin-left:1px;width:272px;height:30px;background-color:#333333;display:inline-block;position:relative;}
+.minpic_top a em{width:0px;height:9px;padding-left:17px;font-size:0;overflow:hidden;background:url(../images/maiche_ico1.gif) no-repeat -160px -500px;position:absolute;left:128px;top:11px;display:block;}
+.minpic_top a:hover{background-color:#f69006;}
+.minpic_down a em{background-position: -182px -500px;}
+.min_nopic a,.min_nopic a:link,.min_nopic a:visited,.min_nopic a:hover{background-color:#d8d8d8;cursor:default;}
+
+/*选择车款浮层*/
+
+
+.chetimebox{hegiht:30px;margin:15px;text-align:center;}
+.chetimebox a{display:inline-block;padding:5px 50px;border:1px solid #dddddd;font-size:16px;font-weight:bold;margin-left:-4px;position:relative;z-index:2;background-color:#ffffff;color:#999999;}
+.chetimebox a:hover{background-color:#8fa1c5;border:1px solid #8fa1c5;color:#ffffff;text-decoration:none;}
+.chetimebox a.current,.chetimebox a.current:hover{background-color:#8fa1c5;border:1px solid #8fa1c5;color:#ffffff;text-decoration:none;}
+.chetimebox a.blnone,.chetimebox a.blnone:hover{border-left:none;}
+.chetimebox li{float:left;}
+.cytabebox{border-top:1px solid #dddddd;}
+.cyfc_h485{height:300px;overflow-y:hidden;}
+@media screen and(max-width: 1100px){
+    .cyfc_h485{height:280px;overflow-y:hidden;}
+}
+.cytabe{text-align:center;margin-top:-1px;}
+.cyfc_h485 .cytabe{overflow-y:auto;height:300px;}
+.cytabebox table{font-size:14px;border-bottom:1px solid #dddddd;border-bottom:1px solid #cccccc;width:100%;}
+.cyfc_h485  table{width:100%;*width:97%;}
+.cytabebox table td{border-top:1px solid #eeeeee;}
+.cytabebox table th{border-top:1px solid #dddddd;border-bottom:1px solid #eeeeee;}
+.cytabebox table th{height:30px;line-height:30px;color:#999999;padding:0px 20px 0px 20px;font-size:12px;
+background:#fafafa; background:-webkit-gradient(linear, left top, left bottom, from(#f6f6f6), to(#fafafa)); background:-moz-linear-gradient(top, #f6f6f6, #fafafa);
+
+}
+.cytabebox table th strong{font-weight:bold;color:#335498;}
+.cytabebox table td{height:20px;line-height:20px;padding:15px 20px 15px 20px;}
+.jdtbox{width:50px;height:7px;background-color:#e6e6e8;overflow:hidden;text-align:left;}
+.jdtbox span{background-color:#fac782;border-right:1px solid #fff;display:block;height:7px;}
+.cytabebox table .colbule {cursor:pointer;}
+.cytabebox table .colbule td{background-color:#eef1f6;}
+.cytabebox table td .car-ico-after{
+    margin-left: 8px;
+    display: inline-block;
+    padding: 0 4px;
+    height: 16px;
+    line-height: 16px;
+    font-size: 12px;
+    text-align: center;
+    color: #fff;
+    background: #d94648;
+}
+.cytabebox table td .car-ico-lend{
+    margin-left: 4px;
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    color: #fff;
+    background: url('../images/car-list.png?@version') -174px -25px;
+    text-indent: -9999px;
+    vertical-align: middle;
+}
+.fuc_login{height:170px;padding-top:130px;text-align:center;}
+
+.rxpp_logo table td.more_hover{background-color:#f69006;color:#ffffff;}
+.rxpp_logo table td.more_hover  strong{color:#ffffff;}
+.rxpp_logo table td p.more_logo{background:url(../images/pinp_55_55.jpg) no-repeat left top;display:block;width:55px;height:55px;margin-left:51px;*margin-left:0px;margin-top:20px;*margin-top:0px;}
+.rxpp_logo table td.more_hover p.more_logo{background:url(../images/pinp_55_55_hover.jpg) no-repeat left 2px;}
+.rxpp_logo table td.more_hover a,.rxpp_logo table td.more_hover a:link,
+.rxpp_logo table td.more_hover:visited,.rxpp_logo table td.more_hover a:hover{text-decoration:none;}
+
+
+/* 双11 add 限时底价 */
+.cytabebox table th, .cytabebox table td{
+    padding-left: 10px;
+    padding-right: 10px;
+}
+.cytabebox table th.spe, .cytabebox table td.spe{
+    color: #d94648;
+}

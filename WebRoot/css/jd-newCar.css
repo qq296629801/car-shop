@@ -1,0 +1,304 @@
+/* @update:2016-12-16 10:16:16 */ 
+.car-new-banner {
+	width:100%;
+	height:420px;
+	position:relative
+}
+.car-new-banner .car-lun {
+	position:absolute;
+	width:100%;
+	height:420px;
+	left:0;
+	top:0;
+	z-index:5
+}
+.car-new-banner .car-lun .img-lun {
+	position:absolute;
+	left:0;
+	top:0;
+	width:100%;
+	height:100%;
+	display:none
+}
+.car-new-banner .car-lun .img-shows {
+	display:block
+}
+.car-new-banner .click-dian {
+	position:absolute;
+	bottom:10px;
+	left:50%;
+	width:700px;
+	margin-left:-320px;
+	z-index:100;
+	height:22px;
+	transition:.3s all ease;
+	text-align:center
+}
+.car-new-banner .click-dian li {
+	cursor:pointer;
+	margin-right:10px;
+	display:inline-block;
+	width:8px;
+	height:8px;
+	border:2px solid #fff;
+	border-radius:8px;
+	*display:inline;
+	*zoom:1;
+	box-shadow:1px 1px 2px rgba(0,0,0,.1)
+}
+.car-new-banner .click-dian .li-add {
+	cursor:pointer;
+	width:8px;
+	height:8px;
+	border:2px solid #fd7045;
+	box-shadow:1px 1px 2px rgba(0,0,0,.1)
+}
+.car-new-banner .click-dian:hover {
+	transform:scale(1.4)
+}
+.car-ban-content {
+	width:1200px;
+	margin:auto;
+	height:0;
+	position:relative;
+	z-index:10
+}
+.car-ban-content .car-ban-right {
+	float:right;
+	margin-top:16px;
+	width:285px;
+	height:369px;
+	padding:20px 30px 0;
+	background:#fff
+}
+.car-ban-content .car-ban-right .c-title {
+	font-size:20px;
+	color:#323232;
+	font-weight:700;
+	line-height:20px
+}
+.car-ban-content .car-ban-right .c-heng {
+	width:285px;
+	height:1px;
+	background:#e6e6e6;
+	margin:19px 0
+}
+.car-ban-content .car-ban-right .c-pe-list {
+	width:285px
+}
+.car-ban-content .car-ban-right .c-pe-list ul {
+	width:300px
+}
+.car-ban-content .car-ban-right .c-pe-list ul li {
+	float:left;
+	height:16px;
+	line-height:16px;
+	margin-right:20px;
+	margin-bottom:15px;
+	cursor:pointer
+}
+.car-ban-content .car-ban-right .c-pe-list ul li .q-circle {
+	width:16px;
+	height:16px;
+	display:inline-block;
+	background:url(//img30.360buyimg.com/jr_image/jfs/t4081/317/302140626/585/efb158b7/5847a9b4N548cf410.png) no-repeat
+}
+.car-ban-content .car-ban-right .c-pe-list ul li .q-text {
+	font-size:14px;
+	position:relative;
+	color:#5e5e5e;
+	top:-2px;
+	margin-left:3px
+}
+.car-ban-content .car-ban-right .c-pe-list ul .c-pe-cur .q-circle {
+	background:url(//img30.360buyimg.com/jr_image/jfs/t3607/57/2214687378/688/99f6e346/5847b08cN2c236c22.png) no-repeat
+}
+.car-ban-content .car-ban-right .c-pe-li {
+	width:285px;
+	margin-top:5px
+}
+.car-ban-content .car-ban-right .c-pe-li li {
+	margin-bottom:9px
+}
+.car-ban-content .car-ban-right .c-pe-li li .li-col {
+	width:27px;
+	height:27px;
+	border:1px solid #fcae52;
+	line-height:27px;
+	text-align:center;
+	font-size:18px;
+	color:#fcae52;
+	display:inline-block;
+	font-family:"Microsoft Yahei"
+}
+.car-ban-content .car-ban-right .c-pe-li li .li-text {
+	margin-left:8px;
+	display:inline-block;
+	width:235px;
+	font-size:18px;
+	color:#5e5e5e;
+	overflow:hidden;
+	text-overflow:ellipsis;
+	white-space:nowrap;
+	position:relative;
+	top:5px
+}
+.car-ban-content .car-ban-right .now-price {
+	display:block;
+	width:285px;
+	height:42px;
+	background:#fd7045;
+	text-align:center;
+	color:#fff;
+	font-size:16px;
+	line-height:42px;
+	margin-top:10px
+}
+.car-container .car-con .car-cc span {
+	display:block;
+	width:120px;
+	height:30px;
+	margin:auto;
+	color:#393f4e;
+	font-size:30px;
+	line-height:30px
+}
+.pin-qu {
+	width:1145px;
+	margin:37px auto 0;
+	overflow:hidden
+}
+.pin-qu ul {
+	width:1156px
+}
+.pin-qu ul .cl-l {
+	margin-right: 15px;
+    width: 562px;
+    height: 284px;
+    position: relative;
+    float: left;
+    margin-bottom: 15px;
+    border-top: 3px solid red;
+    background: white;
+    border-right: 1px solid #ffdddd;
+    box-shadow: 1px 1px 1px 1px #efefef;
+}
+.pin-qu ul .cl-l .cl-img {
+	float:left
+}
+.pin-qu ul .cl-l .cl-img img {
+	position:absolute;
+	left:36px;
+	bottom:4px
+}
+.pin-qu ul .cl-l .cl-text {
+	float:right;
+	width:224px;
+	margin-right:50px;
+	margin-top:55px
+}
+.pin-qu ul .cl-l .cl-text .cl-te-li li {
+	margin-bottom:4px
+}
+.pin-qu ul .cl-l .cl-text .cl-te-li li .cl-li-kuang {
+	display:inline-block;
+	width:27px;
+	height:27px;
+	line-height:27px;
+	border:1px solid #fcae52;
+	font-size:18px;
+	color:#fcae52;
+	text-align:center;
+	position:relative;
+	top:-8px
+}
+.pin-qu ul .cl-l .cl-text .cl-te-li li .cl-li-text {
+	display:inline-block;
+	margin-left:8px;
+	font-size:18px;
+	color:#5e5e5e;
+	width:180px;
+	overflow:hidden;
+	text-overflow:ellipsis;
+	white-space:nowrap;
+	position:relative
+}
+.nwo-bao-price {
+	width:224px;
+	margin-top:34px
+}
+.nwo-bao-price .n-price {
+	display:block;
+	float:left;
+	width:96px;
+	height:32px;
+	border-radius:3px;
+	text-align:center;
+	line-height:32px;
+	font-size:14px;
+	color:#fff;
+	background:#fd7045
+}
+.nwo-bao-price .n-message {
+	float:right;
+	font-size:14px;
+	color:#5b9fe2;
+	margin-top:6px
+}
+.nwo-bao-price .n-message:hover {
+	color:#f52f3e
+}
+.g-t {
+	width:1140px;
+	height:30px;
+	position:absolute;
+	left:50%;
+	margin-left:-574px;
+	top:0;
+	background:#fcfcfe
+}
+.g-t .laba {
+	display:inline-block;
+	width:16px;
+	height:16px;
+	background:url(//img30.360buyimg.com/jr_image/jfs/t2779/210/2418941563/481/23dbabdc/57636490N2c483f6b.png) no-repeat;
+	position:relative;
+	top:2px;
+	margin-left:5px
+}
+.g-t .lian {
+	font-size:14px;
+	line-height:30px;
+	color:#5e5e5e;
+	margin-left:5px
+}
+.search {
+	position:relative;
+	width:281px;
+	height:40px;
+	border:1px solid #e6e6e6;
+	margin:15px 0 0;
+	cursor:pointer
+}
+.search .sers {
+	font-family:"Microsoft Yahei";
+	padding-left:10px;
+	width:250px;
+	outline:0;
+	height:40px;
+	line-height:40px;
+	font-size:16px;
+	color:#5e5e5e;
+	cursor:pointer
+}
+.search .sers-icon {
+	float:right;
+	width:12px;
+	height:18px;
+	margin-top:12px;
+	background:url(//img30.360buyimg.com/jr_image/jfs/t3721/352/2258873998/461/8d16316a/584e4352N42e0bf69.png) no-repeat;
+	margin-right:8px
+}
+.city {
+	z-index:100
+}

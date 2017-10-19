@@ -1,0 +1,671 @@
+#@layout("详细页面")
+<body>
+<script type="text/javascript" src="./single_files/waptopfoot_loader.js.下载"></script>
+<script type="text/javascript">
+    $.waptopfoot_loader.init({
+        loadComplete: function () {
+            $.waptopfoot.init({
+                backurl: "//guangzhou.m.huimaiche.com/search/carlist?scode=63",
+                showLogo: "0",
+                showCity: "0",
+                showBack: "1",
+                 title: "",
+                loadComplete: function () {
+                    var $div_content = $("div[data-role='content']"), $koubei = $('.publicpraise-ctop');
+                    if ($koubei.length > 0) {
+                        var $foot = $('#foot');
+                        if ($foot.length > 0) {
+                            $foot.css('margin-bottom', '50px');
+                        } else {
+                            $('.publicpraise-content').css('margin-bottom', '50px');
+                        }
+                    }
+                    if ($("#top").length > 0) {
+                        $("#top").addClass('hn-v1');
+                        $('#top-back').html('<i class="i-back"></i>');
+                    }
+                }
+            });
+        }
+    });
+</script>
+
+
+    
+<script type="text/javascript">
+    var viewport=  $('#share_viewport');
+    if(viewport.length>0){
+        viewport.attr('content','width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no')
+    }
+    $.ajax({
+        type: "GET",
+        url: '//item.m.huimaiche.com/CarParameter/GetIsApp',
+        dataType: "jsonp",
+        jsonpCallback: "isApp_Callback",
+    })
+    function isApp_Callback(data){
+        if (data.Code ==4) {
+            window.location.href= "maiche://showcarsku?cartype=0&serialid=" + 2593;
+        }
+    }
+
+    var XCWebLogCollector = { area: '501', serial: '2593', page: 'search_brdsku', cp: '' };
+    var HMCWebLogCollector = { area: '501', serial: '2593',page: 'search_brdsku', cp: '', tracker_u: '' };
+    if (123605 > 0)
+    {
+        XCWebLogCollector.car='123605';
+        HMCWebLogCollector.car= '123605';
+    }
+</script>
+<div class="bd-layer">
+    <div id="appdownload-area" class="app_mask" data-area-id="4"></div>
+    <div data-role="content" class="zm-v2">
+        <div class="etzone" style="z-index: 99999999999"></div>
+        <div class="nav-wrap" style="display:none">
+            <div id="p-tab" class="p-tab p-v2 fix-affix">
+                <ul class="u1">
+                    <li class="active"><a href="javascript:;">底价<em></em></a></li>
+                    <li><a href="javascript:;">详情<em></em></a></li>
+                    <li><a href="javascript:;">评价<em></em></a></li>
+                    <li><a href="javascript:;">须知<em></em></a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="tab-content" id="div_content">
+            <!--头图Start-->
+            <div class="car-img-group">
+                <div id="top" class="header hn-v1" data-position="fixed" style="">
+    
+    
+    <a id="top-back" href="javascript:" class="turnback"><i class="i-back"></i></a>
+    <h1 id="top-title"></h1>
+    <div id="top-menu" class="h-menu-wrap">
+        <i class="h-menu" id="h-menu"></i>
+        <div class="hm-wrap">
+            <ul class="ms-list">
+                <li id="top-menu-index"><a href="http://m.huimaiche.com/">首页</a></li>
+                <li id="top-menu-search"><a href="http://m.huimaiche.com/search/">选车</a></li>
+                <li id="top-menu-px" style="display:none;"><a href="http://m.huimaiche.com/jinkou">平行进口</a></li>
+                <li id="top-menu-dg"><a href="http://news.m.huimaiche.com/">导购频道</a></li>
+                <li id="top-menu-order"><a href="http://i.m.huimaiche.com/order/list.aspx">我的订单</a></li>
+                <li id="top-menu-app"><a href="http://m.huimaiche.com/app/?apkname=wapdb&amp;tracker_u=669_wapdb">手机APP</a></li>
+            </ul>
+            <i class="triangle-up"></i>
+        </div>
+    </div>
+</div>
+                <div class="group-list">
+                    <ul class="swiper-wrapper">
+                                <li class="swiper-slide">
+                                    <a href="javascript:;" class="a_swiper">
+                                        <div class="img-wrap"><img src="./single_files/2017090423560856819348_5618956_3.jpg" alt="奥迪A4L"></div>
+                                    </a>
+                                </li>
+                                <li class="swiper-slide">
+                                    <a href="javascript:;" class="a_swiper">
+                                        <div class="img-wrap"><img src="./single_files/201709042356045643935_5618957_3.jpg" alt="奥迪A4L"></div>
+                                    </a>
+                                </li>
+                                <li class="swiper-slide">
+                                    <a href="javascript:;" class="a_swiper">
+                                        <div class="img-wrap"><img src="./single_files/2017090423561456144144_5618952_3.jpg" alt="奥迪A4L"></div>
+                                    </a>
+                                </li>
+                                <li class="swiper-slide">
+                                    <a href="javascript:;" class="a_swiper">
+                                        <div class="img-wrap"><img src="./single_files/20170904235622562216047_5618955_3.jpg" alt="奥迪A4L"></div>
+                                    </a>
+                                </li>
+                                <li class="swiper-slide">
+                                    <a href="javascript:;" class="a_swiper">
+                                        <div class="img-wrap"><img src="./single_files/2017090423560556521248_5618954_3.jpg" alt="奥迪A4L"></div>
+                                    </a>
+                                </li>
+                                <li class="swiper-slide">
+                                    <a href="javascript:;" class="a_swiper">
+                                        <div class="img-wrap"><img src="./single_files/20170904235918591812642_5619042_3.jpg" alt="奥迪A4L"></div>
+                                    </a>
+                                </li>
+                    </ul>
+                </div>
+                <div class="f-opt">
+                    <span class="cx">奥迪A4L</span>
+                        <p id="nav-page" class="p-page">1/6</p>
+                </div>
+            </div>
+            <!--头图End-->
+            <div class="cd-nb-1" id="paa">
+                <!--车款基本信息Start-->
+                <div class="d1">
+                    <div class="gh">
+                        <p class="txt-1">2017款 40 TFSI 进取型 Plus</p>
+                        <p class="txt-2"><a href="javascript:;" id="a_selectcar" data-hmclog="{pageid: 4, eventid:396}">更换车款</a></p>
+                    </div>
+                    <p class="p1">
+                        <del>指导价29.98万</del>
+                            <span>平均节省4.67万</span>
+                    </p>
+                    
+                </div>
+                <!--车款基本信息End-->
+                <div class="d2">
+                        <p class="p1 bind-layer" data-layer="#dk-layer-1" data-mask=".n-mask" id="p_showdealerlist">预付￥<em id="payment"></em>提供多家4S店报价详单</p>
+                            <p class="p2"><em>58人</em>正在询价</p>
+                </div>
+                <div class="d3">
+                    <p class="bz"><i class="l"></i><span>服务保障</span></p>
+                    <ul class="u1">
+                        
+                        <li>订金随时退</li>
+                        <li>无隐性消费</li>
+                    </ul>
+                </div>
+            </div>
+                <div class="cx-bl bind-layer" data-layer="#dk-layer-2" data-mask=".n-mask" id="div_showgift" data-hmclog="{pageid: 368, eventid: 387}">
+                    <span>促销</span>
+                    <p class="p1">热门新车云集，畅销好车直降，新车送千元专属大礼包</p>
+                    <i class="sl"></i>
+                </div>
+            <!--参数配置Start-->
+            <div id="pa" class="cy-header">
+                <div class="ht"></div>
+            </div>
+
+            <div class="p-tab-cot" id="div_pars">
+                <p class="pt">
+                    参数配置
+                        <a href="http://item.m.huimaiche.com/param/123605">更多</a>
+                </p>
+                <dl class="param wbb">
+                            <dd>
+                                <span>排量(L)  </span><strong>
+2.0                                </strong>
+                            </dd>
+                            <dd>
+                                <span>变速箱 </span><strong>
+双离合/7档                                </strong>
+                            </dd>
+                            <dd>
+                                <span>综合工况油耗(L/100km) </span><strong>
+5.9                                </strong>
+                            </dd>
+                            <dd>
+                                <span>长X宽X高（mm） </span><strong>
+4818X1843X1432                                </strong>
+                            </dd>
+                            <dd>
+                                <span>环保标准 </span><strong>
+国5                                </strong>
+                            </dd>
+                            <dd>
+                                <span>最高车速(km/h) </span><strong>
+233                                </strong>
+                            </dd>
+                            <dd>
+                                <span>整备质量(kg) </span><strong>
+1565                                </strong>
+                            </dd>
+                            <dd>
+                                <span>进气形式 </span><strong>
+增压                                </strong>
+                            </dd>
+                            <dd>
+                                <span>轴距（mm） </span><strong>
+2908                                </strong>
+                            </dd>
+                            <dd>
+                                <span>最大马力(Ps) </span><strong>
+190                                </strong>
+                            </dd>
+
+                </dl>
+                <p class="mb">
+                        <a href="http://item.m.huimaiche.com/param/123605" data-hmclog="{pageid: 368, eventid: 801}">全部参数</a>
+                </p>
+            </div>
+
+            <!--参数配置End-->
+            <!--用户评价Start-->
+                <div id="pb" class="cy-header">
+                    <div class="ht t2"></div>
+                </div>
+                <div class="cz-fx">
+                    <h2>
+                        用户评价
+                        <a href="http://item.m.huimaiche.com/comment/2593/123605"></a>
+                    </h2>
+                    <ul class="c1">
+                            <li class="li_comment" data-cid="189857">
+                                <p class="p1">
+                                    <span class="s1">张先生</span>
+                                </p>
+                                    <div class="comment-d">
+                                        <p class="n-txt">好评好评<a href="javascript:;" class="readmore">展开</a></p>
+                                    </div>
+                                                                <p class="opt-2">
+                                    <span class="date">2017-06-28  </span>
+                                    <span class="zan span_zan" data-id="189857"><i class="i-hand"></i>5</span>
+                                </p>
+                            </li>
+                            <li class="li_comment" data-cid="189859">
+                                <p class="p1">
+                                    <span class="s1">黄超</span>
+                                </p>
+                                    <div class="comment-d">
+                                        <p class="n-txt">好评！<a href="javascript:;" class="readmore">展开</a></p>
+                                    </div>
+                                                                <p class="opt-2">
+                                    <span class="date">2017-06-28  </span>
+                                    <span class="zan span_zan" data-id="189859"><i class="i-hand"></i>1</span>
+                                </p>
+                            </li>
+                            <li class="li_comment" data-cid="189752">
+                                <p class="p1">
+                                    <span class="s1">朱相其</span>
+                                </p>
+                                    <div class="comment-d">
+                                        <p class="n-txt">态度很好<a href="javascript:;" class="readmore">展开</a></p>
+                                    </div>
+                                                                <p class="opt-2">
+                                    <span class="date">2017-06-15  </span>
+                                    <span class="zan span_zan" data-id="189752"><i class="i-hand"></i>2</span>
+                                </p>
+                            </li>
+                    </ul>
+                    <p class="mb"><a href="http://item.m.huimaiche.com/comment/2593">全部评价(161)</a></p>
+                </div>
+            <!--用户评价End-->
+        </div>
+        <!--购车须知-->
+        <div id="pc" class="cy-header">
+            <div class="ht t3"></div>
+        </div>
+        <div class="tab-content" data-type="a" id="div_tab_gcxz">
+            <div class="gc-xz">
+                <h2><span>购车须知</span></h2>
+                <div class="b-b1">
+                    <p class="txt">轻松三步  爱车开回家</p>
+                    <ul class="s clearfix">
+                        <li>
+                            <i class="icon"></i>
+                            <p>选车下单<br>预付订金</p>
+                        </li>
+                        <li>
+                            <i class="l"></i>
+                            <i class="icon"></i>
+                            <i class="r"></i>
+                            <p>获取底价<br>及底价凭证</p>
+                        </li>
+                        <li>
+                            <i class="icon"></i>
+                            <p>到店看车<br>付款提车</p>
+                        </li>
+                    </ul>
+                </div>
+                
+                <div class="b-b2">
+                    <p class="p1">选择惠买车的理由</p>
+                    <div class="c">
+                        <div class="l2">
+                            <ul class="u">
+                                <li>
+                                    <p class="p1">多家4S店竞争报底价</p>
+                                    <p class="p2">预付订金后可获得多家4S店底价凭证，确保到店以底价成交，无隐性消费</p>
+                                </li>
+                                <li>
+                                    <p class="p1 w">购车订金放心付</p>
+                                    <p class="p2">预付订金后，经销商更愿意报出更低的底价，不买车订金随时退</p>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                    <div class="b-b3" id="div_newbuygift">
+                        <div class="txt">
+                            <p class="p1">成功购车送<em>价值2300元大礼包</em></p>
+                            <p class="p2">（ 在2017年09月30日前完成购车可领取 ）</p>
+                            <ul class="u2">
+                                    <li class="clearfix">
+                                        <span>￥1280</span>
+                                        <p>康得新（KDX）全车太阳膜</p>
+                                    </li>
+                                    <li class="clearfix">
+                                        <span>￥1020</span>
+                                        <p>违停补贴、车险、加油组合礼包</p>
+                                    </li>
+                            </ul>
+                        </div>
+                    </div>
+                <p class="mb"><a class="a_morequestion bind-layer" data-layer="#dk-layer-4" data-mask=".n-mask" href="javascript:;">常见问题</a></p>
+            </div>
+        </div>
+    </div>
+    <!--下单按钮-->
+    <div class="cy-fixed-btn cf2">
+        <div class="bw clearfix">
+            <p id="calculator" data-hmclog="{pageid: 3, eventid:739}"><i class="icon"></i>购车计算</p>
+            <p id="showPk" data-dk="dk-1" data-hmclog="{pageid:368, eventid: 828}"><i class="icon"></i>车型对比</p>
+            <p class="p_add_remove" data-hmclog="{pageid: 368, eventid: 806}"><i class="icon"></i>收藏</p>
+            <!--<p class="p_add_remove" data-hmclog="{pageid: 368, eventid: 806}"><a class="a_morequestion" data-target="#div_cjwt" href="bitauto.yicheapp://yiche.app/xuanche.huimaicheorder?id=116515&tracker=||undefined">收藏</a></p>-->
+        </div>
+            <a href="javascript:;" id="a_buy" data-sourcetag="wap.sku.order.default" data-hmclog="{pageid: 3, eventid: 50}" class="hq">
+                获取底价
+                <br>
+                <span>约<em>22分钟<em>获得底价</em></em></span>
+            </a>
+    </div>
+
+</div>
+<!--看大图-->
+<div class="ph-mask" style="display:none" id="div_showImg"></div>
+<div class="mask n-mask" style="display:none" id="div_mask"></div>
+<div class="nl-wrap" style="width:0px;height:0px;">
+    <!--贷款 弹层-->
+    
+
+    <!--经销商弹层-->
+    
+    <div class="pricesell-wrap " id="dk-layer-1">
+        <div class="inner" style="display:none">
+            <div class="scroll-ii">
+                <div class="pricesell-top">
+                    <div class="pricesell-title">报价经销商</div>
+                </div>
+                <div class="pricesell-protect">
+                    <i></i>
+                    <div class="pricesell-text">商家均为惠买车认证的优质经销商</div>
+                </div>
+                <ul class="pricesell-list">
+                        <li>
+                            <div class="pricesell-lt">
+                                <i></i>
+                                <div class="pricesell-t">
+                                    广州直营店
+                                    <em class="modal_1"></em>
+                                </div>
+                            </div>
+                            <div class="pricesell-lm">广东省广州市天河区临江大道3号发展中心7C</div>
+                        </li>
+                </ul>
+            </div>
+        </div>
+        <div class="by-btn-close close" style="display:none">
+            <a href="javascript:;" id="a_dealerList" data-hmclog="{pageid: 368, eventid: 798}"></a>
+        </div>
+    </div>
+
+    <!--促销活动弹层-->
+    
+<div class="dj-layer-content" id="dk-layer-2">
+    <div class="inner" style="display:none;">
+        <div class="scroll-ii">
+            <h2>促销活动</h2>
+            <div class="p-active">
+                <ul id="ul_active">
+                                                <li data-href="https://hd.m.huimaiche.com/autotopic/convention/201709">
+                                <a href="javascript:;">
+                                    <span class="i-state i2">礼</span>
+                                    热门新车云集，畅销好车直降，新车送千元专属大礼包
+                                </a><i class="i-link-1"></i>
+                            </li>
+                            <li data-href="//hd.m.huimaiche.com/choujiang">
+                                <a href="javascript:;">
+                                    <span class="i-state i2">礼</span>
+                                    写购车分享赢大奖，行车记录仪、京东卡等您拿！
+                                </a><i class="i-link-1"></i>
+                            </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="by-btn-close close" style="display:none">
+        <a href="javascript:;"></a>
+    </div>
+</div>
+    <!--订金说明 弹层-->
+    
+<div id="dk-layer-5" class="dj-layer-content fw-bz">
+    <div class="inner" style="display:none;">
+        <div class="scroll-ii">
+            <h2>服务保障</h2>
+            <div class="w">
+                <div class="sm-block">
+                    <dl>
+                        <dt><i></i>订金抵车款，不买随时退</dt>
+                        <dd>在惠买车确认成交时，预付的订金可以直接抵用相应的车款，支付给指定商家。如果没有满意的底价，可以随时取消订单，退还订金。</dd>
+                    </dl>
+                    <dl>
+                        <dt><i></i>无隐性消费，买贵就赔5000元</dt>
+                        <dd>如果成交价不是4S店当前底价，将赔付您5000元（具体赔偿细节见服务协议）。</dd>
+                    </dl>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="by-btn-close close" style="display:none">
+        <a href="javascript:;"></a>
+    </div>
+</div>
+<div id="dk-layer-6" class="dj-layer-content dlc">
+    <div class="inner" style="display:none;">
+        <div class="scroll-ii">
+            <h2>服务保障</h2>
+            <p class="p1-tip">
+                惠买车向用户承诺:用户按平台买车流程获取底价并在底价凭证有效期完成买车，若车款成交价格不是买车4S店该车款的最低价格，用户可凭相关购车发票及相关证据材料获得5000元补偿金。（具体赔偿细节见服务协议）
+            </p>
+        </div>
+    </div>
+    <div class="by-btn-close close" style="display:none">
+        <a href="javascript:;"></a>
+    </div>
+</div>
+
+    <!--常见问题 弹层-->
+    <div class="dj-layer-content cj-wt" id="dk-layer-4">
+    <div class="inner" style="display:none;">
+        <div class="scroll-ii">
+            <h2>常见问题</h2>
+            <div class="p-active cj-wt">
+                <div class="p-qa">
+                    
+                    <dl>
+                        <dt>收不到手机确认码短信怎么办？</dt>
+                        <dd>
+                            使用本号码手机拨打 <a href="tel:4008100053">400-810-0053</a> 可直接收听语音播报手机确认码。
+                        </dd>
+                    </dl>
+                    <dl>
+                        <dt>支付订金后如何退款？</dt>
+                        <dd>
+                            您在买车过程中任何阶段都可以终止交易退还订金，如：没有满意的底价、选择底价到店看车不满意。请务必在支付前与销售顾问了解全部买车细节，确认无误后买车。
+                        </dd>
+                    </dl>
+                    
+                    <dl>
+                        <dt>买车时如何使用底价凭证？</dt>
+                        <dd>
+                            底价凭证详细列出了购买车型的裸车价、库存情况、置换补贴、补充说明以及预付税费和保险，帮助您做到进店心中有数。
+                        </dd>
+                    </dl>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="by-btn-close close" style="display:none">
+        <a href="javascript:;"></a>
+    </div>
+</div>
+    <!--PK弹层-->
+    <div id="dk-mask" class="dk-mask" style="display:none"><i class="dr"></i></div>
+    <div class="dk-wrap">
+        <div id="dk-1" class="dk d1" style="display:none" data-mask="#dk-mask">
+            <ul class="u-list">
+                <li class="add">
+                    <a id="add-ck" href="javascript:;" class="a1" data-dk="dk-2"><span>添加车款</span></a>
+                </li>
+            </ul>
+            <p class="tt">最多对比4个车款</p>
+            <p class="opts clearfix">
+                <a href="javascript:;" id="a_removeall" class="a1" data-hmclog="{pageid: 0, eventid: 825}"><i class="i-del"></i>清空</a>
+                <a href="javascript:;" id="a_pkbegin" class="a2" data-hmclog="{pageid: 0, eventid: 824}">开始对比</a>
+            </p>
+        </div>
+    </div>
+</div>
+<div class="gotop" style="display: none;"></div>
+<!--百度统计-->
+
+<div style="display: none">
+    <img src="./single_files/hm.gif" width="0" height="0">
+</div>
+
+    
+<div id="foot" data-role="footer" style="">
+    <div class="footer">
+        <div class="fl">
+            
+            
+            <a id="foot-login" href="http://passport.m.huimaiche.com/login/?re=http%25253A%25252F%25252Fguangzhou.m.huimaiche.com%25252Fquanxinaodia4l%25252F%25253Fpage%25253Dsearch_brdsku%252526re%25253Dhttp%252525253A%25252F%25252Fguangzhou.m.huimaiche.com%25252Fsearch%25252Fcarlist%252525253Fscode%252525253D63" data-hmclog="{pageid: 19, eventid: 58}">登录</a>
+            <a href="http://m.huimaiche.com/app/?apkname=wapdib&amp;tracker_u=670_wapdib" rel="external">手机APP</a>
+        </div>
+        <div class="fr"><a href="http://help.m.huimaiche.com/">帮助中心</a></div>
+    </div>
+</div>
+
+<script type="text/javascript" src="./single_files/hmcstat"></script>
+<!--方晓春统计代码-->
+<script type="text/javascript" src="./single_files/saved_resource(1)"></script><img alt="" border="0" name="DCIMG" width="1" height="1" style="display:none;" src="./single_files/x.gif">
+<script src="./single_files/dcs_tag_huimc.js.下载" type="text/javascript"></script>
+<script type="text/javascript" src="http://hm.baidu.com/h.js?3F01234567890ABCDEF01234567890ABCDEF"></script>
+
+<script type="text/javascript">
+    (function () {
+        var hm = document.createElement("script");
+        hm.src = "//hm.baidu.com/hm.js?34b070f600a54baeebad2039a605f793";
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(hm, s);
+    })();
+</script>
+
+<script type="text/javascript">
+    (function () {
+        var hm = document.createElement("script");
+        hm.src = "//hm.baidu.com/hm.js?ac157e5dcb15848680a2a42733170e82";
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(hm, s);
+    })();
+</script>
+
+<script type="text/javascript">
+    $(function () {
+        $(document).on("click", "[data-hmclog]", function () {
+            if (typeof HMC_LOG !== "undefined" && typeof HMC_LOG.SentClickStat === "function") {
+                try {
+                    HMC_LOG.SentClickStat(this);
+                } catch (e) { }
+            }
+        });
+
+    });
+</script>
+<script>
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+    
+    <script src="./single_files/swiper3.4.0.min.js.下载"></script>
+    <script src="./single_files/cardetail_new2.js.下载"></script>
+    <script type="text/javascript" src="./single_files/carsourcead.js.下载"></script>
+    <!--jplayer-->
+    <script type="text/javascript" src="./single_files/jquery.jplayer.min.js.下载"></script>
+    <script type="text/javascript" src="./single_files/jquery.transform2d.js.下载"></script>
+    <script type="text/javascript" src="./single_files/jquery.grab.js.下载"></script>
+    <script type="text/javascript" src="./single_files/mod.csstransforms.min.js.下载"></script>
+    <script type="text/javascript" src="./single_files/circle.player.js.下载"></script>
+    <script src="./single_files/velocity.min.js.下载"></script>
+    <script src="./single_files/json2_min.js.下载"></script>
+    <script src="./single_files/zmSlidePushState.js.下载"></script>
+    <script src="./single_files/clamp.min.js.下载"></script>
+    <script src="./single_files/iscroll4-lite.js.下载"></script>
+    <script src="./single_files/selectlayer2-1.0.0.min.js.下载"></script>
+    <script src="./single_files/userviewedcar.js.下载"></script>
+    <!--微信分享开始-->
+    <script>
+    var wx_share_options = {
+        title: '【广州奥迪A4L40 TFSI 进取型 Plus】底价购车_优惠买车-惠买车',
+        link: window.location.protocol + '//m.huimaiche.com/quanxinaodia4l/123605/',
+        imgUrl: window.location.protocol + '//img3.bitauto.com/autoalbum/files/20161111/701/14050370135289_5378109_4.jpg',
+        desc: window.location.protocol + '//m.huimaiche.com/quanxinaodia4l/123605'
+    };
+    </script>
+    <script type="text/javascript" src="./single_files/weixin.share-1.0.0.min.js.下载"></script>
+    <!--微信分享结束-->
+    <script>
+    $(function () {
+        
+        $.cardetail.init({
+            financeList: JSON.parse('[]'),
+            financeProduct: JSON.parse('{"ProductId":0,"PackageId":0,"DownPaymentRate":0.0,"DownPaymentAmount":0.0,"DownPaymentText":null,"RepaymentPeriod":0,"MonthlyPayment":0.0,"MonthlyPaymentText":null,"TotalInterest":0.0,"TotalInterestText":null,"TotalCostText":null}'),
+            tradeUrl: '//trade.m.huimaiche.com/order/auction',
+            jsDomain: '//img.huimaiche.cn/uimg/m/v20170623/js/item',
+            carid: '123605',
+            serialid: '2593',
+            serialName:'A4L',
+            carSerialSpell:'quanxinaodia4l',
+            brandId: '10000',
+            ccode: '501',
+            dealerCount: '1',
+            colorId: '0',
+            
+            imglist: JSON.parse('["https://img1.bitautoimg.com/autoalbum/files/20170904/622/2017090423560856819348_5618956_{0}.jpg","https://img2.bitautoimg.com/autoalbum/files/20170904/684/201709042356045643935_5618957_{0}.jpg","https://img1.bitautoimg.com/autoalbum/files/20170904/700/2017090423561456144144_5618952_{0}.jpg","https://img4.bitautoimg.com/autoalbum/files/20170904/951/20170904235622562216047_5618955_{0}.jpg","https://img3.bitautoimg.com/autoalbum/files/20170904/044/2017090423560556521248_5618954_{0}.jpg","https://img3.bitautoimg.com/autoalbum/files/20170904/378/20170904235918591812642_5619042_{0}.jpg"]'),
+            addOrRemoveUrl: '//item.m.huimaiche.com/CarDetail_New/AddOrRemoveInterestCar',
+            moreUrl: '//item.m.huimaiche.com/CarDetail_New/GetMoreContnet',
+            isAppUrl: '//item.m.huimaiche.com/CarParameter/GetIsApp',
+            itemDomain: '//item.m.huimaiche.com',
+            mDomain: '//m.huimaiche.com',
+            carShareDomain: '//hd.m.huimaiche.com/share/',
+            showPriceTime: '22分钟',
+            carDefaultImg: '//item.m.huimaiche.com/images/nopic_420_280.png',
+            hasFavoriteUrl: '//item.m.huimaiche.com/CarDetail_New/IsFavouite',
+            getCarInfoUrl:'//item.m.huimaiche.com/CarDetail_New/GetCarInfo',
+            pkCarShowName: '2017款 奥迪A4L 40 TFSI 进取型 Plus',
+            getPraiseUrl: '//item.m.huimaiche.com/UserComment/GetPraisedList',
+            gotoPraise: '//item.m.huimaiche.com/UserComment/UpVote',
+            updatePraiseUrl:'//item.m.huimaiche.com/UserComment/UpPraise',
+        });
+        //头图
+        var mySwiper = new Swiper('.group-list', {
+            loop: false,
+            onInit: function (swiper) {
+                $("#nav-page").text((swiper.activeIndex + 1) + "/" + (swiper.slides.length));
+            },
+            onSlideChangeStart: function (swiper) {
+                var curIndex = ((swiper.activeIndex + 1) + swiper.slides.length) % swiper.slides.length == 0 ? swiper.slides.length : ((swiper.activeIndex + 1) + swiper.slides.length) % swiper.slides.length;
+                $("#nav-page").text(curIndex + "/" + swiper.slides.length);
+            }
+        });
+
+        //计算器
+        $('#calculator').click(function () {
+
+            window.location.href = '//item.m.huimaiche.com/calculator/123605?re=%252f%252fitem.m.huimaiche.com%252fquanxinaodia4l%252f123605';
+        });
+        //更新cookie
+        setCookie("loc", encodeURIComponent("501|广州"), 30 * 24 * 60 * 60);
+        })
+    </script>
+
+
+    <!--yicheapph5-->
+    <script src="http://m.maiche.biz/commonapi/scripts/appdownload.js?v=201706271702"></script><img src="./single_files/x(1).gif" alt="" name="DCIMG" style="display:none"></body></html>

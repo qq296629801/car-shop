@@ -1,0 +1,136 @@
+#@head("dsad")
+<link rel="stylesheet" type="text/css"
+	href="/css/share-20150811.css" media="all" />
+    <div class="share-experience bt_page">
+        <div class="col-main col-main-left">
+            <div class="bread-crumbs-link-share">
+                <a href="/">首页</a> &gt; <a href="/bbs" id="qbrul"><span>全部分享</span></a><span id="bdCity"></span>
+            </div>
+            <div class="mod-header">
+                <strong>车主分享</strong> <span id="choose-site">全国<i class="icon"></i></span>
+            </div>
+            
+            <div class="listing">
+                <ul id="shareUl">
+                   	 #for(b:bbsList.getList())
+                            <li class="list-item"><a href="/bbs/single?id=#(b.id)" target="_blank">
+                                <div class="list-item-thumb">
+                                    <span></span>
+                                    <img src="/img/bbs/#(b.url)" alt="#(b.title)">
+                                </div>
+                                <div class="list-item-content">
+                                    <h4>
+                                        #(b.title)</h4>
+                                    <h5>
+                                        <span>车主：钟杰</span><span>分享日期：2017年08月05日</span></h5>
+                                    <p class="intro">
+                                        #(b.comment.replaceAll('<[^>]+>', '').substring(0,80))...
+                                    </p>
+                                </div>
+                                <div class="clear">
+                                </div>
+                            </a></li>
+                         #end 
+                </ul>
+            </div>
+            <div id="paginator" class="paginator">
+                <ul id="pagingUrl">
+               	   #@paginate(bbsList.pageNumber, bbsList.totalPage,"/bbs?page=")
+                </ul>
+                <span id="spanCounter" class="page-counter">共762页</span>
+            </div>
+            <div class="share-experience-tips">
+             	   免责声明：购车体验中的图片为平台购车用户真实分享，如果对其中的展示内容有任何问题，请立即联系xxxxxx。
+            </div>
+            
+        </div>
+        <div class="col-sub">
+            <div class="sub-header">
+                <strong>热销车型</strong>
+            </div>
+            <div class="car_list">
+    <ul>
+        
+    <li>
+        <a href="http://www./changancs75?page=buy_share" class="pic">
+            <img width="135" height="88" src="./category_files/0321428710_6.jpg">
+        </a>
+        <div class="car-detail">
+            <a href="http://www./changancs75?page=buy_share">
+                <p class="car-type">长安CS75</p>
+                <p class="buying">有<em>21</em>人正在购买</p>
+            </a>
+</div>
+        
+    </li>
+    
+    <li>
+        <a href="http://www./kaluola?page=buy_share" class="pic">
+            <img width="135" height="88" src="./category_files/1044122409_6.jpg">
+        </a>
+        <div class="car-detail">
+            <a href="http://www./kaluola?page=buy_share">
+                <p class="car-type">卡罗拉</p>
+                <p class="buying">有<em>20</em>人正在购买</p>
+            </a>
+</div>
+        
+    </li>
+    
+    <li>
+        <a href="http://www./dongfengbentiancrv?page=buy_share" class="pic">
+            <img width="135" height="88" src="./category_files/1011118619_6.jpg">
+        </a>
+        <div class="car-detail">
+            <a href="http://www./dongfengbentiancrv?page=buy_share">
+                <p class="car-type">CR-V</p>
+                <p class="buying">有<em>19</em>人正在购买</p>
+            </a>
+</div>
+        
+    </li>
+    
+    <li>
+        <a href="http://www./jieda?page=buy_share" class="pic">
+            <img width="135" height="88" src="./category_files/1048125125_6.jpg">
+        </a>
+        <div class="car-detail">
+            <a href="http://www./jieda?page=buy_share">
+                <p class="car-type">捷达</p>
+                <p class="buying">有<em>19</em>人正在购买</p>
+            </a>
+</div>
+        
+    </li>
+    
+    <li>
+        <a href="http://www./xuanyi?page=buy_share" class="pic">
+            <img width="135" height="88" src="./category_files/0708295885_6.jpg">
+        </a>
+        <div class="car-detail">
+            <a href="http://www./xuanyi?page=buy_share">
+                <p class="car-type">轩逸</p>
+                <p class="buying">有<em>18</em>人正在购买</p>
+            </a>
+</div>
+        
+    </li>
+    
+    <li>
+        <a href="http://www./maiteng?page=buy_share" class="pic">
+            <img width="135" height="88" src="./category_files/0601183541_6.jpg">
+        </a>
+        <div class="car-detail">
+            <a href="http://www./maiteng?page=buy_share">
+                <p class="car-type">迈腾</p>
+                <p class="buying">有<em>18</em>人正在购买</p>
+            </a>
+</div>
+        
+    </li>
+    
+</ul>
+</div>
+        </div>
+    </div>
+#include("/common/_footer.html")

@@ -1,0 +1,362 @@
+#@head("分类")
+    <div class="carlist-wrap">
+    <div class="carlist-top">
+        <!-- 面包屑开始 -->
+        <div class="carlist-tt">
+            <a href="/">车集市首页</a>
+            &gt;
+            <a href="#/search" class="current">车型列表</a>
+        </div>
+        <!-- 面包屑结束 -->
+        
+        <script type="text/javascript" language="javascript">
+        $(function(){
+        	$("#brand-#(brand_id)").addClass("current");
+        	$("#price-#(price_id)").addClass("current");
+        	$("#level-#(level_id)").addClass("current");
+        	$("#cid-#(cid)").addClass("current");
+        	$("#energ-#(energ_id)").addClass("current");
+        	$("#dis-#(dis_id)").addClass("current");
+        	$("#gearbox-#(gearbox_id)").addClass("current");
+        	$("#seats-#(seats_id)").addClass("current");
+        	$("#drive-#(drive_id)").addClass("current");
+        });
+        </script>
+        <!--搜索条件开始 -->
+        <div class="carlist-twrap">
+    <div class="carlist-t1 clearfix" id="ctrlbrand">
+        <div class="carlist-t1-l">品牌</div>
+        <div class="carlist-t1-r">
+            <a href="/list?location_id=#(location_id)&brand_id=0&price_id=#(price_id)&level_id=#(level_id)&cid=#(cid)&energ_id=#(energ_id)&dis_id=#(dis_id)&gearbox_id=#(gearbox_id)&seats_id=#(seats_id)&drive_id=#(drive_id)" id="brand-0" class="carlist-t1-r1 common-link">不限</a>
+            #for(b:hotBrand)
+             <a href="/list?location_id=#(location_id)&brand_id=#(b.id)&price_id=#(price_id)&level_id=#(level_id)&cid=#(cid)&energ_id=#(energ_id)&dis_id=#(dis_id)&gearbox_id=#(gearbox_id)&seats_id=#(seats_id)&drive_id=#(drive_id)" id="brand-#(b.id)" class="carlist-t1-ra common-link">#(b.name)</a>
+            #end
+        </div>
+        <a href="javascript:void(0)" class="carlist-t1-more">
+            更多<i></i>
+        </a>
+    </div>
+    <div class="carlist-t3 clearfix" id="ctrlprice">
+        <div class="carlist-t3-l">价格</div>
+        <div class="carlist-t3-r">
+            <a href="/list?location_id=#(location_id)&brand_id=#(brand_id)&price_id=0&level_id=#(level_id)&cid=#(cid)&energ_id=#(energ_id)&dis_id=#(dis_id)&gearbox_id=#(gearbox_id)&seats_id=#(seats_id)&drive_id=#(drive_id)" id="price-0" class="carlist-t3-r1 common-link">不限</a>
+            	#for(p:priceList)
+             <a href="/list?location_id=#(location_id)&brand_id=#(brand_id)&price_id=#(p.id)&level_id=#(level_id)&cid=#(cid)&energ_id=#(energ_id)&dis_id=#(dis_id)&gearbox_id=#(gearbox_id)&seats_id=#(seats_id)&drive_id=#(drive_id)" id="price-#(p.id)" class="carlist-t3-ra common-link">#(p.name)</a>
+             	#end
+        </div>
+    </div>
+    <div class="carlist-t3 clearfix" id="ctrllevel">
+        <div class="carlist-t3-l">级别</div>
+        <div class="carlist-t3-r">
+            <a href="/list?location_id=#(location_id)&brand_id=#(brand_id)&price_id=#(price_id)&level_id=0&cid=#(cid)&energ_id=#(energ_id)&dis_id=#(dis_id)&gearbox_id=#(gearbox_id)&seats_id=#(seats_id)&drive_id=#(drive_id)" id="level-0" class="carlist-t3-r1 common-link">不限</a>
+            #for(l:levelList)
+               <a href="/list?location_id=#(location_id)&brand_id=#(brand_id)&price_id=#(price_id)&level_id=#(l.id)&cid=#(cid)&energ_id=#(energ_id)&dis_id=#(dis_id)&gearbox_id=#(gearbox_id)&seats_id=#(seats_id)&drive_id=#(drive_id)" id="level-#(l.id)" class="carlist-t3-ra common-link">#(l.name)</a>
+            #end
+        </div>
+    </div>
+    <div class="carlist-t4 clearfix">
+        <div class="carlist-t4-l">更多</div>
+        <div class="carlist-t4-r">
+            <div class="carlist-t4-ra" id="ctrlcountry">
+                <div class="carlist-t4-ra1">
+                    <span class="carlist-t4-text" title="国别">国别</span>
+                    <i></i>
+                </div>
+                <div class="carlist-t4-ra3 clearfix">
+                     <a href="/list?location_id=#(location_id)&brand_id=#(brand_id)&price_id=#(price_id)&level_id=#(level_id)&cid=0&energ_id=#(energ_id)&dis_id=#(dis_id)&gearbox_id=#(gearbox_id)&seats_id=#(seats_id)&drive_id=#(drive_id)" id="cid-0" class="carlist-t4-ra3-a common-link">不限</a>
+                    #for(c:countryList)
+                     <a href="/list?location_id=#(location_id)&brand_id=#(brand_id)&price_id=#(price_id)&level_id=#(level_id)&cid=#(c.id)&energ_id=#(energ_id)&dis_id=#(dis_id)&gearbox_id=#(gearbox_id)&seats_id=#(seats_id)&drive_id=#(drive_id)" id="cid-#(c.id)" class="carlist-t4-ra3-a common-link">#(c.name)</a>
+                    #end
+                </div>
+            </div>
+            <div class="carlist-t4-ra" id="ctrlenergy">
+                <div class="carlist-t4-ra1">
+                    <span class="carlist-t4-text" title="能源">能源</span>
+                    <i></i>
+                </div>
+                <div class="carlist-t4-ra3">
+                     <a href="/list?location_id=#(location_id)&brand_id=#(brand_id)&price_id=#(price_id)&level_id=#(level_id)&cid=#(cid)&energ_id=0&dis_id=#(dis_id)&gearbox_id=#(gearbox_id)&seats_id=#(seats_id)&drive_id=#(drive_id)" id="energ-0" class="carlist-t4-ra3-a common-link">不限</a>
+	                    #for(e:energyList)
+	            <a href="/list?location_id=#(location_id)&brand_id=#(brand_id)&price_id=#(price_id)&level_id=#(level_id)&cid=#(cid)&energ_id=#(e.id)&dis_id=#(dis_id)&gearbox_id=#(gearbox_id)&seats_id=#(seats_id)&drive_id=#(drive_id)" id="energ-#(e.id)" class="carlist-t4-ra3-a common-link">#(e.name)</a>
+	                    #end
+                </div>
+            </div>
+            <div class="carlist-t4-ra" id="ctrloutputvolume">
+                <div class="carlist-t4-ra1">
+                    <span class="carlist-t4-text" title="排量">排量</span>
+                    <i></i>
+                </div>
+                <div class="carlist-t4-ra3">
+                    <a href="/list?location_id=#(location_id)&brand_id=#(brand_id)&price_id=#(price_id)&level_id=#(level_id)&cid=#(cid)&energ_id=#(energ_id)&dis_id=0&gearbox_id=#(gearbox_id)&seats_id=#(seats_id)&drive_id=#(drive_id)" id="dis-0" class="carlist-t4-ra3-a common-link">不限</a>
+                    #for(d:disList)
+                        <a href="/list?location_id=#(location_id)&brand_id=#(brand_id)&price_id=#(price_id)&level_id=#(level_id)&cid=#(cid)&energ_id=#(energ_id)&dis_id=#(d.id)&gearbox_id=#(gearbox_id)&seats_id=#(seats_id)&drive_id=#(drive_id)" id="dis-#(d.id)" class="carlist-t4-ra3-a common-link">#(d.name)</a>
+                    #end
+                </div>
+            </div>
+            <div class="carlist-t4-ra" id="ctrltransmissions">
+                <div class="carlist-t4-ra1">
+                    <span class="carlist-t4-text" title="变速箱">变速箱</span>
+                    <i></i>
+                </div>
+                <div class="carlist-t4-ra3">
+                    <a href="/list?location_id=#(location_id)&brand_id=#(brand_id)&price_id=#(price_id)&level_id=#(level_id)&cid=#(cid)&energ_id=#(energ_id)&dis_id=#(dis_id)&gearbox_id=0&seats_id=#(seats_id)&drive_id=#(drive_id)" id="gearbox-0" class="carlist-t4-ra3-a common-link">不限</a>
+                    #for(g:gearboxList)
+                        <a href="/list?location_id=#(location_id)&brand_id=#(brand_id)&price_id=#(price_id)&level_id=#(level_id)&cid=#(cid)&energ_id=#(energ_id)&dis_id=#(dis_id)&gearbox_id=#(g.id)&seats_id=#(seats_id)&drive_id=#(drive_id)" id="gearbox-#(g.id)" class="carlist-t4-ra3-a common-link">#(g.name)</a>
+                    #end
+                </div>
+            </div>
+            <div class="carlist-t4-ra" id="ctrlseating">
+                <div class="carlist-t4-ra1">
+                    <span class="carlist-t4-text" title="座位数">座位数</span>
+                    <i></i>
+                </div>
+                <div class="carlist-t4-ra3">
+                    <a href="/list?location_id=#(location_id)&brand_id=0&price_id=0&level_id=0&cid=0&energ_id=0&dis_id=0&gearbox_id=0&seats_id=0&drive_id=0" id="seats-0" class="carlist-t4-ra3-a common-link">不限</a>
+                    #for(s:seatsList)
+                        <a href="/list?location_id=#(location_id)&brand_id=#(brand_id)&price_id=#(price_id)&level_id=#(level_id)&cid=#(cid)&energ_id=#(energ_id)&dis_id=#(dis_id)&gearbox_id=#(gearbox_id)&seats_id=#(s.id)&drive_id=#(drive_id)" id="seats-#(s.id)" class="carlist-t4-ra3-a common-link">#(s.name)</a>
+    				#end
+                </div>
+            </div>
+            <div class="carlist-t4-ra" id="ctrldrive">
+                <div class="carlist-t4-ra1" style="border-bottom: 1px solid rgb(215, 220, 228);">
+                    <span class="carlist-t4-text" title="驱动">驱动</span>
+                    <i></i>
+                </div>
+                <div class="carlist-t4-ra3" style="display: none;">
+                    <a href="/list?location_id=#(location_id)&brand_id=#(brand_id)&price_id=#(price_id)&level_id=#(level_id)&cid=#(cid)&energ_id=#(energ_id)&dis_id=#(dis_id)&gearbox_id=#(gearbox_id)&seats_id=#(seats_id)&drive_id=0" id="drive-0" class="carlist-t4-ra3-a common-link">不限</a>
+                    #for(d:driveList)
+                        <a href="/list?location_id=#(location_id)&brand_id=#(brand_id)&price_id=#(price_id)&level_id=#(level_id)&cid=#(cid)&energ_id=#(energ_id)&dis_id=#(dis_id)&gearbox_id=#(gearbox_id)&seats_id=#(seats_id)&drive_id=#(d.id)" id="drive-#(d.id)" class="carlist-t4-ra3-a common-link">#(d.name)</a>
+                    #end
+                </div>
+            </div>
+            <div class="carlist-t4-ra">
+                <div class="carlist-t4-ra1 carlist-t4-raauto">
+                    <span class="carlist-t4-text1" id="ctrlconfigspan" title="配置">配置</span>
+                    <i></i>
+                </div>
+                <div class="carlist-t4-ra2 carlist-t4-extra" id="ctrlconfigpanel">
+                	#for(s:setList)
+                	    <a href="javascript:void(0)" data-code="#(s.id)" id="testset#(s.id)" class="carlist-t4-ra2-a common-link">
+                	  		 <i></i>#(s.name)
+                	    </a>  
+                    #end
+                    <div class="carlist-t4-extra1">
+                        <a href="javascript:void(0)" class="carlist-t4-ensure" id="ctrlconfigbtnok">确定</a>
+                        <a href="javascript:void(0)" class="carlist-t4-cancel" id="ctrlconfigbtncancel">取消</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="carlist-t5 clearfix" id="ctrlbrandall" style="display: none;">
+        #for(i:[1..3])
+        <div class="carlist-t5-all">
+              #for(l:letterList)
+	         	#if(l.num==i)
+	                <div class="carlist-t5-a clearfix">
+		                <div class="carlist-t5-a1">
+		                    <a href="javascript:void(0)">#(l.letter)</a>
+		                </div>
+		                <div class="carlist-t5-a2 clearfix">
+		                    #for(b:brandList)
+		                   	 #if(b.num==i && b.letter==l.letter)
+		                        <a href="/list?location_id=#(location_id)&brand_id=#(b.id)&price_id=#(price_id)&level_id=#(level_id)&cid=#(cid)&energ_id=#(energ_id)&dis_id=#(dis_id)&gearbox_id=#(gearbox_id)&seats_id=#(seats_id)&drive_id=#(drive_id)" class="carlist-t5-a2a common-link">#(b.name)</a>
+		                     #end
+		                    #end
+		                </div>
+	            	</div>
+             	#end
+	          #end   
+        </div>
+        #end
+        <div class="carlist-t5-more" id="ctrlbrandshrink">收起<i></i></div>
+    </div>
+</div>
+        <!-- 搜索条件结束 -->
+        
+        <div class="carlist-talready clearfix" style="display:none">
+            <div class="carlist-tal">
+           		     已选条件
+            </div>
+            <div class="carlist-tar" id="ctrlparambar"><div class="carlist-tar-all"><span>品牌：宝马</span><i data-code="0"></i></div>
+                <a href="javascript:void(0)" class="carlist-tar-clear" id="ctrlclearall">清空条件</a>
+            </div>
+        </div>
+        
+    </div>
+    <div class="carlist-middle">
+    
+        <div class="carlist-mtop clearfix">
+            
+                <div class="carlist-mtleft"><span>
+                #for(l:locationList)
+                	#if(l.id==location_id??)
+                		#(l.name)
+                	#end
+                #end
+                </span>有#(carList.totalRow)款符合条件的车型</div>
+            
+             <div class="carlist-mtright">
+                <a id="ctrlsortprice" href="javascript:void(0)" class="carlist-mtr-price" style="display:none">
+                    <span>指导价</span>
+                    <i></i>
+                </a>
+                <a id="ctrlsorthot" href="javascript:void(0)" class="carlist-mtr-heat current" title="热度从高到低" style="display:none">
+                    <span>热度</span>
+                    <i class="top"></i>
+                </a>
+            </div>
+        </div>
+        <div class="carlist-mcontent">
+            <ul class="carlist-mc clearfix">
+                #for(car : carList.getList())
+                    <li>
+                        <a target="_blank" href="/single?id=#(car.id)" class="carlist-mc-a">
+                            <span class="carlist-mc-img">
+                                <span class="carlist-mc-i" style="overflow: hidden; height: 151.186px; width: 226.186px; margin-left: -0.562657px; margin-top: -0.562657px;">
+                                    <img src="/img/u/#(car.url)" alt="">
+                                </span>
+                            </span>
+                            <span class="carlist-mc-icon">
+                            #if(car.team_id==1)
+                                <i class="carlist-mc-i2 icon" title="该车型有团购优惠活动。"></i>
+                            #end
+                            </span>
+                            <span class="carlist-mc-title">#(car.name)#(car.sname)</span>
+                            <span class="carlist-mc-price">指导价#(car.guide_price)万</span>
+                            <span class="carlist-mc-bottom">
+                                <span class="carlist-mc-bl">
+                                    <span>#(car.count)</span>人正在购买
+                                </span>
+                                <span class="carlist-mc-br">获取底价</span>
+                            </span>
+                        </a>
+                    </li>
+                #end
+            </ul>
+        </div>
+        <!--分页 start-->
+        
+<!--分页 start-->
+
+<div class="carlist-mpage">
+    <div class="carlist-mp-wrap clearfix">
+   #@paginate(carList.pageNumber, carList.totalPage,"/list?location_id="+location_id+"&brand_id="+brand_id+"&price_id="+price_id+"&level_id="+level_id+"&cid="+cid+"&energ_id="+energ_id+"&dis_id="+dis_id+"&gearbox_id="+gearbox_id+"&seats_id="+seats_id+"&drive_id="+drive_id+"&set_id="+set_id+"&page=")
+    </div>
+</div>
+<!--分页 end-->
+ <!--分页 end-->
+    </div>
+    <div class="carlist-bottom">
+        <div class="carlist-blike">
+            <div class="carlist-bl-title">猜你喜欢</div>
+            <div class="carlist-bl-list">
+                <ul class="carlist-bl-ul clearfix" id="favSerialPanel">
+                #for(p:pushList)
+                <li><a target="_blank" href="/single?id=#(p.id)" class="carlist-bl-l"><span class="carlist-bl-img"><span class="carlist-bl-i">
+                <img src="/img/u/#(p.url)" alt=""></span></span>
+                <span class="carlist-bl-title">#(p.name)#(p.bname)#(p.sname)</span><span class="carlist-bl-price">指导价 #(p.gprice)万</span>
+                <span class="carlist-bl-bottom"><span>#(p.count)</span>人正在购买</span></a></li>
+                #end
+                </ul>
+            </div>
+        </div>
+    </div>
+    </div>
+    <script type="text/javascript">
+        var XCWebLogCollector = { page: '', cp: '' };
+        var HMCWebLogCollector = { page: '', cp: '', tracker_u: '' };
+    </script>
+  #include("/common/_footer.html")
+<script type="text/javascript" src="./js/widget-jqm_ext.js"></script>
+<script src="./js/dcs_tag_huimc.js" type="text/javascript"></script>
+<script type="text/javascript">
+    if (navigator.userAgent.indexOf("MSIE 6.0") > 0) {
+        try {
+            $.jqmFrame.isIE6();
+        } catch (e) {
+            $("#jqmframe").show();
+        }
+    }
+    
+    $(function () {
+    	var myArray=new Array();
+    	#for(s:selectSetList)
+    		$('#testset#(s)').addClass('current');
+    	#end
+    	 $("#ctrlconfigbtnok").click(function () {
+    		 #for(s:setList)
+    			 var flag=$('#testset#(s.id)').hasClass('current');
+    		 		if(flag){
+    		 			myArray.push('#(s.id)');
+    		 		}
+    		 #end
+    		 console.log(myArray);
+    		 window.location.href="/list?brand_id=#(brand_id)&price_id=#(price_id)&level_id=#(level_id)&cid=#(cid)&energ_id=#(energ_id)&dis_id=#(dis_id)&gearbox_id=#(gearbox_id)&seats_id=#(seats_id)&drive_id=#(drive_id)&set_id="+myArray;
+    		 myArray=[];
+          });
+          $("#ctrlconfigbtncancel").click(function () {
+              $("#ctrlconfigpanel").hide();
+          });
+    	
+        $(document).on("click", "[data-hmclog]", function () {
+            if (typeof HMC_LOG !== "undefined" && typeof HMC_LOG.SentClickStat === "function") {
+                try {
+                    HMC_LOG.SentClickStat(this);
+                } catch (e) { }
+            }
+        });
+
+    });
+    
+</script>
+
+<script src="./js/jcarousellite_1.0.1.min.js"></script>
+<script type="text/javascript" src="./js/pcadgroup_501.js"></script>
+    <script type="text/javascript" src="./js/scrollloading.js"></script>
+    <script type="text/javascript">
+        $(function () {
+            if (navigator.userAgent.indexOf("MSIE 8.0") > 0) {
+                $(".car-list-right-content img").each(function () {
+                    $(this).attr("src", $(this).data("url"));
+                });
+            } else {
+                $(".car-list-right-content img").scrollLoading();
+            }
+        });
+    </script>
+<script language="javascript" type="text/javascript" src="./js/servicebar.js"></script>
+<script type="text/javascript" src="./js/brandlistnew.js"></script>
+<script type="text/javascript" language="javascript">
+    $.brandlistnew.init({
+        param: '57-0-0-0-0-0-0-0-0-0-0',
+        domain: '/',
+        itemdomain: '/',
+        tradedomain:'/',
+        cityId:501,
+        searchp:'57',
+        haveFinance:'1',
+        haveGroup:'1',
+        havePromise:'1',
+        citySpell:'guangzhou'
+    });
+</script>
+<!--[if lt IE 9]>
+<script type="text/javascript">
+    $(document).ready(function(){
+        (function(){
+            var sideBar = $("#side-bar");
+            var checkboxs = sideBar.find("input[type=checkbox]");
+            checkboxs.on("change", function() {
+                var i = $(this).next();
+                var span = $(this).nextAll("span");
+                if ($(this).prop("checked")) {
+                    i.addClass("current");
+                } else {
+                    i.removeClass("current");
+                }
+            });
+        })();
+    });
+</script>
+<![endif]-->
